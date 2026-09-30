@@ -1,0 +1,20 @@
+PRODUCT CODE CHANGESET — 2026-09-17
+
+Base comparada: quantia_spatialV1_Adaptive_Prototype_V1.zip
+
+NUEVOS ARCHIVOS PRODUCTIVOS (7)
+- process_engine.py
+- post_reconstruction_filters/__init__.py
+- post_reconstruction_filters/contracts.py
+- post_reconstruction_filters/selector.py
+- post_reconstruction_filters/filter_engine.py
+- post_reconstruction_filters/wall_hypothesis_canonicalizer.py
+- post_reconstruction_filters/artifact_renderer.py
+
+ARCHIVO PRODUCTIVO EXISTENTE MODIFICADO (1)
+- adaptive_reconstruction/hybrid_engine.py
+  Cambio exclusivamente de trazabilidad: runtime.artifacts ahora publica context_decisions y context_regions.
+  No se cambiaron thresholds, selección, bridges, topology, roles ni scores.
+
+ARCHIVOS PRODUCTIVOS ELIMINADOS
+- Ninguno.

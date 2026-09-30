@@ -1,0 +1,36 @@
+QUANTIA SPATIALV1 — SPACE CLOSURE PROBE V1
+Fecha: 2026-09-30
+
+PUNTO DE RETORNO
+- El motor productivo quantia_spatialV1 no se modifica.
+- Entrada: resultado ya generado de Call 2 (final_graph.json + interface04.json + original.png).
+
+OBJETIVO
+Validar si los espacios pueden cerrarse SIN otra llamada multimodal usando únicamente:
+1) centerlines finales de Call 2,
+2) logical_gaps existentes,
+3) escala px/m,
+4) reglas geométricas deterministas.
+
+LÓGICA AISLADA
+- CanonicalAxisProjection: alinea H/V casi coincidentes dentro de 0.14 m.
+- ResidualParallelResolver: fusiona sólo líneas del mismo eje con >=65% de solape.
+- LogicalGapClosureResolver: reconstruye continuidad lógica desde logical_gaps; nunca la publica como muro físico.
+- SpacePolygonBuilder: polygonize_full + filtro de slivers por área/ancho.
+- Interface04ProbeExporter: genera geometría experimental de espacios y asociación muro-espacio.
+
+ARTEFACTOS
+- space_closure_graph.json
+- logical_closures.json
+- spaces.json
+- space_closure_metrics.json
+- interface04_space_closure.json
+- space_closure_comparison.png
+- run_status.json
+
+NO HACE
+- No llama Gemini/Qwen/Groq.
+- No modifica final_graph.json original.
+- No convierte logical closures en muros físicos.
+- No confirma nombres/usos de espacios.
+- No habilita cuantificación.

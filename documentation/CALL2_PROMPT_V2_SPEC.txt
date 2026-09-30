@@ -1,0 +1,44 @@
+CALL 2 WALL REVIEW V2 — PROMPT/CONTRACT SPEC
+
+INPUT VISUAL ÚNICO
+A) SOURCE LEVELVIEW (ORIGINAL)
+   - crop directo del raster fuente de página
+   - sin resize, limpieza ni overlay
+B) QUANTIA WALLGRAPH (WALLS ONLY)
+   - mismo ancho/alto y mismo sistema local
+   - una centerline publicada por muro
+
+STATE COMPACTO
+- level_view_id
+- level_name
+- image_size_px
+- px_per_m
+- source document/page/bbox
+- walls: [id,x1,y1,x2,y2,role]
+
+NO ENVIAR
+- cientos de logical_gaps internos
+- diagnostics completos
+- route_plan completo
+- source evidence completo
+- razones completas de cada filtro
+- listas de candidatos excluidos/unresolved
+
+RESULTADO PRIMARIO
+DELTAS:
+ADD_WALL
+REMOVE_WALL
+EXTEND_WALL
+TRIM_WALL
+REPOSITION_WALL
+MERGE_WALLS
+SPLIT_WALL
+
+RESULTADO SECUNDARIO
+non_wall_architectural_regions como candidatos para siguiente capa:
+DOOR, WINDOW, FLOOR_TO_CEILING_GLAZING, RAILING_GUARDRAIL,
+STAIR, STAIR_HANDRAIL, ROOF_COVER, TERRACE, OPENING_CLOSURE,
+SLAB_EDGE_LEVEL_CHANGE, COLUMN, OTHER, UNCERTAIN.
+
+REGLA CENTRAL
+La fuente A manda. B es una hipótesis que debe corregirse, no preservarse.

@@ -1,0 +1,141 @@
+[
+  {
+    "id": "QAE2_DOOR_ARC_HOST_LEAF",
+    "label": "DOOR",
+    "description": "Arco de abatimiento plausible próximo a muro final y con hoja local parcial o completa.",
+    "features": {
+      "expected_class": "DOOR",
+      "door_arc_support": 0.82,
+      "door_leaf_support": 0.58,
+      "host_local_support": 0.7,
+      "host_wall_match": 0.82,
+      "opening_verified": 1.0,
+      "wall_through_support": 0.05,
+      "wall_gap_support": 0.75
+    },
+    "tags": [
+      "CURVE_SWING",
+      "HOST_WALL_MATCH",
+      "OPENING_VERIFIED"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  },
+  {
+    "id": "QAE2_DOOR_FRAGMENTED_LEAF_HOSTED",
+    "label": "DOOR",
+    "description": "Arco de puerta con hoja vectorial fragmentada pero anclaje fuerte a muro y apoyo semántico o geométrico local.",
+    "features": {
+      "expected_class": "DOOR",
+      "door_arc_support": 0.72,
+      "door_leaf_support": 0.24,
+      "host_local_support": 0.58,
+      "host_wall_match": 0.72,
+      "semantic_support": 0.4,
+      "opening_verified": 0.0,
+      "wall_through_support": 0.05,
+      "wall_gap_support": 0.75
+    },
+    "tags": [
+      "CURVE_SWING",
+      "HOST_WALL_MATCH"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  },
+  {
+    "id": "QAE2_WINDOW_HOST_GAP_FRAME",
+    "label": "WINDOW",
+    "description": "Dos o más pistas paralelas cortas alineadas al muro con continuidad de host a ambos lados y sin línea continua dominante atravesando el vano.",
+    "features": {
+      "expected_class": "WINDOW",
+      "window_frame_support": 0.86,
+      "host_local_support": 0.74,
+      "host_wall_match": 0.84,
+      "opening_verified": 1.0,
+      "wall_through_support": 0.1,
+      "wall_gap_support": 0.35
+    },
+    "tags": [
+      "PARALLEL_FRAME",
+      "HOST_WALL_MATCH",
+      "OPENING_VERIFIED"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  },
+  {
+    "id": "QAE2_WINDOW_PARTIAL_SEMANTIC",
+    "label": "WINDOW",
+    "description": "Frame parcial próximo a muro final con evidencia semántica persistida y sin muro continuo fuerte.",
+    "features": {
+      "expected_class": "WINDOW",
+      "window_frame_support": 0.62,
+      "host_local_support": 0.42,
+      "host_wall_match": 0.68,
+      "semantic_support": 0.62,
+      "opening_verified": 0.0,
+      "wall_through_support": 0.18,
+      "wall_gap_support": 0.35
+    },
+    "tags": [
+      "PARALLEL_FRAME",
+      "SEMANTIC_SUPPORT",
+      "HOST_WALL_MATCH"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  },
+  {
+    "id": "QAE2_NOT_OPENING_CONTINUOUS_WALL",
+    "label": "NOT_OPENING",
+    "description": "Paralelismo local sobre un muro cuya evidencia lineal continúa atravesando completamente la región.",
+    "features": {
+      "expected_class": "WINDOW",
+      "window_frame_support": 0.78,
+      "host_local_support": 0.28,
+      "host_wall_match": 0.8,
+      "opening_verified": 0.0,
+      "wall_through_support": 0.92,
+      "wall_gap_support": 0.05
+    },
+    "tags": [
+      "PARALLEL_FRAME",
+      "CONTINUOUS_WALL"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  },
+  {
+    "id": "QAE2_NOT_OPENING_CURVE_WITHOUT_HOST",
+    "label": "NOT_OPENING",
+    "description": "Curva circular o símbolo gráfico sin proximidad suficiente a un muro final ni hoja compatible.",
+    "features": {
+      "expected_class": "DOOR",
+      "door_arc_support": 0.68,
+      "door_leaf_support": 0.05,
+      "host_local_support": 0.08,
+      "host_wall_match": 0.08,
+      "opening_verified": 0.0,
+      "architecture_support": 0.3,
+      "wall_gap_support": 0.05
+    },
+    "tags": [
+      "CURVE_SWING"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  },
+  {
+    "id": "QAE2_NOT_OPENING_DECORATIVE_PARALLELS",
+    "label": "NOT_OPENING",
+    "description": "Líneas paralelas repetidas sin continuidad de host a ambos lados, compatibles con hatch, escalera o gráfico no arquitectónico.",
+    "features": {
+      "expected_class": "WINDOW",
+      "window_frame_support": 0.7,
+      "host_local_support": 0.05,
+      "host_wall_match": 0.35,
+      "opening_verified": 0.0,
+      "wall_through_support": 0.05,
+      "wall_gap_support": 0.05
+    },
+    "tags": [
+      "PARALLEL_FRAME"
+    ],
+    "source": "QUANTIA_ARCHITECTURAL_RAG_V2"
+  }
+]

@@ -1,0 +1,43 @@
+QUANTIA SPATIALV1 — ESTRUCTURA DEPURADA 2026-09-30
+
+__init__.py
+adaptive_reconstruction/
+architectural_elements/
+canonical_wallgraph/
+contracts/
+documentation/
+engine.py
+models/
+parametric_model/
+phase_015_evidence/
+phase_01_level/
+phase_02_boundaries/
+post_reconstruction_filters/
+process_engine.py
+prompts/
+providers/
+reconstruction_core/
+REFERENCIAS_PROCESO/  # material no operativo conservado
+tests/
+transport/
+
+DOCUMENTACION OPERATIVA:
+- documentation/CALL2_PROMPT_V2_SPEC.txt
+- documentation/CURRENT_STATE.txt
+- documentation/CURRENT_VERSION.txt
+- documentation/LOCAL_VALIDATION_CANONICAL_WALLGRAPH_INTEGRITY_V2.json
+- documentation/PRODUCT_CODE_CHANGESET_2026-09-17.txt
+- documentation/QUANTIA_SPATIAL_OBJECTIVES_AND_GATES.txt
+- documentation/REPORTE_CALL2_INTERFAZ04_REVISADO_2026-09-28.md
+- documentation/SPACE_CLOSURE_PROBE_V1.txt
+- documentation/VERSIONADO_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V2.txt
+
+OUTPUTS OPERATIVOS CONSERVADOS:
+- tests/output/.gitkeep
+- tests/output/call2_interface04
+- tests/output/canonical_integrity_v2
+- tests/output/canonical_visual_review
+- tests/output/quantia_spatial_v1_process
+- tests/output/space_closure_constraint_probe_v2
+- tests/output/space_closure_probe_v1
+- tests/output/space_closure_probe_v1.zip

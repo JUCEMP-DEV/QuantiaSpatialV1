@@ -1,0 +1,1150 @@
+{
+  "cleanup_version": "QUANTIA_SPATIALV1_CLEANUP_2026-09-30_V1",
+  "source_zip": "QuantiaSpatialV1.zip",
+  "policy": "No se elimina información histórica; se separa de la ruta operativa.",
+  "active_documentation": [
+    "CALL2_PROMPT_V2_SPEC.txt",
+    "CLEANUP_MANIFEST_2026-09-30.json",
+    "CURRENT_STATE.txt",
+    "CURRENT_VERSION.txt",
+    "LOCAL_VALIDATION_CANONICAL_WALLGRAPH_INTEGRITY_V2.json",
+    "PRODUCT_CODE_CHANGESET_2026-09-17.txt",
+    "QUANTIA_SPATIAL_OBJECTIVES_AND_GATES.txt",
+    "REPORTE_CALL2_INTERFAZ04_REVISADO_2026-09-28.md",
+    "SPACE_CLOSURE_PROBE_V1.txt",
+    "STRUCTURE_TREE_CURRENT.txt",
+    "VERSIONADO_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V2.txt"
+  ],
+  "moves": [
+    {
+      "source": "phase_01_level/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/phase_01_level/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "adaptive_reconstruction/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/adaptive_reconstruction/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "providers/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/providers/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "canonical_wallgraph/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/canonical_wallgraph/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "architectural_elements/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/architectural_elements/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "reconstruction_core/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/reconstruction_core/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "post_reconstruction_filters/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/post_reconstruction_filters/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "phase_02_boundaries/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/phase_02_boundaries/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "phase_015_evidence/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/phase_015_evidence/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "contracts/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/contracts/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "prompts/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/prompts/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "tests/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/tests/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "parametric_model/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/parametric_model/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "transport/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/transport/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "experiments/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/experiments/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "models/__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/models/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "__pycache__",
+      "destination": "REFERENCIAS_PROCESO/99_CACHE_GENERADO/__pycache__",
+      "reason": "Cache Python generado; no forma parte del código fuente."
+    },
+    {
+      "source": "experiments",
+      "destination": "REFERENCIAS_PROCESO/05_EXPERIMENTOS/experiments",
+      "reason": "Código experimental no importado por el orquestador productivo actual."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1033_F03_FLOW_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1033_F03_FLOW_PROBE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VALIDATION_POST_FILTER_V2_REPLAY_2026-09-17.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VALIDATION_POST_FILTER_V2_REPLAY_2026-09-17.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_SCALE_FOUNDATION_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_SCALE_FOUNDATION_V1_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/EXPERIMENT_VISUAL_CANDIDATE_RESOLVER_V1_2026-09-08.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/EXPERIMENT_VISUAL_CANDIDATE_RESOLVER_V1_2026-09-08.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_METRIC_RERASTER_V1_2.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_METRIC_RERASTER_V1_2.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/ARCHIVE_TESTS_2026-09-28.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/ARCHIVE_TESTS_2026-09-28.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-18_CALL2_V2_1_QUOTA_SAFE.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-18_CALL2_V2_1_QUOTA_SAFE.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-29_CALL2_QWEN_HF_INTERFACE04_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-29_CALL2_QWEN_HF_INTERFACE04_PROBE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_CANONICAL_METRIC_RASTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_CANONICAL_METRIC_RASTER_V2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_2151_METRIC_RERASTER_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_2151_METRIC_RERASTER_V1_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_2258_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_2258_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1330_CANONICAL_METRIC_RASTER_V2_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1330_CANONICAL_METRIC_RASTER_V2_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/TEST_ARCHIVE_VALIDATION_2026-09-28.xml",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/TEST_ARCHIVE_VALIDATION_2026-09-28.xml",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_2045_SCALE_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_2045_SCALE_V1_4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V1.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V1.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_2151_METRIC_RERASTER_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_2151_METRIC_RERASTER_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-14_1246_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-14_1246_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-17_1347_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-17_1347_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-19_CALL2_PROVIDER_COMPAT_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-19_CALL2_PROVIDER_COMPAT_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_V5.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_V5.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-18_CALL2_WALL_REVIEW_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-18_CALL2_WALL_REVIEW_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_CONTEXT_CLASSIFICATION_V6_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_CONTEXT_CLASSIFICATION_V6_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_1033.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_1033.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-29_CALL2_QWEN_HF_INTERFACE04_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-29_CALL2_QWEN_HF_INTERFACE04_PROBE_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/MIGRATION_MAP.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/MIGRATION_MAP.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-18_CALL2_DELTA_REVIEW_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-18_CALL2_DELTA_REVIEW_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-16_1249.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-16_1249.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_1301.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_1301.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1200_CANONICAL_METRIC_RASTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1200_CANONICAL_METRIC_RASTER_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1402_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1402_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1402_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1402_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1_1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_CONTEXT_CLASSIFICATION_V6_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_CONTEXT_CLASSIFICATION_V6_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-19_CALL2_PROVIDER_503_BACKOFF_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-19_CALL2_PROVIDER_503_BACKOFF_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-09_1238.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-09_1238.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1852_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1852_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_SCALE_FOUNDATION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_SCALE_FOUNDATION_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_2151_METRIC_RERASTER_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_2151_METRIC_RERASTER_V1_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_2258_CANONICAL_METRIC_RASTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_2258_CANONICAL_METRIC_RASTER_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_1808_SCALE_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_1808_SCALE_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V2.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V2.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1_2.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1_2.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_2209_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_2209_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1200_CANONICAL_METRIC_RASTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1200_CANONICAL_METRIC_RASTER_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/TEST_LOGIC_MIGRATION_MATRIX_2026-09-17.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/TEST_LOGIC_MIGRATION_MATRIX_2026-09-17.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-18_CALL2_WALL_REVIEW_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-18_CALL2_WALL_REVIEW_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-09_1613.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-09_1613.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_2258_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_2258_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-17_1347_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-17_1347_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V4.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V4.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-16_1820_TEST_CLEANUP.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-16_1820_TEST_CLEANUP.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V3.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V3.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/PACKAGE_EXCLUSIONS_QUANTIA_SPATIAL_V1_0.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/PACKAGE_EXCLUSIONS_QUANTIA_SPATIAL_V1_0.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_FLOW_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_FLOW_PROBE_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_METRIC_RERASTER_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_METRIC_RERASTER_V1_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_SCALE_FOUNDATION_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_SCALE_FOUNDATION_V1_1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/TEST_ARCHIVE_2026-09-28.md",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/TEST_ARCHIVE_2026-09-28.md",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1_4.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1_4.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/PACKAGE_EXCLUSIONS_TEST_CLEANUP_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/PACKAGE_EXCLUSIONS_TEST_CLEANUP_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-17_1455_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-17_1455_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-12_1413_F03_ELEMENT_ISOLATION_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-12_1413_F03_ELEMENT_ISOLATION_PROBE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_METRIC_RERASTER_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_METRIC_RERASTER_V1_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1740_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1740_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-17_1347_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-17_1347_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-17_QUANTIA_SPATIAL_V1_0.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-17_QUANTIA_SPATIAL_V1_0.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-17_1455_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-17_1455_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/AUDIT_FINDINGS_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/AUDIT_FINDINGS_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_1700.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_1700.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-09_1002.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-09_1002.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-17_1840_POST_FILTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-17_1840_POST_FILTER_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-14_1401_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-14_1401_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_CONTEXT_CLASSIFICATION_V6.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_CONTEXT_CLASSIFICATION_V6.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_F03_SELECTION_CONTRACTS_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_F03_SELECTION_CONTRACTS_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-16_1820_TEST_CLEANUP.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-16_1820_TEST_CLEANUP.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-12_1413_F03_ELEMENT_ISOLATION_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-12_1413_F03_ELEMENT_ISOLATION_PROBE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1300_CANONICAL_METRIC_RASTER_V2_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1300_CANONICAL_METRIC_RASTER_V2_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_SOLVER_EVIDENCE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_SOLVER_EVIDENCE_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-10_1033.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-10_1033.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-17_1955_POST_FILTER_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-17_1955_POST_FILTER_V3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-19_CALL2_PROVIDER_503_BACKOFF_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-19_CALL2_PROVIDER_503_BACKOFF_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/BASELINE_RECONSTRUCCION_FUNCIONAL_2026-09-15.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/BASELINE_RECONSTRUCCION_FUNCIONAL_2026-09-15.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_2025_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_2025_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1852_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1852_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_0914.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_0914.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_2151_METRIC_RERASTER_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_2151_METRIC_RERASTER_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_1808_SCALE_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_1808_SCALE_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_CONTEXT_CLASSIFICATION_V6_1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_CONTEXT_CLASSIFICATION_V6_1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-14_1401_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-14_1401_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1_4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1330_CANONICAL_METRIC_RASTER_V2_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1330_CANONICAL_METRIC_RASTER_V2_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-18_CALL2_WALL_REVIEW_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-18_CALL2_WALL_REVIEW_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_2025_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_2025_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-08_1600.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-08_1600.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-18_CALL2_QUOTA.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-18_CALL2_QUOTA.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_METRIC_RERASTER_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_METRIC_RERASTER_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_2209_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_2209_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-17_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-17_PRODUCTIZED_PROCESS_POST_FILTER_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_SCALE_FOUNDATION_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-17_1840_POST_FILTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-17_1840_POST_FILTER_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-17_QUANTIA_SPATIAL_V1_0.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-17_QUANTIA_SPATIAL_V1_0.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_1152.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_1152.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/TESTS_ACTIVE_MANIFEST_2026-09-16.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/TESTS_ACTIVE_MANIFEST_2026-09-16.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-17_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-17_ADAPTIVE_RECONSTRUCTION_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V5.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V5.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/TESTS_ACTIVE_MANIFEST_2026-09-17_PRODUCTIZED_PROCESS.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/TESTS_ACTIVE_MANIFEST_2026-09-17_PRODUCTIZED_PROCESS.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_METRIC_RERASTER_V1_3_SCALE_V1_6.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_METRIC_RERASTER_V1_3_SCALE_V1_6.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_CANONICAL_METRIC_RASTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_CANONICAL_METRIC_RASTER_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_1700_SCALE_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_1700_SCALE_V1_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_METRIC_RERASTER_V1_3_SCALE_V1_6.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2_1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2_1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_1700_SCALE_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_1700_SCALE_V1_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VALIDATION_POST_FILTER_V3_REPLAY_2026-09-17.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VALIDATION_POST_FILTER_V3_REPLAY_2026-09-17.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_2026-09-16_SECOND_CALL_WALL_CONSOLIDATION.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_2026-09-16_SECOND_CALL_WALL_CONSOLIDATION.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/AUDIT_FINDINGS.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/AUDIT_FINDINGS.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-17_POST_FILTER_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-17_POST_FILTER_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-14_1246_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-14_1246_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_CONVERSACION_2026-09-18_CALL2_DELTA_REVIEW_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_CONVERSACION_2026-09-18_CALL2_DELTA_REVIEW_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-10_2258_CANONICAL_METRIC_RASTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-10_2258_CANONICAL_METRIC_RASTER_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V2_3.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/checkpoints",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/checkpoints",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-10_0914.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-10_0914.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1_2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V3.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/WALL_CONSOLIDATION_SECOND_CALL_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/WALL_CONSOLIDATION_SECOND_CALL_PROBE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-09_1036.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-09_1036.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1300_CANONICAL_METRIC_RASTER_V2_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1300_CANONICAL_METRIC_RASTER_V2_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_1740_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_1740_F03_SELECTION_CONTRACTS_V1_1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_CANONICAL_METRIC_RASTER_V2_3.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_CANONICAL_METRIC_RASTER_V2_3.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/PACKAGE_CLEANUP_VERSION.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/PACKAGE_CLEANUP_VERSION.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_1033_F03_FLOW_PROBE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_1033_F03_FLOW_PROBE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_CANONICAL_METRIC_RASTER_V1.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-10_2045_SCALE_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-10_2045_SCALE_V1_4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_SCALE_FOUNDATION_V1_4.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_SCALE_FOUNDATION_V1_4.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_2026-09-10_1152.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_2026-09-10_1152.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_SCALE_FOUNDATION_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_SCALE_FOUNDATION_V1_4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/TEST_PLAN.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/TEST_PLAN.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-17_QUANTIA_SPATIAL_V1_0.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-17_QUANTIA_SPATIAL_V1_0.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/LOCAL_VALIDATION_CANONICAL_METRIC_RASTER_V1.json",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/LOCAL_VALIDATION_CANONICAL_METRIC_RASTER_V1.json",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/HISTORICO_DECISION_2026-09-11_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/HISTORICO_DECISION_2026-09-11_F03_SELECTION_CONTRACTS_V1_3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_F03_ELEMENT_CONTEXT_ISOLATION_V2.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_V4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_V4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/STRUCTURE_TREE_2026-09-18_CALL2_DELTA_REVIEW_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/STRUCTURE_TREE_2026-09-18_CALL2_DELTA_REVIEW_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/PATTERN_CONTEXT_V3",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/PATTERN_CONTEXT_V3",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-19_CALL2_PROVIDER_COMPAT_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-19_CALL2_PROVIDER_COMPAT_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-17_1955_POST_FILTER_V3.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-17_1955_POST_FILTER_V3.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/VERSIONADO_2026-09-11_F03_SELECTION_CONTRACTS_V1.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/VERSIONADO_2026-09-11_F03_SELECTION_CONTRACTS_V1.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "destination": "REFERENCIAS_PROCESO/02_CHECKPOINTS_MANIFIESTOS/documentation/RETURN_POINT_F03_SELECTION_CONTRACTS_V1_4.txt",
+      "reason": "Checkpoint/manifiesto histórico; útil como referencia y retorno, no como documentación operativa vigente."
+    },
+    {
+      "source": "documentation/QUANTIA_SPATIAL_V1_0_PACKAGE.txt",
+      "destination": "REFERENCIAS_PROCESO/01_DOCUMENTACION_HISTORICA/documentation/QUANTIA_SPATIAL_V1_0_PACKAGE.txt",
+      "reason": "Documentación histórica, supersedida o de trazabilidad; separada del estado operativo vigente."
+    },
+    {
+      "source": "tests/test_quantia_spatial_v1_call2_qwen_hf_interface04_geometry_v1.py",
+      "destination": "REFERENCIAS_PROCESO/03_PRUEBAS_PROBES_HISTORICOS/tests/test_quantia_spatial_v1_call2_qwen_hf_interface04_geometry_v1.py",
+      "reason": "Probe específico Qwen/Hugging Face, fuera del flujo canónico actual basado en Gemini."
+    },
+    {
+      "source": "tests/test_quantia_spatial_call2_geometry_interface04_all_3_v1_v1_2_qwen_hf.py",
+      "destination": "REFERENCIAS_PROCESO/03_PRUEBAS_PROBES_HISTORICOS/tests/test_quantia_spatial_call2_geometry_interface04_all_3_v1_v1_2_qwen_hf.py",
+      "reason": "Probe específico Qwen/Hugging Face, fuera del flujo canónico actual basado en Gemini."
+    },
+    {
+      "source": "tests/output/adaptive_reconstruction_v1",
+      "destination": "REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/tests/output/adaptive_reconstruction_v1",
+      "reason": "Salida de prueba/probe anterior o sustituida; no es resultado operativo vigente."
+    },
+    {
+      "source": "tests/output/quantia_spatial_v1_call2_v2",
+      "destination": "REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/tests/output/quantia_spatial_v1_call2_v2",
+      "reason": "Salida de prueba/probe anterior o sustituida; no es resultado operativo vigente."
+    },
+    {
+      "source": "tests/output/call2_qwen_hf_interface04_geometry_v1",
+      "destination": "REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/tests/output/call2_qwen_hf_interface04_geometry_v1",
+      "reason": "Salida de prueba/probe anterior o sustituida; no es resultado operativo vigente."
+    },
+    {
+      "source": "tests/output/call2_interface04/groq",
+      "destination": "REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/tests/output/call2_interface04/groq",
+      "reason": "Ejecución de proveedor/no-live previa; se conserva como referencia, no como baseline actual."
+    },
+    {
+      "source": "tests/output/call2_interface04/offline",
+      "destination": "REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/tests/output/call2_interface04/offline",
+      "reason": "Ejecución de proveedor/no-live previa; se conserva como referencia, no como baseline actual."
+    },
+    {
+      "source": "tests/output/call2_interface04/gemini.zip",
+      "destination": "REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/tests/output/call2_interface04/gemini.zip",
+      "reason": "ZIP duplicado del resultado Gemini ya presente como directorio expandido."
+    }
+  ]
+}

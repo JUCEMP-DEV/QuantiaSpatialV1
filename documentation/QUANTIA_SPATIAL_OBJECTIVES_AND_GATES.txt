@@ -1,0 +1,44 @@
+QUANTIA SPATIAL — OBJECTIVES AND GATES
+Fecha: 2026-09-18
+
+OBJETIVO FINAL
+Reconstruir el plano arquitectónico con alta fidelidad y trazabilidad para publicar un modelo editable y utilizable por fases posteriores de Quantia.
+
+OBJETIVO ACTUAL
+Cerrar el WallGraph físico/lógico de muros antes de definir el contrato final hacia F04.
+
+FUENTE DE VERDAD VISUAL
+- LevelView.raster_bytes es un recorte DIRECTO del raster fuente de página.
+- LevelViewBuilder NO reescala, NO limpia y NO interpreta el recorte.
+- source_bbox_px + transform conservan correspondencia exacta con la página fuente.
+
+FLUJO ACTUAL
+F01/F01.5 -> Adaptive Reconstruction -> PostFilter V4 -> Walls-only -> Call 2 V2 -> DeltaValidator -> CorrectionApplier -> WallGraph corregido.
+
+CALL 2 V2
+Objetivo primario:
+- comparar plano fuente real vs WallGraph walls-only;
+- publicar SOLO correcciones/deltas necesarias;
+- no reconstruir desde cero;
+- no repetir muros correctos.
+
+Objetivo secundario:
+- publicar candidatos visualmente claros de elementos no-muro relevantes para la siguiente capa/F04;
+- NO cerrar aún clasificación/dimensionamiento final de F04.
+
+PRIORIDAD DE EVIDENCIA CALL 2
+1. Plano fuente real del LevelView.
+2. Evidencia geométrica visible.
+3. WallGraph V4 actual.
+4. Metadatos previos de filtros (solo auxiliares, nunca verdad).
+
+GATE DE CIERRE CALL 2
+- WallGraph final visualmente coherente con el plano fuente.
+- Deltas validados determinísticamente.
+- Sin cierre sólido de openings visibles.
+- Elementos no-muro conservados como candidatos, no eliminados.
+- Persistencia de prompt, schema, input visual, hashes, respuesta raw/normalizada y modelo.
+
+NO CONFUNDIR
+- PASSED de pytest = transporte/contratos/ejecución técnica correcta.
+- Cierre de fase = resultado visual/semántico validado contra la fuente real.

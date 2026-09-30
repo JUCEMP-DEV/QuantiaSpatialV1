@@ -1,0 +1,39 @@
+Canonical WallGraph Integrity V2 - 2026-09-26
+
+Adaptive Reconstruction y PostFilter V4: baseline conservado, verificado por SHA256.
+F03, Mask/Topology y seleccion geometrica: sin modificaciones.
+Salida operativa: QuantiaSpatialV1ProcessResult.final_wall_graph.
+post_filter.filtered_wall_graph sigue siendo el resultado intermedio historico.
+
+CAMBIOS
+- Gate efectivo: rechaza integridad invalida, IDs repetidos, centerlines exactamente
+  duplicadas (tambien invertidas), segmentos degenerados y coordenadas no finitas.
+- Valida particion de decisiones, buckets completos, preservacion de muros excluidos
+  y mappings de fuentes WALL a las salidas canonicas.
+- Source mapping final independiente del mapping historico PostFilter.
+  REMOVE/MERGE/SPLIT/ADD conservan ancestry y actualizan cobertura de seeds.
+  Las correcciones aceptadas quedan incluidas en el bundle; ADD tiene ancestry vacia.
+- Mascaras serializadas de forma reversible con zlib+base64, dtype, shape y SHA256.
+  Junctions y component_report conservan contenido, ademas de hashes.
+- Regresion integral offline: bloquea sockets, Call 2 OFF; falla si faltan entradas.
+  Compara seis resultados contra la geometria V4 previamente guardada y verifica
+  evidencia/candidatos/contexto/buckets exportados. No reemplaza resultados anteriores.
+
+VALIDACION
+27 pruebas sinteticas/contratos aprobadas.
+3 casos integrales / 6 LevelViews aprobados, cero referencias de gap invalidas.
+Geometria V4 preservada exactamente: IDs, extremos y espesores.
+Ver LOCAL_VALIDATION_CANONICAL_WALLGRAPH_INTEGRITY_V2.json para conteos y hashes.
+
+LIMITES
+La ausencia de centerlines exactamente duplicadas y la conservacion del baseline
+no prueban correspondencia perfecta con todos los muros fisicos del plano.
+La consistencia del grafo no prueba completitud de habitaciones.
+Los conteos de espacios/review de los seis niveles quedan registrados en el informe.
+Este cambio mantiene el orquestador existente; no agrega una ruta HTTP ni ejecuta
+proveedores multimodales. Call 2 se verifica con correcciones sinteticas.
+
+CHECKPOINTS
+documentation/checkpoints/pre_integrity_v2_*/source.zip: estado anterior a estos cambios.
+documentation/checkpoints/canonical_integrity_v2_*/source.zip: estado validado.
+Cada paquete incluye manifest.json externo y source.sha256.
