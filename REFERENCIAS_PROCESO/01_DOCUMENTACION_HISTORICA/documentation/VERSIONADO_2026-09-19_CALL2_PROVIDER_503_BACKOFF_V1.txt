@@ -1,0 +1,25 @@
+QUANTIA SPATIAL V1 — CALL2 PROVIDER 503 BACKOFF V1
+Fecha: 2026-09-19
+
+OBJETIVO
+Corregir exclusivamente la resiliencia del provider Gemini ante HTTP 503/429 durante Call 2.
+No modifica Adaptive Reconstruction, PostFilter V4, prompt Call2 V2, schema, DeltaValidator ni CorrectionApplier.
+
+CAUSA RAIZ
+_generate_once ya reintentaba errores transitorios, pero cuando un 503 no incluia Retry-After/retryDelay usaba backoff rapido 1s/2s. En picos de alta demanda ese intervalo es insuficiente y ambos modelos agotaban intentos casi inmediatamente.
+
+CAMBIO
+- MAX_ATTEMPTS_PER_MODEL por defecto: 4 (configurable con QUANTIA_GEMINI_MAX_ATTEMPTS_PER_MODEL).
+- HTTP 503 sin retry oficial: esperas 15s, 30s y 60s antes de agotar el modelo.
+- QUANTIA_GEMINI_503_DELAYS permite sustituir la secuencia, ej. 20,45,90.
+- HTTP 429 conserva prioridad de Retry-After / google.rpc.RetryInfo / "Please retry in Xs" + 1s de margen.
+- Replay exacto Call 2 existente se conserva sin cambios.
+
+VALIDACION AISLADA
+- py_compile provider: PASS.
+- MAX_ATTEMPTS_PER_MODEL=4.
+- 503 sin retry info -> [15.0, 30.0, 60.0] s.
+- 429 con "Please retry in 28.984056984s" -> 29.984056984 s.
+
+PUNTO DE RETORNO
+quantia_spatialV1_Call2_WallReview_V2_1_QuotaSafe.zip

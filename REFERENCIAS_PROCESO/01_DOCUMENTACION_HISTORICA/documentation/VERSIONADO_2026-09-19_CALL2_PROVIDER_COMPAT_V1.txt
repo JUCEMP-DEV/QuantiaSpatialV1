@@ -1,0 +1,29 @@
+QUANTIA SPATIAL V1 — CALL2 PROVIDER COMPAT V1
+Fecha: 2026-09-19
+
+PUNTO DE RETORNO
+quantia_spatialV1_Call2_WallReview_V2_2_503Backoff.zip
+
+OBJETIVO
+Verificar compatibilidad técnica de proveedores alternativos antes de comparar razonamiento arquitectónico o ejecutar los 3 casos.
+
+IMPLEMENTADO
+- Provider Groq/Qwen: qwen/qwen3.8-27b.
+- Provider Mistral: mistral-medium-3-5.
+- Adaptador de CALL2_SCHEMA a JSON Schema estricto común.
+- Groq strict: todos los campos required, objetos cerrados, opcionales nullable.
+- Selección de proveedor por QUANTIA_CALL2_PROVIDER.
+- Selección de un único caso/nivel por QUANTIA_CALL2_CASE y QUANTIA_CALL2_LEVEL.
+- Smoke test imagen + schema mínimo.
+- Full Call2 test para un solo LevelView.
+- Model availability check antes de consumir completion.
+- No se modificó Adaptive Reconstruction, PostFilter V4, prompt Call2 V2, DeltaValidator ni CorrectionApplier.
+
+MODELOS INICIALES
+- groq: qwen/qwen3.8-27b
+- mistral: mistral-medium-3-5
+
+VALIDACION LOCAL
+- compileall: PASS
+- schema/provider request synthetic: 3 PASSED
+- llamadas reales: NO ejecutadas en este entorno.

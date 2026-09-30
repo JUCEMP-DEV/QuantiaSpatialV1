@@ -1,0 +1,23 @@
+{
+  "version": "CANONICAL_METRIC_RASTER_V2.3",
+  "date": "2026-09-11T14:02:00-06:00",
+  "compileall": "PASS",
+  "pytest": {
+    "files": [
+      "tests/test_quantia_spatial_scale_foundation_v1_4_synthetic.py",
+      "tests/test_quantia_spatial_context_classification_v6_2_synthetic.py"
+    ],
+    "result": "32 PASSED"
+  },
+  "generic_axis_label_crosscheck": {
+    "before_behavior": "wrong unlabeled affine family could govern scale",
+    "after_behavior": "explicit A/B/C labels invalidate wrong affine fit and resolve axis-referenced scale",
+    "result": "PASS"
+  },
+  "generic_projection_vs_axis_span": {
+    "before_behavior": "orthogonal geometry conflict blocked scale",
+    "after_behavior": "axis-referenced perimeter-relative graphic stays diagnostic; orientation with independent consensus resolves while self-conflicted orientation remains warning",
+    "result": "PASS"
+  },
+  "real_case_status": "PENDING USER RUN — test_quantia_spatial_f03_flow_all_3_v1.py remains unchanged"
+}

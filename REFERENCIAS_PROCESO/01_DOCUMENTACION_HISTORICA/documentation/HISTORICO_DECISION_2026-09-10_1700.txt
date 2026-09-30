@@ -1,0 +1,25 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-10 17:00 -06:00
+
+DECISIÓN
+Congelar temporalmente las observaciones de Context Classification V6.2 y no continuar ajustando baldosas/escaleras hasta resolver dos fundamentos: escala métrica y política de rasterización.
+
+CAUSA
+Los tres casos seguían reportando ProjectScaleContext UNRESOLVED. El factor 0.7935 era un baseline histórico de Miguel H y no una política universal. La clasificación estaba comparando elementos sobre densidades arquitectónicas distintas.
+
+IMPLEMENTACIÓN
+1. ScaleEvidenceResolver V1.
+2. ProjectScaleReconciler V1.
+3. RasterDensityPolicy V1.
+4. La misma llamada F01 de localización puede transcribir escala visible por nivel mediante campos opcionales `escala_declarada` y `confianza_escala`; no se agrega una llamada nueva.
+5. El resolver también puede cerrar escala desde cadenas de cotas ya persistidas por F01.5 y su ajuste geométrico de ejes.
+
+DENSIDAD OBJETIVO INICIAL DE PRUEBA
+90 px/m para geometría.
+Equivalencias teóricas sin hardcode por caso:
+- 1:25 -> render_scale 0.79375
+- 1:30 -> render_scale 0.95250
+- 1:50 -> render_scale 1.58750
+
+PUNTO DE RETORNO
+Context Classification V6.2 sin cambios de clasificación/solver.

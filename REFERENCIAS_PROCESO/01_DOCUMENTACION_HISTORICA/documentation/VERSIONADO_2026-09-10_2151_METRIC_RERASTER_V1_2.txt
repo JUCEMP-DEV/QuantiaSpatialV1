@@ -1,0 +1,31 @@
+QUANTIA V2L — METRIC RERASTER V1.2 / SCALE FOUNDATION V1.5
+Fecha: 2026-09-10 21:51 -06:00
+
+BASE
+- Scale Foundation V1.4
+- Context Classification V6.2
+- Metric Reraster V1.1
+
+CAUSAS RAIZ AISLADAS TRAS LA CORRIDA REAL
+1. El F02 congelado puede conservar un level_view_id de una ejecución anterior aunque la geometría esté en el mismo marco raster. La prueba V1.1 no re-vinculaba la copia adaptada al LevelView destino y ScaleEvidenceResolver rechazaba el contrato.
+2. GeneralDimensionGraphicSpan V1 asumía que una cota general exterior llegaba como un solo VECTOR_LINE/RASTER_LINE largo. En PDF/CAD puede llegar partida por ticks, extensiones o exportación.
+3. ScaleEvidenceResolver ponderaba clusters por suma de candidatos. Muchos DIMENSION_RESOLVED_AXIS_SPAN correlacionados podían sobreponderar una cadena de ejes frente a dos cotas GENERAL gráficas ortogonales e independientes.
+
+CAMBIOS V1.2 / V1.5
+- Test Metric Reraster: la copia del F02 congelado conserva geometría/ids/topología pero se re-vincula al level_view_id de la ejecución destino antes de Scale/Reconstruction.
+- GeneralDimensionGraphicSpan V2: une segmentos H/V casi colineales y contiguos con huecos pequeños; no inventa endpoints y solo usa geometría observada.
+- ScaleEvidenceResolver V1.5: si no existe F02_METRIC, un consenso gráfico GENERAL H+V convergente prevalece sobre cantidad de candidatos derivados correlacionados.
+- F02_METRIC mantiene prioridad y sigue siendo conflicto bloqueante si contradice el cierre.
+- Diagnóstico de fallo de la prueba ahora imprime candidatos/métodos/valores si Scale Foundation no cierra.
+
+NO MODIFICADO
+- F01
+- F01.5 semántica (se conserva V1.4)
+- F02 canónico
+- Context Classification V6.2
+- CandidateGraph / GlobalTopologySolver
+- Reglas de muro
+- Gemini: 0 llamadas nuevas
+
+OBJETIVO DE LA CORRIDA
+Aislar únicamente el efecto de rerasterizar a ~90 px/m con F02 geométricamente inmutable y Scale Foundation cerrada.

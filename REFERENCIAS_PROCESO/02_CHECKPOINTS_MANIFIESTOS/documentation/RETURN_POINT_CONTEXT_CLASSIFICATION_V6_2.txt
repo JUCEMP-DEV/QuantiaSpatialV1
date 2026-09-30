@@ -1,0 +1,12 @@
+PUNTO DE RETORNO — ANTES DE CONTEXT CLASSIFICATION V6.2
+Fecha: 2026-09-10
+
+Archivo base:
+QUANTIA_V2L_CONTEXT_CLASSIFICATION_V6_1_2026-09-10.zip
+
+SHA256:
+04069baefe0ec778c2bc2a88e725252d722b15aab44a317b7dfc988b5e415398
+
+Motivo:
+V6.1 es la última versión previa a SurfacePatternDetector + StructuralLineage.
+Si V6.2 degrada Miguel H, Miguel V o Casa Viri, volver exactamente a este ZIP.

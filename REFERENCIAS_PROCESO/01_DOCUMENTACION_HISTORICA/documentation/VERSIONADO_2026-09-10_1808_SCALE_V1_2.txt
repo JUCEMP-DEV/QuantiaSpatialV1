@@ -1,0 +1,25 @@
+QUANTIA V2L — VERSIONADO
+2026-09-10 18:08 -06:00
+
+V6.2 Context Classification: congelada.
+Scale Foundation V1.1: punto de retorno.
+Scale Foundation V1.2: versión activa para validación.
+
+ARCHIVOS MODIFICADOS
+- phase_015_evidence/gemini_semantic_extractor.py
+- phase_015_evidence/gemini_evidence_adapter.py
+- tests/test_quantia_spatial_scale_foundation_v1_2_synthetic.py
+- tests/test_quantia_spatial_scale_foundation_v1_2_standardized.py
+- documentation/CURRENT_VERSION.txt
+- documentation/CURRENT_STATE.txt
+- documentation/STRUCTURE_TREE.txt
+- documentation/TEST_PLAN.txt
+
+ARCHIVOS RETIRADOS DEL ÁRBOL ACTIVO Y ARCHIVADOS
+- tests/test_quantia_spatial_scale_foundation_v1_1_synthetic.py
+- tests/test_quantia_spatial_scale_foundation_v1_1_standardized.py
+Destino: documentation/history/tests/SCALE_FOUNDATION_V1_1/
+
+PUNTO DE RETORNO
+QUANTIA_V2L_SCALE_FOUNDATION_V1_1_2026-09-10.zip
+SHA256 71115f1fc46a43f8e62e28d42a76ac031c88499e3ea5c0c987393dd180f0255e

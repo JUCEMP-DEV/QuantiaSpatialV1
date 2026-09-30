@@ -1,0 +1,32 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN SCALE FOUNDATION V1.2
+Fecha: 2026-09-10 18:08 -06:00
+
+EVIDENCIA DECISIVA
+Scale Foundation V1.1 funcionó en Casa Viri y Miguel H, pero Miguel V continuó con:
+- declared_scale_denominators=[];
+- candidates=[];
+- selected_m_per_px=null;
+- axis_fit_state=RESOLVED.
+
+REVISIÓN DEL REPLAY
+Miguel V sí contiene cotas y ejes suficientes:
+- Planta Baja: 19 cotas, 17 ejes después de asociar el único nivel.
+- Planta Alta: 28 cotas, 24 ejes después de asociar el único nivel.
+El problema era de asociación del nivel, no ausencia de información geométrica.
+
+CAUSA RAÍZ
+GeminiSemanticExtractor._select_level() solo aceptaba coincidencia exacta de nombre.
+Los LevelViews impuestos por el caso son "Planta Baja" y "Planta Alta".
+Los replays legacy devuelven "Nivel Planta" y "Planta Nivel (Superior / Planta Alta)".
+Al no coincidir, se omitían _append_dimensions(), _append_axes(), _append_spaces() y _append_stairs().
+
+DECISIÓN
+No hacer matching difuso general por nombre.
+Aplicar únicamente un fallback determinista cuando:
+1. el adapter conoce exactamente un LevelView para la página;
+2. Gemini devuelve exactamente un nivel válido;
+3. no hubo coincidencia exacta previa.
+En páginas multinivel el fallback queda deshabilitado.
+
+PUNTO DE RETORNO
+Scale Foundation V1.1, SHA256 71115f1fc46a43f8e62e28d42a76ac031c88499e3ea5c0c987393dd180f0255e.

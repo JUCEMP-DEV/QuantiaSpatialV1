@@ -1,0 +1,61 @@
+QUANTIA V2L — A1.2 PATTERN CONTEXT V3
+Fecha: 2026-09-09
+Estado: RAMA DE VALIDACIÓN; NO PROMOVIDA
+
+OBJETIVO
+Corregir la clasificación/selección global partiendo de Proposal C A1.2.
+No se modifica F01, F01.5, F02, engine.py ni F03 R4.
+No hay reglas por Casa Viri/Miguel H/Miguel V.
+
+CAUSA RAÍZ
+V2 intentaba demostrar "wall-like" reutilizando pair_overlap, thickness_support,
+region_support y source_consensus: las mismas señales locales que originaron el
+candidato. Eso produce confirmación circular y protege escaleras/retículas.
+
+CAMBIOS
+1. reconstruction_core/candidate_exclusion_policy.py
+   - V2 hard-gate eliminado.
+   - Patrón repetitivo = prior negativo (log-odds), nunca borrado previo al grafo.
+   - Se recupera detección de familias de 3 tracks con firma fuerte.
+   - Se añade separación/espesor para no confundir alternativas cercanas del
+     mismo muro con una familia repetitiva.
+   - Trazabilidad completa en metadata.
+
+2. reconstruction_core/wall_candidate_generator.py
+   - Eliminados ambos cortes duros [:180].
+   - OPENCV + LSD_LOCAL + REGION_LOCAL = UNA modalidad raster.
+   - PYMUPDF = modalidad vectorial; GEMINI = modalidad semántica.
+   - Raster + vector ya constituye consenso geométrico fuerte.
+   - Familias de espesor ponderadas por longitud solapada y modalidad física;
+     una retícula de muchos trazos cortos ya no obtiene un voto por línea igual
+     al de una banda larga y multi-modal.
+   - La geometría generada sigue siendo hipótesis: no decide muro final.
+
+3. reconstruction_core/global_topology_solver.py
+   - Prior repetitivo se resta en la misma escala log-odds del solver.
+   - Ejes/semántica externa solo pueden aliviar parcialmente la penalización.
+   - JUNCTION/CONTINUATION: máximo dos apoyos por candidato.
+   - topology_degree saturado en 2 para impedir recompensa por densidad.
+
+4. reconstruction_core/topology_analyzer.py
+   - Celdas estrechas de escaleras/retículas no obtienen room bonus.
+   - Espacio significativo exige área mínima + ancho mínimo relativo al espesor.
+
+NO CAMBIA
+F01, F01.5, F02, engine.py, F03 R4, parametric_model.
+
+PRUEBAS EJECUTADAS EN ENTORNO DE AUDITORÍA
+- test_candidate_pattern_context_v3.py: 6 PASSED.
+- test_quantia_spatial_proposal_c_synthetic.py existente: 2 PASSED.
+- py_compile de los archivos del patch: PASSED.
+
+LIMITACIÓN DE VALIDACIÓN
+Casa Viri no puede ejecutarse aquí porque case.json conserva una ruta Windows
+local al PDF. Se incluye la prueba integral para ejecutarla en tu repo.
+
+PRUEBA LOCAL PRINCIPAL
+pytest app/quantia_spatial/tests/test_quantia_spatial_candidate_pattern_context_v3_casa_viri.py -s -v
+
+REGRESIÓN OBLIGATORIA
+Casa Viri -> Miguel H -> Miguel V.
+No promover V3 hasta completar las tres.

@@ -1,0 +1,498 @@
+{
+  "level_view_id": "LEVEL_VIEW_f6e9f0082de5abaa",
+  "accepted_review": {
+    "level_view_id": "LEVEL_VIEW_f6e9f0082de5abaa",
+    "graph_state": "PARTIAL",
+    "deltas": [
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_093",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace edge and glazing line, not a solid wall"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_092",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace floor edge line"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "CW_003_7d95fb039348",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace outer slab edge"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "CW_008_953893c38498",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace outer boundary line"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "CW_005_ba0df4d211d2",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.9,
+        "reason": "Glazing/window area, not a solid wall"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "CF_001_5c973a6def77",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall representation"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "CB_003_5c83ea29398c",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate stair enclosure wall"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_040",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_052",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_031",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_079",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_042",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Dimension graphic line"
+      },
+      {
+        "action": "TRIM_WALL",
+        "wall_id": "PW_087",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": "END",
+        "new_point_px": [
+          949.5,
+          1177.0
+        ],
+        "role_hint": null,
+        "confidence": 0.9,
+        "reason": "Trim wall at building envelope bottom limit"
+      },
+      {
+        "action": "ADD_WALL",
+        "wall_id": null,
+        "wall_ids": [],
+        "start_px": [
+          1210.0,
+          958.0
+        ],
+        "end_px": [
+          1394.0,
+          958.0
+        ],
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": "DIVIDER",
+        "confidence": 0.9,
+        "reason": "Stair enclosure top horizontal wall"
+      }
+    ],
+    "gap_decisions": [],
+    "non_wall_architectural_regions": [
+      {
+        "bbox_px": [
+          1090.0,
+          960.0,
+          1210.0,
+          1170.0
+        ],
+        "family_hint": "STAIR",
+        "confidence": 0.95,
+        "reason": "Internal circulation stairs"
+      },
+      {
+        "bbox_px": [
+          1323.0,
+          1170.0,
+          1686.0,
+          1184.0
+        ],
+        "family_hint": "FLOOR_TO_CEILING_GLAZING",
+        "confidence": 0.9,
+        "reason": "Sliding glass doors on terrace side"
+      },
+      {
+        "bbox_px": [
+          1393.0,
+          528.0,
+          1654.0,
+          553.0
+        ],
+        "family_hint": "WINDOW",
+        "confidence": 0.9,
+        "reason": "Window opening on recessed top facade"
+      }
+    ],
+    "unresolved_regions": [],
+    "summary": "Removed redundant/duplicate wall entities and non-wall terrace/slab boundaries. Trimmed wall overruns and added the missing horizontal divider of the stair enclosure."
+  },
+  "delta_items": [
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_093",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace edge and glazing line, not a solid wall"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_092",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace floor edge line"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "CW_003_7d95fb039348",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace outer slab edge"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "CW_008_953893c38498",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Terrace outer boundary line"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "CW_005_ba0df4d211d2",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.9,
+        "reason": "Glazing/window area, not a solid wall"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "CF_001_5c973a6def77",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall representation"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "CB_003_5c83ea29398c",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate stair enclosure wall"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_040",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_052",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_031",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_079",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Duplicate wall segment"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "REMOVE_WALL",
+        "wall_id": "PW_042",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": null,
+        "confidence": 0.95,
+        "reason": "Dimension graphic line"
+      },
+      "accepted": true,
+      "reason": "valid_remove"
+    },
+    {
+      "delta": {
+        "action": "TRIM_WALL",
+        "wall_id": "PW_087",
+        "wall_ids": [],
+        "start_px": null,
+        "end_px": null,
+        "endpoint": "END",
+        "new_point_px": [
+          949.5,
+          1177.0
+        ],
+        "role_hint": null,
+        "confidence": 0.9,
+        "reason": "Trim wall at building envelope bottom limit"
+      },
+      "accepted": true,
+      "reason": "valid_endpoint_edit"
+    },
+    {
+      "delta": {
+        "action": "ADD_WALL",
+        "wall_id": null,
+        "wall_ids": [],
+        "start_px": [
+          1210.0,
+          958.0
+        ],
+        "end_px": [
+          1394.0,
+          958.0
+        ],
+        "endpoint": null,
+        "new_point_px": null,
+        "role_hint": "DIVIDER",
+        "confidence": 0.9,
+        "reason": "Stair enclosure top horizontal wall"
+      },
+      "accepted": true,
+      "reason": "valid_add"
+    }
+  ],
+  "gap_items": [],
+  "accepted_architectural_regions": [
+    {
+      "bbox_px": [
+        1090.0,
+        960.0,
+        1210.0,
+        1170.0
+      ],
+      "family_hint": "STAIR",
+      "confidence": 0.95,
+      "reason": "Internal circulation stairs"
+    },
+    {
+      "bbox_px": [
+        1323.0,
+        1170.0,
+        1686.0,
+        1184.0
+      ],
+      "family_hint": "FLOOR_TO_CEILING_GLAZING",
+      "confidence": 0.9,
+      "reason": "Sliding glass doors on terrace side"
+    },
+    {
+      "bbox_px": [
+        1393.0,
+        528.0,
+        1654.0,
+        553.0
+      ],
+      "family_hint": "WINDOW",
+      "confidence": 0.9,
+      "reason": "Window opening on recessed top facade"
+    }
+  ],
+  "rejected_architectural_regions": [],
+  "accepted_unresolved_regions": [],
+  "rejected_unresolved_regions": []
+}

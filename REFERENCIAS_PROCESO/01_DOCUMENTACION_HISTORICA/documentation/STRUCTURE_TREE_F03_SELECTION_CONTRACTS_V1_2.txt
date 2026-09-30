@@ -1,0 +1,19 @@
+quantia_spatial/
+├── reconstruction_core/
+│   ├── reconstruction_pipeline.py      [MOD V1.2: physical parameter model]
+│   ├── candidate_context_gate.py       [MOD V1.2: pattern-pair / true boundary]
+│   ├── global_topology_solver.py       [MOD V1.2: physical penalty + full beam topology]
+│   ├── candidate_graph.py              [MOD V1.2: metric relation tolerances]
+│   └── ...                             [SIN CAMBIOS]
+├── tests/
+│   ├── test_quantia_spatial_f03_selection_all_3_v1.py [CONGELADA]
+│   ├── test_quantia_spatial_f03_selection_contracts_v1_2_synthetic.py [NUEVA]
+│   └── ...
+└── documentation/
+    ├── CURRENT_VERSION.txt
+    ├── CURRENT_STATE.txt
+    ├── RETURN_POINT_F03_SELECTION_CONTRACTS_V1_1.txt
+    ├── VERSIONADO_2026-09-11_1852_F03_SELECTION_CONTRACTS_V1_2.txt
+    ├── HISTORICO_DECISION_2026-09-11_1852_F03_SELECTION_CONTRACTS_V1_2.txt
+    ├── LOCAL_VALIDATION_F03_SELECTION_CONTRACTS_V1_2.json
+    └── SHA256_MANIFEST_F03_SELECTION_CONTRACTS_V1_2.txt

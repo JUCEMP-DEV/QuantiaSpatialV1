@@ -1,0 +1,9 @@
+PUNTO DE RETORNO PREVIO A CANONICAL METRIC RASTER V2
+
+Versión: CANONICAL METRIC RASTER V1
+Archivo: QUANTIA_V2L_CANONICAL_METRIC_RASTER_V1_2026-09-10.zip
+SHA256: f9cfc50f991c7b9d10b78cb67f4a96f49f9bc3723d095ef3e66c3a385354ac19
+
+Motivo del nuevo cambio:
+- Casa Viri llegaba a F03 con escala UNRESOLVED aunque el raster final estaba normalizado.
+- Miguel H perdía F02 Planta Alta porque engine reconstruía F02 después del reraster.

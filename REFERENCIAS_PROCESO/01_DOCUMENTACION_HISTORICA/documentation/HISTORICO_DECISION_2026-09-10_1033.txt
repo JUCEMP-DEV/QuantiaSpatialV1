@@ -1,0 +1,20 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha/hora de referencia: 2026-09-10 10:33 -06:00
+
+DECISIÓN
+No seguir tratando todas las zonas sospechosas como una única repetición geométrica.
+Se crea Context Classification V6 para clasificar el tipo de región antes del solver.
+
+MOTIVO
+Los tres casos muestran mejora global, pero Casa Viri PB conserva falsos muros dentro
+de una retícula/módulos rectangulares. V5 detecta paralelismo y retículas largas, pero
+no modela suficientemente bien celdas rectangulares independientes ni separa función
+gráfica (acabado, hatch, eje, cota, etc.).
+
+REGLA DE ESTANDARIZACIÓN
+No se permiten coordenadas, nombres de casos, tamaños específicos de Viri/Miguel ni
+umbrales derivados de una sola planta. Todos los parámetros son relativos al LevelView,
+al tamaño de la propia familia o a propiedades gráficas observables.
+
+PUNTO DE RETORNO
+quantia_spatial(6).zip + Solver Evidence V1, hashes documentados en CURRENT_VERSION.txt.

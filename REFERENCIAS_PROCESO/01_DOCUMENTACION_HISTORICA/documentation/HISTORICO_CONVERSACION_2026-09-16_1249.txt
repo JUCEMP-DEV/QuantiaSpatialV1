@@ -1,0 +1,12 @@
+QUANTIA V2L — HISTÓRICO DE CONVERSACIÓN / DECISIONES
+Corte: 2026-09-16 12:49 -06:00
+
+1. Architectural Core Visual Probe consolidó el estado funcional: Spatial genera muros utilizables, pero las puertas permanecen en cero y ventanas son parciales.
+2. Se investigó reconstrucción estructurada global: WallGraph + Opening + Room-first + ReconciliationEngine quedó fijado como baseline arquitectónico.
+3. Se evaluó la línea FloorplanVLM/Qwen2.5-VL-3B mediante checkpoints públicos SFT/GRPO en Colab.
+4. Los checkpoints mostraron capacidad semántica temprana para Wall -> Opening -> Door/Window, pero degeneraron en generación repetitiva y JSON incompleto; no son aptos como reemplazo geométrico de Quantia.
+5. Se decidió rescatar la representación y la lógica conceptual, no los pesos/checkpoints restringidos.
+6. Se definió Architectural RAG propio con ejemplos validados y relación obligatoria opening -> host_wall.
+7. Decisión decisiva: separar Spatial Geometry Core y Architectural Elements Mini-Engine; unir únicamente por Reconciliation/Openings.
+8. Architectural Elements Mini-Engine V1 fue creado con alcance DOOR/WINDOW/NOT_OPENING, RAG local propio, host matching, resolver opcional y publicación segura sin mutar muros.
+9. Próximo hito: probe real en Casa Viri, Miguel H y Miguel V antes de ampliar a escaleras u otros elementos.

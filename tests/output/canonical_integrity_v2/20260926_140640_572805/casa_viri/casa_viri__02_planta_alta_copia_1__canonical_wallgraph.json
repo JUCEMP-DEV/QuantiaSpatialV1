@@ -1,0 +1,3283 @@
+{
+  "level_view_id": "LEVEL_VIEW_3c23bad8be43edae",
+  "level_name": "02 Planta Alta Copia 1",
+  "image_size_px": [
+    1452,
+    1561
+  ],
+  "px_per_m": 90.01381064290936,
+  "walls": [
+    {
+      "id": "CF_005_f4153a2a04e6",
+      "start_px": [
+        1223.6490936279297,
+        912.0625
+      ],
+      "end_px": [
+        1223.6490936279297,
+        1055.1875
+      ],
+      "thickness_px": 19.0,
+      "role": "REVIEW",
+      "confidence": 0.7999036854172206,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__70f9a996f6b8aa20",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__c65c2559e98a7cca"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_76db21c57fbf42e0",
+        "PYMUPDF_LINE_00320a58f9fe02ea",
+        "PYMUPDF_LINE_35bcb224344880e5",
+        "PYMUPDF_LINE_640651a87bb1a14a",
+        "PYMUPDF_LINE_93905e5e322c20a0",
+        "PYMUPDF_LINE_af0c5c0c11d248e4",
+        "PYMUPDF_LINE_e3ca2508ba6ef97a",
+        "PYMUPDF_LINE_f05e3ab21def9bf1",
+        "PYMUPDF_LINE_fc7a6d89f4ef3ddd"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_019",
+          "PW_024"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "parallel_wall_faces_to_centerline",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              0,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "CW_002_ed740c7c96e4",
+      "start_px": [
+        262.0,
+        917.5
+      ],
+      "end_px": [
+        1412.0,
+        917.5
+      ],
+      "thickness_px": 23.68995634437305,
+      "role": "REVIEW",
+      "confidence": 0.7957595323562603,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__5ee0896d66efea82",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__94aebcfcce00b543",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__bdb9188d304eaf26"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_c615af49520d3a7d",
+        "PYMUPDF_LINE_022bc79e46b98778",
+        "PYMUPDF_LINE_12cdcee08296efd6",
+        "PYMUPDF_LINE_23b27c76bf98587c",
+        "PYMUPDF_LINE_26a786411fb49d16",
+        "PYMUPDF_LINE_33769a0313eac73b",
+        "PYMUPDF_LINE_382ad74fe54b2721",
+        "PYMUPDF_LINE_455061471eccdca2",
+        "PYMUPDF_LINE_51465b5525de3670",
+        "PYMUPDF_LINE_6ab428295fb08673",
+        "PYMUPDF_LINE_6df167fd157ef038",
+        "PYMUPDF_LINE_6fe064b1bbb48245",
+        "PYMUPDF_LINE_704aaf6ef7d0fcae",
+        "PYMUPDF_LINE_81cfed939c989819",
+        "PYMUPDF_LINE_8948b8bb5421c789",
+        "PYMUPDF_LINE_92f6ef5d32a064c5",
+        "PYMUPDF_LINE_af7b4389532940c2",
+        "PYMUPDF_LINE_af9c3b82983f4b43",
+        "PYMUPDF_LINE_b65be8bb649eea48",
+        "PYMUPDF_LINE_bd6ae179217426dd",
+        "PYMUPDF_LINE_c218c7a3590e8cc1",
+        "PYMUPDF_LINE_c5ea2560e7dbc1b9",
+        "PYMUPDF_LINE_d6290ea7b4b208fc",
+        "PYMUPDF_LINE_ddc8854fabf129c4"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_020",
+          "PW_021",
+          "PW_025"
+        ],
+        "hypothesis_count": 3,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 1,
+            "divider_votes": 0,
+            "review_votes": 4,
+            "left_labels": [
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 1,
+        "divider_votes": 0,
+        "review_votes": 4,
+        "left_labels": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "CB_001_ec06231b21eb",
+      "start_px": [
+        900.8835983276367,
+        921.0
+      ],
+      "end_px": [
+        900.8835983276368,
+        1074.0
+      ],
+      "thickness_px": 9.435003512544096,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__2edc895984ec02c3",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__3e0a2cc529441de0",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__8647b1c23d3222f1",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__92c7825f2ecb34c1"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_1d453e55587dd1f9",
+        "PYMUPDF_LINE_1f5376cd822761a0",
+        "PYMUPDF_LINE_2331c3c76b139224",
+        "PYMUPDF_LINE_38f7121ad2b4bd58",
+        "PYMUPDF_LINE_4aebb457a692504e",
+        "PYMUPDF_LINE_5265f31a0f6dd205",
+        "PYMUPDF_LINE_5c863895a1b0430b",
+        "PYMUPDF_LINE_7779030acdfc1bd7",
+        "PYMUPDF_LINE_8857a783bbab36d9",
+        "PYMUPDF_LINE_9931959900e325a4",
+        "PYMUPDF_LINE_c5e8e0e1a83f9a5e",
+        "PYMUPDF_LINE_c751f77cdc95a8fa",
+        "PYMUPDF_LINE_fa6ad9a9ee9c4517"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_006_fdcec47ba1bb",
+          "PW_028"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_022",
+              "PW_023",
+              "PW_046"
+            ],
+            "hypothesis_count": 3,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "id": "PW_026",
+      "start_px": [
+        891.0,
+        926.5
+      ],
+      "end_px": [
+        1211.0,
+        926.5
+      ],
+      "thickness_px": 13.0,
+      "role": "REVIEW",
+      "confidence": 0.8223960360725509,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__455664b26718d7ea"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_022bc79e46b98778",
+        "PYMUPDF_LINE_23b27c76bf98587c",
+        "PYMUPDF_LINE_33769a0313eac73b",
+        "PYMUPDF_LINE_382ad74fe54b2721",
+        "PYMUPDF_LINE_51465b5525de3670",
+        "PYMUPDF_LINE_6ab428295fb08673",
+        "PYMUPDF_LINE_6df167fd157ef038",
+        "PYMUPDF_LINE_6fe064b1bbb48245",
+        "PYMUPDF_LINE_704aaf6ef7d0fcae",
+        "PYMUPDF_LINE_92f6ef5d32a064c5",
+        "PYMUPDF_LINE_af9c3b82983f4b43",
+        "PYMUPDF_LINE_b65be8bb649eea48",
+        "PYMUPDF_LINE_bd6ae179217426dd",
+        "PYMUPDF_LINE_c218c7a3590e8cc1",
+        "PYMUPDF_LINE_ddc8854fabf129c4"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "right_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_027",
+      "start_px": [
+        262.0,
+        930.0
+      ],
+      "end_px": [
+        998.0,
+        930.0
+      ],
+      "thickness_px": 6.0,
+      "role": "REVIEW",
+      "confidence": 0.6714064650351603,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__208bdd6fbfb9f5d4"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_3b40e18e699e7fb7",
+        "OPENCV_LINE_9a65dcd686580910",
+        "OPENCV_LINE_bf87e928bc3ff30e",
+        "PYMUPDF_LINE_0609608e62d950e1",
+        "PYMUPDF_LINE_3af3ddab09388890",
+        "PYMUPDF_LINE_58f8372d68e16206",
+        "PYMUPDF_LINE_6ab428295fb08673",
+        "PYMUPDF_LINE_6fe064b1bbb48245",
+        "PYMUPDF_LINE_706c4bd84b21ef05",
+        "PYMUPDF_LINE_af9c3b82983f4b43",
+        "PYMUPDF_LINE_b65be8bb649eea48",
+        "PYMUPDF_LINE_bd6ae179217426dd",
+        "PYMUPDF_LINE_ddc8854fabf129c4"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "CB_002_687211f7a77d",
+      "start_px": [
+        1199.6587829589844,
+        934.3756713867188
+      ],
+      "end_px": [
+        1199.6587829589844,
+        1071.8753662109375
+      ],
+      "thickness_px": 11.37841561219869,
+      "role": "REVIEW",
+      "confidence": 0.8661029872153023,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__49a03332585cc060",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__6e900dc4d19376c3",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__8e250aac4a60f5c7"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_00320a58f9fe02ea",
+        "PYMUPDF_LINE_35bcb224344880e5",
+        "PYMUPDF_LINE_93905e5e322c20a0",
+        "PYMUPDF_LINE_af0c5c0c11d248e4",
+        "PYMUPDF_LINE_b79f716bc11b0679",
+        "PYMUPDF_LINE_e3ca2508ba6ef97a",
+        "PYMUPDF_LINE_f05e3ab21def9bf1",
+        "PYMUPDF_LINE_fc7a6d89f4ef3ddd"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_007_4e6fcca814dd",
+          "PW_043"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_029",
+              "PW_030"
+            ],
+            "hypothesis_count": 2,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "right_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "PW_041",
+      "start_px": [
+        582.2258377075193,
+        1069.7268753051756
+      ],
+      "end_px": [
+        650.9769668579099,
+        1000.9757461547849
+      ],
+      "thickness_px": 2.848366293014512,
+      "role": "REVIEW",
+      "confidence": 0.8257627486529792,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__ce06daa3e2056649"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_25d7c6dd7de191ed"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_033",
+      "start_px": [
+        1271.0,
+        1054.5
+      ],
+      "end_px": [
+        1424.0,
+        1054.5
+      ],
+      "thickness_px": 3.0,
+      "role": "REVIEW",
+      "confidence": 0.7780561185050946,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__58cb22d5bd04b830"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_1f588a9bb1aaa6be",
+        "OPENCV_LINE_9810d22f3e5e5c00",
+        "OPENCV_LINE_aa6f84d79e437420",
+        "OPENCV_LINE_fe9d2d1b3ca97825",
+        "PYMUPDF_LINE_af2cc1cea6d417e0"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "CF_002_f1067709abf8",
+      "start_px": [
+        655.5,
+        1058.897087097168
+      ],
+      "end_px": [
+        872.0,
+        1058.897087097168
+      ],
+      "thickness_px": 14.5017832802464,
+      "role": "REVIEW",
+      "confidence": 0.7991643504447759,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__59c323b2adeda318",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__61be61141dbb559d",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__f9a1f0af7d4e8623"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_be993764a9d09ff0",
+        "PYMUPDF_LINE_0e36e615d4ea7d71",
+        "PYMUPDF_LINE_29aa68160762b2ac",
+        "PYMUPDF_LINE_61b00b0544b6a148",
+        "PYMUPDF_LINE_a419ca229c4ce3c7",
+        "PYMUPDF_LINE_a61a0b0a3f800907",
+        "PYMUPDF_LINE_d5f389b1949b90e0"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_032",
+          "PW_038"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "parallel_wall_faces_to_centerline",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "CF_001_3202aaacfd8b",
+      "start_px": [
+        319.375,
+        1066.6875
+      ],
+      "end_px": [
+        441.875,
+        1066.6875
+      ],
+      "thickness_px": 10.875,
+      "role": "REVIEW",
+      "confidence": 0.8560881623009496,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__0151cfb5bd3bda06",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__10ba2b3368da12be",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__e1ebf1eff3fbdec6"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_1132e77761714223",
+        "OPENCV_LINE_3792cfd6ffadbbc4",
+        "OPENCV_LINE_3b908ffdb906ac00",
+        "OPENCV_LINE_818e499f5d37a0ba",
+        "OPENCV_LINE_ab81d88a093919d3",
+        "PYMUPDF_LINE_072b04c816229cef",
+        "PYMUPDF_LINE_13730dc857ba59ba",
+        "PYMUPDF_LINE_17d37d18dc8e10f7",
+        "PYMUPDF_LINE_1f556dca01a0746d",
+        "PYMUPDF_LINE_200b2178babebcc1",
+        "PYMUPDF_LINE_23f320c75b980b5f",
+        "PYMUPDF_LINE_253acbace27c8b0d",
+        "PYMUPDF_LINE_2548b76d82f201b9",
+        "PYMUPDF_LINE_3247e98adb90f0d6",
+        "PYMUPDF_LINE_35a5236cf0c56b00",
+        "PYMUPDF_LINE_45dae3371904ac31",
+        "PYMUPDF_LINE_4672b3217cc67d48",
+        "PYMUPDF_LINE_53a5f9cfe2a844a4",
+        "PYMUPDF_LINE_5ea3ac337f7ba6dc",
+        "PYMUPDF_LINE_647650e7cee9ebd3",
+        "PYMUPDF_LINE_653866ace871f440",
+        "PYMUPDF_LINE_698ff8d22e9aa934",
+        "PYMUPDF_LINE_6c4bbb350b3097df",
+        "PYMUPDF_LINE_72c95b368e68c9a9",
+        "PYMUPDF_LINE_762c0728a25d4292",
+        "PYMUPDF_LINE_83966d46f7d87968",
+        "PYMUPDF_LINE_87769a9c8174045a",
+        "PYMUPDF_LINE_90932d9b6d1f432a",
+        "PYMUPDF_LINE_96b6634ffed2e982",
+        "PYMUPDF_LINE_9d0251f987bae9ac",
+        "PYMUPDF_LINE_9d2ab633aefc6f21",
+        "PYMUPDF_LINE_a050fe41f131f374",
+        "PYMUPDF_LINE_a10799977904fc20",
+        "PYMUPDF_LINE_a5b18ccf4a355523",
+        "PYMUPDF_LINE_a5b4f90b5d0c2772",
+        "PYMUPDF_LINE_b0a478bbf30e8300",
+        "PYMUPDF_LINE_b19fda51f97ab301",
+        "PYMUPDF_LINE_b1c5e81bb8177bcf",
+        "PYMUPDF_LINE_b7b24b285a5a3908",
+        "PYMUPDF_LINE_bb4e552ccf50e374",
+        "PYMUPDF_LINE_bbc60e912aafa2fa",
+        "PYMUPDF_LINE_bcfc92edbf82991a",
+        "PYMUPDF_LINE_c191ce33127f3ffa",
+        "PYMUPDF_LINE_d4da8c05f18288a9",
+        "PYMUPDF_LINE_de166c6a127e48b9",
+        "PYMUPDF_LINE_df66435c1cd18e30",
+        "PYMUPDF_LINE_e49f73504ef04b97",
+        "PYMUPDF_LINE_f1a294b62d14d56d",
+        "PYMUPDF_LINE_f307f725599e3fa3",
+        "PYMUPDF_LINE_f51153c230090999",
+        "PYMUPDF_LINE_ffb846fb1ecd0d7d"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_008_cafa4b717b85",
+          "PW_035"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "parallel_wall_faces_to_centerline",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_040",
+              "PW_045"
+            ],
+            "hypothesis_count": 2,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "CF_004_47099492a153",
+      "start_px": [
+        1229.81201171875,
+        1067.4630432128906
+      ],
+      "end_px": [
+        1397.1875,
+        1067.4630432128906
+      ],
+      "thickness_px": 14.0,
+      "role": "REVIEW",
+      "confidence": 0.854706632551348,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__4ed4767be19e5cc5",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__a320e582de791f2a",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__a614ad205960accf"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "PYMUPDF_LINE_072b04c816229cef",
+        "PYMUPDF_LINE_13730dc857ba59ba",
+        "PYMUPDF_LINE_1f556dca01a0746d",
+        "PYMUPDF_LINE_200b2178babebcc1",
+        "PYMUPDF_LINE_253acbace27c8b0d",
+        "PYMUPDF_LINE_2548b76d82f201b9",
+        "PYMUPDF_LINE_35a5236cf0c56b00",
+        "PYMUPDF_LINE_4672b3217cc67d48",
+        "PYMUPDF_LINE_53a5f9cfe2a844a4",
+        "PYMUPDF_LINE_5ea3ac337f7ba6dc",
+        "PYMUPDF_LINE_647650e7cee9ebd3",
+        "PYMUPDF_LINE_653866ace871f440",
+        "PYMUPDF_LINE_698ff8d22e9aa934",
+        "PYMUPDF_LINE_6c4bbb350b3097df",
+        "PYMUPDF_LINE_72c95b368e68c9a9",
+        "PYMUPDF_LINE_762c0728a25d4292",
+        "PYMUPDF_LINE_785b4d1e89724cab",
+        "PYMUPDF_LINE_83966d46f7d87968",
+        "PYMUPDF_LINE_87769a9c8174045a",
+        "PYMUPDF_LINE_90932d9b6d1f432a",
+        "PYMUPDF_LINE_96b6634ffed2e982",
+        "PYMUPDF_LINE_9d0251f987bae9ac",
+        "PYMUPDF_LINE_9d2ab633aefc6f21",
+        "PYMUPDF_LINE_a050fe41f131f374",
+        "PYMUPDF_LINE_a10799977904fc20",
+        "PYMUPDF_LINE_a5b18ccf4a355523",
+        "PYMUPDF_LINE_a5b4f90b5d0c2772",
+        "PYMUPDF_LINE_af2cc1cea6d417e0",
+        "PYMUPDF_LINE_b0a478bbf30e8300",
+        "PYMUPDF_LINE_b1c5e81bb8177bcf",
+        "PYMUPDF_LINE_b7b24b285a5a3908",
+        "PYMUPDF_LINE_bb4e552ccf50e374",
+        "PYMUPDF_LINE_bcfc92edbf82991a",
+        "PYMUPDF_LINE_c191ce33127f3ffa",
+        "PYMUPDF_LINE_cc8d521017c97dd7",
+        "PYMUPDF_LINE_d4da8c05f18288a9",
+        "PYMUPDF_LINE_de166c6a127e48b9",
+        "PYMUPDF_LINE_df66435c1cd18e30",
+        "PYMUPDF_LINE_e49f73504ef04b97",
+        "PYMUPDF_LINE_f1a294b62d14d56d",
+        "PYMUPDF_LINE_f307f725599e3fa3",
+        "PYMUPDF_LINE_f51153c230090999",
+        "PYMUPDF_LINE_f68ac395d05e7079",
+        "PYMUPDF_LINE_ffb846fb1ecd0d7d"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_005_032c1d575194",
+          "PW_036"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "parallel_wall_faces_to_centerline",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_039",
+              "PW_044"
+            ],
+            "hypothesis_count": 2,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "PW_048",
+      "start_px": [
+        583.1248779296875,
+        1075.3990071614583
+      ],
+      "end_px": [
+        888.1250610351562,
+        1075.3990071614583
+      ],
+      "thickness_px": 9.402534169070302,
+      "role": "REVIEW",
+      "confidence": 0.830461603539305,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__1a919c9941457ef4",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__2630d96d031bf8b6",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__27ce1f48d1504f63",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__3e1f2e1a14b28da5",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__47900584c5aead62",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__8094856156930e37"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_050c0c07345a4e35",
+        "PYMUPDF_LINE_072b04c816229cef",
+        "PYMUPDF_LINE_08383b5c3bf680f4",
+        "PYMUPDF_LINE_09658a4963d44c57",
+        "PYMUPDF_LINE_0e36e615d4ea7d71",
+        "PYMUPDF_LINE_102cee5e0bff5a67",
+        "PYMUPDF_LINE_1284b428b562e2ef",
+        "PYMUPDF_LINE_132efab6bfb20ca9",
+        "PYMUPDF_LINE_13730dc857ba59ba",
+        "PYMUPDF_LINE_16a5e386aff79573",
+        "PYMUPDF_LINE_1d9990e2ce75b660",
+        "PYMUPDF_LINE_1f556dca01a0746d",
+        "PYMUPDF_LINE_200b2178babebcc1",
+        "PYMUPDF_LINE_209cc31f6dd0ccc6",
+        "PYMUPDF_LINE_253acbace27c8b0d",
+        "PYMUPDF_LINE_2548b76d82f201b9",
+        "PYMUPDF_LINE_25d1f5693605620e",
+        "PYMUPDF_LINE_29aa68160762b2ac",
+        "PYMUPDF_LINE_2b8c418cfbd2c262",
+        "PYMUPDF_LINE_2e638791404d63f7",
+        "PYMUPDF_LINE_32c72c984affcd93",
+        "PYMUPDF_LINE_33c0e666031e9e9c",
+        "PYMUPDF_LINE_355eb98fe1e99acd",
+        "PYMUPDF_LINE_35a5236cf0c56b00",
+        "PYMUPDF_LINE_38b9b0cdd77099e6",
+        "PYMUPDF_LINE_4672b3217cc67d48",
+        "PYMUPDF_LINE_481cac835cd41a36",
+        "PYMUPDF_LINE_4a03879ebab7e991",
+        "PYMUPDF_LINE_4b5b84ce1defac44",
+        "PYMUPDF_LINE_4dfb7e4bd3414bd7",
+        "PYMUPDF_LINE_518461098660a6a9",
+        "PYMUPDF_LINE_52634e2216b28b8d",
+        "PYMUPDF_LINE_53a5f9cfe2a844a4",
+        "PYMUPDF_LINE_54585c5394e9649b",
+        "PYMUPDF_LINE_5ea3ac337f7ba6dc",
+        "PYMUPDF_LINE_604c11ce5146c93c",
+        "PYMUPDF_LINE_61b00b0544b6a148",
+        "PYMUPDF_LINE_62112e30ab2f4582",
+        "PYMUPDF_LINE_647650e7cee9ebd3",
+        "PYMUPDF_LINE_653866ace871f440",
+        "PYMUPDF_LINE_654695644516031c",
+        "PYMUPDF_LINE_698ff8d22e9aa934",
+        "PYMUPDF_LINE_6c4bbb350b3097df",
+        "PYMUPDF_LINE_72c95b368e68c9a9",
+        "PYMUPDF_LINE_762c0728a25d4292",
+        "PYMUPDF_LINE_7e148d4122f4919d",
+        "PYMUPDF_LINE_82347285f92f163a",
+        "PYMUPDF_LINE_83966d46f7d87968",
+        "PYMUPDF_LINE_87769a9c8174045a",
+        "PYMUPDF_LINE_88b54b04b303fc1b",
+        "PYMUPDF_LINE_8a07541a98ee5cee",
+        "PYMUPDF_LINE_8a2b8b12afd33449",
+        "PYMUPDF_LINE_90932d9b6d1f432a",
+        "PYMUPDF_LINE_93822d9edae005f6",
+        "PYMUPDF_LINE_940fc3a19cefd3db",
+        "PYMUPDF_LINE_96b6634ffed2e982",
+        "PYMUPDF_LINE_97f0bd15a5f776c3",
+        "PYMUPDF_LINE_986b54d526944226",
+        "PYMUPDF_LINE_9d0251f987bae9ac",
+        "PYMUPDF_LINE_9d2ab633aefc6f21",
+        "PYMUPDF_LINE_a050fe41f131f374",
+        "PYMUPDF_LINE_a10799977904fc20",
+        "PYMUPDF_LINE_a419ca229c4ce3c7",
+        "PYMUPDF_LINE_a5b18ccf4a355523",
+        "PYMUPDF_LINE_a5b4f90b5d0c2772",
+        "PYMUPDF_LINE_aa802b45585e455d",
+        "PYMUPDF_LINE_adaf77442ca2b464",
+        "PYMUPDF_LINE_b0a478bbf30e8300",
+        "PYMUPDF_LINE_b1c5e81bb8177bcf",
+        "PYMUPDF_LINE_b4ff1563b2d85053",
+        "PYMUPDF_LINE_b7b24b285a5a3908",
+        "PYMUPDF_LINE_bb4e552ccf50e374",
+        "PYMUPDF_LINE_bcfc92edbf82991a",
+        "PYMUPDF_LINE_c191ce33127f3ffa",
+        "PYMUPDF_LINE_c1dd984c41daeaf2",
+        "PYMUPDF_LINE_c335f4b59c73c1b0",
+        "PYMUPDF_LINE_ca56b72908b7dc13",
+        "PYMUPDF_LINE_cf6a3d1197dc7687",
+        "PYMUPDF_LINE_d0cccc97ce3589bf",
+        "PYMUPDF_LINE_d4da8c05f18288a9",
+        "PYMUPDF_LINE_d5c1b9543dc44567",
+        "PYMUPDF_LINE_d5f389b1949b90e0",
+        "PYMUPDF_LINE_d9c7fabe1f60724f",
+        "PYMUPDF_LINE_de166c6a127e48b9",
+        "PYMUPDF_LINE_dee3542112738ce5",
+        "PYMUPDF_LINE_df66435c1cd18e30",
+        "PYMUPDF_LINE_e49f73504ef04b97",
+        "PYMUPDF_LINE_e4a1312279f02fbb",
+        "PYMUPDF_LINE_e7c957458d175a59",
+        "PYMUPDF_LINE_f1a294b62d14d56d",
+        "PYMUPDF_LINE_f307f725599e3fa3",
+        "PYMUPDF_LINE_f51153c230090999",
+        "PYMUPDF_LINE_f5f2826f351bd84e",
+        "PYMUPDF_LINE_f77e7e927573c7e5",
+        "PYMUPDF_LINE_f87cab08253ad614",
+        "PYMUPDF_LINE_fcac2c2abb31334b",
+        "PYMUPDF_LINE_feaa1dbb6d3fff74",
+        "PYMUPDF_LINE_ffb846fb1ecd0d7d"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_049",
+      "start_px": [
+        909.0,
+        1076.5394409179687
+      ],
+      "end_px": [
+        1194.3751220703125,
+        1076.5394409179687
+      ],
+      "thickness_px": 7.427345283781331,
+      "role": "REVIEW",
+      "confidence": 0.8082138247175932,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__2c91be023bf7918c",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__2fa2147ab9319ded",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__455a727925516361",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__ace6b748901ef041",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__fdf55626693f1410"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_050c0c07345a4e35",
+        "PYMUPDF_LINE_08383b5c3bf680f4",
+        "PYMUPDF_LINE_09658a4963d44c57",
+        "PYMUPDF_LINE_102cee5e0bff5a67",
+        "PYMUPDF_LINE_1284b428b562e2ef",
+        "PYMUPDF_LINE_132efab6bfb20ca9",
+        "PYMUPDF_LINE_16a5e386aff79573",
+        "PYMUPDF_LINE_1d9990e2ce75b660",
+        "PYMUPDF_LINE_209cc31f6dd0ccc6",
+        "PYMUPDF_LINE_25d1f5693605620e",
+        "PYMUPDF_LINE_2b8c418cfbd2c262",
+        "PYMUPDF_LINE_2e638791404d63f7",
+        "PYMUPDF_LINE_32c72c984affcd93",
+        "PYMUPDF_LINE_33c0e666031e9e9c",
+        "PYMUPDF_LINE_355eb98fe1e99acd",
+        "PYMUPDF_LINE_38b9b0cdd77099e6",
+        "PYMUPDF_LINE_481cac835cd41a36",
+        "PYMUPDF_LINE_4a03879ebab7e991",
+        "PYMUPDF_LINE_4b5b84ce1defac44",
+        "PYMUPDF_LINE_4dfb7e4bd3414bd7",
+        "PYMUPDF_LINE_518461098660a6a9",
+        "PYMUPDF_LINE_52634e2216b28b8d",
+        "PYMUPDF_LINE_54585c5394e9649b",
+        "PYMUPDF_LINE_5aecb0357612d34c",
+        "PYMUPDF_LINE_604c11ce5146c93c",
+        "PYMUPDF_LINE_62112e30ab2f4582",
+        "PYMUPDF_LINE_654695644516031c",
+        "PYMUPDF_LINE_7e0cc5345623b8d6",
+        "PYMUPDF_LINE_7e148d4122f4919d",
+        "PYMUPDF_LINE_82347285f92f163a",
+        "PYMUPDF_LINE_88b54b04b303fc1b",
+        "PYMUPDF_LINE_8a07541a98ee5cee",
+        "PYMUPDF_LINE_8a2b8b12afd33449",
+        "PYMUPDF_LINE_93822d9edae005f6",
+        "PYMUPDF_LINE_940fc3a19cefd3db",
+        "PYMUPDF_LINE_97f0bd15a5f776c3",
+        "PYMUPDF_LINE_986b54d526944226",
+        "PYMUPDF_LINE_aa802b45585e455d",
+        "PYMUPDF_LINE_aaa54dfabb32c13a",
+        "PYMUPDF_LINE_adaf77442ca2b464",
+        "PYMUPDF_LINE_b4ff1563b2d85053",
+        "PYMUPDF_LINE_c1dd984c41daeaf2",
+        "PYMUPDF_LINE_c335f4b59c73c1b0",
+        "PYMUPDF_LINE_ca56b72908b7dc13",
+        "PYMUPDF_LINE_cf6a3d1197dc7687",
+        "PYMUPDF_LINE_d0cccc97ce3589bf",
+        "PYMUPDF_LINE_d5c1b9543dc44567",
+        "PYMUPDF_LINE_d9c7fabe1f60724f",
+        "PYMUPDF_LINE_dee3542112738ce5",
+        "PYMUPDF_LINE_e4a1312279f02fbb",
+        "PYMUPDF_LINE_e7c957458d175a59",
+        "PYMUPDF_LINE_f5f2826f351bd84e",
+        "PYMUPDF_LINE_f77e7e927573c7e5",
+        "PYMUPDF_LINE_f87cab08253ad614",
+        "PYMUPDF_LINE_fcac2c2abb31334b",
+        "PYMUPDF_LINE_feaa1dbb6d3fff74"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "REVIEW",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "CW_001_2c4b87da7f85",
+      "start_px": [
+        259.0,
+        1082.0
+      ],
+      "end_px": [
+        1412.0,
+        1082.0
+      ],
+      "thickness_px": 7.773248725171945,
+      "role": "REVIEW",
+      "confidence": 0.8739291832902837,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__0294617db6fbed92",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__3607c2370cfae2d1",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__d811c3149c670d88",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__e332fb82a94736d6"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_050c0c07345a4e35",
+        "PYMUPDF_LINE_072b04c816229cef",
+        "PYMUPDF_LINE_08383b5c3bf680f4",
+        "PYMUPDF_LINE_09658a4963d44c57",
+        "PYMUPDF_LINE_102cee5e0bff5a67",
+        "PYMUPDF_LINE_13730dc857ba59ba",
+        "PYMUPDF_LINE_16a5e386aff79573",
+        "PYMUPDF_LINE_17d37d18dc8e10f7",
+        "PYMUPDF_LINE_1990fc7ea4bcd4bb",
+        "PYMUPDF_LINE_1bee0cac694f371e",
+        "PYMUPDF_LINE_1d9990e2ce75b660",
+        "PYMUPDF_LINE_1f556dca01a0746d",
+        "PYMUPDF_LINE_200b2178babebcc1",
+        "PYMUPDF_LINE_23f320c75b980b5f",
+        "PYMUPDF_LINE_253acbace27c8b0d",
+        "PYMUPDF_LINE_2548b76d82f201b9",
+        "PYMUPDF_LINE_25d1f5693605620e",
+        "PYMUPDF_LINE_2b8c418cfbd2c262",
+        "PYMUPDF_LINE_3247e98adb90f0d6",
+        "PYMUPDF_LINE_355eb98fe1e99acd",
+        "PYMUPDF_LINE_35a5236cf0c56b00",
+        "PYMUPDF_LINE_37c00d6bdf97caf3",
+        "PYMUPDF_LINE_410aade843fc8e71",
+        "PYMUPDF_LINE_4520a8fc9284ce7d",
+        "PYMUPDF_LINE_4672b3217cc67d48",
+        "PYMUPDF_LINE_518461098660a6a9",
+        "PYMUPDF_LINE_5194ed30e79febc0",
+        "PYMUPDF_LINE_53a5f9cfe2a844a4",
+        "PYMUPDF_LINE_54585c5394e9649b",
+        "PYMUPDF_LINE_5ea3ac337f7ba6dc",
+        "PYMUPDF_LINE_604c11ce5146c93c",
+        "PYMUPDF_LINE_63ee8dabbf23dc83",
+        "PYMUPDF_LINE_647650e7cee9ebd3",
+        "PYMUPDF_LINE_653866ace871f440",
+        "PYMUPDF_LINE_698ff8d22e9aa934",
+        "PYMUPDF_LINE_6c4bbb350b3097df",
+        "PYMUPDF_LINE_72c95b368e68c9a9",
+        "PYMUPDF_LINE_762c0728a25d4292",
+        "PYMUPDF_LINE_785b4d1e89724cab",
+        "PYMUPDF_LINE_7e148d4122f4919d",
+        "PYMUPDF_LINE_7fc3e8ad067914ac",
+        "PYMUPDF_LINE_82347285f92f163a",
+        "PYMUPDF_LINE_83966d46f7d87968",
+        "PYMUPDF_LINE_8523e1c34ffa1123",
+        "PYMUPDF_LINE_87769a9c8174045a",
+        "PYMUPDF_LINE_8a07541a98ee5cee",
+        "PYMUPDF_LINE_8a2b8b12afd33449",
+        "PYMUPDF_LINE_90932d9b6d1f432a",
+        "PYMUPDF_LINE_93822d9edae005f6",
+        "PYMUPDF_LINE_940fc3a19cefd3db",
+        "PYMUPDF_LINE_96b6634ffed2e982",
+        "PYMUPDF_LINE_986b54d526944226",
+        "PYMUPDF_LINE_9d0251f987bae9ac",
+        "PYMUPDF_LINE_9d2ab633aefc6f21",
+        "PYMUPDF_LINE_a050fe41f131f374",
+        "PYMUPDF_LINE_a10799977904fc20",
+        "PYMUPDF_LINE_a5b18ccf4a355523",
+        "PYMUPDF_LINE_a5b4f90b5d0c2772",
+        "PYMUPDF_LINE_adaf77442ca2b464",
+        "PYMUPDF_LINE_b0a478bbf30e8300",
+        "PYMUPDF_LINE_b1c5e81bb8177bcf",
+        "PYMUPDF_LINE_b4ff1563b2d85053",
+        "PYMUPDF_LINE_b7b24b285a5a3908",
+        "PYMUPDF_LINE_bb4e552ccf50e374",
+        "PYMUPDF_LINE_bbc60e912aafa2fa",
+        "PYMUPDF_LINE_bcfc92edbf82991a",
+        "PYMUPDF_LINE_c191ce33127f3ffa",
+        "PYMUPDF_LINE_c1dd984c41daeaf2",
+        "PYMUPDF_LINE_c335f4b59c73c1b0",
+        "PYMUPDF_LINE_c49b8f09b81a0bd0",
+        "PYMUPDF_LINE_ca56b72908b7dc13",
+        "PYMUPDF_LINE_cc8d521017c97dd7",
+        "PYMUPDF_LINE_cf6a3d1197dc7687",
+        "PYMUPDF_LINE_d46900b2f31ef16c",
+        "PYMUPDF_LINE_d4da8c05f18288a9",
+        "PYMUPDF_LINE_d5c1b9543dc44567",
+        "PYMUPDF_LINE_d61a2d5b7889bbd1",
+        "PYMUPDF_LINE_de166c6a127e48b9",
+        "PYMUPDF_LINE_dee3542112738ce5",
+        "PYMUPDF_LINE_df66435c1cd18e30",
+        "PYMUPDF_LINE_e49f73504ef04b97",
+        "PYMUPDF_LINE_e7c957458d175a59",
+        "PYMUPDF_LINE_ee0252182edc4cc7",
+        "PYMUPDF_LINE_f1a294b62d14d56d",
+        "PYMUPDF_LINE_f307f725599e3fa3",
+        "PYMUPDF_LINE_f51153c230090999",
+        "PYMUPDF_LINE_f68ac395d05e7079",
+        "PYMUPDF_LINE_f77e7e927573c7e5",
+        "PYMUPDF_LINE_fcac2c2abb31334b",
+        "PYMUPDF_LINE_feaa1dbb6d3fff74",
+        "PYMUPDF_LINE_ffb846fb1ecd0d7d"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_050",
+          "PW_051",
+          "PW_052",
+          "PW_054"
+        ],
+        "hypothesis_count": 4,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 1,
+            "review_votes": 4,
+            "left_labels": [
+              3,
+              0,
+              5,
+              5,
+              6
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              6,
+              5,
+              5,
+              0,
+              3
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 2,
+            "divider_votes": 0,
+            "review_votes": 3,
+            "left_labels": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "right_labels": [
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 1,
+        "divider_votes": 0,
+        "review_votes": 4,
+        "left_labels": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "id": "CW_003_ea85b8674b24",
+      "start_px": [
+        254.99999999999997,
+        1084.0
+      ],
+      "end_px": [
+        255.0,
+        1522.0
+      ],
+      "thickness_px": 10.770779241163524,
+      "role": "REVIEW",
+      "confidence": 0.8677934566455705,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__50c733bde77c260f",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__7a06e2b208d759eb",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__91ca354dce510880",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__ccbaa0b3436b16a2"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_1c2b04ffc2bfb0f3",
+        "OPENCV_LINE_864273ac1a34d05e",
+        "PYMUPDF_LINE_0c8320344a1f54c7",
+        "PYMUPDF_LINE_0fa5c36c400f9df3",
+        "PYMUPDF_LINE_26b27030330ec7ab",
+        "PYMUPDF_LINE_2acc53f670ff0657",
+        "PYMUPDF_LINE_3f86557c61179869",
+        "PYMUPDF_LINE_408effe6ffe02084",
+        "PYMUPDF_LINE_4827477b111e9f13",
+        "PYMUPDF_LINE_4977acc2ce5c59fd",
+        "PYMUPDF_LINE_6660ac8f1fa9e5e2",
+        "PYMUPDF_LINE_7710cff3231e47fd",
+        "PYMUPDF_LINE_7ab5cc6f15be73af",
+        "PYMUPDF_LINE_804bc2604dae1f50",
+        "PYMUPDF_LINE_860c328c0dc2c8bb",
+        "PYMUPDF_LINE_8697b0213899d88b",
+        "PYMUPDF_LINE_876b6d586cbad30c",
+        "PYMUPDF_LINE_8f4084f07e7af406",
+        "PYMUPDF_LINE_9c0d0b41a2d10a8e",
+        "PYMUPDF_LINE_a15c247bb5da79d8",
+        "PYMUPDF_LINE_a7218e0304b07536",
+        "PYMUPDF_LINE_abb37f31976d07bc",
+        "PYMUPDF_LINE_ac5ebb68128802f9",
+        "PYMUPDF_LINE_b1ad59ce5b1a0a34",
+        "PYMUPDF_LINE_b321a28495c39844",
+        "PYMUPDF_LINE_b326b0a94d5d0150",
+        "PYMUPDF_LINE_b33ed540f0cb5b55",
+        "PYMUPDF_LINE_d417e2522b7819b4",
+        "PYMUPDF_LINE_dc20b41bb50d7bce",
+        "PYMUPDF_LINE_e969d083e8614fa2",
+        "PYMUPDF_LINE_f5ad3071c8cacaf0"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_067",
+          "PW_091"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              0,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "PW_055",
+      "start_px": [
+        614.0,
+        1087.0
+      ],
+      "end_px": [
+        614.0,
+        1419.0
+      ],
+      "thickness_px": 10.0,
+      "role": "REVIEW",
+      "confidence": 0.8666599938872621,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__ae01fef493116f58"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_2997028254e3cd27",
+        "PYMUPDF_LINE_6c2335bc8d3c6ba7",
+        "PYMUPDF_LINE_7fae40c66f24bc18",
+        "PYMUPDF_LINE_813a415917d28be7",
+        "PYMUPDF_LINE_e768f941294bf942",
+        "PYMUPDF_LINE_e96fd28e9c4be268"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_labels": [
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_076",
+      "start_px": [
+        1093.6749267578125,
+        1414.375
+      ],
+      "end_px": [
+        1093.6749267578125,
+        1087.0
+      ],
+      "thickness_px": 2.648681640625,
+      "role": "REVIEW",
+      "confidence": 0.8056135102179262,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__487b593496c681c4"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_1132091bfdd65649",
+        "PYMUPDF_LINE_8e65ac7922461e3c",
+        "PYMUPDF_LINE_a6e0a0f7251e66f3",
+        "PYMUPDF_LINE_b4efc08d374feab9",
+        "PYMUPDF_LINE_ba7974ca7ec0874a"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "REVIEW",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_069",
+      "start_px": [
+        604.4332427978516,
+        1325.625
+      ],
+      "end_px": [
+        604.4332427978516,
+        1089.375
+      ],
+      "thickness_px": 3.12884521484375,
+      "role": "REVIEW",
+      "confidence": 0.8520534114016192,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__89b319915086a2ac"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_05b7fa9c7450b279",
+        "PYMUPDF_LINE_634765ce971e5589",
+        "PYMUPDF_LINE_8093dcc3ebf9e837"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_062",
+      "start_px": [
+        776.4307454427083,
+        1089.374755859375
+      ],
+      "end_px": [
+        776.4307454427083,
+        1312.0
+      ],
+      "thickness_px": 3.1860960815589006,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__9af4b23368a7cdee",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__af8af55b2570f9dd",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__c09fd848d4148046"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_301fa51fd85a7f05",
+        "PYMUPDF_LINE_389e27a5fc475e47",
+        "PYMUPDF_LINE_47824aec55536dce",
+        "PYMUPDF_LINE_59e1fcd2a76bd367",
+        "PYMUPDF_LINE_a13d8f9e450f5a9d",
+        "PYMUPDF_LINE_cbc8529fe4cdb9d2",
+        "PYMUPDF_LINE_e1a8ceed47caedee"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_063",
+      "start_px": [
+        1410.5294799804688,
+        1089.375
+      ],
+      "end_px": [
+        1410.5294799804688,
+        1518.125
+      ],
+      "thickness_px": 2.93896484375,
+      "role": "REVIEW",
+      "confidence": 0.8342549944423167,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__9c1b15312e537f82"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_024f18a205109cc7",
+        "PYMUPDF_LINE_34552e81975c72f2",
+        "PYMUPDF_LINE_bbffe18ee84738f8"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "REVIEW",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_078",
+      "start_px": [
+        236.2157211303711,
+        1415.6251220703125
+      ],
+      "end_px": [
+        236.2157211303711,
+        1190.6246337890625
+      ],
+      "thickness_px": 12.409515380859375,
+      "role": "REVIEW",
+      "confidence": 0.7937690413034358,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__8b64fb36a9b9954b"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_93bafe3c50a3c0db",
+        "OPENCV_LINE_ffe80651323df652",
+        "PYMUPDF_LINE_206847c7395f2d19",
+        "PYMUPDF_LINE_f8e77d8c9ed17d0a"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_070",
+      "start_px": [
+        619.0,
+        1325.75
+      ],
+      "end_px": [
+        781.0,
+        1325.75
+      ],
+      "thickness_px": 3.5384615384615383,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__14efcaf661f50098",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__e69e5759100a0ed8"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_11347a7156105b4a",
+        "PYMUPDF_LINE_2ea32dd3504a3585",
+        "PYMUPDF_LINE_3cd7418316356886",
+        "PYMUPDF_LINE_aebba547a11cd982",
+        "PYMUPDF_LINE_cda04bddb4eec930",
+        "PYMUPDF_LINE_ff43c042dd40cde1"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_073",
+      "start_px": [
+        524.0,
+        1406.5
+      ],
+      "end_px": [
+        604.0,
+        1406.5
+      ],
+      "thickness_px": 3.0,
+      "role": "REVIEW",
+      "confidence": 0.8399761185050947,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__df4fd480a6bed6d0"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_617a7d315afe4dd7",
+        "PYMUPDF_LINE_eed59b4b6cd9ceb6",
+        "PYMUPDF_LINE_f24a9ac01732df49",
+        "PYMUPDF_LINE_fa09fdd2e497848e"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "CB_003_ca301014103d",
+      "start_px": [
+        793.0,
+        1407.75
+      ],
+      "end_px": [
+        873.0,
+        1407.75
+      ],
+      "thickness_px": 19.0,
+      "role": "REVIEW",
+      "confidence": 0.8586188399079983,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__3f032e099c192d85",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__b6eb003231ca1020"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_053d83ac9497f632",
+        "PYMUPDF_LINE_17358e3bfb1a333f",
+        "PYMUPDF_LINE_7e4cdc80639cc0ef",
+        "PYMUPDF_LINE_e84675b8127e1900"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_072",
+          "PW_074"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "PW_083",
+      "start_px": [
+        265.0,
+        1422.0
+      ],
+      "end_px": [
+        265.0,
+        1522.0
+      ],
+      "thickness_px": 12.0,
+      "role": "REVIEW",
+      "confidence": 0.6601665999807226,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__67f7d32d9e7fb919"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_1c2b04ffc2bfb0f3",
+        "PYMUPDF_LINE_2acc53f670ff0657",
+        "PYMUPDF_LINE_408effe6ffe02084",
+        "PYMUPDF_LINE_804bc2604dae1f50",
+        "PYMUPDF_LINE_8697b0213899d88b",
+        "PYMUPDF_LINE_923f198348195f5e",
+        "PYMUPDF_LINE_9aae56f3efb76dd5",
+        "PYMUPDF_LINE_dc20b41bb50d7bce",
+        "PYMUPDF_LINE_e64b273db33515e4"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "CF_003_cd16857d62b0",
+      "start_px": [
+        786.5,
+        1424.5
+      ],
+      "end_px": [
+        1095.0,
+        1424.5
+      ],
+      "thickness_px": 10.0,
+      "role": "REVIEW",
+      "confidence": 0.8442991973723221,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__747fca8cd917b39f",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__792c0844de6fb408",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__eb70bcc05729eb4f"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_0aae6c42a802a6e6",
+        "PYMUPDF_LINE_25edda1946b5e0cc",
+        "PYMUPDF_LINE_42d2e5af8a0984b1",
+        "PYMUPDF_LINE_7e4cdc80639cc0ef",
+        "PYMUPDF_LINE_84366be603c55705",
+        "PYMUPDF_LINE_ae35fe88e6afb799",
+        "PYMUPDF_LINE_e84675b8127e1900",
+        "PYMUPDF_LINE_ea29c7911c0ece96"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_004_1da9502c922c",
+          "PW_089"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "parallel_wall_faces_to_centerline",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_079",
+              "PW_080"
+            ],
+            "hypothesis_count": 2,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "PW_087",
+      "start_px": [
+        328.0578110419982,
+        1426.477968380205
+      ],
+      "end_px": [
+        272.05755487896784,
+        1504.155743057957
+      ],
+      "thickness_px": 2.718580291533891,
+      "role": "REVIEW",
+      "confidence": 0.5561268119588022,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__1fc8c03b8bcb2bee",
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__a2abb47435fdd95b"
+      ],
+      "evidence_ids": [
+        "PYMUPDF_LINE_a8e415af4a29fb6f"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "REVIEW",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      }
+    },
+    {
+      "id": "PW_090",
+      "start_px": [
+        333.0,
+        1515.0
+      ],
+      "end_px": [
+        262.0,
+        1515.0
+      ],
+      "thickness_px": 14.0,
+      "role": "REVIEW",
+      "confidence": 0.6553687621539948,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_3c23bad8be43edae__WC_PAIR__e0db45f6e596cf3c"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_05fc5818776ec25a",
+        "OPENCV_CONTOUR_06d01541a84020c2",
+        "OPENCV_CONTOUR_1c2b04ffc2bfb0f3",
+        "OPENCV_CONTOUR_3b02295ef821e44f",
+        "OPENCV_CONTOUR_3ca1013384fbb671",
+        "OPENCV_CONTOUR_45b5e1e7703ce2a9",
+        "OPENCV_CONTOUR_5b4f2f073114d358",
+        "OPENCV_CONTOUR_6e08af72a7c3fa56",
+        "OPENCV_CONTOUR_71e5e6b39655060d",
+        "OPENCV_CONTOUR_a528a502009e4d1c",
+        "OPENCV_CONTOUR_c4d82b1016eec4d0",
+        "OPENCV_CONTOUR_f9b42c8546b781ba",
+        "PYMUPDF_LINE_00cacf24f9f72594",
+        "PYMUPDF_LINE_1f57ee4999185c81",
+        "PYMUPDF_LINE_26f158e5d6051acd",
+        "PYMUPDF_LINE_29c433085869f80c",
+        "PYMUPDF_LINE_2ca5839189e848fc",
+        "PYMUPDF_LINE_32e86df43aa93711",
+        "PYMUPDF_LINE_363aba8b4ea78c47",
+        "PYMUPDF_LINE_36983bf1febe3af8",
+        "PYMUPDF_LINE_3d2462b8463e8b63",
+        "PYMUPDF_LINE_3e756c0ae953b401",
+        "PYMUPDF_LINE_588a1052b6710cd9",
+        "PYMUPDF_LINE_7e8ddb6e109b83d9",
+        "PYMUPDF_LINE_8c47f1718479552c",
+        "PYMUPDF_LINE_929863c10be1ec8c",
+        "PYMUPDF_LINE_a510333a7d0e6728",
+        "PYMUPDF_LINE_b513e071418d8d70",
+        "PYMUPDF_LINE_d32bb7125f82f974",
+        "PYMUPDF_LINE_e0db48930a33d8de",
+        "PYMUPDF_LINE_ef853382853b663b",
+        "PYMUPDF_LINE_f9cccb913b29ad09"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "finalized_topology": true
+      }
+    }
+  ],
+  "logical_gaps": [
+    {
+      "id": "HB_COL_CF_004_47099492a153_PW_049",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        1194.3751220703125,
+        1072.0012420654298
+      ],
+      "end_px": [
+        1229.81201171875,
+        1072.0012420654298
+      ],
+      "gap_px": 35.4368896484375,
+      "wall_ids": [
+        "CF_004_47099492a153",
+        "PW_049"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_COL_PW_048_PW_049",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        888.1250610351562,
+        1075.9692240397135
+      ],
+      "end_px": [
+        909.0,
+        1075.9692240397135
+      ],
+      "gap_px": 20.87493896484375,
+      "wall_ids": [
+        "PW_048",
+        "PW_049"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CF_005_f4153a2a04e6_CW_002_ed740c7c96e4_1223.65_912.06",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1223.6490936279297,
+        912.0625
+      ],
+      "end_px": [
+        1223.6490936279297,
+        917.5
+      ],
+      "gap_px": 5.4375,
+      "wall_ids": [
+        "CF_005_f4153a2a04e6",
+        "CW_002_ed740c7c96e4"
+      ],
+      "protected_by_seed": false,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CF_005_f4153a2a04e6_CF_004_47099492a153_1223.65_1055.19",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1223.6490936279297,
+        1055.1875
+      ],
+      "end_px": [
+        1229.81201171875,
+        1067.4630432128906
+      ],
+      "gap_px": 13.735738806693485,
+      "wall_ids": [
+        "CF_005_f4153a2a04e6",
+        "CF_004_47099492a153"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_001_ec06231b21eb_CW_002_ed740c7c96e4_900.88_921.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        900.8835983276367,
+        921.0
+      ],
+      "end_px": [
+        900.8835983276367,
+        917.5
+      ],
+      "gap_px": 3.5,
+      "wall_ids": [
+        "CB_001_ec06231b21eb",
+        "CW_002_ed740c7c96e4"
+      ],
+      "protected_by_seed": false,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_001_ec06231b21eb_CW_001_2c4b87da7f85_900.88_1074.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        900.8835983276368,
+        1074.0
+      ],
+      "end_px": [
+        900.8835983276368,
+        1082.0
+      ],
+      "gap_px": 8.0,
+      "wall_ids": [
+        "CB_001_ec06231b21eb",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_002_687211f7a77d_PW_026_1199.66_934.38",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1199.6587829589844,
+        934.3756713867188
+      ],
+      "end_px": [
+        1199.6587829589844,
+        926.5
+      ],
+      "gap_px": 7.87567138671875,
+      "wall_ids": [
+        "CB_002_687211f7a77d",
+        "PW_026"
+      ],
+      "protected_by_seed": false,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_002_687211f7a77d_PW_049_1199.66_1071.88",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1199.6587829589844,
+        1071.8753662109375
+      ],
+      "end_px": [
+        1194.3751220703125,
+        1076.5394409179687
+      ],
+      "gap_px": 7.047741855321397,
+      "wall_ids": [
+        "CB_002_687211f7a77d",
+        "PW_049"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CF_004_47099492a153_CF_005_f4153a2a04e6_1229.81_1067.46",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1229.81201171875,
+        1067.4630432128906
+      ],
+      "end_px": [
+        1223.6490936279297,
+        1055.1875
+      ],
+      "gap_px": 13.735738806693485,
+      "wall_ids": [
+        "CF_004_47099492a153",
+        "CF_005_f4153a2a04e6"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_048_CB_001_ec06231b21eb_888.13_1075.4",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        888.1250610351562,
+        1075.3990071614583
+      ],
+      "end_px": [
+        900.8835983276368,
+        1074.0
+      ],
+      "gap_px": 12.835010513491184,
+      "wall_ids": [
+        "PW_048",
+        "CB_001_ec06231b21eb"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_049_CB_001_ec06231b21eb_909.0_1076.54",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        909.0,
+        1076.5394409179687
+      ],
+      "end_px": [
+        900.8835983276368,
+        1074.0
+      ],
+      "gap_px": 8.504395115644225,
+      "wall_ids": [
+        "PW_049",
+        "CB_001_ec06231b21eb"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_049_CB_002_687211f7a77d_1194.38_1076.54",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1194.3751220703125,
+        1076.5394409179687
+      ],
+      "end_px": [
+        1199.6587829589844,
+        1071.8753662109375
+      ],
+      "gap_px": 7.047741855321397,
+      "wall_ids": [
+        "PW_049",
+        "CB_002_687211f7a77d"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_001_2c4b87da7f85_CW_003_ea85b8674b24_259.0_1082.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        259.0,
+        1082.0
+      ],
+      "end_px": [
+        254.99999999999997,
+        1084.0
+      ],
+      "gap_px": 4.4721359549996045,
+      "wall_ids": [
+        "CW_001_2c4b87da7f85",
+        "CW_003_ea85b8674b24"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_001_2c4b87da7f85_PW_063_1412.0_1082.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1412.0,
+        1082.0
+      ],
+      "end_px": [
+        1410.5294799804688,
+        1089.375
+      ],
+      "gap_px": 7.520176469195532,
+      "wall_ids": [
+        "CW_001_2c4b87da7f85",
+        "PW_063"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_003_ea85b8674b24_CW_001_2c4b87da7f85_255.0_1084.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        254.99999999999997,
+        1084.0
+      ],
+      "end_px": [
+        259.0,
+        1082.0
+      ],
+      "gap_px": 4.4721359549996045,
+      "wall_ids": [
+        "CW_003_ea85b8674b24",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_055_CW_001_2c4b87da7f85_614.0_1087.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        614.0,
+        1087.0
+      ],
+      "end_px": [
+        614.0,
+        1082.0
+      ],
+      "gap_px": 5.0,
+      "wall_ids": [
+        "PW_055",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_055_PW_073_614.0_1419.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        614.0,
+        1419.0
+      ],
+      "end_px": [
+        604.0,
+        1406.5
+      ],
+      "gap_px": 16.00781059358212,
+      "wall_ids": [
+        "PW_055",
+        "PW_073"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_076_CF_003_cd16857d62b0_1093.67_1414.38",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1093.6749267578125,
+        1414.375
+      ],
+      "end_px": [
+        1093.6749267578125,
+        1424.5
+      ],
+      "gap_px": 10.125,
+      "wall_ids": [
+        "PW_076",
+        "CF_003_cd16857d62b0"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_076_CW_001_2c4b87da7f85_1093.67_1087.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1093.6749267578125,
+        1087.0
+      ],
+      "end_px": [
+        1093.6749267578125,
+        1082.0
+      ],
+      "gap_px": 5.0,
+      "wall_ids": [
+        "PW_076",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_069_PW_070_604.43_1325.62",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        604.4332427978516,
+        1325.625
+      ],
+      "end_px": [
+        619.0,
+        1325.75
+      ],
+      "gap_px": 14.567293516173256,
+      "wall_ids": [
+        "PW_069",
+        "PW_070"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_069_CW_001_2c4b87da7f85_604.43_1089.38",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        604.4332427978516,
+        1089.375
+      ],
+      "end_px": [
+        604.4332427978516,
+        1082.0
+      ],
+      "gap_px": 7.375,
+      "wall_ids": [
+        "PW_069",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_062_CW_001_2c4b87da7f85_776.43_1089.37",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        776.4307454427083,
+        1089.374755859375
+      ],
+      "end_px": [
+        776.4307454427083,
+        1082.0
+      ],
+      "gap_px": 7.374755859375,
+      "wall_ids": [
+        "PW_062",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_062_PW_070_776.43_1312.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        776.4307454427083,
+        1312.0
+      ],
+      "end_px": [
+        776.4307454427083,
+        1325.75
+      ],
+      "gap_px": 13.75,
+      "wall_ids": [
+        "PW_062",
+        "PW_070"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_063_CW_001_2c4b87da7f85_1410.53_1089.38",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1410.5294799804688,
+        1089.375
+      ],
+      "end_px": [
+        1410.5294799804688,
+        1082.0
+      ],
+      "gap_px": 7.375,
+      "wall_ids": [
+        "PW_063",
+        "CW_001_2c4b87da7f85"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_070_PW_055_619.0_1325.75",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        619.0,
+        1325.75
+      ],
+      "end_px": [
+        614.0,
+        1325.75
+      ],
+      "gap_px": 5.0,
+      "wall_ids": [
+        "PW_070",
+        "PW_055"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_070_PW_062_781.0_1325.75",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        781.0,
+        1325.75
+      ],
+      "end_px": [
+        776.4307454427083,
+        1312.0
+      ],
+      "gap_px": 14.489326665146706,
+      "wall_ids": [
+        "PW_070",
+        "PW_062"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_073_PW_055_604.0_1406.5",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        604.0,
+        1406.5
+      ],
+      "end_px": [
+        614.0,
+        1406.5
+      ],
+      "gap_px": 10.0,
+      "wall_ids": [
+        "PW_073",
+        "PW_055"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_083_PW_090_265.0_1522.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        265.0,
+        1522.0
+      ],
+      "end_px": [
+        265.0,
+        1515.0
+      ],
+      "gap_px": 7.0,
+      "wall_ids": [
+        "PW_083",
+        "PW_090"
+      ],
+      "protected_by_seed": false,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CF_003_cd16857d62b0_PW_076_1095.0_1424.5",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1095.0,
+        1424.5
+      ],
+      "end_px": [
+        1093.6749267578125,
+        1414.375
+      ],
+      "gap_px": 10.211338996290413,
+      "wall_ids": [
+        "CF_003_cd16857d62b0",
+        "PW_076"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_090_PW_083_262.0_1515.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        262.0,
+        1515.0
+      ],
+      "end_px": [
+        265.0,
+        1515.0
+      ],
+      "gap_px": 3.0,
+      "wall_ids": [
+        "PW_090",
+        "PW_083"
+      ],
+      "protected_by_seed": false,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    }
+  ],
+  "interior_space_count": 2,
+  "route_plan": {
+    "mode": "DENSE_RECOVERY",
+    "modules": [
+      {
+        "module": "F03_STRUCTURAL_SEED",
+        "enabled": true,
+        "reason": "Protege muros ya seleccionados por F03."
+      },
+      {
+        "module": "CONTEXT_NEGATIVE_MASK",
+        "enabled": true,
+        "reason": "Encapsula ruido contextual sin borrar evidencia."
+      },
+      {
+        "module": "WALL_MASK_RECOVERY",
+        "enabled": true,
+        "reason": "Recupera bandas y muros omitidos por la selección conservadora."
+      },
+      {
+        "module": "WALL_CANONICALIZATION",
+        "enabled": true,
+        "reason": "Publica una sola centerline por muro físico."
+      },
+      {
+        "module": "STRICT_CONNECTIVITY",
+        "enabled": true,
+        "reason": "Cierra únicamente gaps/junctions con evidencia geométrica."
+      },
+      {
+        "module": "ROOM_TOPOLOGY",
+        "enabled": true,
+        "reason": "Clasifica perímetro/divisor por adyacencia espacial."
+      },
+      {
+        "module": "MULTIMODAL_CALL2",
+        "enabled": true,
+        "reason": "Contrasta Single-Line WallGraph con el LevelView original y devuelve solo deltas."
+      }
+    ],
+    "recovery_strength": 0.8873239436619719,
+    "require_multimodal_review": true,
+    "reasons": [
+      "Candidate Discovery contiene mucha geometría adicional respecto a F03; se activa densificación.",
+      "Una fracción alta del WallGraph permanece REVIEW.",
+      "La red sigue fragmentada en demasiados componentes.",
+      "Existe ruido contextual significativo; Call 2 debe contrastar contra el plano original."
+    ]
+  },
+  "diagnostics": {
+    "level_view_id": "LEVEL_VIEW_3c23bad8be43edae",
+    "f03_seed_count": 16,
+    "discovered_candidate_count": 142,
+    "quarantined_candidate_count": 52,
+    "hybrid_candidate_count": 94,
+    "selected_wall_count": 28,
+    "component_count": 6,
+    "junction_count": 4,
+    "virtual_bridge_count": 30,
+    "interior_space_count": 2,
+    "review_wall_count": 25,
+    "perimeter_wall_count": 3,
+    "divider_wall_count": 0,
+    "seed_coverage_ratio": 0.6052631578947368,
+    "quarantine_ratio": 0.36619718309859156,
+    "review_ratio": 0.8928571428571429
+  }
+}

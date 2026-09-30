@@ -1,0 +1,24 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-14 12:46 -06:00
+Versión: F03 Element Context Isolation V2
+Estado: CANDIDATA
+Base inmediata: F03 Element Context Isolation V1
+Base estable: Canonical Metric Raster V2.3 VALIDATED
+
+OBJETIVO
+Cerrar primero clasificación/encapsulamiento de objetos antes de volver a tocar el solver de muros.
+
+CAMBIOS
+1. Provenance explícita línea -> cara candidata -> track consolidado mediante face_lineage_groups/lineage_line_ids.
+2. direct_member_support se calcula por pertenencia física real, no por igualdad de IDs de representación.
+3. Puerta exige arco + hoja + host wall + contexto arquitectónico.
+4. Detección geométrica conservadora de ventanas por frame paralelo + host/perímetro.
+5. Host walls de openings permanecen ACTIVE y sin penalización contextual.
+6. TEXT_SYMBOL deja de fusionarse en regiones gigantes y bbox-only no penaliza.
+7. Nueva prueba sintética V2 cubre burbuja falsa, puerta real, ventana, provenance y preservación de host wall.
+
+NO MODIFICADO
+F02, Canonical Metric Raster V2.3, CandidateGraph, GlobalTopologySolver, test real congelado.
+
+PUNTO DE RETORNO
+F03 Element Context Isolation V1.

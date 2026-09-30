@@ -1,0 +1,26 @@
+QUANTIA V2L — VERSIONADO
+Versión: ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2
+Fecha: 2026-09-16 12:49 -06:00
+
+BASE
+ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1
+Paquete V1 SHA256: 14888715fbd32359683a4026f857d6ead60efb08cd4a9b2d9a88588f5386db67
+
+CAMBIOS
+1. OpeningHypothesisGenerator deja de invocar ElementContextDetector.
+2. Candidate discovery independiente desde DrawingModel + ParametricWall.
+3. Door discovery por CUBIC_BEZIER con host final.
+4. Door discovery adicional por gaps alineados en caras de muro.
+5. Window discovery guiado por muro final mediante tracks paralelos, left/right host support y through-wall conflict.
+6. Semántica Gemini persistida se usa como constraint, incluida relación LOCATED_IN -> SPACE.
+7. HostWallMatcher recibe host_wall hints producidos por detector independiente.
+8. FeatureVector incorpora wall_gap_support.
+9. Architectural RAG pasa a knowledge/architectural_openings_v2.json.
+10. Diagnóstico publica independent_candidate_count, semantic_candidate_count, semantic_resolution_count y source_counts.
+11. Tests V1 de esta rama se archivan como históricos; se crean synthetic/probe V2.
+
+NO MODIFICADO
+- F02.
+- CandidateGraph.
+- GlobalTopologySolver.
+- test_quantia_spatial_f03_selection_all_3_v1.py.

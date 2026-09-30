@@ -1,0 +1,36 @@
+QUANTIA V2L — METRIC RERASTER V1.1
+Fecha: 2026-09-10 21:51 -06:00
+
+PUNTO DE RETORNO
+- Scale Foundation V1.4
+- Metric Reraster V1 original (test only)
+
+CAUSA RAIZ DE LA CORRECCION
+1. El test V1 asumía que F02 siempre publicaba EditablePerimeterModel durante el bootstrap.
+   Miguel H Planta Alta demostró que esa precondición no es segura en el flujo PDF actual.
+2. El test V1 asumía que el repo ya tenía ScaleEvidenceResolver V1.4.
+   Miguel V ejecutó un resolver anterior y quedó CONFLICT.
+3. El experimento de densidad no debe permitir que F02 cambie entre BEFORE/AFTER, porque
+   entonces se mezclan dos variables: densidad raster + perímetro.
+
+CAMBIO V1.1
+- Exige SCALE_EVIDENCE_RESOLVER_V1_4 y el paquete incluye sus archivos requeridos.
+- ScaleEvidenceResolver acepta perimeter=None o un perímetro congelado.
+- F02 queda INMUTABLE durante la comparación.
+- El perímetro bootstrap se transforma de forma afín a las nuevas coordenadas raster.
+- Si Miguel H PDF no publica F02 en un nivel, usa como referencia el raster canónico
+  versionado de Miguel H, sin llamadas Gemini.
+- Se registran runtime_f02_state y runtime_editable_perimeter_available para diagnóstico.
+- Salidas exclusivas V1.1 para no mezclar con V1.
+
+NO MODIFICADO
+- Candidate generation V6.2
+- Context classification V6.2
+- StructuralLineage
+- Solver
+- F02 motor
+- Engine/router/endpoints
+
+POLITICA GEMINI
+- 0 llamadas nuevas.
+- Reutilización de payloads bootstrap.

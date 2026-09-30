@@ -1,0 +1,10 @@
+2026-09-09 16:13 -0600
+
+Decisión:
+Detener nuevas iteraciones de exclusión/semántica antes de comprobar la pérdida dentro del GlobalTopologySolver.
+Se preserva Context Gate V5 y se crea un probe específico Miguel V que usa el solver real instalado.
+El probe distingue SELECTED, OUTSIDE_F02, CONFLICT_WITH_SELECTED, DASHED_REFERENCE, WEAK_EVIDENCE, TOPOLOGY_REJECTED, SEARCH_COMPETITION y OTHER_REJECTED.
+También reporta semantic_support/vector_support efectivos.
+
+Corrección menor:
+El test Casa Viri V5 guardaba la imagen de decisiones con sufijo v4; se corrige solo el nombre de salida a v5.

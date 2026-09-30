@@ -1,0 +1,122 @@
+AUDITORÍA Y MIGRACIÓN DE LÓGICA DESDE TESTS
+Fecha: 2026-09-17
+
+REGLA
+Los tests validan comportamiento; la lógica reutilizable debe vivir en módulos productivos.
+
+TESTS ORIGINALES AUDITADOS
+
+1. test_quantia_spatial_adaptive_call2_contract_v1_synthetic.py
+   ESTADO: ACTIVO.
+   LÓGICA PRODUCTIVA: adaptive_reconstruction/multimodal_review.py + correction_applier.py.
+   TEST: solo valida contrato provider-agnostic y aplicación de deltas.
+
+2. test_quantia_spatial_adaptive_module_decision_engine_v1_synthetic.py
+   ESTADO: ACTIVO.
+   LÓGICA PRODUCTIVA: adaptive_reconstruction/decision_engine.py.
+
+3. test_quantia_spatial_adaptive_reconstruction_all_3_v1.py
+   ESTADO: HISTÓRICO.
+   MOTIVO: contenía orquestación _run_case, visuales y activación Call 2.
+   REEMPLAZO: process_engine.py + test_quantia_spatial_v1_process_all_3_v1.py.
+
+4. test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic.py
+   ESTADO: ACTIVO.
+   LÓGICA PRODUCTIVA: architectural_elements/.
+   RELEVANCIA: base para futura transición F04; no se integra todavía al WallGraph filtrado.
+
+5. test_quantia_spatial_canonical_metric_raster_v2_synthetic.py
+   ESTADO: ACTIVO.
+   LÓGICA PRODUCTIVA: engine.py + raster/scale modules.
+
+6. test_quantia_spatial_context_classification_v6_2_standardized.py
+   ESTADO: ACTIVO.
+   LÓGICA PRODUCTIVA: reconstruction_core/context_region_detector.py, candidate_context_gate.py y solver.
+   NOTA: conserva auditoría standardized sobre casos reales/replay.
+
+7. test_quantia_spatial_context_classification_v6_2_synthetic.py
+   ESTADO: ACTIVO.
+   LÓGICA PRODUCTIVA: Context Classification V6.2.
+
+8. test_quantia_spatial_context_gate_v5_standardized.py
+   ESTADO: HISTÓRICO.
+   MOTIVO: superado por V6.2.
+
+9. test_quantia_spatial_f03_architectural_core_visual_all_3_v1.py
+   ESTADO: HISTÓRICO.
+   MOTIVO: probe visual previo al flujo adaptativo.
+
+10. test_quantia_spatial_f03_element_context_isolation_v5_synthetic.py
+    ESTADO: ACTIVO.
+    LÓGICA PRODUCTIVA: element_context_detector.py + candidate_context_gate.py.
+
+11. test_quantia_spatial_f03_flow_all_3_v1.py
+    ESTADO: HISTÓRICO.
+    MOTIVO: orquestación antigua sustituida por QuantiaSpatialV1ProcessEngine.
+
+12. test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.py
+    ESTADO: HISTÓRICO.
+    LÓGICA MIGRADA: adaptive_reconstruction/hybrid_engine.py.
+
+13. test_quantia_spatial_f03_selection_contracts_v1_6_synthetic.py
+    ESTADO: ACTIVO.
+    LÓGICA PRODUCTIVA: candidate_context_gate/global_topology_solver/metric thickness contracts.
+
+14. test_quantia_spatial_metric_reraster_v1_3_standardized.py
+    ESTADO: HISTÓRICO.
+    MOTIVO: exige ScaleEvidenceResolver V1.6; código vigente es V1.7.
+    COBERTURA ACTUAL: canonical_metric_raster_v2 + scale_resolver_v1_7_contract.
+
+15. test_quantia_spatial_perimeter_wall_tracks_all_3_v1.py
+    ESTADO: HISTÓRICO.
+    MOTIVO: probe de perímetro anterior; no es pipeline canónico actual.
+
+16. test_quantia_spatial_perimeter_wall_tracks_all_3_v2.py
+    ESTADO: HISTÓRICO.
+    LÓGICA ÚTIL MIGRADA: discovery/physical tracks absorbidos por adaptive_reconstruction/hybrid_engine.py.
+
+17. test_quantia_spatial_scale_foundation_v1_6_synthetic.py
+    ESTADO: HISTÓRICO.
+    MOTIVO: tres contratos privados/heurísticos ya no corresponden a resolver V1.7.
+    REEMPLAZO: test_quantia_spatial_scale_resolver_v1_7_contract.py usa solo contrato público.
+
+18. test_quantia_spatial_solver_evidence_v1_standardized.py
+    ESTADO: ACTIVO.
+    LÓGICA PRODUCTIVA: global_topology_solver.py.
+
+19. test_quantia_spatial_solver_evidence_v1_synthetic.py
+    ESTADO: ACTIVO.
+
+20. test_quantia_spatial_wall_canonicalization_isolated_all_3_v1.py
+    ESTADO: HISTÓRICO.
+    LÓGICA VIGENTE REIMPLEMENTADA COMO MÓDULO: post_reconstruction_filters/wall_hypothesis_canonicalizer.py.
+    DIFERENCIA: el módulo nuevo solo colapsa hipótesis concurrentes y NO cierra gaps.
+
+21. test_quantia_spatial_wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback.py
+    ESTADO: HISTÓRICO.
+    MOTIVO: contrato antiguo fijaba F02/perímetro como inmutable.
+    REEMPLAZO: adaptive_reconstruction/multimodal_review.py.
+
+22. test_quantia_spatial_wall_mask_reconstruction_all_3_v1.py
+    ESTADO: HISTÓRICO.
+    LÓGICA MIGRADA: adaptive_reconstruction/hybrid_engine.py.
+
+23. quantia_case_loader.py
+    ESTADO: UTILIDAD DE TEST.
+    NO MIGRAR: rutas/replays/casos de validación no pertenecen al motor productivo.
+
+24. __init__.py
+    ESTADO: infraestructura de tests.
+
+NUEVOS TESTS ACTIVOS
+- test_quantia_spatial_post_filter_contract_v1_synthetic.py
+  Valida que excluir no borra evidencia y que N hipótesis paralelas se convierten en una centerline.
+- test_quantia_spatial_v1_process_all_3_v1.py
+  Ejecuta el mismo QuantiaSpatialV1ProcessEngine para Casa Viri, Miguel H y Miguel V; no contiene algoritmo del motor.
+- test_quantia_spatial_scale_resolver_v1_7_contract.py
+  Verifica contrato público actual del resolver de escala.
+
+LAGUNAS DELIBERADAMENTE ABIERTAS
+- ROOF/TERRACE/GARAGE_SHUTTER aún no tienen detector especializado productivo: deben quedar ARCHITECTURAL_ELEMENT si existe contexto conocido o UNRESOLVED si no existe certeza.
+- Call 2 no se ejecuta en la validación actual.
+- Contrato final hacia F04 aún no se congela hasta validar visualmente filtros + canonicalización.

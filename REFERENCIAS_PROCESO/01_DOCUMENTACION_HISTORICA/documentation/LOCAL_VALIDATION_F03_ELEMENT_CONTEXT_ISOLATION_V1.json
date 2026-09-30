@@ -1,0 +1,20 @@
+{
+  "version": "F03_ELEMENT_CONTEXT_ISOLATION_V1",
+  "timestamp_local": "2026-09-11T22:09:00-06:00",
+  "status": "PASS_LOCAL_CANDIDATE",
+  "targeted_pytest": {
+    "passed": 35,
+    "failed": 0,
+    "suites": [
+      "test_quantia_spatial_f03_element_context_isolation_v1_synthetic.py",
+      "test_quantia_spatial_f03_selection_contracts_v1_4_synthetic.py",
+      "test_quantia_spatial_f03_selection_contracts_v1_3_synthetic.py",
+      "test_quantia_spatial_f03_selection_contracts_v1_2_synthetic.py",
+      "test_quantia_spatial_context_classification_v6_2_synthetic.py"
+    ]
+  },
+  "compile": "PASS",
+  "real_three_case_test_modified": false,
+  "real_three_case_test_executed_here": false,
+  "promotion": "PENDING_REAL_3_CASE_VALIDATION"
+}

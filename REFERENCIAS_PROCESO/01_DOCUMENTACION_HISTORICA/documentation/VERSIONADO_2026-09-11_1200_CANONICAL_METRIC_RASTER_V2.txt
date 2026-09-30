@@ -1,0 +1,20 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-11
+Versión: CANONICAL METRIC RASTER V2
+Base: CANONICAL METRIC RASTER V1 + SCALE FOUNDATION V1.4
+
+ARCHIVOS DE EJECUCIÓN MODIFICADOS
+- engine.py
+- models/level_view.py
+- reconstruction_core/level_scale_normalizer.py
+
+ARCHIVO NUEVO
+- phase_02_boundaries/perimeter_raster_reprojector.py
+
+PRINCIPIO
+F02 se interpreta una sola vez. Después de normalizar el raster solo cambia su representación px mediante reproyección determinista.
+
+VALIDACIÓN
+40 PASSED sintéticos.
+compileall PASS.
+Probe real F03 Casa Viri + Miguel H permanece sin cambios y debe ejecutarse en el entorno con los PDFs originales.

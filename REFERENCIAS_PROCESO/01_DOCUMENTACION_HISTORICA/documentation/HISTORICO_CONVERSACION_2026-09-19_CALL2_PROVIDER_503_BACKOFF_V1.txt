@@ -1,0 +1,15 @@
+HISTORICO — CALL2 PROVIDER 503 BACKOFF V1
+Fecha: 2026-09-19
+
+DECISION
+No modificar reconstruccion ni Call2 por un error HTTP 503 de alta demanda.
+Se aisla la correccion al provider Gemini.
+
+EVIDENCIA
+Los tres casos Casa Viri, Miguel H y Miguel V alcanzaron provider.analyze y fallaron con HTTP 503 UNAVAILABLE en gemini-3.7-flash y gemini-3.5-flash.
+
+CAUSA
+La capa HTTP reintentaba, pero un 503 sin retryDelay caia en backoff exponencial corto (1/2 s), inadecuado para el mensaje "model is currently experiencing high demand".
+
+CAMBIO
+Backoff especifico 503 15/30/60 s, cuatro intentos totales por modelo y configuracion por variables de entorno.

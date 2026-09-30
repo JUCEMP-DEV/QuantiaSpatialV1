@@ -1,0 +1,47 @@
+QUANTIA SPATIAL V1 — CANONICAL WALLGRAPH INTEGRITY V1
+Fecha: 2026-09-26
+
+OBJETIVO
+Cerrar la reconstrucción base sin modificar Adaptive Reconstruction ni PostFilter V4.
+
+CAUSA RAÍZ CORREGIDA
+PostFilter V4 sustituía únicamente `walls` dentro de un SingleLineWallGraph heredado.
+`logical_gaps`, topología, espacios, route_plan y diagnostics seguían correspondiendo al grafo Adaptive anterior.
+Esto permitía una salida walls-only visualmente limpia pero un contrato interno inconsistente.
+
+CAMBIOS
+1. Nuevo paquete `canonical_wallgraph/`.
+2. `CanonicalWallGraphFinalizer` reconstruye, usando exclusivamente los muros canónicos finales:
+   - PhysicalWallTracks canónicos;
+   - bridges/gaps lógicos;
+   - connected-space topology;
+   - PERIMETER/DIVIDER/REVIEW;
+   - junctions/components;
+   - diagnostics;
+   - route plan.
+3. El finalizador NO agrega ni elimina muros y NO modifica su geometría.
+4. Nuevo `ReconstructionEvidenceBundle`, separado del WallGraph operativo.
+5. `QuantiaSpatialV1ProcessEngine` ejecuta ahora:
+   Adaptive -> PostFilter V4 -> CanonicalWallGraphFinalizer -> [Call2 opcional].
+6. Si Call2 modifica muros, las relaciones topológicas se recalculan antes de publicar `final_wall_graph`.
+7. Regresión integral reforzada con invariantes de IDs, gaps, diagnósticos, clases y mappings.
+
+INVARIANTES DE CIERRE
+- Todos los `logical_gaps.wall_ids` existen en `final_wall_graph.walls`.
+- No existen IDs de muro duplicados.
+- `selected_wall_count == len(walls)`.
+- Conteos REVIEW/PERIMETER/DIVIDER coinciden con los muros publicados.
+- `diagnostics.interior_space_count == graph.interior_space_count`.
+- Cada muro Adaptive pertenece exactamente a una clase PostFilter.
+- Cada source WALL pertenece exactamente a un canonical mapping.
+- Ningún source WALL se publica en dos mappings canónicos.
+- La geometría publicada por PostFilter no cambia durante el finalizado.
+
+PUNTO DE RETORNO
+ZIP recibido por el usuario: `quantia_spatialV1.zip` previo a CANONICAL_WALLGRAPH_INTEGRITY_V1.
+
+VALIDACIÓN EN CONTENEDOR
+- compileall: PASS.
+- regresión sintética focal: 8 PASSED.
+- regresión ampliada seleccionada: 30 PASSED.
+- prueba integral de 3 casos: 3 SKIPPED en contenedor por ausencia de PDFs en rutas Windows; ejecutar localmente.

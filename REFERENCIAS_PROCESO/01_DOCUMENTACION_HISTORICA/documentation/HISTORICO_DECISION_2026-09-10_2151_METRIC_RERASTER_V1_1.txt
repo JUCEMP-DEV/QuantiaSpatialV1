@@ -1,0 +1,19 @@
+DECISION: AISLAR UNA SOLA VARIABLE EN EL BENCHMARK DE RERASTERIZACION
+
+La primera corrida real produjo:
+- Casa Viri: PASS y ~90 px/m alcanzados.
+- Miguel H: FAIL por ausencia de EditablePerimeterModel en Planta Alta del bootstrap PDF.
+- Miguel V: FAIL porque el resolver cargado devolvió CONFLICT, señal de que no estaba
+  garantizada la versión Scale Foundation V1.4 en el repo usado por el test.
+
+Se corrige el test, no el clasificador:
+- Scale Foundation V1.4 se fija explícitamente como dependencia.
+- F02 se congela como referencia inmutable y no se vuelve a interpretar como variable
+  experimental entre BEFORE y AFTER.
+- El objetivo sigue siendo medir únicamente el efecto de normalizar la densidad geométrica
+  hacia 90 px/m sobre V6.2.
+
+EVIDENCIA CASA VIRI DE LA PRIMERA CORRIDA
+PB: 44.734 -> 89.872 px/m; surface_selected 3 -> 21.
+PA: 44.737 -> 90.213 px/m; surface_selected 0 -> 0.
+Esto NO se interpreta aún como conclusión final hasta completar H/V con V1.1.

@@ -1,0 +1,16 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Fecha: 2026-09-11
+
+Rama de retorno: F03 Selection Contracts V1
+Paquete exacto: QUANTIA_V2L_F03_SELECTION_CONTRACTS_V1.zip
+SHA256: ed0c57d2bd0ec59f72ec75a7f88d4cd31cb11e23e8ff9eeeee11fed6b8517707
+
+Base estable subyacente:
+Canonical Metric Raster V2.3 VALIDATED
+
+Motivo del nuevo avance:
+La validación real V1 mejoró el aislamiento de escaleras/repetición, pero dejó cuatro residuos globales:
+1. candidatos internos de FLOOR_FINISH_GRID de alta confianza aún podían quedar ACTIVE cuando no coincidían con perfiles/face_ids;
+2. candidatos ultradelgados podían conservar unary positivo pese a la escala métrica resuelta;
+3. líneas sólidas centradas sobre AXIS_GRID podían evitar dashed_penalty y conservarse como muro;
+4. continuation/orientation mismatch dentro de regiones 2D seguía permitiendo algunas selecciones falsas.

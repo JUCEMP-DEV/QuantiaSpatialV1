@@ -1,0 +1,31 @@
+QUANTIA V2L — VERSIONADO 2026-09-11 14:02 CST
+Versión: CANONICAL METRIC RASTER V2.3
+Base: CANONICAL METRIC RASTER V2.2
+Rollback SHA256: fa7df1910b402dccf5a88a37e30d0e3adb0d9a9ade38ef7b05bc8791a439562f
+
+ARCHIVOS DE EJECUCIÓN MODIFICADOS
+- reconstruction_core/reference_axis_resolver.py
+- reconstruction_core/general_dimension_graphic_span.py
+- reconstruction_core/scale_evidence_resolver.py
+
+ARCHIVO DE PRUEBA PRESERVADO
+- tests/test_quantia_spatial_f03_flow_all_3_v1.py
+  SHA256: 389552f6d7d06e85b29ac9cdfb7a1e374fd692ac70cc560df083924869d8437f
+
+CAMBIO FUNCIONAL
+- Cota con reference_start/reference_end se interpreta como distancia entre ejes, no como dimensión del bbox F02.
+- Rótulos explícitos de eje se vuelven cross-check permanente del fit afín.
+- Fit afín contradicho por múltiples rótulos queda CONFLICT y no gobierna escala.
+- Línea gráfica relativa a F02 para cota entre ejes queda con confianza diagnóstica <=0.70.
+- Sin escala declarada, clusters se evalúan por soporte independiente, no por cantidad de derivados de una misma cadena.
+- Una orientación auto-contradictoria no bloquea otra orientación con consenso independiente.
+
+NO MODIFICADO
+- engine.py
+- F02 y reproyección
+- phase_015_evidence/evidence_parameterizer.py
+- level_scale_normalizer.py
+- Context Classification V6.2
+- Structural Lineage
+- solver
+- criterios PASS/FAIL de pruebas.

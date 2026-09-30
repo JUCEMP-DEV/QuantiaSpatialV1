@@ -1,0 +1,20 @@
+{
+  "version": "F03_SELECTION_CONTRACTS_V1_2",
+  "date_local": "2026-09-11T18:52:00-06:00",
+  "targeted_tests": {
+    "count": 38,
+    "result": "PASSED"
+  },
+  "compileall_reconstruction_core": "PASSED",
+  "real_test_modified": false,
+  "real_test_sha256": "17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f",
+  "rollback": {
+    "version": "F03 Selection Contracts V1.1",
+    "package_sha256": "16237e18282a9bf45fdb3f7054bac5a53134ec2d57ddfbe835fa37bcbccc3db7"
+  },
+  "limitations": [
+    "El contenedor aislado no incluye app/core del backend completo.",
+    "Los PDFs externos de Casa Viri, Miguel H y Miguel V no están dentro del paquete V1.1.",
+    "La prueba real congelada debe ejecutarse en el backend local del usuario."
+  ]
+}

@@ -1,0 +1,9 @@
+PUNTO DE RETORNO — SCALE FOUNDATION V1.1
+Base: QUANTIA_V2L_SCALE_FOUNDATION_V1_2026-09-10.zip
+SHA256: 4810d2c3f5172e25f0bf913889dade67f5f7fea6a74b9d228b4f7aee61635164
+
+Para revertir esta ronda:
+- restaurar scale_evidence_resolver.py desde Scale Foundation V1;
+- restaurar los tests Scale Foundation V1.
+
+No se modificaron fases ni solver fuera del resolver de escala.

@@ -1,0 +1,9 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Fecha: 2026-09-11
+
+RETORNO INMEDIATO
+F03 Selection Contracts V1.2
+Paquete: QUANTIA_V2L_F03_SELECTION_CONTRACTS_V1_2.zip
+SHA256: 8d37d90cb4b617e67b0478c36989e2c12a76c1129ddec5f4e9b20e340cf8f2b4
+
+Usar este punto si V1.3 reintroduce falsos positivos o pierde estabilidad de V1.2.

@@ -1,0 +1,17 @@
+QUANTIA_V2L_A12_PATTERN_CONTEXT_V3_PATCH/
+├── reconstruction_core/
+│   ├── candidate_exclusion_policy.py      REEMPLAZO COMPLETO
+│   ├── wall_candidate_generator.py        REEMPLAZO COMPLETO
+│   ├── global_topology_solver.py          REEMPLAZO COMPLETO
+│   └── topology_analyzer.py               REEMPLAZO COMPLETO
+├── tests/
+│   ├── test_candidate_pattern_context_v3.py
+│   └── test_quantia_spatial_candidate_pattern_context_v3_casa_viri.py
+└── documentation/PATTERN_CONTEXT_V3/
+    ├── CURRENT_VERSION.txt
+    ├── POINT_OF_RETURN.txt
+    ├── PATCH_NOTES.txt
+    ├── HISTORY_2026-09-09.txt
+    ├── BASE_ZIP_SHA256.txt
+    ├── STRUCTURE_TREE.txt
+    └── SHA256_MANIFEST.txt

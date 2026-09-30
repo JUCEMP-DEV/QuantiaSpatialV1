@@ -1,0 +1,10 @@
+QUANTIA V2L — PUNTO DE RETORNO ANTES DE SCALE FOUNDATION V1.4
+Fecha: 2026-09-10 20:45 -06:00
+
+Base restaurable:
+QUANTIA_V2L_SCALE_FOUNDATION_V1_2_2026-09-10.zip
+SHA256: faeb6ba3a2174c5ae72f1cade05abab7e80b096659995731ad034da9d238ae12
+
+Motivo:
+V1.4 modifica asociación semántica de orientación/lado e introduce un nuevo resolver de span gráfico.
+Si aparece regresión, restaurar V1.2 completa. No aplicar reversión parcial.

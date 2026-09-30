@@ -1,0 +1,26 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-14 12:46 -06:00
+
+DECISIÓN PRINCIPAL
+No continuar ajustando scores del solver. Primero reparar identidad y encapsulamiento de objetos para que F03 reciba candidatos con provenance funcional confiable.
+
+EVIDENCIA QUE MOTIVA EL CAMBIO
+Element Isolation Probe V1 mostró:
+- regiones de puerta detectadas fuera de las puertas reales;
+- WINDOW_REGION = 0;
+- regiones de escalera/acabado con muchos member_line_ids pero direct_member_candidate_count = 0;
+- TEXT_SYMBOL con bboxes extensos capaces de cruzar numerosos candidatos;
+- walls_only todavía contaminado por geometría funcional no aislada.
+
+CAUSA RAÍZ
+Los detectores de contexto trabajan con trazos físicos normalizados mientras Candidate Discovery usa líneas representativas y tracks consolidados. Esa transformación perdía la equivalencia de identidad. Como resultado, el gate redecidía por bbox/heurística aun cuando la provenance directa existía en capas anteriores.
+
+CONTRATO V2
+- Contención espacial nunca sustituye provenance cuando la provenance está disponible.
+- Puerta: arco por sí solo no basta; debe existir hoja, host wall y contexto arquitectónico.
+- Ventana: frame paralelo compacto + soporte de host/perímetro; no simple triple línea aislada.
+- Opening: símbolo directo puede aislarse; host wall nunca se elimina por compartir bbox.
+- Texto: localización únicamente, sin máscara negativa ni riesgo por bbox.
+
+PUNTO DE RETORNO
+F03 Element Context Isolation V1, paquete SHA256 c7cf109552a097a1f7961f415ed404010b823445f0b7aa46ad4112b0b80f8cd7.

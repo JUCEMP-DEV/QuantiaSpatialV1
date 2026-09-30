@@ -1,0 +1,23 @@
+QUANTIA V2L — HISTÓRICO DECISIÓN
+2026-09-12 14:13 -06:00
+
+DECISIÓN
+Detener ajustes del motor por umbral hasta observar cada clase contextual por separado.
+
+EVIDENCIA DE LA CORRIDA PREVIA
+- Casa Viri PB publica 13 DOOR_REGION; PA publica 14.
+- Miguel V PB publica 34 DOOR_REGION.
+- No aparece WINDOW_REGION en los reportes actuales.
+- La decisión final del gate no registra DOOR_REGION en decision_region_type_counts aunque existan regiones; la decisión única ganadora oculta coincidencias secundarias.
+- Persisten candidatos seleccionados asociados a STAIR_FLIGHT_REGION.
+
+CAUSA DE DIAGNÓSTICO
+El reporte anterior mezcla regiones, candidatos, estados y nomenclaturas en una sola imagen. Además, CandidateContextGate conserva una sola decisión final por candidato; esto impide saber si una puerta/ventana fue detectada pero perdió prioridad ante otra región.
+
+NUEVO CRITERIO
+- Visual principal = solo muros seleccionados.
+- Diagnóstico por elemento = cada clase aislada.
+- El probe evalúa cada candidato contra cada región individual mediante la misma regla del gate, sin alterar el resultado del solver.
+
+PUNTO DE RETORNO
+F03 Element Context Isolation V1 previo a este probe. El motor no fue modificado.

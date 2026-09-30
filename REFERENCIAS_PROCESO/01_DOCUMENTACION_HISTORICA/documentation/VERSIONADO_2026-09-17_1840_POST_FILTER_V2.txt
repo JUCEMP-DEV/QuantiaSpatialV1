@@ -1,0 +1,78 @@
+QUANTIA SPATIAL V1 — POST-RECONSTRUCTION FILTER LAYER V2
+Fecha: 2026-09-17
+Raíz: Backend/app/quantia_spatialV1
+
+PUNTO DE RETORNO
+- Archivo: quantia_spatialV1_Productized_Process_PostFilter_V1.zip
+- SHA256: 2a8d7ba19b24f6140e83a72f96b70dc02a3c1716972ef2b123adda9dd9391795
+- Adaptive Reconstruction permanece congelada.
+- Call 2 permanece OFF por defecto.
+
+OBJETIVO DEL CAMBIO
+Añadir una capa posterior e independiente que opere sobre el resultado ya reconstruido para:
+1. clasificar/excluir sin borrar evidencia;
+2. encapsular patrones no-muro de alta certeza;
+3. separar evidencia gráfica de elementos arquitectónicos;
+4. publicar una sola centerline por muro físico aceptado;
+5. evitar regresar a F03/Mask/Topology para corregir el resultado.
+
+CAMBIOS PRODUCTIVOS — SOLO post_reconstruction_filters/
+- geometry_pattern_analyzer.py (nuevo):
+  * detecta familias paralelas repetitivas locales;
+  * detecta retículas ortogonales;
+  * detecta nodos angulares convergentes compatibles con cubierta/proyección;
+  * no muta el WallGraph adaptativo.
+- selector.py:
+  * activa filtros por evidencia contextual y geométrica;
+  * añade REPETITIVE_PATTERN_FILTER, ANGULAR_HUB_FILTER y WALL_FACE_CANONICALIZER.
+- filter_engine.py:
+  * combina contexto previo + patrones post-reconstrucción + protección topológica;
+  * salida fija: WALL / ARCHITECTURAL_ELEMENT / EXCLUDED_GRAPHIC / UNRESOLVED;
+  * ningún elemento se elimina; todos conservan referencia a su evidencia.
+- wall_hypothesis_canonicalizer.py:
+  * paso 1: colapso conservador de hipótesis casi coincidentes;
+  * paso 2: dos caras paralelas compatibles -> centerline física;
+  * evita canonicalización transitiva indiscriminada.
+- contracts.py:
+  * agrega PatternEvidence y trazabilidad de pattern_ids;
+  * versión de resultado POST_RECONSTRUCTION_FILTER_V2.
+- artifact_renderer.py:
+  * añade 05_pattern_evidence.png.
+
+REGLA FIJA DE FILTROS
+- Filtrar = excluir de una salida concreta, nunca borrar.
+- ARCHITECTURAL_ELEMENT: se preserva fuera del WallGraph para capas posteriores.
+- EXCLUDED_GRAPHIC: se preserva como evidencia no-muro/no-elemento útil.
+- UNRESOLVED: se conserva para revisión/Call 2.
+- Conflicto patrón vs evidencia estructural fuerte => UNRESOLVED, no exclusión automática.
+
+VALIDACIÓN
+- Suite activa completa: 65 PASSED, 9 SKIPPED, 0 FAILED.
+- compileall: PASS.
+- Los 9 skips corresponden a pruebas reales dependientes de PDFs ubicados en rutas Windows del usuario.
+
+REPLAY SOBRE 6 WALLGRAPH REALES RECIBIDOS
+Se ejecutaron únicamente los módulos post-reconstrucción que no requieren reabrir el motor.
+Canonicalización V2:
+- Casa Viri PB: 140 -> 87; 53 hipótesis colapsadas.
+- Casa Viri PA: 73 -> 38; 35 colapsadas.
+- Miguel H PB: 221 -> 121; 100 colapsadas.
+- Miguel H PA: 153 -> 81; 72 colapsadas.
+- Miguel V PB: 75 -> 43; 32 colapsadas.
+- Miguel V PA: 178 -> 130; 48 colapsadas.
+Nota: menor cantidad NO es criterio de calidad por sí mismo. V2 es más conservador frente a cadenas transitivas.
+
+Patrones geométricos detectados sin usar nombres de caso:
+- Casa Viri PB: 3 familias repetitivas locales compatibles con elemento arquitectónico.
+- Casa Viri PA: 0 patrones fuertes; los haces estrechos se delegan al canonicalizer.
+- Miguel H PB: 2 familias compactas de trazos clasificables como evidencia gráfica.
+- Miguel H PA: 1 nodo angular convergente compatible con ROOF_COVER_CANDIDATE.
+- Miguel V PB/PA: 0 patrones fuertes puramente geométricos; requieren contexto previo o permanecen sin forzar clasificación.
+
+PENDIENTE INMEDIATO
+Ejecutar el test integral real en Windows y revisar:
+- 02_filter_classification.png
+- 03_encapsulated_and_excluded.png
+- 04_filtered_single_line_wallgraph.png
+- 05_pattern_evidence.png
+No activar Call 2 hasta validar visualmente esta capa.

@@ -1,0 +1,19 @@
+HISTÓRICO — 2026-09-26 — CANONICAL WALLGRAPH INTEGRITY V1
+
+DECISIÓN
+No regresar a F03/Wall Mask/Adaptive/PostFilter. El defecto identificado está después del filtrado: el WallGraph filtrado heredaba relaciones del grafo anterior.
+
+HALLAZGO DECISIVO
+Los resultados walls-only eran visualmente válidos, pero la mayoría de `logical_gaps` referenciaban muros ya ausentes después de PostFilter/canonicalización. Por tanto, PostFilter V4 sigue siendo baseline visual y de selección, pero no se publica directamente como contrato canónico.
+
+SOLUCIÓN
+Agregar una etapa posterior independiente: `CanonicalWallGraphFinalizer`.
+La etapa reconstruye relaciones y diagnósticos desde los muros canónicos finales sin alterar sus centerlines.
+
+TRAZABILIDAD
+La evidencia completa no se incrusta en el WallGraph. Se publica en `ReconstructionEvidenceBundle` para mantener separado:
+- contrato operativo;
+- evidencia/auditoría.
+
+GATE
+Antes de retomar Call2/F04, ejecutar localmente la regresión integral con los seis LevelViews y confirmar `canonical_integrity_valid=true` en todos.

@@ -1,0 +1,17 @@
+PUNTO DE RETORNO — ANTES DE CONTEXT CLASSIFICATION V6
+
+Base física:
+quantia_spatial(6).zip
+SHA256: c038b3a1092e19d625d40d26fb45883eda55856531b8904e95a64a122aeceef5
+
+Último cambio aplicado y validado por el usuario antes de V6:
+QUANTIA_V2L_SOLVER_EVIDENCE_V1_STANDARDIZED_2026-09-10.zip
+SHA256: f7adec49931246cb35c3718d5261abdc2a8b0ea1192ff8fad0e1557f4eb4c24b
+
+Para volver atrás, restaurar esa combinación y retirar los archivos/cambios V6:
+- reconstruction_core/repeated_cell_detector.py
+- reconstruction_core/context_region_classifier.py
+- cambios V6 en context_models.py
+- cambios V6 en context_region_detector.py
+- cambios V6 en candidate_context_gate.py
+- cambios de identificación/documentación V6.

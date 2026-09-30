@@ -1,0 +1,187 @@
+{
+  "case": "Miguel H limpio",
+  "levels": [
+    {
+      "level": "Planta Baja",
+      "adaptive_walls": 221,
+      "filtered_walls": 96,
+      "architectural_elements": 12,
+      "excluded_graphics": 12,
+      "unresolved": 26,
+      "collapsed_hypotheses": 75,
+      "pattern_groups": 2,
+      "repetitive_patterns": 2,
+      "angular_hubs": 0,
+      "filter_modules": [
+        {
+          "module": "CONTEXT_CLASSIFIER",
+          "enabled": true,
+          "reason": "Existen decisiones/regiones contextuales trazables en los candidatos de entrada."
+        },
+        {
+          "module": "TOPOLOGY_GUARD",
+          "enabled": true,
+          "reason": "La topologia ya validada se usa como evidencia de conservacion, nunca como borrado."
+        },
+        {
+          "module": "GRAPHIC_EVIDENCE_FILTER",
+          "enabled": true,
+          "reason": "Hay regiones graficas conocidas o una fraccion relevante de muros REVIEW."
+        },
+        {
+          "module": "ARCHITECTURAL_ELEMENT_FILTER",
+          "enabled": false,
+          "reason": "Hay regiones de elementos arquitectonicos ya detectadas por capas anteriores."
+        },
+        {
+          "module": "REPETITIVE_PATTERN_FILTER",
+          "enabled": true,
+          "reason": "La geometria post-reconstruccion contiene familias repetitivas regulares que requieren encapsulamiento."
+        },
+        {
+          "module": "ANGULAR_HUB_FILTER",
+          "enabled": false,
+          "reason": "Se detectaron nodos con convergencia angular compatibles con cubierta/proyeccion arquitectonica."
+        },
+        {
+          "module": "RAILING_GUARDRAIL_FILTER",
+          "enabled": true,
+          "reason": "Existe evidencia de bordes abiertos/escaleras o patrones repetitivos que pueden corresponder a barandales/barandales de proteccion."
+        },
+        {
+          "module": "STAIR_HANDRAIL_FILTER",
+          "enabled": true,
+          "reason": "Existe evidencia de escalera o familias repetitivas asociables a pasamanos/barandal de escalera."
+        },
+        {
+          "module": "SLAB_EDGE_LEVEL_CHANGE_FILTER",
+          "enabled": true,
+          "reason": "Hay REVIEWs sobre bordes abiertos/proyecciones donde pueden existir bordes de losa o cambios de nivel."
+        },
+        {
+          "module": "OPENING_CLOSURE_FILTER",
+          "enabled": true,
+          "reason": "Hay patrones repetitivos o regiones de opening/door/window compatibles con cierres lineales o cortinas."
+        },
+        {
+          "module": "ALUMINUM_GLAZING_FILTER",
+          "enabled": true,
+          "reason": "Hay openings o modulos lineales repetitivos compatibles con canceleria/aluminio de piso a techo."
+        },
+        {
+          "module": "ORPHAN_GRAPHIC_FILTER",
+          "enabled": true,
+          "reason": "Los REVIEW aislados se mantienen trazables y pueden excluirse solo con evidencia grafica adicional."
+        },
+        {
+          "module": "DUPLICATE_WALL_CANONICALIZER",
+          "enabled": true,
+          "reason": "Se detectaron 113 pares de hipotesis paralelas/solapadas compatibles con un mismo muro fisico."
+        },
+        {
+          "module": "WALL_FACE_CANONICALIZER",
+          "enabled": true,
+          "reason": "Se detectaron 85 pares de caras paralelas compatibles con una sola centerline fisica."
+        },
+        {
+          "module": "NEAR_COINCIDENT_CANONICALIZER",
+          "enabled": true,
+          "reason": "Se detectaron 86 pares casi coincidentes que pueden representar la misma centerline aunque difiera su rol topologico."
+        }
+      ],
+      "call2_required": true,
+      "call2_executed": false
+    },
+    {
+      "level": "Planta Alta",
+      "adaptive_walls": 153,
+      "filtered_walls": 70,
+      "architectural_elements": 9,
+      "excluded_graphics": 6,
+      "unresolved": 2,
+      "collapsed_hypotheses": 66,
+      "pattern_groups": 1,
+      "repetitive_patterns": 0,
+      "angular_hubs": 1,
+      "filter_modules": [
+        {
+          "module": "CONTEXT_CLASSIFIER",
+          "enabled": true,
+          "reason": "Existen decisiones/regiones contextuales trazables en los candidatos de entrada."
+        },
+        {
+          "module": "TOPOLOGY_GUARD",
+          "enabled": true,
+          "reason": "La topologia ya validada se usa como evidencia de conservacion, nunca como borrado."
+        },
+        {
+          "module": "GRAPHIC_EVIDENCE_FILTER",
+          "enabled": true,
+          "reason": "Hay regiones graficas conocidas o una fraccion relevante de muros REVIEW."
+        },
+        {
+          "module": "ARCHITECTURAL_ELEMENT_FILTER",
+          "enabled": true,
+          "reason": "Hay regiones de elementos arquitectonicos ya detectadas por capas anteriores."
+        },
+        {
+          "module": "REPETITIVE_PATTERN_FILTER",
+          "enabled": false,
+          "reason": "La geometria post-reconstruccion contiene familias repetitivas regulares que requieren encapsulamiento."
+        },
+        {
+          "module": "ANGULAR_HUB_FILTER",
+          "enabled": true,
+          "reason": "Se detectaron nodos con convergencia angular compatibles con cubierta/proyeccion arquitectonica."
+        },
+        {
+          "module": "RAILING_GUARDRAIL_FILTER",
+          "enabled": true,
+          "reason": "Existe evidencia de bordes abiertos/escaleras o patrones repetitivos que pueden corresponder a barandales/barandales de proteccion."
+        },
+        {
+          "module": "STAIR_HANDRAIL_FILTER",
+          "enabled": true,
+          "reason": "Existe evidencia de escalera o familias repetitivas asociables a pasamanos/barandal de escalera."
+        },
+        {
+          "module": "SLAB_EDGE_LEVEL_CHANGE_FILTER",
+          "enabled": true,
+          "reason": "Hay REVIEWs sobre bordes abiertos/proyecciones donde pueden existir bordes de losa o cambios de nivel."
+        },
+        {
+          "module": "OPENING_CLOSURE_FILTER",
+          "enabled": true,
+          "reason": "Hay patrones repetitivos o regiones de opening/door/window compatibles con cierres lineales o cortinas."
+        },
+        {
+          "module": "ALUMINUM_GLAZING_FILTER",
+          "enabled": true,
+          "reason": "Hay openings o modulos lineales repetitivos compatibles con canceleria/aluminio de piso a techo."
+        },
+        {
+          "module": "ORPHAN_GRAPHIC_FILTER",
+          "enabled": true,
+          "reason": "Los REVIEW aislados se mantienen trazables y pueden excluirse solo con evidencia grafica adicional."
+        },
+        {
+          "module": "DUPLICATE_WALL_CANONICALIZER",
+          "enabled": true,
+          "reason": "Se detectaron 82 pares de hipotesis paralelas/solapadas compatibles con un mismo muro fisico."
+        },
+        {
+          "module": "WALL_FACE_CANONICALIZER",
+          "enabled": true,
+          "reason": "Se detectaron 48 pares de caras paralelas compatibles con una sola centerline fisica."
+        },
+        {
+          "module": "NEAR_COINCIDENT_CANONICALIZER",
+          "enabled": true,
+          "reason": "Se detectaron 72 pares casi coincidentes que pueden representar la misma centerline aunque difiera su rol topologico."
+        }
+      ],
+      "call2_required": true,
+      "call2_executed": false
+    }
+  ]
+}

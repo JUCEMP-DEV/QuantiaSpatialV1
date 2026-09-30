@@ -1,0 +1,27 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11 14:02 CST
+
+HECHO VALIDADO ANTES DEL CAMBIO
+Casa Viri y Miguel H pasan el flujo F01→F03 con escala final ~90 px/m. Miguel V Planta Alta también resuelve; solo Planta Baja queda CONFLICT.
+
+DECISIÓN CLAVE DEL USUARIO
+En Miguel V PB el perímetro F02 no debe coincidir con las cotas generales de ancho porque existen marquesinas/proyecciones en los lados norte y oeste. Las cotas generales corresponden a ejes arquitectónicos, no necesariamente a la envolvente exterior F02.
+
+CAUSA RAÍZ
+El motor mezclaba dos referencias distintas:
+- envolvente física/perímetro F02;
+- retícula dimensional entre ejes.
+Además, AxisGridResolver podía aceptar un patrón de líneas paralelas sin identidad textual como si fuera la retícula completa.
+
+CAMBIO
+1. Separar cota entre ejes de bbox F02.
+2. Usar rótulos de eje observados como ancla de identidad para validar/corregir coordenadas.
+3. Invalidar como fuente métrica un fit afín global contradicho por >=2 rótulos.
+4. Evitar que múltiples AXISSPAN derivados de la misma cadena aparenten fuentes independientes.
+5. Mantener conflictos descartados visibles en warnings/candidates para trazabilidad.
+
+PUNTO DE RETORNO
+Canonical Metric Raster V2.2, SHA256 fa7df1910b402dccf5a88a37e30d0e3adb0d9a9ade38ef7b05bc8791a439562f.
+
+CRITERIO DE CIERRE
+No se considera V2.3 validada en real hasta que la prueba ALL 3, sin cambios, conserve Casa Viri/Miguel H y vuelva a ejecutar Miguel V PB con Scale/F03 RESOLVED.

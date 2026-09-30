@@ -1,0 +1,32 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-10 11:52 -06:00
+
+DECISIÓN
+Crear Context Classification V6.1 antes de continuar con nuevas clases o con la segunda llamada LLM.
+
+MOTIVO
+Los resultados V6 muestran que las clases existen, pero no son estables entre plantas equivalentes:
+- DIMENSION_REGION se expande y domina candidatos ajenos a cotas.
+- STAIR_FLIGHT_REGION puede detectarse pero perder la decisión final por superposición.
+- Los umbrales siguen parcialmente ligados a píxeles/tamaño individual del LevelView.
+
+CAMBIO ESTRUCTURAL
+Se introduce normalización inter-planta por proyecto:
+F02 m/px por LevelView -> escala canónica del proyecto -> referencia común de análisis.
+No se reescala la imagen ni se altera geometría; solo se normalizan criterios de clasificación.
+
+REGLA DE CERTEZA
+Si una planta no tiene escala métrica fundamentada, queda SCALE_UNRESOLVED. No se copia la escala
+hermana de forma automática.
+
+CORRECCIÓN DIMENSION_REGION
+Se sustituye el crecimiento por buffer global por una cadena local:
+texto numérico -> línea anchor cercana -> máximo dos extensiones perpendiculares en extremos.
+Se rechazan cajas bidimensionalmente gigantes.
+
+SUPERPOSICIÓN
+A igual estado contextual, una clase local fuerte (STAIR/FLOOR/HATCH) tiene prioridad sobre
+AXIS/DIMENSION. WALL_PROTECTED sigue teniendo prioridad absoluta.
+
+PUNTO DE RETORNO
+Context Classification V6 ZIP SHA256 877235649cd25eedea6c4411383f9c3c6c0b3127929b2f324ef32054ef14d125.

@@ -1,0 +1,18 @@
+HISTÓRICO — DECISIÓN CANONICAL METRIC RASTER V1
+Fecha: 2026-09-10 22:58 -06:00
+
+DECISIÓN
+Dejar de tratar la normalización de escala como una prueba externa. La densidad métrica pasa a formar parte del flujo canónico de QuantiaSpatialEngine antes de publicar F01.5/F02 hacia F03.
+
+AUDITORÍA
+- OpenCV y OCR consumen level_view.raster_bytes.
+- DrawingModel/F03 consume level_view.raster_bytes para soporte raster.
+- Los visuales estandarizados también se generan desde level_view.raster_bytes.
+- PyMuPDF calcula PDF->px a partir de source_page_width_px/source_page_height_px del LevelView.
+- Gemini produce bboxes normalizados de página, por lo que una misma respuesta puede reproyectarse al nuevo raster sin otra llamada.
+
+CONSECUENCIA
+Si el LevelView publicado no se rerasteriza, el cálculo de escala no modifica realmente el proceso posterior. Con Canonical Metric Raster V1, el LevelView final, F01.5, F02 y F03 comparten el mismo marco raster normalizado.
+
+LÍMITE VERIFICADO
+El ZIP auditado contiene únicamente app/quantia_spatial. No contiene router/endpoints ni frontend; por tanto no se afirma que el preview de interfaz ya consuma este resultado. Dentro del motor, la fuente visual canónica sí queda actualizada. La integración UI deberá apuntar al LevelView final del engine cuando se abra esa fase.

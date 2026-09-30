@@ -1,0 +1,42 @@
+QUANTIA V2L — ARCHITECTURAL ELEMENTS MINI-ENGINE V2
+Fecha: 2026-09-16 12:49 -06:00
+Estado: IMPLEMENTADO / VALIDACIÓN SINTÉTICA APROBADA / PROBE REAL PENDIENTE
+
+OBJETIVO
+Separar definitivamente la detección de DOOR/WINDOW/NOT_OPENING de F03 ElementContextDetector.
+Spatial conserva autoridad exclusiva sobre muros. El mini-motor descubre openings desde evidencia F01.5 + semántica Gemini persistida + muros finales como contexto.
+
+CAMBIO DE CAUSA RAÍZ
+V1 todavía dependía de regiones producidas por F03 y por ello heredaba su recall: 0 puertas y varios LevelView sin candidatos.
+V2 elimina esa dependencia en producción.
+
+FLUJO V2
+DrawingModel F01.5 + WallGraph/ParametricWall final + semántica Gemini persistida
+  -> Independent Opening Hypothesis Generator V2
+     - curvas CUBIC_BEZIER plausibles para puertas
+     - interrupciones alineadas de caras de muro para puertas sin curva conservada
+     - grupos de líneas paralelas guiados por muro para ventanas
+     - bbox Gemini directo cuando existe
+     - restricciones LOCATED_IN -> SPACE como apoyo semántico
+  -> HostWallMatcher
+  -> FeatureVector + Architectural RAG V2
+  -> SemanticResolver opcional
+  -> ACCEPTED / REVIEW / REJECTED
+  -> OpeningReconciler
+  -> ParametricOpening
+
+GARANTÍAS
+- No consume ElementContextDetector en generación normal.
+- No consume CandidateContextGate.
+- No modifica F02.
+- No modifica CandidateGraph ni GlobalTopologySolver.
+- No reescribe muros Spatial.
+- ACCEPTED requiere host_wall publicable.
+- REVIEW nunca se publica automáticamente.
+
+RAG V2
+Se conserva RAG local auditable. Los ejemplos siguen siendo patrones propios/semillas de Quantia, no pesos ni salidas copiadas de FloorplanVLM.
+Se agrega soporte explícito para WALL_GAP y negativos de muro continuo/decorative parallels.
+
+LIMITACIÓN V2
+No declara puertas/ventanas resueltas sobre los casos reales hasta ejecutar el probe real V2 en el entorno del usuario. La validación local fue sintética y de regresión.

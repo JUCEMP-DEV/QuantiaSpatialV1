@@ -1,0 +1,6 @@
+2026-09-16 — DECISIÓN
+Tras validar que la canonicalización reduce muros paralelos/traslapados a una representación single-line, se decide probar una segunda llamada multimodal antes de integrar cambios al motor.
+
+La segunda llamada debe consolidar el WallGraph actual y decidir qué falta, no limitarse a seleccionar candidatos existentes. Debe devolver solo deltas y conservar gaps que puedan ser openings. Una tercera llamada futura se reserva para DOOR/WINDOW/NOT_OPENING.
+
+La primera evidencia real se limita a Miguel V Planta Baja para controlar costo, tokens y trazabilidad.

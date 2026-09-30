@@ -1,0 +1,31 @@
+QUANTIA SPATIAL V1 — CALL 2 WALL REVIEW V2.1 QUOTA SAFE
+Fecha: 2026-09-18
+
+PUNTO DE RETORNO
+- quantia_spatialV1_Call2_WallReview_V2.zip
+- SHA256 conocido: d33754a488708016ce3c1431d33ffb412a1afa26182a8d8a0f16a8a3fb9b1df6
+
+CAMBIOS
+1. providers/vision.py
+   - 429/503/etc siguen usando reintentos del mismo modelo.
+   - El delay ahora se obtiene en este orden:
+     Retry-After HTTP -> google.rpc.RetryInfo.retryDelay -> mensaje "Please retry in Xs" -> backoff exponencial.
+   - Se agrega 1 s de margen al delay informado por Gemini.
+
+2. adaptive_reconstruction/multimodal_review.py
+   - Replay exacto por hash para Call 2.
+   - Equivalencia requerida: level_view_id + prompt_version + schema_version + prompt_sha256 + schema_sha256 + image_sha256.
+   - Si existe SUCCEEDED equivalente en history JSONL, se devuelve sin nueva llamada.
+   - Se registra evento REPLAY_HIT.
+
+3. tests/test_quantia_spatial_v1_call2_all_3_v2.py
+   - Ya NO elimina output_dir al iniciar.
+   - Conserva history append-only y outputs previos para poder reanudar.
+
+NO MODIFICADO
+- Prompt CALL2_WALL_REVIEW_V2.
+- Schema CALL2_WALL_REVIEW_SCHEMA_V2.
+- Adaptive Reconstruction.
+- PostFilter V4.
+- DeltaValidator.
+- CorrectionApplier.

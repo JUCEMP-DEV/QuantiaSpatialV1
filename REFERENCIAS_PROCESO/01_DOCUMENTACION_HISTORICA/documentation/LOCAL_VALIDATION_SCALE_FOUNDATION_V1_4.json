@@ -1,0 +1,34 @@
+{
+  "version": "SCALE_FOUNDATION_V1_4",
+  "date_local": "2026-09-10T20:45:00-06:00",
+  "gemini_calls_added": 0,
+  "source_note": "Validación local sobre replays persistidos y evidencia visual real disponible de Miguel V; los PDFs originales están referenciados por rutas Windows externas y no están embebidos en el paquete.",
+  "tests": {
+    "scale_context_solver_synthetic": "36 PASSED",
+    "compileall": "PASS",
+    "miguel_v_pa_replay_dimensions": 28,
+    "miguel_v_pa_horizontal_dimensions": 15,
+    "miguel_v_pa_vertical_dimensions": 13
+  },
+  "miguel_v": {
+    "planta_baja": {
+      "general_spans": [
+        {"orientation": "HORIZONTAL", "value_m": 20.0, "span_px": 1497.0, "m_per_px": 0.013360053440213761},
+        {"orientation": "VERTICAL", "value_m": 7.7, "span_px": 578.0, "m_per_px": 0.013321799307958479}
+      ],
+      "selected_m_per_px": 0.013340868260457541,
+      "current_px_per_m": 74.95763997340484,
+      "recommended_render_scale_90pxm": 0.9529306456579073
+    },
+    "planta_alta": {
+      "general_spans": [
+        {"orientation": "HORIZONTAL", "side": "TOP", "value_m": 20.8, "span_px": 1466.0, "m_per_px": 0.014188267394270123},
+        {"orientation": "VERTICAL", "side": "LEFT", "value_m": 8.5, "span_px": 601.0, "m_per_px": 0.014143094841930116},
+        {"orientation": "VERTICAL", "side": "RIGHT", "value_m": 7.7, "span_px": 544.0, "m_per_px": 0.014154411764705882}
+      ],
+      "selected_m_per_px": 0.01416197861624022,
+      "current_px_per_m": 70.611602170706,
+      "recommended_render_scale_90pxm": 1.011582092191684
+    }
+  }
+}

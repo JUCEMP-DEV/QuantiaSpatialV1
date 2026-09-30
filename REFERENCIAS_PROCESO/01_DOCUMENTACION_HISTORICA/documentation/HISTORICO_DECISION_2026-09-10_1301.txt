@@ -1,0 +1,32 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-10 13:01 -06:00
+
+DECISIÓN
+Crear Context Classification V6.2 como evolución estandarizada de V6.1.
+
+MOTIVO
+V6.1 mejora los casos Miguel, pero Casa Viri PB mantiene over-selection sobre una rejilla modular. La geometría no debe resolverse con un FIX por caso: se incorpora una clase de detección de patrones de superficie segmentados y una evaluación de linaje estructural general.
+
+REGLA NUEVA
+- Repetición regular aislada + sin eje/continuidad/junction estructural => contexto de acabado, REVIEW/QUARANTINE según certeza.
+- Paralelismo con eje fuerte o continuidad sobre la misma línea de un muro/ancla => conservar como hipótesis estructural.
+- Tamaño físico >=0.15 m se usa solo cuando m/px está fundamentado.
+
+ARCHIVOS NUEVOS
+- reconstruction_core/surface_pattern_detector.py
+- reconstruction_core/structural_lineage.py
+
+ARCHIVOS MODIFICADOS
+- reconstruction_core/context_region_detector.py
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/context_models.py
+- reconstruction_core/reconstruction_pipeline.py
+- reconstruction_core/__init__.py
+- tests estandarizados V6.2
+- documentación/versionado
+
+NO MODIFICADO
+F01, F01.5, F02, engine.py, Candidate Discovery A1.2 y GlobalTopologySolver.
+
+VALIDACIÓN LOCAL
+19 tests PASSED. Pendiente validación real de los 3 casos.

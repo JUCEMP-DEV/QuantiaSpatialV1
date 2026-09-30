@@ -1,0 +1,23 @@
+QUANTIA V2L — VERSIONADO 2026-09-10 20:45 -06:00
+Versión: SCALE FOUNDATION V1.4
+Base: SCALE FOUNDATION V1.2
+
+MODIFICADOS
+- phase_015_evidence/gemini_semantic_extractor.py
+- phase_015_evidence/gemini_evidence_adapter.py
+- reconstruction_core/scale_evidence_resolver.py
+
+NUEVO
+- reconstruction_core/general_dimension_graphic_span.py
+- tests/test_quantia_spatial_scale_foundation_v1_4_synthetic.py
+- tests/test_quantia_spatial_scale_foundation_v1_4_standardized.py
+
+ARCHIVADO
+- tests V1.2 -> documentation/history/tests/SCALE_FOUNDATION_V1_2/
+
+DECISIÓN
+No continuar afinando clasificación hasta cerrar una parametrización física reutilizable.
+Cuando 1:N no existe, usar cota GENERAL + línea gráfica observada antes de depender de ejes inferidos.
+
+PUNTO DE RETORNO
+Scale Foundation V1.2, SHA256 faeb6ba3a2174c5ae72f1cade05abab7e80b096659995731ad034da9d238ae12.

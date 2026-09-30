@@ -1,0 +1,9 @@
+{
+  "version": "F03_ELEMENT_CONTEXT_ISOLATION_V5 + F03_SELECTION_CONTRACTS_V1_6",
+  "timestamp": "2026-09-15T09:11:00-06:00",
+  "synthetic_tests_passed": 35,
+  "compileall": "PASS",
+  "frozen_real_test_sha256": "17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f",
+  "real_probe_v4": "PENDING",
+  "note": "Canonical Metric Raster synthetic not run in isolated sandbox because app.core/config is outside quantia_spatial package; subsystem unchanged."
+}

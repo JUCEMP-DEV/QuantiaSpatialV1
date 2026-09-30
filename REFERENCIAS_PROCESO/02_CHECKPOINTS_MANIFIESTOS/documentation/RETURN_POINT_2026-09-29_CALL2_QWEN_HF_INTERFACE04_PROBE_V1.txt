@@ -1,0 +1,17 @@
+PUNTO DE RETORNO — 2026-09-29
+
+El probe Qwen/HF es aditivo y sólo agrega un test/documentación.
+No sustituye ni modifica:
+- adaptive_reconstruction/
+- canonical_wallgraph/
+- providers/
+- process_engine.py
+- tests/call2_editor_snapshot.py
+- tests/call2_interface04_export.py
+- tests/run_call2_interface04.py
+
+Para volver al estado anterior, eliminar únicamente:
+- tests/test_quantia_spatial_v1_call2_qwen_hf_interface04_geometry_v1.py
+- documentation/VERSIONADO_2026-09-29_CALL2_QWEN_HF_INTERFACE04_PROBE_V1.txt
+- documentation/RETURN_POINT_2026-09-29_CALL2_QWEN_HF_INTERFACE04_PROBE_V1.txt
+- tests/output/call2_qwen_hf_interface04_geometry_v1/ (si existe)

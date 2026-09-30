@@ -1,0 +1,122 @@
+[
+  {
+    "wall_id": "PW_093",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.4451488964322561,
+    "f03_seed_protected": false,
+    "length_m": 8.2201,
+    "call2_reason": "Terrace edge and glazing line, not a solid wall",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": false
+  },
+  {
+    "wall_id": "PW_092",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.3487650247747004,
+    "f03_seed_protected": true,
+    "length_m": 0.3444,
+    "call2_reason": "Terrace floor edge line",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "CW_003_7d95fb039348",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.4428140047310806,
+    "f03_seed_protected": true,
+    "length_m": 4.5645,
+    "call2_reason": "Terrace outer slab edge",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "CW_008_953893c38498",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.44952081283691375,
+    "f03_seed_protected": false,
+    "length_m": 1.5552,
+    "call2_reason": "Terrace outer boundary line",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": false
+  },
+  {
+    "wall_id": "CW_005_ba0df4d211d2",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.45022696737837625,
+    "f03_seed_protected": true,
+    "length_m": 2.902,
+    "call2_reason": "Glazing/window area, not a solid wall",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "CF_001_5c973a6def77",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.45466226470620746,
+    "f03_seed_protected": true,
+    "length_m": 0.8471,
+    "call2_reason": "Duplicate wall representation",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "CB_003_5c83ea29398c",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.4814012291123087,
+    "f03_seed_protected": true,
+    "length_m": 1.022,
+    "call2_reason": "Duplicate stair enclosure wall",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "PW_040",
+    "role_before_call2": "PERIMETER",
+    "confidence_before_call2": 1.0,
+    "f03_seed_protected": true,
+    "length_m": 0.5624,
+    "call2_reason": "Duplicate wall segment",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "PW_052",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.3962820933573598,
+    "f03_seed_protected": true,
+    "length_m": 0.5832,
+    "call2_reason": "Duplicate wall segment",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "PW_031",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.41816092472557875,
+    "f03_seed_protected": true,
+    "length_m": 0.8053,
+    "call2_reason": "Duplicate wall segment",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "PW_079",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.3889610905213155,
+    "f03_seed_protected": true,
+    "length_m": 0.4999,
+    "call2_reason": "Duplicate wall segment",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  },
+  {
+    "wall_id": "PW_042",
+    "role_before_call2": "REVIEW",
+    "confidence_before_call2": 0.6220126035362556,
+    "f03_seed_protected": true,
+    "length_m": 0.511,
+    "call2_reason": "Dimension graphic line",
+    "still_in_final_graph": false,
+    "requires_area_topology_review": true
+  }
+]

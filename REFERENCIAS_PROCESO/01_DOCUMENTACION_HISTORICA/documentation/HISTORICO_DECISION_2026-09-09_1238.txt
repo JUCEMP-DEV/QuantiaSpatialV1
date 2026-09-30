@@ -1,0 +1,28 @@
+QUANTIA V2L — HISTÓRICO DECISIVO
+Fecha/hora de referencia: 2026-09-09 12:38 -06:00
+
+Entrada observada:
+Context Gate V4 mejoró Planta Alta, pero Planta Baja continuó sin cuarentena efectiva.
+Resumen V4 Casa Viri:
+- PB: discovered=255, context_regions=18, quarantine_regions=0,
+      active=230, quarantine=0, review=25, graph_input=180.
+- PA: discovered=59, context_regions=7, quarantine_regions=2,
+      active=34, quarantine=18, review=7, graph_input=34.
+
+Causas confirmadas:
+1. semantic_support=0.5225 repetido provenía de observación semántica sin bbox.
+2. pares de caras raster de 2-4 px se interpretaban como tracks independientes.
+3. regiones periódicas podían quedar fragmentadas en micro-runs.
+4. REVIEW estaba documentado como provisional, pero reconstruction_pipeline.py lo retiraba.
+5. MAX_GRAPH_CANDIDATES=180 eliminó 50 candidatos ACTIVE adicionales en PB.
+
+Decisión V5:
+- no tocar A1.2 Candidate Discovery;
+- normalizar trazos físicos solo para contexto;
+- localizar semántica únicamente cuando existe bbox;
+- ensamblar regiones compatibles;
+- QUARANTINE fuera del grafo;
+- REVIEW dentro del grafo de forma provisional;
+- eliminar recorte de 180.
+
+Punto de retorno permanece A1.2.

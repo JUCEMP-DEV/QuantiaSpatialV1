@@ -1,0 +1,31 @@
+QUANTIA V2L — VERSIONADO
+2026-09-11 20:25 -06:00
+
+VERSIÓN CANDIDATA
+F03 Selection Contracts V1.4 — Pattern Membership / Axis Locator Contract
+
+BASE
+F03 Selection Contracts V1.3 — Boundary Preservation
+
+PUNTO DE RETORNO INMEDIATO
+QUANTIA_V2L_F03_SELECTION_CONTRACTS_V1_3.zip
+SHA256: bc025b9877b4c898031edec2141468353a5199c98ae7ee5d6f8f9bc0eb8e6c2d
+
+DECISIONES
+1. bbox/context region expresa riesgo espacial, no pertenencia.
+2. QUARANTINE requiere evidencia directa del patrón.
+3. spatially_derived deja de ser suficiente para QUARANTINE.
+4. pair_support conserva fuerza negativa solo si no existe evidencia de borde unilateral físicamente plausible.
+5. AXIS_GRID_REGION deja de ser máscara negativa; axis_support es locator positivo.
+6. La primitiva real de eje todavía puede aislarse por member/dashed + baja plausibilidad métrica.
+7. F02, escala V2.3, solver, graph y prueba real quedan inmutables.
+
+ARCHIVOS MOTOR
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/context_region_classifier.py
+
+PRUEBA INTERNA NUEVA
+- tests/test_quantia_spatial_f03_selection_contracts_v1_4_synthetic.py
+
+NO PROMOVIDA
+Pendiente corrida real de Casa Viri, Miguel H y Miguel V.

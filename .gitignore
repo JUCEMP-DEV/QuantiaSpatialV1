@@ -1,0 +1,17 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment
+.venv/
+venv/
+.env
+
+# Historical generated artifacts preserved locally but not recommended for Git
+REFERENCIAS_PROCESO/99_CACHE_GENERADO/
+REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/
+
+# Temporary files
+*.tmp
+*.log

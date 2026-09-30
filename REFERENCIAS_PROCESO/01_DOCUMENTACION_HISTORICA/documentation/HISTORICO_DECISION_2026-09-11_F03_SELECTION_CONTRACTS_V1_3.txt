@@ -1,0 +1,33 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11
+Fase: F03 Candidate Selection
+Rama: F03 Selection Contracts V1.3 — Boundary Preservation
+
+EVIDENCIA
+La corrida real V1.2 mejoró la supresión de ruido pero sobreaisló candidatos:
+- Casa Viri PB: 151 descubiertos, 75 QUARANTINE, 23 seleccionados.
+- Miguel V PA: 281 descubiertos, 64 QUARANTINE, 7 seleccionados.
+- Miguel H PB: 172 descubiertos, 10 seleccionados.
+Las imágenes muestran muros reales absorbidos por regiones de escalera/acabado.
+
+CAUSA RAÍZ
+No era un problema del test ni de escala. La zona negativa del patrón podía envolver muros reales y el gate evaluaba pertenencia al patrón antes de reconocer correctamente el borde arquitectónico.
+
+DECISIÓN
+No aflojar thresholds globales ni modificar la prueba. Implementar contrato de preservación de borde:
+- región de superficie más ceñida;
+- evidencia one-sided también para muros perpendiculares a pistas repetitivas;
+- borde plausible => REVIEW, nunca ACTIVE;
+- interior/bracketed => QUARANTINE.
+
+ARCHIVOS MODIFICADOS
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/surface_pattern_detector.py
+- tests/test_quantia_spatial_f03_selection_contracts_v1_3_synthetic.py (solo regresión sintética nueva)
+
+PUNTO DE RETORNO
+F03 Selection Contracts V1.2
+SHA256 paquete: 8d37d90cb4b617e67b0478c36989e2c12a76c1129ddec5f4e9b20e340cf8f2b4
+
+PRUEBA REAL
+No modificada. SHA256: 17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f

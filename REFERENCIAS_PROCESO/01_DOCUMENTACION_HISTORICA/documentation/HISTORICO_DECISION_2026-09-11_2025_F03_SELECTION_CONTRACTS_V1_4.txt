@@ -1,0 +1,27 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11 20:25 -06:00
+
+CONTEXTO
+La corrida V1.3 confirmó que el encapsulamiento aún eliminaba muros reales dentro de regiones STAIR/FLOOR/AXIS.
+
+DECISIÓN
+No seguir ajustando thresholds del test ni cantidades objetivo. Corregir el contrato de pertenencia dentro del motor.
+
+CAMBIO DECISIVO
+Antes:
+  containment/spacing/orientation podían bastar para QUARANTINE.
+Ahora:
+  containment -> riesgo/review.
+  QUARANTINE -> requiere provenance/pattern membership demostrable.
+
+AXIS
+Se elimina el uso del bbox global de ejes como máscara negativa. Un eje puede coincidir con el centro de un muro. axis_support no puede expulsar un muro plausible.
+
+SUPERFICIES
+Se separa member_support (identidad/provenance) de geometry_support (proximidad). geometry_support sola no prueba que el candidato sea parte del acabado/escalera.
+
+BORDE
+La sidedness del patrón se calcula independientemente de pair_support. Un muro real de borde puede coincidir con trazos del patrón y aun así debe sobrevivir como REVIEW.
+
+PUNTO DE RETORNO
+V1.3 inmediato; V1.2 conservador; Canonical Metric Raster V2.3 estable.

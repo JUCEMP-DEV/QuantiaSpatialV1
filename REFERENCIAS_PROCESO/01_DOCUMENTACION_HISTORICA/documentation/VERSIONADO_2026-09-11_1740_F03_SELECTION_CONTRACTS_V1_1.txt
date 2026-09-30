@@ -1,0 +1,50 @@
+QUANTIA V2L — F03 SELECTION CONTRACTS V1.1
+Fecha: 2026-09-11 17:40
+Estado: CANDIDATA / PENDIENTE VALIDACIÓN REAL
+
+BASE INMUTABLE
+- Canonical Metric Raster V2.3 VALIDATED.
+- F01 / F01.5 / F02 sin cambios.
+- test_quantia_spatial_f03_flow_all_3_v1.py sin cambios.
+- test_quantia_spatial_f03_selection_all_3_v1.py sin cambios.
+
+PUNTO DE RETORNO
+F03 Selection Contracts V1
+SHA256 paquete: ed0c57d2bd0ec59f72ec75a7f88d4cd31cb11e23e8ff9eeeee11fed6b8517707
+
+CAMBIOS V1.1
+1. FLOOR_FINISH_GRID de alta confianza se trata como región negativa 2D aunque un candidato no comparta face_ids/perfil.
+   - interior completo -> QUARANTINE;
+   - borde de región + espesor métrico plausible -> REVIEW.
+2. STAIR/HATCH/FLOOR con orientation mismatch ya no quedan REVIEW de forma uniforme.
+   - interior de región fuerte -> QUARANTINE;
+   - posible muro de borde -> REVIEW.
+3. CANDIDATE_CONTINUES_OUTSIDE_CONTEXT_REGION requiere ahora:
+   - salida material del bbox;
+   - espesor métrico plausible;
+   - apoyo sobre borde de región.
+   Si no cumple, permanece REVIEW.
+4. AXIS_GRID añade evidencia de referencia para líneas sólidas ultradelgadas:
+   thin_axis_reference = axis_support * (1 - metric_thickness_support).
+5. axis_support dentro de wall_identity queda modulado por plausibilidad métrica.
+6. metric_thickness_penalty pasa de evidencia casi testimonial a evidencia física material continua:
+   0.45*(1-support) -> 1.20*(1-support).
+   No existe veto duro por espesor.
+
+ARCHIVOS DE MOTOR MODIFICADOS RESPECTO A V1
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/global_topology_solver.py
+
+PRUEBA NUEVA
+- tests/test_quantia_spatial_f03_selection_contracts_v1_1_synthetic.py
+- La prueba sintética V1 se mueve a documentation/history/tests/F03_SELECTION_CONTRACTS_V1/ para no mezclar contratos.
+
+VALIDACIÓN LOCAL
+- F03 Selection Contracts V1.1 synthetic
+- Context Classification V6.2 synthetic
+- Solver Evidence V1 synthetic
+Resultado conjunto: 33 PASSED
+- compileall reconstruction_core: PASS
+
+VALIDACIÓN REAL PENDIENTE
+pytest app/quantia_spatial/tests/test_quantia_spatial_f03_selection_all_3_v1.py -s -v

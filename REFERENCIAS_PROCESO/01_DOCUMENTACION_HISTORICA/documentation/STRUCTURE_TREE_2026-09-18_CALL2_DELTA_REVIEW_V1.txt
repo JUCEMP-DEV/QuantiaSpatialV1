@@ -1,0 +1,14 @@
+quantia_spatialV1/
+├── process_engine.py
+├── adaptive_reconstruction/
+│   ├── multimodal_review.py
+│   ├── call2_validation.py
+│   ├── correction_applier.py
+│   ├── call2_artifact_renderer.py
+│   └── contracts.py
+├── post_reconstruction_filters/
+│   └── [V4 determinista previo a Call 2]
+└── tests/
+    ├── test_quantia_spatial_v1_call2_all_3_v1.py
+    ├── test_quantia_spatial_call2_delta_validator_v2_synthetic.py
+    └── [regresiones activas]

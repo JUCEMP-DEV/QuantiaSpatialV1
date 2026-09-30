@@ -1,0 +1,11 @@
+PUNTO DE RETORNO — CANONICAL METRIC RASTER V2.1
+Fecha: 2026-09-11
+
+RETORNO INMEDIATO
+Canonical Metric Raster V2
+Archivo: QUANTIA_V2L_CANONICAL_METRIC_RASTER_V2_2026-09-11.zip
+SHA256: c34a40bb83bb89ad01893f53313c5b1820368264e66bd50a3517ba804cd77dbc
+
+MOTIVO DEL CAMBIO V2.1
+Separar semánticamente resolución de escala y procedencia de escala.
+No modifica geometría, rasterización, F02 ni reglas F03.

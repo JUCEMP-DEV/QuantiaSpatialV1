@@ -1,0 +1,16 @@
+HISTÓRICO DE DECISIONES — 2026-09-17
+
+1. El usuario confirmó que la reconstrucción adaptativa actual mejora considerablemente los tres casos y no debe reabrirse mediante nuevas iteraciones internas.
+2. Se fijó que los filtros deben implementarse como una capa posterior e independiente.
+3. Se aclaró la semántica: filtrar = excluir/clasificar, nunca eliminar evidencia.
+4. Las salidas obligatorias de la capa son WALL, ARCHITECTURAL_ELEMENT, EXCLUDED_GRAPHIC y UNRESOLVED.
+5. El usuario pidió que los tests dejen de ser el lugar donde vive la lógica del proceso.
+6. Se auditó el conjunto completo de tests de quantia_spatialV1. Se identificó lógica histórica grande en Wall Mask, Hybrid Topology, Perimeter Tracks, Canonicalization y Second Call V5.
+7. Se confirmó que Wall Mask/Hybrid ya habían sido migrados a adaptive_reconstruction/hybrid_engine.py.
+8. Se detectó que la canonicalización final de múltiples hipótesis concurrentes todavía no existía como módulo productivo; se creó WallHypothesisCanonicalizer.
+9. Se creó QuantiaSpatialV1ProcessEngine para que la orquestación ya no dependa de _run_case() dentro de un test.
+10. Los probes superados se conservaron como histórico fuera de la suite activa.
+11. La suite completa reveló tests Scale V1.6/V1.3 ejecutándose contra resolver V1.7. Se decidió no degradar código vigente para satisfacer contratos antiguos; se archivaron y se creó un contrato público V1.7.
+12. La suite activa cerró en 57 PASSED / 9 SKIPPED / 0 FAILED.
+13. La canonicalización se probó además sobre los seis JSON reales recibidos y redujo de forma importante las líneas duplicadas sin reejecutar el motor.
+14. Call 2 permanece deshabilitado por defecto. Su validación ocurrirá después de comprobar visualmente la nueva capa de filtros.

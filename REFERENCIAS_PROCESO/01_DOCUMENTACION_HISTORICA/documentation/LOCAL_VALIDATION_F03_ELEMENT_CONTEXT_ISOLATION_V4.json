@@ -1,0 +1,19 @@
+{
+  "version": "F03_ELEMENT_CONTEXT_ISOLATION_V4",
+  "selection_contract": "F03_SELECTION_CONTRACTS_V1_5",
+  "probe": "F03_ELEMENT_ISOLATION_PROBE_ALL_3_V3",
+  "date": "2026-09-14T22:37:00-06:00",
+  "status": "CANDIDATE_LOCAL_VALIDATION_PASSED_REAL_PENDING",
+  "current_synthetic_tests_passed": 34,
+  "current_synthetic_tests_failed": 0,
+  "compileall": "PASS",
+  "active_internal_imports_missing": 0,
+  "frozen_real_test_sha256": "17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f",
+  "return_point_sha256": "b9faf204b444ce045eb9a688b6662d968428bb4ffe5c61e82f1d897b8d89459f",
+  "real_three_case_validation": "PENDING_USER_RUN",
+  "notes": [
+    "32 current synthetics ran directly in isolated quantia_spatial package.",
+    "2 Canonical Metric Raster V2 synthetics passed with an isolated app.core.config stub because the uploaded package excludes the parent backend app/core module.",
+    "Historical superseded tests were archived rather than rewritten."
+  ]
+}

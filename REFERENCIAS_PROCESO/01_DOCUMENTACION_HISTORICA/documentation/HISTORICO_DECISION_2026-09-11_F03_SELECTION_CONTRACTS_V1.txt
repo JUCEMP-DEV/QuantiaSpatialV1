@@ -1,0 +1,25 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11
+Tema: cierre de contradicciones internas en selección F03.
+
+EVIDENCIA DE ENTRADA
+La base Canonical Metric Raster V2.3 pasó los tres casos y los seis LevelView. La siguiente prueba visual mostró que el problema restante era selección de candidatos, no escala ni pérdida de F02.
+
+DECISIÓN
+No continuar ajustando thresholds aislados ni tocar la prueba real. Se crea Selection Contracts V1 como rama adyacente sobre V2.3.
+
+CAUSA RAÍZ PRINCIPAL
+Existía un ciclo de autoconfirmación:
+candidato repetitivo -> buena geometría local -> contexto riesgoso -> linaje lo rescata -> graph crea junctions -> solver premia conectividad -> SELECTED.
+
+CORRECCIÓN DE ARQUITECTURA
+El orden pasa a ser:
+Candidate Discovery
+-> contexto base
+-> linaje usando solo anclas independientes ya clasificadas
+-> ACTIVE / REVIEW / QUARANTINE
+-> CandidateGraph sin auto-relaciones positivas del mismo patrón
+-> Solver con riesgo contextual persistente + referencia + espesor métrico suave.
+
+CRITERIO DE PROMOCIÓN
+Selection Contracts V1 NO se considera estable por pruebas sintéticas. Debe mejorar los 6 visuales de Casa Viri, Miguel H y Miguel V usando exactamente test_quantia_spatial_f03_selection_all_3_v1.py y conservar la estabilidad V2.3.

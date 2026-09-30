@@ -1,0 +1,40 @@
+F03 Element Context Isolation V1
+
+F01.5 RawEvidence
+├─ SEGMENT / POLYLINE
+├─ CUBIC_BEZIER ───────────────┐
+├─ OCR/PyMuPDF text            │
+└─ Gemini semantic observations│
+                               ▼
+DrawingModel
+├─ lines[]
+├─ curves[] [NUEVO]
+├─ regions[]
+├─ texts[]
+└─ semantic_observations[]
+                               │
+                               ▼
+ElementContextDetector [NUEVO]
+├─ DOOR_REGION
+├─ WINDOW_REGION
+├─ OPENING_REGION
+├─ COLUMN_REGION
+├─ FURNITURE_MODULE_REGION
+├─ SYMBOL_FIXTURE_REGION
+└─ TEXT_SYMBOL_REGION
+                               │
+                ┌──────────────┴──────────────┐
+                ▼                             ▼
+ContextRegionDetector V6              WallCandidateGenerator
+                │                             │
+                └──────────────┬──────────────┘
+                               ▼
+CandidateContextGate
+├─ direct symbol member -> QUARANTINE cuando corresponde
+├─ bbox-only -> nunca exclusión dura
+├─ host wall through opening -> ACTIVE
+└─ ambiguous element context -> REVIEW
+                               ▼
+CandidateGraph [sin cambios]
+                               ▼
+GlobalTopologySolver [sin cambios]

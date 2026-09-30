@@ -1,0 +1,28 @@
+QUANTIA V2L — F03 ELEMENT ISOLATION PROBE V1
+Fecha local: 2026-09-12 14:13 -06:00
+
+FASE
+Diagnóstico visual/funcional. NO modifica el motor F03.
+
+BASE INMUTABLE
+- Canonical Metric Raster V2.3 VALIDATED.
+- F03 Selection Contracts V1.4.
+- F03 Element Context Isolation V1.
+
+OBJETIVO
+1. Reducir saturación visual: producir un PNG walls_only por LevelView con solo F02 + muros F03 seleccionados sobre raster muy tenue.
+2. Auditar encapsulamiento por tipo de elemento de forma independiente.
+3. Evaluar TODAS las coincidencias candidato↔región, no solo la decisión final ganadora del CandidateContextGate.
+4. Confirmar explícitamente cuándo un tipo de elemento no está siendo detectado (ej. WINDOW_REGION=0).
+
+ARCHIVO NUEVO
+- tests/test_quantia_spatial_f03_element_isolation_probe_all_3_v1.py
+
+SALIDAS
+- output/f03_element_isolation_probe_v1/<caso>/*__walls_only.png
+- output/f03_element_isolation_probe_v1/<caso>/*__element_<tipo>.png (solo tipos existentes)
+- output/f03_element_isolation_probe_v1/<caso>/<caso>__f03_element_isolation_probe_v1.json
+
+IMPORTANTE
+La prueba congelada test_quantia_spatial_f03_selection_all_3_v1.py NO fue modificada.
+No se cambió CandidateContextGate, ElementContextDetector, CandidateGraph, Solver, F02 ni escala.

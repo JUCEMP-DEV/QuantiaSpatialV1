@@ -1,0 +1,35 @@
+QUANTIA V2L — AUDITORÍA DEL RAR PREVIO A REORGANIZACIÓN
+Fecha: 2026-09-08
+
+RAR AUDITADO
+quantia_spatial.rar
+
+CONTENIDO ORIGINAL
+- 456 archivos reales (sin contar directorios)
+- 153 .py
+- 155 .pyc
+- 18 ZIPs de versiones embebidos
+- 56 PNGs
+- 60 JSON
+- 5 JSONL
+
+IDENTIFICACIÓN DE VERSIONES POR HASH
+- reconstruction_core/ actual del RAR = Proposal C A1.6 exacta (20/20 .py coincidentes)
+- phase_03_structure/ actual del RAR = F03 WALL_EVIDENCE_FUSION R4 exacta (15/15 .py)
+- direct_reconstruction/ actual del RAR = Direct Reconstruction A2 exacta
+
+PROBLEMAS DE ESTRUCTURA
+1. Versiones históricas ZIP mezcladas con el paquete ejecutable.
+2. A1.5/A1.6 Recovery mezclado con el baseline aunque no fue validado como mejora.
+3. 155 archivos .pyc dentro del árbol entregable.
+4. 26+ MB de outputs de pruebas dentro de tests/output y más evidencia en cases/output.
+5. Duplicados de pruebas con sufijo '(1)'.
+6. phase_04_rooms / phase_05_validation / phase_06_contract conservan imports a
+   phase_02_boundaries.boundary_models, módulo que ya no existe en la base actual.
+7. test_quantia_spatial_proposal_c_miguel_v.py dependía de un test F03 legacy para
+   funciones auxiliares; en el paquete reorganizado quedó autocontenido.
+
+DECISIÓN
+Separar runtime, pruebas vigentes y documentación histórica. El runtime vuelve al
+checkpoint Proposal C A1.2, que es el punto de Candidate Discovery utilizado para
+identificar el problema real de clasificación/exclusión.

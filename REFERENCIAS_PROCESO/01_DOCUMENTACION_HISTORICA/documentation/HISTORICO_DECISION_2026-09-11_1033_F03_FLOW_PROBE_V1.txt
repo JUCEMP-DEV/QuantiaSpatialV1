@@ -1,0 +1,20 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+2026-09-11 10:33 -06:00
+
+Problema observado:
+Las pruebas separadas mostraron que normalización métrica, F02 y F03 podían no compartir la misma verdad operativa. Casa Viri alcanzó F03 con scale_profile UNRESOLVED y Miguel H perdió un perímetro en una ejecución posterior a la rerasterización.
+
+Decisión:
+Congelar una prueba de flujo completa únicamente con Casa Viri y Miguel H antes de volver a Miguel V. La prueba no contiene escalas esperadas por proyecto, ejes específicos ni excepciones por caso.
+
+Causa raíz a aislar si falla:
+- enlace de Scale Foundation / raster normalizado hacia F03;
+- conservación/reproyección de F02 después de normalizar;
+- publicación de ProjectScaleContext hacia F03.
+
+No se modifica:
+- F01/F01.5/F02;
+- Scale Foundation;
+- Context Classification V6.2;
+- GlobalTopologySolver;
+- test loaders/replays existentes.

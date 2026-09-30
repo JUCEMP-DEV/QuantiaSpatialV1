@@ -1,0 +1,17 @@
+QUANTIA V2L — HISTÓRICO DECISIVO 2026-09-09
+
+1. Se confirma Proposal C A1.2 como punto de retorno.
+2. CandidateExclusionPolicy V2 se considera fallida/no promovible:
+   Casa Viri PB 152->152, PA 59->59, 0 exclusiones.
+3. Causa raíz: confirmación circular entre Candidate Discovery y wall_likeness.
+4. Se detectan fallos estructurales adicionales:
+   - REGION_LOCAL/OPENCV/LSD no son fuentes físicas independientes.
+   - familias de espesor podían ser dominadas por repetición de trazos cortos.
+   - dos cortes [:180] eliminaban hipótesis antes de topología.
+   - JUNCTION podía acumular recompensa por densidad.
+   - celdas estrechas podían ganar room bonus.
+5. Decisión V3:
+   repetición pasa de HARD EXCLUSION a SOFT NEGATIVE PRIOR.
+6. F01/F01.5/F02 permanecen intactas. engine.py no se integra.
+7. Validación local del patch: 6 unit tests + 2 Proposal C synthetic = PASS.
+8. Pendiente: Casa Viri -> Miguel H -> Miguel V antes de promoción.

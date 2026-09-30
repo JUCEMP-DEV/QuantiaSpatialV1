@@ -1,0 +1,17 @@
+app/quantia_spatial/
+├── reconstruction_core/
+│   ├── general_dimension_graphic_span.py
+│   └── scale_evidence_resolver.py          # V1.6
+├── phase_015_evidence/
+│   ├── gemini_evidence_adapter.py
+│   └── gemini_semantic_extractor.py
+├── tests/
+│   ├── test_quantia_spatial_metric_reraster_v1_3_standardized.py
+│   └── test_quantia_spatial_scale_foundation_v1_6_synthetic.py
+└── documentation/
+    ├── VERSIONADO_2026-09-10_2258_METRIC_RERASTER_V1_3_SCALE_V1_6.txt
+    ├── RETURN_POINT_METRIC_RERASTER_V1_3_SCALE_V1_6.txt
+    ├── HISTORICO_DECISION_2026-09-10_2258_METRIC_RERASTER_V1_3_SCALE_V1_6.txt
+    ├── LOCAL_VALIDATION_METRIC_RERASTER_V1_3_SCALE_V1_6.json
+    ├── STRUCTURE_TREE_METRIC_RERASTER_V1_3_SCALE_V1_6.txt
+    └── SHA256_MANIFEST_METRIC_RERASTER_V1_3_SCALE_V1_6.txt

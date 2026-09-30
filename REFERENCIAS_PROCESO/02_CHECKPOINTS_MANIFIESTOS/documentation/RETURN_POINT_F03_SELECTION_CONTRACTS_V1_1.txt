@@ -1,0 +1,21 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Fecha fijada: 2026-09-11
+
+Punto de retorno inmediato:
+F03 Selection Contracts V1.1
+
+Paquete validado previo a V1.2:
+QUANTIA_V2L_F03_SELECTION_CONTRACTS_V1_1.zip
+SHA256:
+16237e18282a9bf45fdb3f7054bac5a53134ec2d57ddfbe835fa37bcbccc3db7
+
+Base estable inferior:
+Canonical Metric Raster V2.3 VALIDATED
+SHA256 paquete histórico:
+6c40ed3a11ae651d1e3114e2545fae27321fef4e58af1012d2707c376ae5d296
+
+No modificar para rollback:
+- F01 / F01.5 / F02
+- Canonical Metric Raster V2.3
+- tests/test_quantia_spatial_f03_selection_all_3_v1.py
+  SHA256: 17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f

@@ -1,0 +1,25 @@
+QUANTIA V2L — F03 CANONICAL FLOW PROBE V1
+Fecha: 2026-09-11 10:33 -06:00
+Tipo: prueba fija de integración; no modifica motor.
+
+Punto de partida:
+- Scale Foundation V1.4 como punto de retorno técnico.
+- Canonical Metric Raster V1 instalado en el flujo a auditar.
+- Context Classification V6.2 / ProposalCReconstructionPipeline sin cambios.
+
+Objetivo:
+Verificar una sola vez, con el mismo criterio y sin reglas por caso, que Casa Viri y Miguel H recorren:
+F01 -> F01.5 -> F02 -> normalización métrica -> F03.
+
+Criterios invariantes:
+1. Escala final RESOLVED.
+2. Densidad final 90 px/m ±5%.
+3. EditablePerimeterModel presente en todos los LevelView.
+4. ProjectScaleContext que recibe F03 en RESOLVED.
+5. F03 ejecuta todos los LevelView.
+6. F03 no modifica F02.
+7. Una PNG por LevelView + un JSON por caso.
+8. Cero nuevas llamadas Gemini; se usan replays del loader canónico.
+
+Decisión:
+Esta prueba queda fija. Si falla, las siguientes iteraciones deben modificar el flujo/motor; no la prueba para adaptarla a un caso.

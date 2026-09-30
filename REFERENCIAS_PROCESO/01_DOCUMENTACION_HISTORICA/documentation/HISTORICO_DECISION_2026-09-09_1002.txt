@@ -1,0 +1,35 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-09 10:02 -06:00
+
+DECISIÓN
+La exclusión de geometría repetitiva deja de ser una regla aislada del test Casa Viri y
+se traslada a la base del Candidate Discovery para que cualquier caso reciba exactamente
+el mismo comportamiento.
+
+CAUSA RAÍZ
+La primera prueba de patrón repetitivo eliminó un muro real de Planta Alta porque contó
+varias hipótesis similares como repetición sin comprobar si tenían propiedades de muro.
+
+REGLA V2
+1. colapsar tracks casi coincidentes antes de contar repetición;
+2. detectar familias repetitivas sobre tracks espaciales distintos;
+3. evaluar wall-likeness usando evidencias existentes;
+4. excluir solo REPETITIVE_PATTERN + WEAK_WALL_PROPERTIES;
+5. proteger WALL_LIKE aunque pertenezca a patrón repetitivo.
+
+ARCHIVOS DE MOTOR
+NUEVO: reconstruction_core/candidate_exclusion_policy.py
+MODIFICADO: reconstruction_core/wall_candidate_generator.py
+MODIFICADO: reconstruction_core/__init__.py
+MODIFICADO: reconstruction_core/README_PROPOSAL_C.txt
+
+PRUEBA
+NUEVO: tests/test_quantia_spatial_candidate_exclusion_v2_casa_viri.py
+- test sintético de regla global;
+- test Casa Viri sin llamadas Gemini;
+- genera before/detected/after por LevelView;
+- no fija cantidad esperada de muros ni exclusiones.
+
+ESTADO
+Rama en validación. No promover a checkpoint canónico hasta revisar Casa Viri y después
+regresiones Miguel H/Miguel V.

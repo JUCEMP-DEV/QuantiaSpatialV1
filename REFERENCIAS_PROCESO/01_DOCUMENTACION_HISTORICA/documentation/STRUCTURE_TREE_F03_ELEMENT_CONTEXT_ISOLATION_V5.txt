@@ -1,0 +1,20 @@
+QUANTIA V2L — STRUCTURE TREE — F03 ELEMENT CONTEXT ISOLATION V5
+
+quantia_spatial/
+├── reconstruction_core/
+│   ├── element_context_detector.py      [V5 MODIFICADO]
+│   ├── candidate_context_gate.py        [Selection Contracts V1.6 MODIFICADO]
+│   ├── candidate_graph.py               [SIN CAMBIO]
+│   ├── global_topology_solver.py        [SIN CAMBIO]
+│   └── surface_pattern_detector.py      [SIN CAMBIO]
+├── tests/
+│   ├── test_quantia_spatial_f03_element_context_isolation_v5_synthetic.py
+│   ├── test_quantia_spatial_f03_selection_contracts_v1_6_synthetic.py
+│   ├── test_quantia_spatial_f03_element_isolation_probe_all_3_v4.py
+│   └── test_quantia_spatial_f03_selection_all_3_v1.py [CONGELADO]
+└── documentation/
+    ├── CURRENT_VERSION.txt
+    ├── CURRENT_STATE.txt
+    ├── VERSIONADO_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt
+    ├── HISTORICO_DECISION_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V5.txt
+    └── RETURN_POINT_2026-09-15_0911_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt

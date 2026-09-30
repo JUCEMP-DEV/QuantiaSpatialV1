@@ -1,0 +1,35 @@
+HISTÓRICO DE CONVERSACIÓN — 2026-09-17 19:55
+Proyecto: Quantia Spatial V1
+
+DECISIÓN PRINCIPAL
+Después de validar PostFilter V2 en Windows (Casa Viri, Miguel H y Miguel V: 3/3 PASSED), se decide continuar sin tocar Adaptive Reconstruction.
+
+HALLAZGOS DECISIVOS
+1. PostFilterSelector V2 calculaba módulos habilitados, pero FilterEngine aplicaba reglas de clasificación sin consultar de forma efectiva el plan. Se corrige para que el selector gobierne la ejecución real.
+2. El canonicalizador V2 dejaba pares casi coincidentes cuando los roles topológicos diferían, aun cuando geométricamente representaban la misma línea física.
+3. Se añade una etapa independiente NEAR_COINCIDENT_CANONICALIZER con umbral métrico conservador.
+4. Se mantiene estrictamente la regla: filtros excluyen/clasifican; no eliminan evidencia.
+5. Call 2 continúa deshabilitada hasta cerrar visualmente la capa de filtros.
+
+NO MODIFICADO
+- adaptive_reconstruction/
+- reconstruction_core/
+- F03 seed
+- Wall Mask
+- bridges
+- topology
+- process_engine.py
+
+VALIDACIÓN
+- 70 passed / 9 skipped / 0 failed.
+- compileall PASS.
+- Replay V3 reduce líneas canónicas respecto a V2 en los seis casos sin conectar gaps.
+
+SIGUIENTE CONTROL
+Reejecutar el test integral en Windows y revisar por LevelView:
+- 02_filter_classification.png
+- 03_encapsulated_and_excluded.png
+- 04_filtered_single_line_wallgraph.png
+- 05_pattern_evidence.png
+
+Solo después de validar esta capa se habilita la segunda llamada para resolver elementos/UNRESOLVED y preparar el contrato hacia F04.

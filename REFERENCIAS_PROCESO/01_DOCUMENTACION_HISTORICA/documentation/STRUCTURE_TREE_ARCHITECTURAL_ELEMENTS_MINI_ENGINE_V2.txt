@@ -1,0 +1,20 @@
+quantia_spatial/
+├── architectural_elements/
+│   ├── contracts.py
+│   ├── engine.py
+│   ├── feature_builder.py
+│   ├── host_wall_matcher.py
+│   ├── proposal_generator.py      # detector independiente V2
+│   ├── rag.py
+│   ├── reconciler.py
+│   ├── resolver.py
+│   ├── visual_context.py
+│   └── knowledge/
+│       ├── architectural_openings_v1.json   # histórico
+│       └── architectural_openings_v2.json   # vigente
+├── tests/
+│   ├── test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic.py
+│   └── test_quantia_spatial_architectural_elements_probe_all_3_v2.py
+└── documentation/history/tests/architectural_elements_v1/
+    ├── test_quantia_spatial_architectural_elements_mini_engine_v1_synthetic.py
+    └── test_quantia_spatial_architectural_elements_probe_all_3_v1.py

@@ -1,0 +1,20 @@
+quantia_spatial/
+├── reconstruction_core/
+│   ├── wall_candidate_generator.py        [MOD] evidencia independiente + espesor ponderado
+│   ├── wall_track_consolidator.py          [MOD] sin bonus por cantidad de fragmentos
+│   ├── candidate_context_gate.py          [MOD] contexto antes de linaje + riesgo persistente
+│   ├── structural_lineage.py              [MOD] anclas independientes / sin auto-rescate
+│   ├── candidate_graph.py                 [MOD] sin auto-junction de patrón repetitivo
+│   ├── global_topology_solver.py          [MOD] contexto/reference/metric thickness scoring
+│   └── reconstruction_pipeline.py         [MOD] anotación métrica de espesor
+├── tests/
+│   ├── test_quantia_spatial_f03_flow_all_3_v1.py                  [INMUTABLE]
+│   ├── test_quantia_spatial_f03_selection_all_3_v1.py             [INMUTABLE]
+│   └── test_quantia_spatial_f03_selection_contracts_v1_synthetic.py [NUEVO]
+└── documentation/
+    ├── CURRENT_VERSION.txt
+    ├── CURRENT_STATE.txt
+    ├── VERSIONADO_2026-09-11_F03_SELECTION_CONTRACTS_V1.txt
+    ├── HISTORICO_DECISION_2026-09-11_F03_SELECTION_CONTRACTS_V1.txt
+    ├── RETURN_POINT_F03_SELECTION_CONTRACTS_V1.txt
+    └── STRUCTURE_TREE_F03_SELECTION_CONTRACTS_V1.txt

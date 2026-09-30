@@ -1,0 +1,16 @@
+{
+  "version": "METRIC_RERASTER_V1_2__SCALE_FOUNDATION_V1_5",
+  "local_validation": {
+    "scale_foundation_v1_5_synthetic": "19 PASSED",
+    "context_classification_v6_2_synthetic": "16 PASSED",
+    "solver_evidence_v1_synthetic": "3 PASSED",
+    "combined": "38 PASSED",
+    "compileall": "PASS",
+    "metric_test_collection": "3 tests collected",
+    "frozen_perimeter_rebind_scale_probe": "PASS"
+  },
+  "limitations": [
+    "Los PDFs originales de Casa Viri, Miguel H y Miguel V no están montados en este entorno Linux; la corrida real de los tres documentos requiere las rutas Windows del usuario.",
+    "No se realizaron llamadas Gemini nuevas."
+  ]
+}

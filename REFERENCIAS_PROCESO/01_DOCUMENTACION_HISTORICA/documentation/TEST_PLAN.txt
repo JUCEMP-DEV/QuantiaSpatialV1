@@ -1,0 +1,54 @@
+QUANTIA V2L — PLAN DE PRUEBA ACTIVO SCALE FOUNDATION V1.4
+Fecha: 2026-09-10
+
+OBJETIVO
+Cerrar escala en Casa Viri, Miguel H y Miguel V con el mismo flujo y sin nuevas llamadas Gemini.
+Cuando no exista 1:N, la escala debe poder salir de cotas GENERAL + línea gráfica observada.
+
+PRUEBA REAL ESTANDARIZADA
+pytest app/quantia_spatial/tests/test_quantia_spatial_scale_foundation_v1_4_standardized.py -s -v
+
+CRITERIO DE CIERRE
+- project.state == RESOLVED en los tres fixtures canónicos.
+- todas las plantas RESOLVED con selected_m_per_px y raster_recommendation.
+- ningún valor 1:N hardcodeado por caso.
+- 1 JSON por caso.
+
+PRUEBA SINTÉTICA V1.4
+pytest app/quantia_spatial/tests/test_quantia_spatial_scale_foundation_v1_4_synthetic.py -s -v
+
+REGRESIÓN CONTEXTO + SOLVER
+pytest app/quantia_spatial/tests/test_quantia_spatial_context_classification_v6_2_synthetic.py app/quantia_spatial/tests/test_quantia_spatial_solver_evidence_v1_synthetic.py -s -v
+
+VALIDAR ESPECIALMENTE
+1. Casa Viri y Miguel H mantienen la ruta V1.2 cuando sí existe escala declarada.
+2. Miguel V PA normaliza superior/inferior/izquierda/derecha sin perder el lado.
+3. Miguel V sin 1:N genera DIMENSION_GENERAL_GRAPHIC_SPAN.
+4. Una línea exterior ajena al dimensionado no debe ganar si sus extremos no corresponden al span de la planta.
+5. Cotas GENERAL H/V convergentes pueden cerrar escala aunque AxisGridResolver tenga una rama incompatible.
+6. F02, clasificación V6.2 y solver permanecen sin cambios.
+
+============================================================
+CANONICAL METRIC RASTER V1 — 2026-09-10 22:58 -06:00
+============================================================
+
+OBJETIVO
+Verificar que el raster normalizado forme parte del flujo real del motor y no de una prueba paralela.
+
+PRUEBA FIJA REAL
+Usar los case loaders existentes sin introducir valores esperados por proyecto.
+No modificar tests para hacer pasar Casa Viri, Miguel H o Miguel V.
+
+CRITERIOS
+1. F01 identifica/localiza con bootstrap.
+2. Scale Foundation V1.4 resuelve la densidad a partir de evidencia real.
+3. El LevelView final cambia de dimensiones cuando corresponde.
+4. OpenCV/OCR/PyMuPDF/Gemini reproyectado/F02 comparten el LevelView final.
+5. raster_normalization.state debe ser NORMALIZED para niveles resueltos.
+6. Densidad final dentro de la tolerancia fuerte ya existente respecto a 90 px/m.
+7. gemini_calls adicionales = 0 durante la segunda pasada.
+8. F03 deberá consumir directamente los level_result finales de QuantiaSpatialEngine.
+
+VALIDACIÓN LOCAL
+pytest synthetic Canonical Metric Raster V1 + Scale V1.4 + Context V6.2 + Solver Evidence: 38 PASSED.
+compileall: PASS.

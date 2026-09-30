@@ -1,0 +1,17 @@
+PUNTO DE RETORNO — SCALE FOUNDATION V1
+Base: QUANTIA_V2L_CONTEXT_CLASSIFICATION_V6_2_2026-09-10.zip
+SHA256: 74c12f6e9b62f50940d32b34ddf1ff30bf0e2e7eab6be5172d8036d72f4fb2c9
+
+Para revertir esta ronda:
+- retirar scale_evidence_resolver.py
+- retirar project_scale_reconciler.py
+- retirar raster_density_policy.py
+- revertir los campos opcionales de escala de transport/gemini_level_localization.py
+- revertir la evidencia declared_scale_hint en phase_01_level/level_detector.py
+- revertir la ampliación mínima del prompt prompts/level_localization.py
+
+No fue modificado:
+- F01.5 extraction legacy
+- F02 canónica
+- Context Classification V6.2
+- GlobalTopologySolver

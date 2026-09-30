@@ -1,0 +1,19 @@
+HISTÓRICO — 2026-09-18 — CALL 2 WALL REVIEW V2
+
+DECISIÓN
+La llamada multimodal deja de tratarse como un experimento de test. El test queda únicamente como harness. La lógica productiva vive en WallGraphMultimodalReviewer + ProcessEngine + DeltaValidator + CorrectionApplier.
+
+ACLARACIÓN DECISIVA
+Se verificó LevelViewBuilder: raster_bytes se obtiene por crop directo de source_raster_bytes y se codifica PNG sin resize/limpieza. Por tanto Call 2 V1 sí tenía como panel A una fuente real del LevelView. La afirmación posterior de que no tenía plano base fue incorrecta.
+
+HALLAZGO DE LOS DOS ÚLTIMOS FLUJOS
+- V4 walls-only entrega una base suficientemente limpia.
+- Call 2 V1 realizó correcciones útiles y reconoció ejes, escaleras, puertas, glazing y mobiliario, confirmando uso de la fuente original.
+- El contexto enviado estaba sobredimensionado por cientos de logical_gaps y detalles internos del filtro.
+- Las decisiones de gap realmente devueltas fueron mínimas frente a la cantidad enviada.
+
+OBJETIVO V2
+Fuente A real + WallGraph B -> únicamente deltas necesarios + candidatos no-muro relevantes para siguiente capa.
+
+SIGUIENTE PASO
+Ejecutar Call 2 V2 real sobre los seis LevelViews y comparar final_wallgraph contra fuente original. No cerrar F04 hasta validar ese resultado.

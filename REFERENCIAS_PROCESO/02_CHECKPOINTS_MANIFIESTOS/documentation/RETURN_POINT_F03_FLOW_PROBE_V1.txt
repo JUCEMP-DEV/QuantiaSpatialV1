@@ -1,0 +1,3 @@
+PUNTO DE RETORNO
+Antes de esta prueba: QUANTIA_V2L_CANONICAL_METRIC_RASTER_V1_2026-09-10.zip sobre Scale Foundation V1.4.
+Este paquete agrega únicamente una prueba y documentación; no altera archivos de ejecución.

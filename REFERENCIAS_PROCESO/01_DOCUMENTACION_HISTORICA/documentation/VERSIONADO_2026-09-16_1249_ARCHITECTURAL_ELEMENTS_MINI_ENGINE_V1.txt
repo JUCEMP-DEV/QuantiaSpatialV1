@@ -1,0 +1,63 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-16 12:49 -06:00
+Versión: ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1
+Estado: EXPERIMENTAL AISLADO / VALIDACIÓN SINTÉTICA APROBADA
+
+BASE DE PARTIDA
+- F03 Element Context Isolation V5 + Selection Contracts V1.6.
+- Canonical Metric Raster V2.3 VALIDATED permanece como base estable.
+- Architectural Core Visual Probe V1 fija evidencia visual previa.
+- Baseline arquitectónico: reconstrucción funcional WallGraph + Opening + Room-first + ReconciliationEngine.
+
+CAMBIO DE FASE / ARCHIVO
+Nueva rama dentro de app/quantia_spatial:
+
+architectural_elements/
+├── __init__.py
+├── contracts.py
+├── engine.py
+├── feature_builder.py
+├── host_wall_matcher.py
+├── proposal_generator.py
+├── rag.py
+├── reconciler.py
+├── resolver.py
+├── visual_context.py
+└── knowledge/
+    └── architectural_openings_v1.json
+
+tests/
+├── test_quantia_spatial_architectural_elements_mini_engine_v1_synthetic.py
+└── test_quantia_spatial_architectural_elements_probe_all_3_v1.py
+
+documentation/
+├── ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt
+├── BASELINE_RECONSTRUCCION_FUNCIONAL_2026-09-15.txt
+├── HISTORICO_DECISION_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt
+├── RETURN_POINT_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt
+└── VERSIONADO_2026-09-16_1249_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.txt
+
+DECISIONES
+1. Spatial queda responsable de muros.
+2. Element Mini-Engine queda responsable de DOOR/WINDOW/NOT_OPENING.
+3. Un resultado solo se une por OpeningReconciler; nunca por mutación del muro.
+4. RAG V1 usa ejemplos propios y atributos geométricos/semánticos auditables.
+5. Gemini existente se reutiliza como evidencia persistida; no se añade consumo obligatorio.
+6. CandidateContextGate no se amplía para resolver openings.
+7. No se toca F02, CandidateGraph, GlobalTopologySolver ni el test real congelado.
+
+VALIDACIÓN LOCAL
+- 8/8 pruebas sintéticas nuevas PASS.
+- 24/24 pruebas conjuntas Mini-Engine + Element Context V5 + Selection Contracts V1.6 PASS.
+- 15/15 Context Classification V6.2 synthetic PASS.
+- Total de ejecuciones relevantes verificadas: 39 PASS (conjuntos no solapados: 24 + 15).
+- compileall Architectural Elements + probe: PASS.
+- Standardized context-gate completo no puede recolectarse en el sandbox aislado porque falta app.core/config; este límite ya existía y no pertenece al mini-motor.
+- Test real congelado conserva SHA256:
+  17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f
+
+PENDIENTE
+- Probe real Casa Viri / Miguel H / Miguel V.
+- Medir recall de DOOR broad hypotheses.
+- Medir precisión de WINDOW publicados.
+- Decidir si V2 conecta Gemini como ElementSemanticResolver directo con crops recuperados por RAG.

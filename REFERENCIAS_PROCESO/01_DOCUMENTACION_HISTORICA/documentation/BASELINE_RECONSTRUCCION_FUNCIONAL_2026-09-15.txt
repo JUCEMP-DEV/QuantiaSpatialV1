@@ -1,0 +1,91 @@
+QUANTIA V2L — BASELINE DE RECONSTRUCCIÓN FUNCIONAL
+Fecha: 2026-09-15
+Estado: FIJADO COMO PUNTO DE PARTIDA ARQUITECTÓNICO
+
+PUNTO ACTUAL DE EVIDENCIA
+- Base geométrica: Canonical Metric Raster V2.3 VALIDATED.
+- Motor F03 vigente para comparación: Element Context Isolation V5 + Selection Contracts V1.6.
+- Evidencia visual principal: Architectural Core Visual Probe V1.
+- Este baseline no declara cerrada F03; fija la dirección de maduración.
+
+DECISIÓN ARQUITECTÓNICA
+No continuar resolviendo la reconstrucción mediante acumulación de reglas locales en CandidateContextGate.
+El objetivo pasa a ser una reconstrucción estructurada global con varias fuentes de evidencia y una reconciliación arquitectónica final.
+
+ARQUITECTURA OBJETIVO
+F01.5 / Evidencia multimodal
+  -> Wall Proposals
+  -> Opening Proposals
+  -> Room Proposals
+  -> Element Proposals
+  -> Global Reconciliation
+  -> Functional Building Model
+  -> DXF / SVG / IFC / BIM
+
+CONTRATOS A INTRODUCIR
+1. WallGraph
+   - Junctions = nodos.
+   - Tramos de muro = aristas.
+   - Cada muro conserva geometría, ancho, orientación, longitud métrica, evidencias, openings y espacios adyacentes.
+
+2. Opening
+   - Entidad independiente.
+   - Asociada obligatoriamente a host_wall.
+   - Door y Window ocupan/especializan un Opening.
+   - El opening modifica topología sin destruir la continuidad lógica del muro.
+
+3. RoomGraph / Room Polygons
+   - Reconstrucción independiente de habitaciones.
+   - Segunda fuente de verdad para validar muros, recuperar gaps y verificar cierre topológico.
+
+4. ReconciliationEngine
+   - Fusiona hipótesis wall-first y room-first.
+   - No debe alimentar una reconstrucción con la salida de la otra.
+   - Decide el modelo final con evidencia geométrica, topológica y semántica.
+
+REPARTO DE RESPONSABILIDADES
+- PyMuPDF / OpenCV: precisión geométrica y evidencia vectorial/raster.
+- Modelo CV especializado: propuestas/heatmaps de junction, wall, opening, door, window y room.
+- Gemini: semántica, nomenclaturas y revisión de ambigüedades.
+- Reconciliador determinista: verdad final publicada.
+
+ENTRENAMIENTO FUTURO
+- Base prioritaria: ResPlan.
+- Renderizado sintético con múltiples estilos y degradaciones.
+- Fine tuning posterior con planos reales Quantia.
+- CubiCasa5K: investigación/evaluación sujeto a su licencia no comercial.
+
+MÉTRICAS CANÓNICAS FUTURAS
+- Wall precision / recall / F1.
+- Opening precision / recall / F1.
+- Door host accuracy.
+- Window host accuracy.
+- Junction F1.
+- Room polygon IoU.
+- Room closure.
+- Room adjacency F1.
+- Dangle length.
+- Double-wall errors.
+- Topology validity.
+- Scale error.
+- Edit cost.
+
+META DE PRODUCCIÓN
+- 95%+ automático.
+- Incertidumbre => REVIEW.
+- No forzar 100% si reduce certeza o introduce errores silenciosos.
+
+RUTA PRIORIZADA
+1. Congelar benchmark actual.
+2. Implementar WallGraph.
+3. Introducir Opening como entidad canónica.
+4. Resolver continuidad del muro a través de openings.
+5. Implementar reconstrucción room-first.
+6. Implementar ReconciliationEngine.
+7. Incorporar modelo CV especializado.
+8. Mantener Gemini como capa semántica/reviewer.
+9. Publicar DXF/SVG/IFC cuando la topología sea consistente.
+
+PUNTO DE RETORNO
+La arquitectura previa permanece preservada en los paquetes/versiones ya generados.
+Este documento fija dirección; no sustituye ni reescribe evidencia histórica.

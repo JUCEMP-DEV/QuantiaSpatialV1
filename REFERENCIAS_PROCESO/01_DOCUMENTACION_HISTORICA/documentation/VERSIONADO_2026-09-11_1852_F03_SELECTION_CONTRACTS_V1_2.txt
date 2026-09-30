@@ -1,0 +1,56 @@
+QUANTIA V2L — F03 SELECTION CONTRACTS V1.2
+Fecha: 2026-09-11 18:52
+Estado: CANDIDATA / PENDIENTE VALIDACIÓN REAL DE LOS 3 CASOS
+
+BASE INMUTABLE
+- Canonical Metric Raster V2.3 VALIDATED.
+- F01 / F01.5 / F02 sin cambios.
+- test_quantia_spatial_f03_flow_all_3_v1.py sin cambios.
+- test_quantia_spatial_f03_selection_all_3_v1.py sin cambios.
+
+PUNTO DE RETORNO INMEDIATO
+F03 Selection Contracts V1.1
+SHA256 paquete: 16237e18282a9bf45fdb3f7054bac5a53134ec2d57ddfbe835fa37bcbccc3db7
+
+CAUSA RAÍZ ATACADA
+V1.1 mejoró el aislamiento contextual, pero todavía quedaban cuatro sesgos generales:
+1. metric_thickness_support tenía una meseta 1.0 demasiado amplia entre 0.06 y 0.40 m;
+2. el bbox rectangular de una región podía convertir una línea de patrón en supuesto muro de borde;
+3. dos pistas repetitivas podían emparejarse como DOUBLE_FACE sin una señal explícita de "pattern pair";
+4. CandidateGraph derivaba tolerancias relacionales de una mediana de espesores contaminable por módulos gráficos.
+
+CAMBIOS DE MOTOR
+1. reconstruction_core/reconstruction_pipeline.py
+   - separa plausibilidad de espesor, esbeltez longitud/espesor y soporte combinado de banda;
+   - publica metric_thickness_support, metric_slenderness_support y metric_wall_band_support;
+   - mantiene evidencia continua: no existe veto duro por espesor.
+2. reconstruction_core/candidate_context_gate.py
+   - agrega pattern_pair_support para detectar candidatos bracketed por pistas repetitivas;
+   - un pair perteneciente al patrón se QUARANTINE antes de que bbox/axis lo rescaten;
+   - region_boundary_support usa evidencia de patrón a un lado; bbox queda como fallback débil;
+   - salida externa de región exige banda plausible, borde y ausencia de pattern-pair fuerte.
+3. reconstruction_core/global_topology_solver.py
+   - penalización métrica separa espesor y esbeltez;
+   - una línea larga no puede rescatar por sí sola un espesor físicamente pobre;
+   - topología se evalúa por defecto sobre todo el beam (96 estados), no solo los 28 primeros.
+4. reconstruction_core/candidate_graph.py
+   - junction/continuation quedan limitados por escala métrica para evitar tolerancias infladas;
+   - CONTINUATION exige compatibilidad de espesor y pondera su fuerza por esa compatibilidad.
+
+PRUEBA INTERNA NUEVA
+- tests/test_quantia_spatial_f03_selection_contracts_v1_2_synthetic.py
+- No sustituye ni modifica la prueba real congelada.
+
+VALIDACIÓN LOCAL
+- F03 Selection Contracts V1.1 synthetic
+- F03 Selection Contracts V1.2 synthetic
+- Solver Evidence V1 synthetic
+- Context Classification V6.2 synthetic
+Resultado conjunto: 38 PASSED
+- compileall reconstruction_core: PASS
+
+LIMITACIÓN DE ESTA VALIDACIÓN
+El entorno aislado no contiene app/core ni los PDFs externos de los 3 casos; por ello la prueba real completa debe ejecutarse en el backend del usuario. La iteración local se apoyó además en replay analítico de los tres JSON reales V1.1 entregados por el usuario, sin editar el test ni fijar cantidades objetivo.
+
+VALIDACIÓN REAL PENDIENTE
+pytest app/quantia_spatial/tests/test_quantia_spatial_f03_selection_all_3_v1.py -s -v

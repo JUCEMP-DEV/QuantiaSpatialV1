@@ -1,0 +1,39 @@
+QUANTIA SPATIAL V1 — CALL 2 WALL REVIEW V2
+Fecha: 2026-09-18
+
+PUNTO DE RETORNO
+quantia_spatialV1_Call2_Delta_Review_V1.zip
+SHA256: 143ab48746e0cbd1b3dcc95f20bb6aae13eacda096498c87cfefd931cd3b1e1a
+
+CAUSA RAÍZ REVISADA
+- Call 2 V1 sí recibía fuente visual real: LevelView.raster_bytes es crop directo del raster de página.
+- El problema principal era exceso de contexto interno: logical_gaps, diagnostics y candidatos de filtro completos.
+- Ejemplo: Miguel H PB tenía 306 logical_gaps en el prompt y solo 1 fue utilizado en la respuesta.
+
+CAMBIOS V2
+1. Prompt CALL2_WALL_REVIEW_V2 orientado al objetivo final: corregir WallGraph por DELTAS.
+2. STATE capsule compacto: solo identidad, tamaño, escala y muros [id,x1,y1,x2,y2,role].
+3. NO se envían logical_gaps internos.
+4. NO se envían diagnósticos completos ni listas completas de filtros.
+5. PostFilter se reduce a conteos/familias como metadato auxiliar.
+6. Input visual único conserva:
+   A: LevelView fuente original exacto.
+   B: Walls-only actual.
+7. Headers A/B fuera del sistema local de coordenadas.
+8. Candidatos de siguiente capa son secundarios a la corrección de muros.
+9. Se añaden host_wall_continuity y solid_wall_present opcionales a candidatos arquitectónicos.
+10. Persistencia reforzada: prompt completo, schema completo, versiones, hashes, source bbox/page, input PNG y respuesta raw/normalizada.
+11. El provider mantiene retry/backoff existente de hasta 3 intentos por modelo para errores transitorios.
+
+EFICIENCIA DE CONTEXTO (aprox chars/4)
+- Casa Viri PB: ~1299 tokens prompt
+- Casa Viri PA: ~1053
+- Miguel H PB: ~1760
+- Miguel H PA: ~1501
+- Miguel V PB: ~1125
+- Miguel V PA: ~1577
+
+VALIDACIÓN LOCAL
+- test_call2_prompt_v2_synthetic: PASS
+- suite activa: 72 PASSED / 12 SKIPPED / 0 FAILED
+- compileall: PASS pendiente de cierre de paquete (ejecutar antes de empaquetar)

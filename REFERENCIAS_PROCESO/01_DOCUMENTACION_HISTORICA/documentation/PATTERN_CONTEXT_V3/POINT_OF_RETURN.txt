@@ -1,0 +1,22 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Fecha: 2026-09-09
+
+BASE INMUTABLE:
+QUANTIA_V2L_SPATIAL_CANDIDATE_BASELINE_2026-09-08
+Proposal C A1.2
+
+NO MODIFICAR EN ESTE PATCH:
+- F01
+- F01.5
+- F02
+- engine.py
+- F03 R4
+- parametric_model
+
+RAMA EXPERIMENTAL QUE SE SUSTITUYE:
+CANDIDATE_EXCLUSION_V2_WALL_LIKENESS_GATED_PATTERN
+
+CAUSA DE RETORNO:
+V2 produjo Casa Viri PB 152->152 y PA 59->59; 0 exclusiones.
+La protección wall-like reutilizaba evidencias locales de Candidate Discovery y
+no podía distinguir con fiabilidad muro vs. patrón repetitivo.

@@ -1,0 +1,37 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha/hora: 2026-09-09 10:36 -06:00
+
+DECISIÓN
+Abandonar V2/V3 como mecanismo canónico de exclusión por candidato.
+
+CAUSA
+Casa Viri demostró que las señales usadas para crear WallCandidate también podían elevar su
+wall_likeness y proteger falsos positivos. El resultado V3 conservó toda la geometría y no
+resolvió la contaminación del CandidateGraph.
+
+NUEVO PRINCIPIO
+Separar detección de CONTEXTO de generación de MUROS.
+Las reglas de exclusión se encapsulan en una capa previa al CandidateGraph.
+
+IMPLEMENTACIÓN
+NUEVO: reconstruction_core/context_models.py
+NUEVO: reconstruction_core/context_region_detector.py
+NUEVO: reconstruction_core/candidate_context_gate.py
+MODIFICADO: reconstruction_core/wall_candidate_generator.py
+MODIFICADO: reconstruction_core/reconstruction_pipeline.py
+MODIFICADO: reconstruction_core/__init__.py
+NUEVO TEST: tests/test_quantia_spatial_context_gate_v4_synthetic.py
+NUEVO TEST: tests/test_quantia_spatial_context_gate_v4_casa_viri.py
+
+INVARIANTES
+- F02 permanece inmutable.
+- Candidate Discovery no decide semántica.
+- QUARANTINE/REVIEW no entran al CandidateGraph.
+- No hay llamada Gemini nueva.
+- No hay lógica específica Casa Viri.
+- A1.2 permanece como punto de retorno.
+
+RESULTADO DE PRUEBA LOCAL
+3 pruebas V4 sintéticas PASS.
+2 pruebas Proposal C sintéticas existentes PASS.
+Casa Viri real pendiente porque su PDF está referenciado por ruta local del equipo del usuario.

@@ -1,0 +1,45 @@
+QUANTIA SPATIAL V1.0 — STRUCTURE TREE
+Fecha: 2026-09-17
+
+.
+./architectural_elements
+./architectural_elements/knowledge
+./contracts
+./documentation
+./documentation/PATTERN_CONTEXT_V3
+./documentation/history
+./experiments
+./models
+./parametric_model
+./phase_015_evidence
+./phase_01_level
+./phase_02_boundaries
+./prompts
+./providers
+./reconstruction_core
+./tests
+./tests/data
+./transport
+
+TESTS ACTIVOS/RELEVANTES:
+tests/F03_MASK_TOPOLOGY_HYBRID_PROBE_V1.txt
+tests/WALL_MASK_RECONSTRUCTION_PROBE_V1.txt
+tests/test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic.py
+tests/test_quantia_spatial_canonical_metric_raster_v2_synthetic.py
+tests/test_quantia_spatial_context_classification_v6_2_standardized.py
+tests/test_quantia_spatial_context_classification_v6_2_synthetic.py
+tests/test_quantia_spatial_context_gate_v5_standardized.py
+tests/test_quantia_spatial_f03_architectural_core_visual_all_3_v1.py
+tests/test_quantia_spatial_f03_element_context_isolation_v5_synthetic.py
+tests/test_quantia_spatial_f03_flow_all_3_v1.py
+tests/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.py
+tests/test_quantia_spatial_f03_selection_contracts_v1_6_synthetic.py
+tests/test_quantia_spatial_metric_reraster_v1_3_standardized.py
+tests/test_quantia_spatial_perimeter_wall_tracks_all_3_v1.py
+tests/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.py
+tests/test_quantia_spatial_scale_foundation_v1_6_synthetic.py
+tests/test_quantia_spatial_solver_evidence_v1_standardized.py
+tests/test_quantia_spatial_solver_evidence_v1_synthetic.py
+tests/test_quantia_spatial_wall_canonicalization_isolated_all_3_v1.py
+tests/test_quantia_spatial_wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback.py
+tests/test_quantia_spatial_wall_mask_reconstruction_all_3_v1.py

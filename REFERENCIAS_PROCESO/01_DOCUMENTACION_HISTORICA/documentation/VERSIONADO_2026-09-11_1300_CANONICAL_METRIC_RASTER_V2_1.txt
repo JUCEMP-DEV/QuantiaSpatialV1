@@ -1,0 +1,18 @@
+VERSIONADO — QUANTIA V2L
+Fecha: 2026-09-11 13:00
+Versión: CANONICAL_METRIC_RASTER_V2.1
+
+BASE
+CANONICAL_METRIC_RASTER_V2
+SHA256 base: c34a40bb83bb89ad01893f53313c5b1820368264e66bd50a3517ba804cd77dbc
+
+CAMBIO EJECUTABLE
+reconstruction_core/level_scale_normalizer.py
+- LevelScaleState: F02_METRIC/UNRESOLVED → RESOLVED/UNRESOLVED
+- perfil con escala válida: state=RESOLVED
+- VERSION: V6_2 → V6_3
+- source conserva la procedencia métrica.
+
+PRUEBA REAL CONGELADA
+No modificada. SHA256:
+8a5532843adfbcae11d71c3c3dab69048770399e2c0acfe5c888a295a1df83c5

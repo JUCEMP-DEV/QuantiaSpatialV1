@@ -1,0 +1,20 @@
+{
+  "version": "POST_RECONSTRUCTION_FILTER_V3",
+  "adaptive_reconstruction_modified": false,
+  "call2_enabled": false,
+  "validation": {
+    "pytest_passed": 70,
+    "pytest_skipped": 9,
+    "pytest_failed": 0,
+    "compileall": "PASS"
+  },
+  "replay_canonical_counts": {
+    "casa_viri_pb": {"input": 140, "v2": 87, "v3": 82},
+    "casa_viri_pa": {"input": 73, "v2": 38, "v3": 35},
+    "miguel_h_pb": {"input": 221, "v2": 121, "v3": 113},
+    "miguel_h_pa": {"input": 153, "v2": 81, "v3": 78},
+    "miguel_v_pb": {"input": 75, "v2": 43, "v3": 38},
+    "miguel_v_pa": {"input": 178, "v2": 130, "v3": 126}
+  },
+  "note": "Replay geométrico; la clasificación contextual final debe verificarse con la ejecución Windows de los 6 LevelViews."
+}

@@ -1,0 +1,49 @@
+QUANTIA SPATIAL V1 — CALL 2 DELTA REVIEW V1
+Fecha: 2026-09-18
+Raíz: Backend/app/quantia_spatialV1
+
+PUNTO DE RETORNO
+- quantia_spatialV1_PostFilterLayer_V4_WallsOnly.zip
+- SHA256: 4d2afdf96157d0c19ab671a6ec1b7bafb63912d20c811f5ee4dc254b517d190d
+
+OBJETIVO
+Validar una segunda llamada multimodal sobre el WallGraph filtrado/canónico V4 sin reconstruir desde cero.
+Call 2 compara plano original vs walls-only y publica únicamente deltas de corrección + candidatos arquitectónicos para la siguiente capa.
+
+CAMBIOS PRODUCTIVOS
+1. adaptive_reconstruction/call2_validation.py
+   - Valida deltas antes de aplicarlos.
+   - Conserva respuesta cruda y separa deltas aceptados/rechazados.
+   - Verifica IDs, bounds, longitudes, semántica EXTEND/TRIM, merge colineal, split sobre muro y confianza.
+   - REMOVE sobre F03 seed protegido exige confianza >= 0.90.
+2. adaptive_reconstruction/multimodal_review.py
+   - Call 2 recibe contexto de PostFilter V4 sin considerarlo verdad inmutable.
+   - Mantiene un único archivo visual: original arriba + walls-only abajo.
+   - Reconoce candidatos DOOR/WINDOW/FLOOR_TO_CEILING_GLAZING/RAILING_GUARDRAIL/STAIR/STAIR_HANDRAIL/ROOF_COVER/TERRACE/OPENING_CLOSURE/SLAB_EDGE_LEVEL_CHANGE/OTHER/UNCERTAIN.
+   - Perímetro no es inmutable.
+3. process_engine.py
+   - Flujo: Adaptive -> PostFilter V4 -> Call 2 -> DeltaValidator -> CorrectionApplier.
+   - Call 2 recibe candidatos architectural/excluded/unresolved del filtro como evidencia auxiliar.
+4. adaptive_reconstruction/call2_artifact_renderer.py
+   - Publica únicamente walls-only final para revisión visual.
+5. tests/test_quantia_spatial_v1_call2_all_3_v1.py
+   - Mismo motor para Casa Viri, Miguel H y Miguel V.
+   - Call 2 FORCE cuando QUANTIA_RUN_REAL_CALL2=1.
+   - Produce un PNG walls-only final por LevelView y JSON de review/validation/final graph.
+6. tests/test_quantia_spatial_call2_delta_validator_v2_synthetic.py
+   - Regresión de aceptación/rechazo de deltas peligrosos.
+
+CORRECCIÓN DE REGRESIÓN
+- Se restauró prioridad de ANGULAR_HUB -> ROOF_COVER_CANDIDATE.
+- RAILING_GUARDRAIL no puede sobreescribir un angular hub previamente reconocido como cubierta.
+
+VALIDACIÓN LOCAL
+- compileall: PASS.
+- Suite activa completa: 71 passed, 12 skipped, 0 failed.
+- Skips: pruebas que requieren PDFs/rutas Windows y Call 2 real deshabilitado por defecto.
+- Call 2 real NO ejecutado en este entorno.
+
+ESTADO
+- PostFilter V4 sigue siendo la base determinista.
+- Call 2 queda listo para prueba real, no validado aún visualmente.
+- F04 no se integra todavía.

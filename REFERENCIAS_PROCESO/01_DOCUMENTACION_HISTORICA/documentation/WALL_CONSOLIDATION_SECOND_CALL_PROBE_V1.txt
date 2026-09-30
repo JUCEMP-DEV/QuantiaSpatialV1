@@ -1,0 +1,41 @@
+QUANTIA V2L — WALL CONSOLIDATION SECOND CALL PROBE V1
+Fecha: 2026-09-16
+Estado: EXPERIMENTAL / AISLADO / NO MODIFICA MOTOR
+
+CASO ÚNICO
+- Miguel V — Planta Baja.
+- Consume exclusivamente el resultado ya generado por WALL_CANONICALIZATION_ISOLATED_ALL_3_V1.
+- Visual de entrada: wall_canonicalization_gap_audit.png.
+- State Capsule: centerlines canónicas + gaps + escala + dimensiones de imagen.
+
+OBJETIVO
+Realizar una única segunda llamada Gemini para decidir DELTAS sobre el WallGraph existente:
+- muro faltante;
+- extensión de muro DIVIDER;
+- muro DIVIDER falso;
+- clasificación de cada gap como WALL_CONTINUITY / PROBABLE_OPENING / UNCERTAIN / NOT_A_GAP;
+- regiones no resueltas.
+
+RESTRICCIONES
+- Exactamente 1 HTTP POST.
+- Sin retry.
+- Sin fallback.
+- No reinterpreta ni modifica F02/perímetro.
+- No clasifica todavía puerta/ventana.
+- No reconstruye todo el plano desde cero.
+- No modifica ningún archivo del motor.
+- La respuesta cruda se persiste antes de validar el resultado.
+- El output es diagnóstico; no se publica automáticamente al WallGraph canónico.
+
+EVIDENCIA GENERADA
+- RAW Gemini completo.
+- Texto crudo.
+- JSON normalizado.
+- Historial JSONL con hashes, modelo y usageMetadata.
+- Preview visual de correcciones.
+- Audit JSON con violaciones del contrato.
+
+PUNTO DE RETORNO
+No aplica modificación al motor. Estado previo intacto:
+- Architectural Elements Mini-Engine V2.
+- Wall Canonicalization Isolated Probe V1.

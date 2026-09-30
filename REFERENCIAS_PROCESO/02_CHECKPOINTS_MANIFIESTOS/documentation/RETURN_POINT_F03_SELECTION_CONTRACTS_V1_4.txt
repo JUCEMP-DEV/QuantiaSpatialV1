@@ -1,0 +1,6 @@
+QUANTIA V2L — PUNTO DE RETORNO INMEDIATO
+Versión: F03 Selection Contracts V1.4 — Pattern Membership / Axis Locator Contract
+Paquete: QUANTIA_V2L_F03_SELECTION_CONTRACTS_V1_4.zip
+SHA256: 9bbeed48c14104794577ab0c126e156b86c13a48b937b0ec6f90943d2e46e267
+
+Usar este punto si Element Context Isolation V1 degrada los 3 casos reales.

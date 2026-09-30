@@ -1,0 +1,16 @@
+HISTORICO DE DECISIONES — 2026-09-17
+
+1. Se descartó seguir agregando filtros por caso antes de consolidar una arquitectura general.
+2. La mejor lógica observada se separó por responsabilidad:
+   - F03 selecciona estructura confiable.
+   - Wall Mask recupera geometría omitida.
+   - Topology valida continuidad/espacios.
+   - Canonicalization reduce a una centerline por muro.
+   - Call 2 compara contra el plano original y corrige deltas.
+3. Se corrigió la premisa antigua de Call 2: F02/perímetro NO es inmutable.
+4. PROBABLE_OPENING conserva host_wall_continuity=true y solid_wall_present=false.
+5. El motor debe decidir módulos según evidencia del LevelView, no por identidad del proyecto.
+6. Se crea AdaptiveModuleDecisionEngine con rutas SEED_FIRST, BALANCED, DENSE_RECOVERY y SEED_RESCUE.
+7. Se crea DecisionTraceRecorder append-only para conservar features, ruta y feedback futuros para entrenamiento.
+8. Call 2 queda desacoplado mediante provider inyectable; Gemini es proveedor actual, no requisito arquitectónico permanente.
+9. Los tests de Casa Viri, Miguel H y Miguel V pasan a validar el mismo motor y registrar qué ruta elige.

@@ -1,0 +1,18 @@
+quantia_spatialV1/
+├── adaptive_reconstruction/          [CONGELADO]
+├── post_reconstruction_filters/      [POSTFILTER V4 — CONGELADO]
+├── canonical_wallgraph/              [NUEVO]
+│   ├── __init__.py
+│   ├── contracts.py
+│   ├── evidence_bundle.py
+│   └── finalizer.py
+├── process_engine.py                 [ORQUESTA FINALIZER]
+├── tests/
+│   ├── test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic.py [NUEVO]
+│   └── test_quantia_spatial_v1_process_all_3_v1.py [REGRESIÓN REFORZADA]
+└── documentation/
+    ├── CURRENT_STATE.txt
+    ├── CURRENT_VERSION.txt
+    ├── VERSIONADO_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt
+    ├── HISTORICO_CONVERSACION_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt
+    └── STRUCTURE_TREE_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V1.txt

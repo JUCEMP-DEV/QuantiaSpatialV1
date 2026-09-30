@@ -1,0 +1,12 @@
+2026-09-18 — Call 2 V2 / cuota Gemini
+
+Hecho decisivo:
+- Ejecución real de los tres casos falló con HTTP 429 RESOURCE_EXHAUSTED.
+- Gemini indicó retry explícito de ~29 s y ~57 s.
+- La causa no fue prompt, schema ni reconstrucción: el provider no extraía ese delay del cuerpo JSON y reintentaba antes de que se liberara la cuota.
+
+Decisión:
+- No modificar reconstrucción ni prompt.
+- Hacer provider quota-aware.
+- Preservar/reutilizar respuestas Call 2 válidas mediante replay exacto por hash.
+- No borrar salidas/historial en reruns del harness.

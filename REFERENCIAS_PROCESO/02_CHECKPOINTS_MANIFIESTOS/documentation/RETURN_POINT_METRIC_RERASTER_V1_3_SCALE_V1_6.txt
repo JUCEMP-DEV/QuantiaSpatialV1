@@ -1,0 +1,6 @@
+PUNTO DE RETORNO
+Metric Reraster V1.2 + Scale Foundation V1.5
+Archivo: QUANTIA_V2L_TEST_METRIC_RERASTER_V1_2_SCALE_V1_5_2026-09-10.zip
+SHA256: 1bb282a5f6f8ba1eda5be00a24d673c445bd16255f9a094187c04555d18a7920
+
+Si V1.6 produce una regresión no explicada, volver a este paquete sin mezclar archivos.

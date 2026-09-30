@@ -1,0 +1,17 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11 22:09 -06:00
+
+DECISIÓN
+Dejar de tratar F03 únicamente como selección muro/no-muro. Antes del CandidateGraph se agrega una capa de identidad funcional para elementos que el plano ya hace reconocibles.
+
+MOTIVO
+Los resultados V1.4 muestran que el problema residual se desplaza desde encapsulamiento excesivo hacia geometría ambigua que llega sin identidad al solver. Puertas son el caso más claro: F01.5 conserva curvas CUBIC_BEZIER, pero esa evidencia se perdía al construir DrawingModel.
+
+REGLA GENERAL
+Localización/contención no equivale a exclusión. Para aislar una primitiva se exige provenance directa del elemento. Openings son además evidencia positiva para preservar/relacionar sus host walls.
+
+ALCANCE V1
+Puertas/openings por Bézier y semántica; ventanas/openings/columnas/furniture/fixtures/equipment/text/symbol por semántica disponible; texto vector/OCR como contexto no negativo.
+
+NO SE CAMBIA
+Test congelado, F02, escala, graph, solver.

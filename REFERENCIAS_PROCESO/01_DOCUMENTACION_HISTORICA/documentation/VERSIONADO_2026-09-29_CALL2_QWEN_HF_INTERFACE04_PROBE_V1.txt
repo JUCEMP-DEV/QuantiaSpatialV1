@@ -1,0 +1,60 @@
+QUANTIA SPATIAL V1 — CALL2 QWEN/HF INTERFACE04 GEOMETRY PROBE V1
+Fecha: 2026-09-29
+
+ALCANCE
+- Prueba aislada sobre app/quantia_spatialV1.
+- No modifica providers productivos, ProcessEngine, Finalizer, validator ni export_review.
+- Usa snapshot CANONICAL_WALLGRAPH_INTEGRITY_V2 como entrada reproducible.
+- Proveedor experimental: Hugging Face Router + Qwen/Qwen3-VL-30B-A3B-Instruct.
+- Reutiliza Call2StrictSchemaAdapter del motor actual.
+- Reutiliza Call2DeltaValidator + export_review + QuantiaSpatialV1ProcessEngine existentes.
+
+OBJETIVO
+Comparar LevelView original contra WallGraph canónico de centerlines, proponer deltas,
+clasificar gaps y detectar DOOR/WINDOW/GARAGE_DOOR/STAIR. Después validar/finalizar
+con SpatialV1 y generar interface04.json real más interface04_geometry_probe.json
+experimental para revisión geométrica.
+
+ARCHIVO NUEVO
+quantia_spatialV1/tests/test_quantia_spatial_v1_call2_qwen_hf_interface04_geometry_v1.py
+
+VARIABLES LIVE
+QUANTIA_RUN_QWEN_HF_CALL2=1
+QUANTIA_CALL2_CASE=miguel_v
+QUANTIA_CALL2_LEVEL=planta_baja
+HF_TOKEN=<token Hugging Face con permiso Inference Providers>
+
+MODELOS DEFAULT
+Primary: Qwen/Qwen3-VL-30B-A3B-Instruct:deepinfra
+Fallback: Qwen/Qwen3-VL-30B-A3B-Instruct:novita
+
+SALIDAS
+original.png
+call2_input_abc.png
+prompt.txt
+schema.json
+state_capsule.json
+input_graph.json
+provider_raw.json
+provider_text.txt
+review.json
+pre_export_validation.json
+interface04.json
+final_graph.json
+evidence_bundle.json
+validation.json
+integrity.json
+interface04_geometry_probe.json
+comparison_metrics.json
+comparison_original_baseline_qwen.png
+audit.json
+run_status.json
+
+ESTADO
+EXPERIMENTAL. No promueve geometry_probe a contrato productivo ni habilita quantification.
+
+VALIDACION LOCAL DEL PATCH
+- py_compile: PASS
+- pytest del archivo nuevo: 3 PASSED, 1 SKIPPED
+- El SKIPPED corresponde exclusivamente a la llamada real protegida por QUANTIA_RUN_QWEN_HF_CALL2=1.
+- Validado offline: request multimodal + strict JSON Schema + snapshot SpatialV1 + validator + finalizer + export_review + geometry probe para 04.

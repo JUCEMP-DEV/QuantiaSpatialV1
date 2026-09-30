@@ -1,0 +1,42 @@
+{
+  "probe_version": "QUANTIA_SPATIALV1_SPACE_CLOSURE_CONSTRAINT_PROBE_V2",
+  "input_result_dir": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\QuantiaV2L\\Backend\\app\\quantia_spatialV1\\tests\\output\\call2_interface04\\gemini\\dc937b598926\\miguel_v__planta_baja",
+  "px_per_m": 90.02319564320835,
+  "physical_wall_count": 22,
+  "residual_parallel_merge_count": 1,
+  "logical_gap_closure_count": 19,
+  "first_call_semantic_space_count": 6,
+  "first_call_spaces_with_explicit_dimensions": 0,
+  "v1_derived_space_count": 2,
+  "v1_derived_area_m2": 53.106,
+  "reference_footprint": {
+    "evidence_id": "OPENCV_CONTOUR_ba42e5008ba9a9bb",
+    "area_px2": 1513116.5,
+    "area_m2": 186.70825337020108,
+    "perimeter_m": 62.30564554757538,
+    "bbox_px": [
+      163.0,
+      351.0,
+      2098.0,
+      1207.0
+    ],
+    "source_area_px2": 1513116.5,
+    "classification": "REFERENCE_FOOTPRINT_CANDIDATE_NOT_CONFIRMED_TERRAIN_AREA"
+  },
+  "reference_footprint_area_m2": 186.7083,
+  "v1_footprint_coverage_ratio": 0.284433,
+  "envelope_face_count": 4,
+  "envelope_area_m2": 185.0754,
+  "under_segmented_face_count": 1,
+  "call2_removed_wall_count": 12,
+  "call2_removed_topology_review_count": 10,
+  "v1_dangle_length_m": 25.1173,
+  "dangle_length_m": 20.757513,
+  "cut_length_m": 0.0,
+  "invalid_ring_length_m": 0.0,
+  "area_conservation_ratio": 0.991254,
+  "semantic_separation_ratio": 0.333333,
+  "semantic_assignment_ratio": 1.0,
+  "dangle_quality": 0.325124,
+  "closure_score": 0.69527
+}

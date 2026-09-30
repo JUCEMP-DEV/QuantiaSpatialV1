@@ -1,0 +1,26 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN / LIMPIEZA
+Fecha: 2026-09-16 18:20 America/Mexico_City
+
+DECISIÓN
+Se limpia el árbol ejecutable de pruebas de Quantia Spatial y del Architectural Elements Mini-Engine sin modificar lógica productiva.
+
+CAUSA
+El ZIP contenía múltiples generaciones V1..V6 de pruebas ya superadas, outputs de iteraciones antiguas, caches Python/pytest y una copia accidental completa del probe Second Call V1 dentro de tests/__init__.py.
+
+PUNTO DE RETORNO
+ZIP original QuantiaV2L.zip, SHA256:
+3e001667c60d10d9926e5b80523c1c9fcc955ed67bf56ea05e9843e9b9ee20ce
+
+SE CONSERVA ACTIVO
+- regresiones finales/representativas de escala, reraster, clasificación contextual, solver y contratos F03;
+- test congelado F03 flow all-3;
+- Architectural Core Visual V1;
+- Architectural Elements Mini-Engine V2 synthetic;
+- Wall Canonicalization Isolated V1;
+- Second Call V5 retry/fallback, solo como evidencia de la última prueba previa a la nueva reconstrucción.
+
+MINI-ENGINE
+Se conserva el código actual. Se elimina el seed V1 no referenciado y los probes/outputs V1/V2 ya superados. La ruta vigente del proyecto continúa siendo Wall Reconstruction -> Call 3 de elementos, no iterar el Mini-Engine V2 como detector dimensional.
+
+NO MODIFICADO
+F01/F01.5/F02/F03 productivo, CandidateGraph, GlobalTopologySolver, contratos productivos, transportes, providers, router/endpoints legacy.

@@ -1,0 +1,63 @@
+QUANTIA SPATIAL V1 — PRODUCTIZED PROCESS + POST-RECONSTRUCTION FILTER V1
+Fecha: 2026-09-17
+Raíz: Backend/app/quantia_spatialV1
+
+PUNTO DE RETORNO
+- Archivo: quantia_spatialV1_Adaptive_Prototype_V1.zip
+- SHA256: 209ae7e1d514ebd9bddd16b5f5e6879514d4a07981e5964164e33d64cd922156
+- Evidencia visual recibida: adaptive_reconstruction_v1.zip
+- SHA256 evidencia: 0155000309d129379e08c707c2e293560441f79ceed72b07addbba3247683669
+
+CAMBIO DE FASE
+De: lógica híbrida productivizada + orquestación todavía parcialmente en tests.
+A: orquestador productivo + capa post-reconstruction independiente + tests activos de contrato/regresión.
+
+CAMBIOS PRODUCTIVOS
+1. process_engine.py
+   - Nuevo QuantiaSpatialV1ProcessEngine.
+   - Orquesta Adaptive Reconstruction -> Post Filter -> Call 2 opcional.
+   - Call 2 OFF por defecto; AUTO/FORCE están disponibles sin alterar el flujo de pruebas actual.
+   - No contiene reglas por nombre de proyecto.
+
+2. post_reconstruction_filters/
+   - filter_engine.py: clasifica sin borrar evidencia.
+   - selector.py: habilita filtros por evidencia observada.
+   - wall_hypothesis_canonicalizer.py: colapsa hipótesis paralelas/solapadas del mismo muro a una centerline.
+   - contracts.py: WALL / ARCHITECTURAL_ELEMENT / EXCLUDED_GRAPHIC / UNRESOLVED.
+   - artifact_renderer.py: evidencia visual separada de decisiones.
+
+3. adaptive_reconstruction/hybrid_engine.py
+   - No se cambió ninguna regla de reconstrucción.
+   - Único ajuste: expone context_decisions y context_regions en runtime.artifacts para trazabilidad post-filter.
+
+SEMÁNTICA FIJA DE FILTROS
+- Un filtro EXCLUYE de una salida; no elimina evidencia.
+- WALL: participa en FilteredWallGraph.
+- ARCHITECTURAL_ELEMENT: se conserva para capas posteriores, no participa como muro.
+- EXCLUDED_GRAPHIC: no es muro ni elemento arquitectónico útil; se conserva como evidencia.
+- UNRESOLVED: queda disponible para revisión/Call 2.
+
+CANONICALIZACIÓN
+- 1 muro físico publicado = 1 centerline.
+- source_wall_ids/source_candidate_ids/evidence_ids se conservan.
+- No cierra gaps ni openings; solo colapsa hipótesis concurrentes.
+
+PRUEBAS
+- Suite activa: 57 PASSED, 9 SKIPPED, 0 FAILED.
+- Skips: casos reales cuyos PDFs no existen en el entorno Linux de validación.
+- Probes superseded se movieron a documentation/history/probes_2026-09-17/ y no se perdieron.
+- Tests V1.6/V1.3 incompatibles con ScaleEvidenceResolver V1.7 se archivaron; se creó contrato público V1.7.
+
+VALIDACIÓN SOBRE WALLGRAPH REAL RECIBIDO (CANONICALIZER ONLY)
+- Casa Viri PB: 140 -> 83 líneas; 57 hipótesis colapsadas.
+- Casa Viri PA: 73 -> 38; 35 colapsadas.
+- Miguel H PB: 221 -> 127; 94 colapsadas.
+- Miguel H PA: 153 -> 79; 74 colapsadas.
+- Miguel V PB: 75 -> 40; 35 colapsadas.
+- Miguel V PA: 178 -> 128; 50 colapsadas.
+Nota: esta medición valida solo canonicalización; la clasificación completa de filtros requiere rerun para disponer de context_decisions en runtime.
+
+PENDIENTE INMEDIATO
+- Ejecutar el test integral productivo en Windows sobre los 6 LevelViews.
+- Revisar 02_filter_classification.png, 03_encapsulated_and_excluded.png y 04_filtered_single_line_wallgraph.png.
+- No ejecutar Call 2 hasta validar esta capa.

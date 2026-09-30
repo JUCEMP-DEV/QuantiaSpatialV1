@@ -1,0 +1,23 @@
+QUANTIA V2L — VERSIONADO
+2026-09-10 17:00 -06:00
+
+V6.2 Context Classification: congelada.
+Scale Foundation V1: punto de retorno.
+Scale Foundation V1.1: versión activa para validación.
+
+Archivos modificados:
+- reconstruction_core/scale_evidence_resolver.py
+- tests/test_quantia_spatial_scale_foundation_v1_1_synthetic.py
+- tests/test_quantia_spatial_scale_foundation_v1_1_standardized.py
+- documentation/CURRENT_VERSION.txt
+- documentation/CURRENT_STATE.txt
+- documentation/STRUCTURE_TREE.txt
+- documentation/TEST_PLAN.txt
+
+Archivos retirados del árbol activo:
+- tests/test_quantia_spatial_scale_foundation_v1_synthetic.py
+- tests/test_quantia_spatial_scale_foundation_v1_standardized.py
+
+Punto de retorno:
+QUANTIA_V2L_SCALE_FOUNDATION_V1_2026-09-10.zip
+SHA256 4810d2c3f5172e25f0bf913889dade67f5f7fea6a74b9d228b4f7aee61635164

@@ -1,0 +1,3493 @@
+{
+  "level_view_id": "LEVEL_VIEW_f6e9f0082de5abaa",
+  "level_name": "Planta Baja",
+  "image_size_px": [
+    2464,
+    1651
+  ],
+  "px_per_m": 90.02319564320835,
+  "walls": [
+    {
+      "id": "CB_005_fcf68a56e77f",
+      "start_px": [
+        302.0,
+        504.72438170167817
+      ],
+      "end_px": [
+        355.6237487792969,
+        504.72438170167817
+      ],
+      "thickness_px": 10.34759521484375,
+      "role": "PERIMETER",
+      "confidence": 0.8,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__b372946a0581cf24",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__c9cf77d8e205d635"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_433f38dc5f08f705",
+        "OPENCV_CONTOUR_ad6945341051ce9a",
+        "OPENCV_LINE_1abe5b3e739fe120",
+        "OPENCV_LINE_8a9df395d662a9d0",
+        "OPENCV_LINE_a88abe670882bd23"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_004",
+          "PW_007"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "perimeter_votes": 4,
+            "divider_votes": 0,
+            "review_votes": 1,
+            "left_labels": [
+              0,
+              2,
+              2,
+              2,
+              2
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 4,
+        "divider_votes": 0,
+        "review_votes": 1,
+        "left_labels": [
+          0,
+          2,
+          2,
+          2,
+          2
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 502.38844299316406,
+        "canonical_axis_px": 504.72438170167817,
+        "axis_shift_px": 2.3359387085141066
+      }
+    },
+    {
+      "id": "PW_006",
+      "start_px": [
+        405.0,
+        504.72438170167817
+      ],
+      "end_px": [
+        956.0,
+        504.72438170167817
+      ],
+      "thickness_px": 7.16325328386644,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__1bb50645f1faeba3",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__67ba0f9cff1daf92",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__781dba091165b370",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__ae77a5d3751d743c"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_433f38dc5f08f705",
+        "OPENCV_CONTOUR_ad6945341051ce9a",
+        "OPENCV_LINE_1abe5b3e739fe120",
+        "OPENCV_LINE_349a119d0c3f81d7",
+        "OPENCV_LINE_8a9df395d662a9d0",
+        "OPENCV_LINE_a88abe670882bd23"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 504.90625,
+        "canonical_axis_px": 504.72438170167817,
+        "axis_shift_px": -0.18186829832183093
+      }
+    },
+    {
+      "id": "CW_006_df30003f4bd0",
+      "start_px": [
+        980.6214424114676,
+        550.8602905273438
+      ],
+      "end_px": [
+        1209.375976319987,
+        550.8602905273438
+      ],
+      "thickness_px": 10.298078535421679,
+      "role": "REVIEW",
+      "confidence": 0.4493605100740948,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__030bcddbef980660",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__05b9c8387db0a662",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__21cd4344fc1d9653",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__4cb1bb6c8cc3e6e3",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__5d531d5c4d8995da",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__6a2714f5de605a97",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__71705c13b5f79917",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__730213cee1d53c04",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__c176d8761eaedf7d",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__d3445edab44629d5",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__d79c7aef2d3fdfc3",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__dbf26c2797cf872b",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__f678b11aa31fd88e"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_6d6dfe82a55a82bc",
+        "OPENCV_LINE_9cdbceefc4194370"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_017",
+          "PW_018",
+          "PW_025"
+        ],
+        "hypothesis_count": 3,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 550.8602905273438,
+        "canonical_axis_px": 550.8602905273438,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "CW_001_beef627bdca1",
+      "start_px": [
+        314.374755859375,
+        840.2191550514915
+      ],
+      "end_px": [
+        940.6258544921875,
+        840.2191550514915
+      ],
+      "thickness_px": 6.298394675774851,
+      "role": "DIVIDER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__4ab6895c9fb89a27",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__4b9ef63112c4a110",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__53f661903127abcc",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__72983d08357bb5a6",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__796cdff58273d955",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__7b0a399674614512",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__7b7857015a36e07c",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__8ee439bed2afde55",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__ad9244e37453f79c",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__b0d68b1c81f08403",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__ca1f0fe757221279",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__ea3a9cbf73ab9e25"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_6eab3de82a9526ba",
+        "OPENCV_CONTOUR_8d2749d8736c17ef",
+        "OPENCV_CONTOUR_c4ccbedd1b7ff3b8",
+        "OPENCV_CONTOUR_d6ee55dab6e54415",
+        "OPENCV_LINE_21c02624690e395b",
+        "OPENCV_LINE_63f4ec88c06d1739"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_046",
+          "PW_049"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 5,
+            "review_votes": 0,
+            "left_labels": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "right_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 5,
+        "review_votes": 0,
+        "left_labels": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "right_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 840.2191550514915,
+        "canonical_axis_px": 840.2191550514915,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "CALL2_ADD_001",
+      "start_px": [
+        1210.0,
+        958.177123091603
+      ],
+      "end_px": [
+        1394.0,
+        958.177123091603
+      ],
+      "thickness_px": 10.802783477185002,
+      "role": "REVIEW",
+      "confidence": 0.9,
+      "source_candidate_ids": [],
+      "evidence_ids": [],
+      "source_names": [
+        "GEMINI_CALL2"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "CALL2_ADDED",
+      "topology_support": {
+        "reason": "Stair enclosure top horizontal wall",
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 958.0,
+        "canonical_axis_px": 958.177123091603,
+        "axis_shift_px": 0.17712309160299355
+      }
+    },
+    {
+      "id": "CB_004_7ff8fca5d92f",
+      "start_px": [
+        946.0,
+        958.177123091603
+      ],
+      "end_px": [
+        1001.0,
+        958.177123091603
+      ],
+      "thickness_px": 12.0,
+      "role": "REVIEW",
+      "confidence": 0.8,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__32034c91eb0992c5",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__7d9b0abb78b80840"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_f8becbcabc4963cf",
+        "OPENCV_LINE_2538be6dd51cc1b5",
+        "OPENCV_LINE_f2c1ec12753eec40"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_059",
+          "PW_068"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "perimeter_votes": 4,
+            "divider_votes": 0,
+            "review_votes": 1,
+            "left_labels": [
+              0,
+              5,
+              5,
+              5,
+              5
+            ],
+            "right_labels": [
+              0,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 958.84375,
+        "canonical_axis_px": 958.177123091603,
+        "axis_shift_px": -0.6666269083970064
+      }
+    },
+    {
+      "id": "PW_094",
+      "start_px": [
+        314.375,
+        1177.422966003418
+      ],
+      "end_px": [
+        1323.1248779296875,
+        1177.422966003418
+      ],
+      "thickness_px": 6.119379407920625,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__05e3a39270b2c791",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__10730dc3aa31ff61",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__1d13dc83074a1f22",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__1dab9d1f420115be",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__4e7691c7cb843d30",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__74ef8d6a2ea5e88b",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__9bbc721177298267",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__b769d7bc09a2aa85"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_ccaaa2566750eb46",
+        "OPENCV_CONTOUR_e4ecf9be31c585d2",
+        "OPENCV_CONTOUR_e5d062d2150f1cd2",
+        "OPENCV_CONTOUR_ec6cdce2d67cdafa",
+        "OPENCV_LINE_4572152bbc558f32",
+        "OPENCV_LINE_544acb0d43198b9c",
+        "OPENCV_LINE_64bfe16274baddc4",
+        "OPENCV_LINE_9235cb2901602a13",
+        "OPENCV_LINE_9a187b78d6e6f210",
+        "OPENCV_LINE_c1a2aecbbf5bffa5",
+        "OPENCV_LINE_c1ae9bc974e60ed7"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": false,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 3,
+        "divider_votes": 0,
+        "review_votes": 2,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          3,
+          3,
+          3,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "H",
+        "original_axis_px": 1177.422966003418,
+        "canonical_axis_px": 1177.422966003418,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "CW_004_f80558c7f953",
+      "start_px": [
+        306.5453340249675,
+        510.625196913372
+      ],
+      "end_px": [
+        306.5453340249675,
+        828.9999921806267
+      ],
+      "thickness_px": 6.029808264585841,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__2af4e4c73cb9af89",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__60e113fcec178733",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__9b7463fe3a9307a1",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__a68e417bf2948b39",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__feaf6db4e4610f99"
+      ],
+      "evidence_ids": [
+        "OPENCV_LINE_3e9d8d81f8b5a58a",
+        "OPENCV_LINE_9299493d16bbc17b"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_009",
+          "PW_041"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 4,
+            "divider_votes": 0,
+            "review_votes": 1,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              2,
+              2,
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 5,
+            "divider_votes": 0,
+            "review_votes": 0,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 305.6659635420219,
+        "canonical_axis_px": 306.5453340249675,
+        "axis_shift_px": 0.8793704829455464
+      }
+    },
+    {
+      "id": "PW_050",
+      "start_px": [
+        306.5453340249675,
+        866.8750691869178
+      ],
+      "end_px": [
+        306.5453340249675,
+        1175.999971215663
+      ],
+      "thickness_px": 5.148300376034286,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__a0d532e6791bd142",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__c4c2d12bfe71e61b",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__ce5d555079a028ee"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_e4ecf9be31c585d2",
+        "OPENCV_LINE_6a69540cb15061f7"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 307.4510177649252,
+        "canonical_axis_px": 306.5453340249675,
+        "axis_shift_px": -0.9056837399577375
+      }
+    },
+    {
+      "id": "PW_032",
+      "start_px": [
+        828.0448038888815,
+        693.1250610351562
+      ],
+      "end_px": [
+        828.0448038888815,
+        976.87548828125
+      ],
+      "thickness_px": 6.214796084152577,
+      "role": "REVIEW",
+      "confidence": 0.4412471305348755,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__1c5b8c9ae8491573",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__49ba490cc432edb7",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__4c02083377c2cb28",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__52da0948dbe9a907",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__63b22e06767798da",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__6918c0a8a4c2ca00",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__a20dc35244768732",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__e095bf6daf61db6b"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_8d2749d8736c17ef",
+        "OPENCV_LINE_4cb78d5f60d45511",
+        "OPENCV_LINE_82d51d407306764e",
+        "OPENCV_LINE_c6f5ccd997592871",
+        "OPENCV_LINE_e90cce96b113e432",
+        "OPENCV_LINE_ffc9dda00976b39a"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 831.6887016296387,
+        "canonical_axis_px": 828.0448038888815,
+        "axis_shift_px": -3.643897740757211,
+        "residual_parallel_merge": true,
+        "merged_from_wall_ids": [
+          "PW_032",
+          "PW_071"
+        ]
+      }
+    },
+    {
+      "id": "PW_010",
+      "start_px": [
+        946.4111945614235,
+        511.875
+      ],
+      "end_px": [
+        946.4111945614235,
+        693.0
+      ],
+      "thickness_px": 10.414603819501957,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__1af7de7f88b88603",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__27c3c192e6e6ccd1",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__3b4d25e716267f40",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__925312be1e8e4cd8",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__b62b7d9ee32a9537",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__d7e7f926bc61a3e0"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_6d6dfe82a55a82bc",
+        "OPENCV_CONTOUR_f06c90bb14707d95",
+        "OPENCV_LINE_c5767738ec3250cf",
+        "OPENCV_LINE_c8378d2b1e9c0627"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 945.3285955709871,
+        "canonical_axis_px": 946.4111945614235,
+        "axis_shift_px": 1.082598990436395
+      }
+    },
+    {
+      "id": "CB_002_2df4315b84d2",
+      "start_px": [
+        946.4111945614235,
+        850.625
+      ],
+      "end_px": [
+        946.4111945614235,
+        943.1259155273438
+      ],
+      "thickness_px": 16.917326771490387,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__a1ad116398cf63b4",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__bfdea79deb8dad0d"
+      ],
+      "evidence_ids": [],
+      "source_names": [
+        "LSD_LOCAL"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_053",
+          "PW_057"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 5,
+            "divider_votes": 0,
+            "review_votes": 0,
+            "left_labels": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 945.8297958374023,
+        "canonical_axis_px": 946.4111945614235,
+        "axis_shift_px": 0.5813987240211418
+      }
+    },
+    {
+      "id": "CB_001_499cb26544fa",
+      "start_px": [
+        946.4111945614235,
+        1021.8731994429043
+      ],
+      "end_px": [
+        946.4111945614235,
+        1163.12892360377
+      ],
+      "thickness_px": 16.85874809576464,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__12c26e5855e5dfff",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__405223edff7a2461",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__bef604b990a4d5d4"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_e4ecf9be31c585d2",
+        "OPENCV_LINE_955abdf84eb840d9"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_009_c2175f0039fb",
+          "PW_076"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 3,
+            "review_votes": 2,
+            "left_labels": [
+              0,
+              0,
+              3,
+              3,
+              3
+            ],
+            "right_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_080",
+              "PW_089"
+            ],
+            "hypothesis_count": 2,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 946.1871960402112,
+        "canonical_axis_px": 946.4111945614235,
+        "axis_shift_px": 0.22399852121225194
+      }
+    },
+    {
+      "id": "CW_010_681e1b047237",
+      "start_px": [
+        946.4111945614235,
+        733.126072059178
+      ],
+      "end_px": [
+        946.4111945614235,
+        833.1268747237326
+      ],
+      "thickness_px": 9.747493750336837,
+      "role": "PERIMETER",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__bbc5b2ca03d2c229",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__dcea3b2e08ef19b0"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_c4ccbedd1b7ff3b8",
+        "OPENCV_LINE_d6a19dce4fe6e25e"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_036",
+          "PW_045"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 5,
+            "divider_votes": 0,
+            "review_votes": 0,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 5,
+        "divider_votes": 0,
+        "review_votes": 0,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 948.8370528545928,
+        "canonical_axis_px": 946.4111945614235,
+        "axis_shift_px": -2.4258582931693127
+      }
+    },
+    {
+      "id": "PW_087",
+      "start_px": [
+        946.4111945614235,
+        1163.0
+      ],
+      "end_px": [
+        946.4111945614235,
+        1177.0
+      ],
+      "thickness_px": 1.0,
+      "role": "REVIEW",
+      "confidence": 0.9,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_REGION__63a0e9aac0f00283",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_REGION__c15a3820505b877a"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_8cf341b1fef3befe",
+        "OPENCV_CONTOUR_e4ecf9be31c585d2",
+        "OPENCV_LINE_955abdf84eb840d9",
+        "OPENCV_LINE_ca6aaecedf88ee2d",
+        "PYMUPDF_LINE_18091f0dbcb2a453",
+        "PYMUPDF_LINE_3b00c300334c3c8e"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV",
+        "PYMUPDF",
+        "REGION_LOCAL"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "CALL2_TRIM_WALL",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 949.5,
+        "canonical_axis_px": 946.4111945614235,
+        "axis_shift_px": -3.0888054385765145
+      }
+    },
+    {
+      "id": "CW_013_102f4da6e80f",
+      "start_px": [
+        1090.1875,
+        1108.0
+      ],
+      "end_px": [
+        1090.1875,
+        1170.625
+      ],
+      "thickness_px": 8.747904852318337,
+      "role": "REVIEW",
+      "confidence": 0.41880212474728207,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__d469f09cd99e3d95",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__e1314259f403ab96"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_8c29fa56cdf0a6b1",
+        "OPENCV_CONTOUR_e4ecf9be31c585d2",
+        "OPENCV_LINE_13017284e2d1bff4",
+        "OPENCV_LINE_5f873a1bedabbc4f",
+        "OPENCV_LINE_ae1c1f45b7db3f33"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_090",
+          "PW_091"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "right_labels": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1090.1875,
+        "canonical_axis_px": 1090.1875,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "PW_074",
+      "start_px": [
+        1210.1311093264208,
+        988.1078328315541
+      ],
+      "end_px": [
+        1210.1311093264208,
+        1068.1077765116636
+      ],
+      "thickness_px": 40.95423392440597,
+      "role": "REVIEW",
+      "confidence": 0.6,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__831c15026f4271f5"
+      ],
+      "evidence_ids": [],
+      "source_names": [
+        "LSD_LOCAL"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1210.1311093264208,
+        "canonical_axis_px": 1210.1311093264208,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "CW_007_a9a37c55f834",
+      "start_px": [
+        1331.0,
+        961.8751831054688
+      ],
+      "end_px": [
+        1331.0,
+        1173.1251220703125
+      ],
+      "thickness_px": 5.650347932863922,
+      "role": "REVIEW",
+      "confidence": 1.0,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__02b859e9f13c2017",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__145d7200c9787b5d",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__650a9f401f31ba47",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__6fa2306c2acecab3"
+      ],
+      "evidence_ids": [
+        "OPENCV_CONTOUR_5c12245ebe26b360",
+        "OPENCV_CONTOUR_a8d61cb15125da9a",
+        "OPENCV_LINE_3c3dd6e96b85d330",
+        "OPENCV_LINE_9d0854664e77dafc",
+        "OPENCV_LINE_c1229b615c23a1ee"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_060",
+          "PW_067",
+          "PW_075"
+        ],
+        "hypothesis_count": 3,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 5,
+            "divider_votes": 0,
+            "review_votes": 0,
+            "left_labels": [
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "right_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "perimeter_votes": 5,
+            "divider_votes": 0,
+            "review_votes": 0,
+            "left_labels": [
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1331.0,
+        "canonical_axis_px": 1331.0,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "PW_022",
+      "start_px": [
+        1376.25,
+        553.125
+      ],
+      "end_px": [
+        1376.25,
+        633.125
+      ],
+      "thickness_px": 3.75,
+      "role": "REVIEW",
+      "confidence": 0.4316204391203323,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__00f1a6efcad2f1ad"
+      ],
+      "evidence_ids": [],
+      "source_names": [
+        "LSD_LOCAL"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1376.25,
+        "canonical_axis_px": 1376.25,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "CB_006_912c39224642",
+      "start_px": [
+        1394.166768210765,
+        904.0003764100013
+      ],
+      "end_px": [
+        1394.166768210765,
+        956.000366087115
+      ],
+      "thickness_px": 14.975918143820207,
+      "role": "REVIEW",
+      "confidence": 0.38823386753038147,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__38fb7298191ffc5b",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__59ebdf95cc13af6a",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__9f84190278b77bde"
+      ],
+      "evidence_ids": [
+        "OPENCV_LINE_8de10745499f6629",
+        "OPENCV_LINE_dc18aa9465d4bdd8",
+        "OPENCV_LINE_f5e865bc701c86d6"
+      ],
+      "source_names": [
+        "LSD_LOCAL",
+        "OPENCV"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "CW_014_a178f8295188",
+          "PW_055"
+        ],
+        "hypothesis_count": 2,
+        "canonicalization_reason": "near_coincident_centerline_bundle",
+        "source_topology": [
+          {
+            "canonicalized_from_wall_ids": [
+              "PW_061",
+              "PW_062"
+            ],
+            "hypothesis_count": 2,
+            "canonicalization_reason": "near_duplicate_hypotheses",
+            "source_topology": [
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "perimeter_votes": 0,
+                "divider_votes": 0,
+                "review_votes": 5,
+                "left_labels": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "right_labels": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1394.166768210765,
+        "canonical_axis_px": 1394.166768210765,
+        "axis_shift_px": 0.0
+      }
+    },
+    {
+      "id": "PW_027",
+      "start_px": [
+        1685.9610528400406,
+        559.3561627108301
+      ],
+      "end_px": [
+        1685.9610528400406,
+        694.3465023845204
+      ],
+      "thickness_px": 13.25212849178722,
+      "role": "REVIEW",
+      "confidence": 0.4464333935797879,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__bf57f2a91b02e65b",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__ebf42e22a77de585"
+      ],
+      "evidence_ids": [],
+      "source_names": [
+        "LSD_LOCAL"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "ACTIVE",
+      "topology_support": {
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "finalized_topology": true
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1685.8832211753763,
+        "canonical_axis_px": 1685.9610528400406,
+        "axis_shift_px": 0.07783166466424518
+      }
+    },
+    {
+      "id": "CW_002_1c4c508dee8a",
+      "start_px": [
+        1685.9610528400406,
+        733.1257444597483
+      ],
+      "end_px": [
+        1685.9610528400406,
+        1170.6186509521988
+      ],
+      "thickness_px": 11.639030622419877,
+      "role": "REVIEW",
+      "confidence": 0.4562302968601128,
+      "source_candidate_ids": [
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__0be17e2e046a1a2c",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__2b705cb47fbe674f",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__38dfc74337cb56d4",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__6d4384351779b722",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__89a59654b69dd684",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__89c91303019f8a25",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__8c1afc8acd54a665",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__92a0d8e95f2ef196",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__d3ef29973d6fddcd",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__e778d3ccd046d4b8",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__f278778d044ab309",
+        "LEVEL_VIEW_f6e9f0082de5abaa__WC_PAIR__f9521c9f35df2483"
+      ],
+      "evidence_ids": [],
+      "source_names": [
+        "LSD_LOCAL"
+      ],
+      "f03_seed_protected": true,
+      "context_state": "POST_FILTER_CANONICAL",
+      "topology_support": {
+        "canonicalized_from_wall_ids": [
+          "PW_037",
+          "PW_039",
+          "PW_043",
+          "PW_044",
+          "PW_051",
+          "PW_054",
+          "PW_084",
+          "PW_086"
+        ],
+        "hypothesis_count": 8,
+        "canonicalization_reason": "near_duplicate_hypotheses",
+        "source_topology": [
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "perimeter_votes": 0,
+            "divider_votes": 0,
+            "review_votes": 5,
+            "left_labels": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "right_labels": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "finalized_topology": true,
+        "perimeter_votes": 0,
+        "divider_votes": 0,
+        "review_votes": 5,
+        "left_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "right_labels": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "space_closure_probe": {
+        "axis_orientation": "V",
+        "original_axis_px": 1685.9845525822939,
+        "canonical_axis_px": 1685.9610528400406,
+        "axis_shift_px": -0.023499742253306977
+      }
+    }
+  ],
+  "logical_gaps": [
+    {
+      "id": "HB_COL_CB_001_499cb26544fa_CB_002_2df4315b84d2",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        945.9917353234149,
+        943.1258628881026
+      ],
+      "end_px": [
+        946.0173325552068,
+        1021.8732471952876
+      ],
+      "gap_px": 78.74738846743912,
+      "wall_ids": [
+        "CB_001_499cb26544fa",
+        "CB_002_2df4315b84d2"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_COL_CB_002_2df4315b84d2_CW_010_681e1b047237",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        947.3334243459975,
+        833.1268747237326
+      ],
+      "end_px": [
+        947.3334243459975,
+        850.625
+      ],
+      "gap_px": 17.498125276267388,
+      "wall_ids": [
+        "CB_002_2df4315b84d2",
+        "CW_010_681e1b047237"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_COL_CB_005_fcf68a56e77f_PW_006",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        355.6237487792969,
+        503.64734649658203
+      ],
+      "end_px": [
+        405.0,
+        503.64734649658203
+      ],
+      "gap_px": 49.376251220703125,
+      "wall_ids": [
+        "CB_005_fcf68a56e77f",
+        "PW_006"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_COL_CW_002_1c4c508dee8a_PW_027",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        1685.861881044373,
+        694.3466982317494
+      ],
+      "end_px": [
+        1685.8912691584776,
+        733.125689523837
+      ],
+      "gap_px": 38.77900242777082,
+      "wall_ids": [
+        "CW_002_1c4c508dee8a",
+        "PW_027"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_COL_CW_004_f80558c7f953_PW_050",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        306.5577398813411,
+        828.9999522335877
+      ],
+      "end_px": [
+        306.5594502833254,
+        866.8751098098822
+      ],
+      "gap_px": 37.87515761491443,
+      "wall_ids": [
+        "CW_004_f80558c7f953",
+        "PW_050"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_COL_CW_010_681e1b047237_PW_010",
+      "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+      "start_px": [
+        947.0735540929296,
+        733.1256642046989
+      ],
+      "end_px": [
+        947.0827740253475,
+        693.0004030729358
+      ],
+      "gap_px": 40.125262191035404,
+      "wall_ids": [
+        "CW_010_681e1b047237",
+        "PW_010"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CALL2_ADD_001_CB_006_912c39224642_1394.0_958.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1394.0,
+        958.0
+      ],
+      "end_px": [
+        1394.1783525750634,
+        956.000366087115
+      ],
+      "gap_px": 2.0075720227656637,
+      "wall_ids": [
+        "CALL2_ADD_001",
+        "CB_006_912c39224642"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_001_499cb26544fa_PW_094_946.21_1163.13",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        946.2101539806247,
+        1163.12892360377
+      ],
+      "end_px": [
+        946.2101539806246,
+        1177.422966003418
+      ],
+      "gap_px": 14.294042399647878,
+      "wall_ids": [
+        "CB_001_499cb26544fa",
+        "PW_094"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_002_2df4315b84d2_CW_001_beef627bdca1_945.83_850.62",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        945.8297958374023,
+        850.625
+      ],
+      "end_px": [
+        940.6258544921875,
+        840.2191550514915
+      ],
+      "gap_px": 11.634544022729742,
+      "wall_ids": [
+        "CB_002_2df4315b84d2",
+        "CW_001_beef627bdca1"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_002_2df4315b84d2_CB_004_7ff8fca5d92f_945.83_943.13",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        945.8297958374025,
+        943.1259155273438
+      ],
+      "end_px": [
+        946.0,
+        958.84375
+      ],
+      "gap_px": 15.718755992978156,
+      "wall_ids": [
+        "CB_002_2df4315b84d2",
+        "CB_004_7ff8fca5d92f"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_004_7ff8fca5d92f_CB_002_2df4315b84d2_946.0_958.84",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        946.0,
+        958.84375
+      ],
+      "end_px": [
+        945.8297958374025,
+        943.1259155273438
+      ],
+      "gap_px": 15.718755992978156,
+      "wall_ids": [
+        "CB_004_7ff8fca5d92f",
+        "CB_002_2df4315b84d2"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_005_fcf68a56e77f_CW_004_f80558c7f953_302.0_502.39",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        302.0,
+        502.38844299316406
+      ],
+      "end_px": [
+        305.65877480781677,
+        510.625196913372
+      ],
+      "gap_px": 9.012810229688384,
+      "wall_ids": [
+        "CB_005_fcf68a56e77f",
+        "CW_004_f80558c7f953"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CB_006_912c39224642_CALL2_ADD_001_1394.18_956.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1394.1783525750634,
+        956.000366087115
+      ],
+      "end_px": [
+        1394.0,
+        958.0
+      ],
+      "gap_px": 2.0075720227656637,
+      "wall_ids": [
+        "CB_006_912c39224642",
+        "CALL2_ADD_001"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_001_beef627bdca1_CW_004_f80558c7f953_314.37_840.22",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        314.374755859375,
+        840.2191550514915
+      ],
+      "end_px": [
+        305.67315227622714,
+        828.9999921806267
+      ],
+      "gap_px": 14.198152007963682,
+      "wall_ids": [
+        "CW_001_beef627bdca1",
+        "CW_004_f80558c7f953"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_001_beef627bdca1_CW_010_681e1b047237_940.63_840.22",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        940.6258544921875,
+        840.2191550514915
+      ],
+      "end_px": [
+        948.825563824786,
+        833.1268747237326
+      ],
+      "gap_px": 10.84138706008681,
+      "wall_ids": [
+        "CW_001_beef627bdca1",
+        "CW_010_681e1b047237"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_004_f80558c7f953_CB_005_fcf68a56e77f_305.66_510.63",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        305.65877480781677,
+        510.625196913372
+      ],
+      "end_px": [
+        305.65877480781677,
+        502.38844299316406
+      ],
+      "gap_px": 8.236753920207946,
+      "wall_ids": [
+        "CW_004_f80558c7f953",
+        "CB_005_fcf68a56e77f"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_004_f80558c7f953_CW_001_beef627bdca1_305.67_829.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        305.67315227622714,
+        828.9999921806267
+      ],
+      "end_px": [
+        314.374755859375,
+        840.2191550514915
+      ],
+      "gap_px": 14.198152007963682,
+      "wall_ids": [
+        "CW_004_f80558c7f953",
+        "CW_001_beef627bdca1"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_007_a9a37c55f834_CALL2_ADD_001_1331.0_961.88",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1331.0,
+        961.8751831054688
+      ],
+      "end_px": [
+        1331.0,
+        958.0
+      ],
+      "gap_px": 3.87518310546875,
+      "wall_ids": [
+        "CW_007_a9a37c55f834",
+        "CALL2_ADD_001"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_007_a9a37c55f834_PW_094_1331.0_1173.13",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1331.0,
+        1173.1251220703125
+      ],
+      "end_px": [
+        1323.1248779296875,
+        1177.422966003418
+      ],
+      "gap_px": 8.971566758133973,
+      "wall_ids": [
+        "CW_007_a9a37c55f834",
+        "PW_094"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_010_681e1b047237_CW_001_beef627bdca1_948.83_833.13",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        948.825563824786,
+        833.1268747237326
+      ],
+      "end_px": [
+        940.6258544921875,
+        840.2191550514915
+      ],
+      "gap_px": 10.84138706008681,
+      "wall_ids": [
+        "CW_010_681e1b047237",
+        "CW_001_beef627bdca1"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_CW_013_102f4da6e80f_PW_094_1090.19_1170.62",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1090.1875,
+        1170.625
+      ],
+      "end_px": [
+        1090.1875,
+        1177.422966003418
+      ],
+      "gap_px": 6.797966003417969,
+      "wall_ids": [
+        "CW_013_102f4da6e80f",
+        "PW_094"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_006_PW_010_956.0_504.91",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        956.0,
+        504.90625
+      ],
+      "end_px": [
+        945.3285955709871,
+        511.875
+      ],
+      "gap_px": 12.745287327089034,
+      "wall_ids": [
+        "PW_006",
+        "PW_010"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_010_PW_006_945.33_511.88",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        945.3285955709871,
+        511.875
+      ],
+      "end_px": [
+        945.3285955709871,
+        504.90625
+      ],
+      "gap_px": 6.96875,
+      "wall_ids": [
+        "PW_010",
+        "PW_006"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_050_PW_094_307.44_1176.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        307.44302994294094,
+        1175.999971215663
+      ],
+      "end_px": [
+        314.375,
+        1177.422966003418
+      ],
+      "gap_px": 7.07651913287467,
+      "wall_ids": [
+        "PW_050",
+        "PW_094"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_071_CW_001_beef627bdca1_823.57_848.12",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        823.5680847167969,
+        848.125
+      ],
+      "end_px": [
+        823.5680847167969,
+        840.2191550514915
+      ],
+      "gap_px": 7.905844948508502,
+      "wall_ids": [
+        "PW_071",
+        "CW_001_beef627bdca1"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_087_PW_094_949.5_1163.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        949.5,
+        1163.0
+      ],
+      "end_px": [
+        949.5,
+        1177.422966003418
+      ],
+      "gap_px": 14.422966003417969,
+      "wall_ids": [
+        "PW_087",
+        "PW_094"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_087_PW_094_949.5_1177.0",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        949.5,
+        1177.0
+      ],
+      "end_px": [
+        949.5,
+        1177.422966003418
+      ],
+      "gap_px": 0.42296600341796875,
+      "wall_ids": [
+        "PW_087",
+        "PW_094"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_094_PW_050_314.38_1177.42",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        314.375,
+        1177.422966003418
+      ],
+      "end_px": [
+        307.44302994294094,
+        1175.999971215663
+      ],
+      "gap_px": 7.07651913287467,
+      "wall_ids": [
+        "PW_094",
+        "PW_050"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    },
+    {
+      "id": "HB_JNC_PW_094_CW_007_a9a37c55f834_1323.12_1177.42",
+      "kind": "JUNCTION_LOGICAL_CONTINUITY",
+      "start_px": [
+        1323.1248779296875,
+        1177.422966003418
+      ],
+      "end_px": [
+        1331.0,
+        1173.1251220703125
+      ],
+      "gap_px": 8.971566758133973,
+      "wall_ids": [
+        "PW_094",
+        "CW_007_a9a37c55f834"
+      ],
+      "protected_by_seed": true,
+      "physical_wall_present": false,
+      "logical_continuity_only": true
+    }
+  ],
+  "interior_space_count": 2,
+  "route_plan": {
+    "mode": "DENSE_RECOVERY",
+    "modules": [
+      {
+        "module": "F03_STRUCTURAL_SEED",
+        "enabled": true,
+        "reason": "Protege muros ya seleccionados por F03."
+      },
+      {
+        "module": "CONTEXT_NEGATIVE_MASK",
+        "enabled": true,
+        "reason": "Encapsula ruido contextual sin borrar evidencia."
+      },
+      {
+        "module": "WALL_MASK_RECOVERY",
+        "enabled": true,
+        "reason": "Recupera bandas y muros omitidos por la selección conservadora."
+      },
+      {
+        "module": "WALL_CANONICALIZATION",
+        "enabled": true,
+        "reason": "Publica una sola centerline por muro físico."
+      },
+      {
+        "module": "STRICT_CONNECTIVITY",
+        "enabled": true,
+        "reason": "Cierra únicamente gaps/junctions con evidencia geométrica."
+      },
+      {
+        "module": "ROOM_TOPOLOGY",
+        "enabled": true,
+        "reason": "Clasifica perímetro/divisor por adyacencia espacial."
+      },
+      {
+        "module": "MULTIMODAL_CALL2",
+        "enabled": true,
+        "reason": "Contrasta Single-Line WallGraph con el LevelView original y devuelve solo deltas."
+      }
+    ],
+    "recovery_strength": 0.8110236220472441,
+    "require_multimodal_review": true,
+    "reasons": [
+      "Candidate Discovery contiene mucha geometría adicional respecto a F03; se activa densificación.",
+      "Una fracción alta del WallGraph permanece REVIEW.",
+      "La red sigue fragmentada en demasiados componentes.",
+      "Existe ruido contextual significativo; Call 2 debe contrastar contra el plano original."
+    ]
+  },
+  "diagnostics": {
+    "level_view_id": "LEVEL_VIEW_f6e9f0082de5abaa",
+    "f03_seed_count": 24,
+    "discovered_candidate_count": 127,
+    "quarantined_candidate_count": 31,
+    "hybrid_candidate_count": 96,
+    "selected_wall_count": 23,
+    "component_count": 5,
+    "junction_count": 1,
+    "virtual_bridge_count": 29,
+    "interior_space_count": 2,
+    "review_wall_count": 13,
+    "perimeter_wall_count": 9,
+    "divider_wall_count": 1,
+    "seed_coverage_ratio": 0.6507936507936508,
+    "quarantine_ratio": 0.2440944881889764,
+    "review_ratio": 0.5652173913043478
+  },
+  "space_closure_probe": {
+    "version": "QUANTIA_SPATIALV1_SPACE_CLOSURE_PROBE_V1",
+    "logical_closures": [
+      {
+        "id": "HB_COL_CB_001_499cb26544fa_CB_002_2df4315b84d2",
+        "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          1021.8731994429043
+        ],
+        "end_px": [
+          946.4111945614235,
+          943.1259155273438
+        ],
+        "length_px": 78.7472839155605,
+        "length_m": 0.8747443739684824,
+        "wall_ids": [
+          "CB_001_499cb26544fa",
+          "CB_002_2df4315b84d2"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_COL_CB_001_499cb26544fa_CB_002_2df4315b84d2"
+      },
+      {
+        "id": "HB_COL_CB_002_2df4315b84d2_CW_010_681e1b047237",
+        "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          850.625
+        ],
+        "end_px": [
+          946.4111945614235,
+          833.1268747237326
+        ],
+        "length_px": 17.498125276267388,
+        "length_m": 0.19437351841650052,
+        "wall_ids": [
+          "CB_002_2df4315b84d2",
+          "CW_010_681e1b047237"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_COL_CB_002_2df4315b84d2_CW_010_681e1b047237"
+      },
+      {
+        "id": "HB_COL_CB_005_fcf68a56e77f_PW_006",
+        "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+        "start_px": [
+          355.6237487792969,
+          504.72438170167817
+        ],
+        "end_px": [
+          405.0,
+          504.72438170167817
+        ],
+        "length_px": 49.376251220703125,
+        "length_m": 0.5484836532175276,
+        "wall_ids": [
+          "CB_005_fcf68a56e77f",
+          "PW_006"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_COL_CB_005_fcf68a56e77f_PW_006"
+      },
+      {
+        "id": "HB_COL_CW_002_1c4c508dee8a_PW_027",
+        "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+        "start_px": [
+          1685.9610528400406,
+          733.1257444597483
+        ],
+        "end_px": [
+          1685.9610528400406,
+          694.3465023845204
+        ],
+        "length_px": 38.7792420752279,
+        "length_m": 0.4307694455651501,
+        "wall_ids": [
+          "CW_002_1c4c508dee8a",
+          "PW_027"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_COL_CW_002_1c4c508dee8a_PW_027"
+      },
+      {
+        "id": "HB_COL_CW_004_f80558c7f953_PW_050",
+        "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+        "start_px": [
+          306.5453340249675,
+          828.9999921806267
+        ],
+        "end_px": [
+          306.5453340249675,
+          866.8750691869178
+        ],
+        "length_px": 37.87507700629112,
+        "length_m": 0.42072575557529146,
+        "wall_ids": [
+          "CW_004_f80558c7f953",
+          "PW_050"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_COL_CW_004_f80558c7f953_PW_050"
+      },
+      {
+        "id": "HB_COL_CW_010_681e1b047237_PW_010",
+        "kind": "COLLINEAR_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          733.126072059178
+        ],
+        "end_px": [
+          946.4111945614235,
+          693.0
+        ],
+        "length_px": 40.126072059178,
+        "length_m": 0.44573036729567866,
+        "wall_ids": [
+          "CW_010_681e1b047237",
+          "PW_010"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_COL_CW_010_681e1b047237_PW_010"
+      },
+      {
+        "id": "HB_JNC_CALL2_ADD_001_CB_006_912c39224642_1394.0_958.0",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          1394.0,
+          958.177123091603
+        ],
+        "end_px": [
+          1394.166768210765,
+          956.000366087115
+        ],
+        "length_px": 2.183135976687935,
+        "length_m": 0.024250816260071723,
+        "wall_ids": [
+          "CALL2_ADD_001",
+          "CB_006_912c39224642"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CALL2_ADD_001_CB_006_912c39224642_1394.0_958.0"
+      },
+      {
+        "id": "HB_JNC_CB_001_499cb26544fa_PW_094_946.21_1163.13",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          1163.12892360377
+        ],
+        "end_px": [
+          946.4111945614235,
+          1177.422966003418
+        ],
+        "length_px": 14.294042399647878,
+        "length_m": 0.15878177060387733,
+        "wall_ids": [
+          "CB_001_499cb26544fa",
+          "PW_094"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CB_001_499cb26544fa_PW_094_946.21_1163.13"
+      },
+      {
+        "id": "HB_JNC_CB_002_2df4315b84d2_CW_001_beef627bdca1_945.83_850.62",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          850.625
+        ],
+        "end_px": [
+          940.6258544921875,
+          840.2191550514915
+        ],
+        "length_px": 11.905955182559161,
+        "length_m": 0.1322543050987258,
+        "wall_ids": [
+          "CB_002_2df4315b84d2",
+          "CW_001_beef627bdca1"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CB_002_2df4315b84d2_CW_001_beef627bdca1_945.83_850.62"
+      },
+      {
+        "id": "HB_JNC_CB_002_2df4315b84d2_CB_004_7ff8fca5d92f_945.83_943.13",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          943.1259155273438
+        ],
+        "end_px": [
+          946.4111945614235,
+          958.177123091603
+        ],
+        "length_px": 15.051207564259244,
+        "length_m": 0.16719254917268375,
+        "wall_ids": [
+          "CB_002_2df4315b84d2",
+          "CB_004_7ff8fca5d92f"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CB_002_2df4315b84d2_CB_004_7ff8fca5d92f_945.83_943.13"
+      },
+      {
+        "id": "HB_JNC_CB_005_fcf68a56e77f_CW_004_f80558c7f953_302.0_502.39",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          306.5453340249675,
+          504.72438170167817
+        ],
+        "end_px": [
+          306.5453340249675,
+          510.625196913372
+        ],
+        "length_px": 5.900815211693839,
+        "length_m": 0.06554771989077923,
+        "wall_ids": [
+          "CB_005_fcf68a56e77f",
+          "CW_004_f80558c7f953"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CB_005_fcf68a56e77f_CW_004_f80558c7f953_302.0_502.39"
+      },
+      {
+        "id": "HB_JNC_CW_001_beef627bdca1_CW_004_f80558c7f953_314.37_840.22",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          314.374755859375,
+          840.2191550514915
+        ],
+        "end_px": [
+          306.5453340249675,
+          828.9999921806267
+        ],
+        "length_px": 13.680989064540938,
+        "length_m": 0.15197182200422227,
+        "wall_ids": [
+          "CW_001_beef627bdca1",
+          "CW_004_f80558c7f953"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CW_001_beef627bdca1_CW_004_f80558c7f953_314.37_840.22"
+      },
+      {
+        "id": "HB_JNC_CW_001_beef627bdca1_CW_010_681e1b047237_940.63_840.22",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          940.6258544921875,
+          840.2191550514915
+        ],
+        "end_px": [
+          946.4111945614235,
+          833.1268747237326
+        ],
+        "length_px": 9.152628035937171,
+        "length_m": 0.10166966380767084,
+        "wall_ids": [
+          "CW_001_beef627bdca1",
+          "CW_010_681e1b047237"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CW_001_beef627bdca1_CW_010_681e1b047237_940.63_840.22"
+      },
+      {
+        "id": "HB_JNC_CW_007_a9a37c55f834_CALL2_ADD_001_1331.0_961.88",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          1331.0,
+          961.8751831054688
+        ],
+        "end_px": [
+          1331.0,
+          958.177123091603
+        ],
+        "length_px": 3.6980600138657564,
+        "length_m": 0.041078968453001706,
+        "wall_ids": [
+          "CW_007_a9a37c55f834",
+          "CALL2_ADD_001"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CW_007_a9a37c55f834_CALL2_ADD_001_1331.0_961.88"
+      },
+      {
+        "id": "HB_JNC_CW_007_a9a37c55f834_PW_094_1331.0_1173.13",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          1331.0,
+          1173.1251220703125
+        ],
+        "end_px": [
+          1323.1248779296875,
+          1177.422966003418
+        ],
+        "length_px": 8.971566758133973,
+        "length_m": 0.09965839019635843,
+        "wall_ids": [
+          "CW_007_a9a37c55f834",
+          "PW_094"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CW_007_a9a37c55f834_PW_094_1331.0_1173.13"
+      },
+      {
+        "id": "HB_JNC_CW_013_102f4da6e80f_PW_094_1090.19_1170.62",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          1090.1875,
+          1170.625
+        ],
+        "end_px": [
+          1090.1875,
+          1177.422966003418
+        ],
+        "length_px": 6.797966003417969,
+        "length_m": 0.07551349354849113,
+        "wall_ids": [
+          "CW_013_102f4da6e80f",
+          "PW_094"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_CW_013_102f4da6e80f_PW_094_1090.19_1170.62"
+      },
+      {
+        "id": "HB_JNC_PW_006_PW_010_956.0_504.91",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          504.72438170167817
+        ],
+        "end_px": [
+          946.4111945614235,
+          511.875
+        ],
+        "length_px": 7.150618298321831,
+        "length_m": 0.07943084276481466,
+        "wall_ids": [
+          "PW_006",
+          "PW_010"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_PW_006_PW_010_956.0_504.91"
+      },
+      {
+        "id": "HB_JNC_PW_050_PW_094_307.44_1176.0",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          306.5453340249675,
+          1175.999971215663
+        ],
+        "end_px": [
+          314.375,
+          1177.422966003418
+        ],
+        "length_px": 7.957925825650795,
+        "length_m": 0.08839861514348682,
+        "wall_ids": [
+          "PW_050",
+          "PW_094"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_PW_050_PW_094_307.44_1176.0"
+      },
+      {
+        "id": "HB_JNC_PW_087_PW_094_949.5_1163.0",
+        "kind": "JUNCTION_LOGICAL_CONTINUITY",
+        "start_px": [
+          946.4111945614235,
+          1177.0
+        ],
+        "end_px": [
+          946.4111945614235,
+          1177.422966003418
+        ],
+        "length_px": 0.42296600341796875,
+        "length_m": 0.004698411341609364,
+        "wall_ids": [
+          "PW_087",
+          "PW_094"
+        ],
+        "physical_wall_present": false,
+        "logical_continuity_only": true,
+        "source_gap_id": "HB_JNC_PW_087_PW_094_949.5_1163.0"
+      }
+    ],
+    "spaces": [
+      {
+        "id": "LEVEL_VIEW_f6e9f0082de5abaa__SPACE_CLOSURE_001",
+        "name": "",
+        "usageCode": "",
+        "usageLabel": "",
+        "category": "",
+        "levelId": "LEVEL_VIEW_f6e9f0082de5abaa",
+        "geometry": {
+          "type": "polygon",
+          "vertices": [
+            {
+              "x": 3.950356863454961,
+              "y": 5.606603699140692
+            },
+            {
+              "x": 3.4051816516257416,
+              "y": 5.606603699140692
+            },
+            {
+              "x": 3.4051816516257416,
+              "y": 5.672151419031471
+            },
+            {
+              "x": 3.4051816516257416,
+              "y": 9.208737662082418
+            },
+            {
+              "x": 3.4921528125411805,
+              "y": 9.33336290772833
+            },
+            {
+              "x": 9.198127193470185,
+              "y": 9.33336290772833
+            },
+            {
+              "x": 10.448705444985515,
+              "y": 9.33336290772833
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 9.25458009761939
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 8.143746362490827
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 7.6980159951951475
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 5.6860345419055065
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 5.606603699140692
+            },
+            {
+              "x": 4.498840516672488,
+              "y": 5.606603699140692
+            }
+          ],
+          "verticesRaster": [
+            {
+              "x": 355.6237487792969,
+              "y": 504.72438170167817
+            },
+            {
+              "x": 306.5453340249675,
+              "y": 504.72438170167817
+            },
+            {
+              "x": 306.5453340249675,
+              "y": 510.625196913372
+            },
+            {
+              "x": 306.5453340249675,
+              "y": 828.9999921806267
+            },
+            {
+              "x": 314.374755859375,
+              "y": 840.2191550514915
+            },
+            {
+              "x": 828.0448038888815,
+              "y": 840.2191550514915
+            },
+            {
+              "x": 940.6258544921875,
+              "y": 840.2191550514915
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 833.1268747237326
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 733.126072059178
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 693.0
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 511.875
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 504.72438170167817
+            },
+            {
+              "x": 405.0,
+              "y": 504.72438170167817
+            }
+          ],
+          "areaM2": 26.481066424031205,
+          "perimeterM": 21.568093266385088,
+          "bbox": {
+            "minX": 3.4051816516257416,
+            "minY": 5.606603699140692,
+            "maxX": 10.512970438334177,
+            "maxY": 9.33336290772833,
+            "width": 7.1077887867084355,
+            "height": 3.7267592085876386
+          }
+        },
+        "areaM2": 26.481066424031205,
+        "perimeterM": 21.568093266385088,
+        "heightM": null,
+        "doubleHeight": false,
+        "confirmed": false,
+        "state": "REVIEW",
+        "source": {
+          "type": "deterministic_space_closure_probe",
+          "probeVersion": "QUANTIA_SPATIALV1_SPACE_CLOSURE_PROBE_V1",
+          "confidence": null,
+          "note": "Polígono derivado de centerlines canónicas + continuidad lógica; no es un muro físico agregado."
+        },
+        "wallIds": [
+          "CB_005_fcf68a56e77f",
+          "PW_006",
+          "CW_001_beef627bdca1",
+          "CW_004_f80558c7f953",
+          "PW_010",
+          "CW_010_681e1b047237"
+        ],
+        "logicalClosureIds": [
+          "HB_COL_CB_002_2df4315b84d2_CW_010_681e1b047237",
+          "HB_COL_CB_005_fcf68a56e77f_PW_006",
+          "HB_COL_CW_010_681e1b047237_PW_010",
+          "HB_JNC_CB_002_2df4315b84d2_CW_001_beef627bdca1_945.83_850.62",
+          "HB_JNC_CB_005_fcf68a56e77f_CW_004_f80558c7f953_302.0_502.39",
+          "HB_JNC_CW_001_beef627bdca1_CW_004_f80558c7f953_314.37_840.22",
+          "HB_JNC_CW_001_beef627bdca1_CW_010_681e1b047237_940.63_840.22",
+          "HB_JNC_PW_006_PW_010_956.0_504.91"
+        ],
+        "doorIds": [],
+        "windowIds": [],
+        "validation": {
+          "isValid": true,
+          "conflicts": [],
+          "warnings": []
+        }
+      },
+      {
+        "id": "LEVEL_VIEW_f6e9f0082de5abaa__SPACE_CLOSURE_002",
+        "name": "",
+        "usageCode": "",
+        "usageLabel": "",
+        "category": "",
+        "levelId": "LEVEL_VIEW_f6e9f0082de5abaa",
+        "geometry": {
+          "type": "polygon",
+          "vertices": [
+            {
+              "x": 9.198127193470185,
+              "y": 9.33336290772833
+            },
+            {
+              "x": 3.4921528125411805,
+              "y": 9.33336290772833
+            },
+            {
+              "x": 3.4051816516257416,
+              "y": 9.208737662082418
+            },
+            {
+              "x": 3.4051816516257416,
+              "y": 9.62946341765771
+            },
+            {
+              "x": 3.4051816516257416,
+              "y": 13.06329955089063
+            },
+            {
+              "x": 3.492155524515836,
+              "y": 13.079106530165113
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 13.079106530165113
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 13.074408118823504
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 12.920324759561236
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 12.918892644173097
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 11.351221117420948
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 10.64366929262515
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 10.476476743452467
+            },
+            {
+              "x": 10.512970438334177,
+              "y": 9.44895361603589
+            },
+            {
+              "x": 10.448705444985515,
+              "y": 9.33336290772833
+            }
+          ],
+          "verticesRaster": [
+            {
+              "x": 828.0448038888815,
+              "y": 840.2191550514915
+            },
+            {
+              "x": 314.374755859375,
+              "y": 840.2191550514915
+            },
+            {
+              "x": 306.5453340249675,
+              "y": 828.9999921806267
+            },
+            {
+              "x": 306.5453340249675,
+              "y": 866.8750691869178
+            },
+            {
+              "x": 306.5453340249675,
+              "y": 1175.999971215663
+            },
+            {
+              "x": 314.375,
+              "y": 1177.422966003418
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 1177.422966003418
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 1177.0
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 1163.12892360377
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 1163.0
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 1021.8731994429043
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 958.177123091603
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 943.1259155273438
+            },
+            {
+              "x": 946.4111945614235,
+              "y": 850.625
+            },
+            {
+              "x": 940.6258544921875,
+              "y": 840.2191550514915
+            }
+          ],
+          "areaM2": 26.624972303434017,
+          "perimeterM": 21.834707091446543,
+          "bbox": {
+            "minX": 3.4051816516257416,
+            "minY": 9.208737662082418,
+            "maxX": 10.512970438334177,
+            "maxY": 13.079106530165113,
+            "width": 7.1077887867084355,
+            "height": 3.8703688680826946
+          }
+        },
+        "areaM2": 26.624972303434017,
+        "perimeterM": 21.834707091446543,
+        "heightM": null,
+        "doubleHeight": false,
+        "confirmed": false,
+        "state": "REVIEW",
+        "source": {
+          "type": "deterministic_space_closure_probe",
+          "probeVersion": "QUANTIA_SPATIALV1_SPACE_CLOSURE_PROBE_V1",
+          "confidence": null,
+          "note": "Polígono derivado de centerlines canónicas + continuidad lógica; no es un muro físico agregado."
+        },
+        "wallIds": [
+          "CW_001_beef627bdca1",
+          "PW_094",
+          "PW_050",
+          "CB_002_2df4315b84d2",
+          "CB_001_499cb26544fa",
+          "PW_087"
+        ],
+        "logicalClosureIds": [
+          "HB_COL_CB_001_499cb26544fa_CB_002_2df4315b84d2",
+          "HB_COL_CB_002_2df4315b84d2_CW_010_681e1b047237",
+          "HB_COL_CW_004_f80558c7f953_PW_050",
+          "HB_JNC_CB_001_499cb26544fa_PW_094_946.21_1163.13",
+          "HB_JNC_CB_002_2df4315b84d2_CW_001_beef627bdca1_945.83_850.62",
+          "HB_JNC_CB_002_2df4315b84d2_CB_004_7ff8fca5d92f_945.83_943.13",
+          "HB_JNC_CW_001_beef627bdca1_CW_004_f80558c7f953_314.37_840.22",
+          "HB_JNC_CW_001_beef627bdca1_CW_010_681e1b047237_940.63_840.22",
+          "HB_JNC_PW_050_PW_094_307.44_1176.0"
+        ],
+        "doorIds": [],
+        "windowIds": [],
+        "validation": {
+          "isValid": true,
+          "conflicts": [],
+          "warnings": []
+        }
+      }
+    ],
+    "metrics": {
+      "probe_version": "QUANTIA_SPATIALV1_SPACE_CLOSURE_PROBE_V1",
+      "input_result_dir": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\QuantiaV2L\\Backend\\app\\quantia_spatialV1\\tests\\output\\call2_interface04\\gemini\\dc937b598926\\miguel_v__planta_baja",
+      "px_per_m": 90.02319564320835,
+      "input_wall_count": 23,
+      "canonical_wall_count": 22,
+      "axis_cluster_count": 14,
+      "residual_parallel_merge_count": 1,
+      "residual_parallel_merges": [
+        {
+          "result_wall_id": "PW_032",
+          "merged_from_wall_ids": [
+            "PW_032",
+            "PW_071"
+          ],
+          "orientation": "V",
+          "canonical_axis_px": 828.0448038888815,
+          "union_interval_px": [
+            693.1250610351562,
+            976.87548828125
+          ]
+        }
+      ],
+      "logical_closure_count": 19,
+      "logical_closure_length_m": 4.105274482324424,
+      "expected_interior_space_count": 2,
+      "derived_space_count": 2,
+      "space_count_matches_graph": true,
+      "derived_space_areas_m2": [
+        26.4811,
+        26.625
+      ],
+      "raw_polygon_count": 3,
+      "meaningful_space_count": 2,
+      "rejected_face_count": 1,
+      "rejected_faces": [
+        {
+          "area_m2": 0.006245706434096113,
+          "minimum_width_m": 0.06426499334865966,
+          "reason": "SLIVER_OR_NON_ARCHITECTURAL_FACE"
+        }
+      ],
+      "dangle_length_px": 2261.1408733019625,
+      "cut_length_px": 0.0,
+      "invalid_ring_length_px": 0.0
+    }
+  }
+}

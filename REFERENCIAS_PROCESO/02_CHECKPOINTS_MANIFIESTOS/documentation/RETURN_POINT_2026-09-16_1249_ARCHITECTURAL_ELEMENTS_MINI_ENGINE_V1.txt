@@ -1,0 +1,5 @@
+PUNTO DE RETORNO INMEDIATO
+ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1
+Paquete: QUANTIA_V2L_ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V1.zip
+SHA256: 14888715fbd32359683a4026f857d6ead60efb08cd4a9b2d9a88588f5386db67
+Motivo: preservar exactamente el estado anterior a la independencia del detector de elementos V2.

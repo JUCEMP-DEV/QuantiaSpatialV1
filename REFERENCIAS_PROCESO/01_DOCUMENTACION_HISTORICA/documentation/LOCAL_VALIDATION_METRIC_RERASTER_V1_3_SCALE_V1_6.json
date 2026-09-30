@@ -1,0 +1,19 @@
+{
+  "version": "METRIC_RERASTER_V1_3__SCALE_FOUNDATION_V1_6",
+  "local_validation": {
+    "scale_foundation_v1_6_synthetic": "23 PASSED",
+    "context_classification_v6_2_synthetic": "16 PASSED",
+    "solver_evidence_v1_synthetic": "3 PASSED",
+    "combined": "42 PASSED",
+    "compileall": "PASS",
+    "metric_test_collection": "3 tests collected"
+  },
+  "real_evidence_regression": {
+    "miguel_v_pb_v1_5_signature": "covered by exact diagnostic synthetic test",
+    "safety_case_two_consistent_orientations_disagree": "must remain CONFLICT"
+  },
+  "limitations": [
+    "Los PDFs originales se ejecutan en las rutas Windows del usuario; no están montados en este entorno Linux.",
+    "No se realizaron llamadas Gemini nuevas."
+  ]
+}

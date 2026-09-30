@@ -1,0 +1,16 @@
+{
+  "version": "ARCHITECTURAL_ELEMENTS_MINI_ENGINE_V2",
+  "date": "2026-09-16T12:49:00-06:00",
+  "synthetic_and_regression_tests": {
+    "status": "PASS",
+    "passed": 46,
+    "failed": 0
+  },
+  "compileall": "PASS",
+  "frozen_real_test_sha256": "17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f",
+  "real_probe_v2": "PENDING_USER_ENVIRONMENT",
+  "notes": [
+    "No se declara mejora real de puertas/ventanas hasta ejecutar el probe V2.",
+    "La generación normal no importa ni invoca ElementContextDetector."
+  ]
+}

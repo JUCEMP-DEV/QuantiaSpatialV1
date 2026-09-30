@@ -1,0 +1,11 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Fecha: 2026-09-10 09:14 -06:00
+
+Fuente recibida:
+quantia_spatial(6).zip
+SHA256: c038b3a1092e19d625d40d26fb45883eda55856531b8904e95a64a122aeceef5
+
+Estado lógico de retorno:
+Proposal C A1.2 + Context Gate V5, F01/F01.5/F02 canónicas sin cambios.
+
+Este punto se conserva antes de introducir Solver Evidence V1.

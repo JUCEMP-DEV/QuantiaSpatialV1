@@ -1,0 +1,34 @@
+Backend/app/quantia_spatialV1/
+├── adaptive_reconstruction/                 [CONGELADO]
+├── post_reconstruction_filters/             [CAPA V2]
+│   ├── __init__.py
+│   ├── contracts.py
+│   ├── selector.py
+│   ├── geometry_pattern_analyzer.py         [NUEVO]
+│   ├── filter_engine.py
+│   ├── wall_hypothesis_canonicalizer.py
+│   └── artifact_renderer.py
+├── process_engine.py                        [ORQUESTADOR; SIN CAMBIO DE LÓGICA]
+└── tests/
+    ├── test_quantia_spatial_post_filter_contract_v1_synthetic.py
+    ├── test_quantia_spatial_post_filter_layer_v2_synthetic.py [NUEVO]
+    └── test_quantia_spatial_v1_process_all_3_v1.py
+
+FLUJO
+Adaptive Reconstruction [inmutable]
+        ↓
+Geometry Pattern Analyzer
+        ↓
+PostFilterSelector
+        ↓
+PostReconstructionFilterEngine
+        ├── WALL
+        ├── ARCHITECTURAL_ELEMENT
+        ├── EXCLUDED_GRAPHIC
+        └── UNRESOLVED
+        ↓
+WallHypothesisCanonicalizer V2
+        ↓
+Filtered Single-Line WallGraph
+        ↓
+Call 2 [OFF hasta validación]

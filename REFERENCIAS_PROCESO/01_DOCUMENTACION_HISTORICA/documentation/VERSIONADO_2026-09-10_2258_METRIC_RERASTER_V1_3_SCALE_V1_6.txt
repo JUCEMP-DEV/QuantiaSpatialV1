@@ -1,0 +1,28 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-10 22:58 -06:00
+Versión: METRIC_RERASTER_V1_3 + SCALE_FOUNDATION_V1_6
+
+PUNTO DE PARTIDA
+- Metric Reraster V1.2 + Scale Foundation V1.5
+- ZIP SHA256: 1bb282a5f6f8ba1eda5be00a24d673c445bd16255f9a094187c04555d18a7920
+
+CAUSA RAÍZ CORREGIDA
+Miguel V PB contenía tres familias métricas HORIZONTAL coherentes (~0.01338 m/px), pero la orientación VERTICAL era internamente contradictoria:
+- GENERAL gráfica V: ~0.01021 m/px
+- ejes/cotas V: ~0.0169 m/px
+La V1.5 trataba ambas discrepancias como fuentes independientes fuertes y bloqueaba el cierre con CONFLICT.
+
+CAMBIO V1.6
+- DIMENSION_AXIS_FIT y DIMENSION_RESOLVED_AXIS_SPAN se consideran una sola familia correlacionada: AXIS_GEOMETRY.
+- Una orientación solo obtiene consenso independiente cuando GRAPHIC_GENERAL + AXIS_GEOMETRY convergen.
+- Si la orientación opuesta se contradice internamente entre esas dos familias, deja de bloquear la orientación que sí posee consenso independiente.
+- F02_METRIC o una fuente fuerte sin orientación siguen bloqueando si contradicen el resultado.
+- Si H y V son internamente coherentes pero incompatibles entre sí, el estado continúa siendo CONFLICT.
+
+NO MODIFICADO
+- F01/F01.5 salvo los adaptadores ya vigentes de V1.2.
+- F02 geométrico.
+- Context Classification V6.2.
+- Solver global.
+- Política objetivo 90 px/m.
+- Gemini: 0 llamadas nuevas en la prueba replay-only.

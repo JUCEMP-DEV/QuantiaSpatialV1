@@ -1,0 +1,45 @@
+QUANTIA V2L — ESTRUCTURA ACTIVA
+F03 Element Context Isolation V4 + Selection Contracts V1.5
+Fecha: 2026-09-14 22:37 -06:00
+
+quantia_spatial/
+├─ engine.py                              # F01→F02 canónico; no modificado
+├─ models/
+├─ phase_01_level/
+├─ phase_015_evidence/
+│  ├─ gemini_evidence_adapter.py          # semantic_category + relations ya persistidos
+│  └─ gemini_semantic_extractor.py        # DOOR/WINDOW relacionados con SPACE
+├─ phase_02_boundaries/                   # F02 estable; no modificado
+├─ reconstruction_core/
+│  ├─ drawing_builder.py                  # semantic_category → SemanticObservation.family [V4]
+│  ├─ element_context_detector.py         # DOOR/WINDOW + SPACE constraints [V4]
+│  ├─ candidate_context_gate.py           # Selection Contracts V1.5
+│  ├─ context_region_detector.py
+│  ├─ wall_candidate_generator.py
+│  ├─ wall_track_consolidator.py
+│  ├─ reconstruction_pipeline.py          # diagnostics version-agnostic V*
+│  ├─ candidate_graph.py                  # no modificado
+│  └─ global_topology_solver.py           # no modificado
+├─ tests/
+│  ├─ test_quantia_spatial_canonical_metric_raster_v2_synthetic.py
+│  ├─ test_quantia_spatial_context_classification_v6_2_{synthetic,standardized}.py
+│  ├─ test_quantia_spatial_f03_element_context_isolation_v4_synthetic.py
+│  ├─ test_quantia_spatial_f03_selection_contracts_v1_5_synthetic.py
+│  ├─ test_quantia_spatial_f03_element_isolation_probe_all_3_v3.py
+│  ├─ test_quantia_spatial_f03_selection_all_3_v1.py   # CONGELADA
+│  ├─ test_quantia_spatial_solver_evidence_v1_{synthetic,standardized}.py
+│  └─ pruebas de flujo/context gate vigentes
+└─ documentation/
+   ├─ CURRENT_VERSION.txt
+   ├─ CURRENT_STATE.txt
+   ├─ AUDIT_FINDINGS_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt
+   ├─ VERSIONADO_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt
+   ├─ HISTORICO_DECISION_2026-09-14_2237_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt
+   ├─ RETURN_POINT_F03_ELEMENT_CONTEXT_ISOLATION_V4.txt
+   ├─ LOCAL_VALIDATION_F03_ELEMENT_CONTEXT_ISOLATION_V4.json
+   └─ history/
+      ├─ tests/                            # contratos/pruebas supersedidas intactas
+      └─ output/                           # probes V1/V2 históricos
+
+REGLA
+Solo los archivos bajo tests/ son pruebas activas. documentation/history/tests no participa en la validación corriente.

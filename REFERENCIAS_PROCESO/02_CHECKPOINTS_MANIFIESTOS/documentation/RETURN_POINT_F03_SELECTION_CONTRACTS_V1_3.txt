@@ -1,0 +1,4 @@
+PUNTO DE RETORNO — F03 Selection Contracts V1.3
+Paquete: QUANTIA_V2L_F03_SELECTION_CONTRACTS_V1_3.zip
+SHA256: bc025b9877b4c898031edec2141468353a5199c98ae7ee5d6f8f9bc0eb8e6c2d
+Estado: candidato previo intacto antes de V1.4.

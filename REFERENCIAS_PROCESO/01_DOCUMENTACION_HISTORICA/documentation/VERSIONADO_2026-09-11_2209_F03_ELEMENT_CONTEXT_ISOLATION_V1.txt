@@ -1,0 +1,22 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-11 22:09 -06:00
+Versión: F03 Element Context Isolation V1
+Estado: CANDIDATA
+Base: F03 Selection Contracts V1.4 sobre Canonical Metric Raster V2.3 VALIDATED
+
+OBJETIVO
+Reducir ambigüedad del solver clasificando elementos arquitectónicos/no-muro antes del CandidateGraph, sin obligar resultados desde tests y sin usar bboxes como máscaras negativas indiscriminadas.
+
+CAMBIOS
+1. DrawingModel conserva CUBIC_BEZIER de F01.5.
+2. Nuevo ElementContextDetector.
+3. Detección geométrica de DOOR_REGION por arco Bézier con escala métrica y líneas de hoja asociadas.
+4. Reutilización de semántica existente para openings, columnas, furniture, fixtures y símbolos.
+5. CandidateContextGate distingue símbolo directo vs host wall de opening.
+6. Diagnósticos publican cantidad de element/opening contexts.
+
+NO MODIFICADO
+F02, escala V2.3, CandidateGraph, GlobalTopologySolver, prueba real de los tres casos.
+
+PUNTO DE RETORNO
+F03 Selection Contracts V1.4.

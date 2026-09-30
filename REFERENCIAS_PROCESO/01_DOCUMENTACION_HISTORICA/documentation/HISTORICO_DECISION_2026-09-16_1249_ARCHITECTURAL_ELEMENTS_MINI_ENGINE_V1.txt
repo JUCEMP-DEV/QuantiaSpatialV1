@@ -1,0 +1,29 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-16 12:49 -06:00
+
+CONTEXTO DECISIVO
+Architectural Core Visual Probe mostró que Quantia supera a los checkpoints públicos
+FloorplanVLM probados en estabilidad geométrica, pero continúa con déficit fuerte en
+puertas y ventanas. Los checkpoints VLM reconocían conceptualmente Wall -> Opening ->
+Door/Window, pero degeneraban al intentar reconstruir el plano completo.
+
+DECISIÓN
+No sustituir Quantia Spatial por un VLM. Separar responsabilidades:
+- Spatial Geometry Core: muros y geometría métrica.
+- Architectural Elements Mini-Engine: DOOR/WINDOW/NOT_OPENING.
+- Reconciliation: host_wall + ParametricOpening sin modificar muros.
+
+RAG
+Se adopta un RAG arquitectónico propio como memoria de patrones. V1 recupera ejemplos
+por features interpretables; posteriormente puede incorporar embeddings visuales y
+casos validados propios. No se usa el checkpoint restringido como dependencia de
+producción ni como fuente de verdad.
+
+PUNTO CLAVE
+Las hipótesis de elementos pueden ser amplias porque ya no participan en la selección
+de muros. Una hipótesis dudosa queda REVIEW y no se publica. Esta separación permite
+aumentar recall de puertas/ventanas sin volver a contaminar F03.
+
+PUNTO DE RETORNO
+F03 Element Context Isolation V5 + Selection Contracts V1.6 permanece intacto como
+fuente de partida y benchmark inmediato.

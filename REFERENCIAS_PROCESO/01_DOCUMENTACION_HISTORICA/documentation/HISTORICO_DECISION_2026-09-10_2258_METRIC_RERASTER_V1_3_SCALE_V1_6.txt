@@ -1,0 +1,15 @@
+HISTÓRICO DE DECISIÓN — 2026-09-10 22:58
+
+1. Casa Viri y Miguel H completaron Metric Reraster V1.2.
+2. Miguel V PB falló en bootstrap por CONFLICT de escala.
+3. Evidencia real:
+   - H GENERAL gráfica 20.00 m / 1497 px = 0.013360 m/px.
+   - H AXIS_FIT = 0.013382 m/px.
+   - H GENERAL por ejes = 0.013376 m/px.
+   Estas tres rutas convergen.
+4. Evidencia VERTICAL se contradice a sí misma:
+   - GENERAL gráfica 7.70 m / 754 px = 0.010212 m/px.
+   - AXIS_FIT ~0.016916 m/px.
+   - GENERAL por ejes ~0.016851 m/px.
+5. Decisión: no adivinar una escala vertical ni forzar 1:30. Tratar AXIS_FIT + AXISSPAN como una familia correlacionada y usar consenso entre familias independientes.
+6. Regla de seguridad: si dos orientaciones son cada una internamente coherentes y aun así discrepan, conservar CONFLICT.

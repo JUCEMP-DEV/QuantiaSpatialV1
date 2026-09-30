@@ -1,0 +1,26 @@
+HISTÓRICO DE DECISIÓN — QUANTIA V2L
+Fecha: 2026-09-11
+
+DECISIÓN
+Congelar test_quantia_spatial_f03_flow_casa_viri_miguel_h_v1.py y corregir exclusivamente el motor.
+
+EVIDENCIA REAL PREVIA
+Casa Viri:
+- escala final RESOLVED ~90 px/m;
+- F02 presente;
+- F03 ejecutaba pero recibía escala UNRESOLVED.
+
+Miguel H:
+- escala final RESOLVED ~90 px/m;
+- PB con F02;
+- PA perdía F02 después de la segunda ejecución post-reraster.
+
+CAUSA RAÍZ
+1. ProjectLevelScaleNormalizer leía solo F02.metric_summary.metric_scale_m_per_px.
+2. QuantiaSpatialEngine volvía a ejecutar F02 tras la rerasterización.
+
+SOLUCIÓN
+- Publicar escala del raster final en LevelView.
+- F03 prioriza esa escala.
+- Regenerar F01.5 post-reraster.
+- Reproyectar F02 bootstrap validado, sin redetectar/reinterpretar.

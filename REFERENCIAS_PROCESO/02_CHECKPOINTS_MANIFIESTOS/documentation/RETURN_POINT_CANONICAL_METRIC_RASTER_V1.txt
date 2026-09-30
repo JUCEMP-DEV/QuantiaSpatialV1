@@ -1,0 +1,10 @@
+QUANTIA V2L — PUNTO DE RETORNO CANONICAL METRIC RASTER V1
+Fecha: 2026-09-10 22:58 -06:00
+
+BASE CANÓNICA RESTAURADA
+Scale Foundation V1.4
+Archivo: QUANTIA_V2L_SCALE_FOUNDATION_V1_4_2026-09-10.zip
+SHA256: d923e84edfbb5d48d4abaf7d277067612e4fcbcfa1c535d421167eb3ef4349d3
+
+REGLA DE RETORNO
+Si la integración del raster canónico introduce una regresión no explicada, volver exactamente a Scale Foundation V1.4. No conservar Scale V1.5/V1.6 ni Metric Reraster V1.1-V1.3 como lógica canónica.

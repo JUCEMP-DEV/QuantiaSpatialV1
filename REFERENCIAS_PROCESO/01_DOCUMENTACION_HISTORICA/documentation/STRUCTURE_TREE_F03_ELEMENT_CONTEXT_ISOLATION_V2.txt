@@ -1,0 +1,40 @@
+F03 Element Context Isolation V2
+
+F01.5 RawEvidence
+├─ SEGMENT / POLYLINE
+├─ CUBIC_BEZIER
+├─ OCR/PyMuPDF text
+└─ Gemini semantic observations
+              │
+              ▼
+DrawingModel
+├─ lines[]
+├─ curves[]
+├─ texts[]
+└─ semantic_observations[]
+              │
+              ├───────────────────────────────┐
+              ▼                               ▼
+WallCandidateGenerator                 ContextRegionDetector
+├─ representative lines                ├─ pattern detectors V6.2
+├─ face_lineage_groups [V2]            ├─ reference regions
+└─ lineage_line_ids [V2]               └─ ElementContextDetector V2
+              │                            ├─ DOOR: arc + leaf + host + architecture
+              │                            ├─ WINDOW: parallel frame + host/perimeter
+              │                            ├─ semantic COLUMN/FIXTURE/FURNITURE
+              │                            └─ local TEXT_SYMBOL
+              ▼                               │
+WallTrackConsolidator [V2]                    │
+└─ preserves lineage groups                   │
+              └───────────────┬───────────────┘
+                              ▼
+CandidateContextGate
+├─ direct membership by provenance [V2]
+├─ direct door/window symbol -> QUARANTINE
+├─ host wall through opening -> ACTIVE / risk 0
+├─ bbox-only -> no hard isolation
+└─ TEXT context-only -> risk 0
+                              ▼
+CandidateGraph [SIN CAMBIOS]
+                              ▼
+GlobalTopologySolver [SIN CAMBIOS]

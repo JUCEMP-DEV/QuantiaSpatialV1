@@ -1,0 +1,31 @@
+QUANTIA V2L — MAPA DE REORGANIZACIÓN
+Fecha: 2026-09-08
+
+SE MANTIENE EN RUNTIME
+- engine.py
+- contracts/
+- models/
+- prompts/
+- providers/
+- transport/
+- phase_01_level/
+- phase_015_evidence/
+- phase_02_boundaries/
+- reconstruction_core/  -> RESTAURADO EXACTAMENTE A Proposal C A1.2
+- parametric_model/      -> Proposal C A1.2
+- tests/                 -> solo pruebas canónicas/diagnósticas vigentes
+
+SE RETIRA DEL RUNTIME Y PASA A DOCUMENTACIÓN
+- direct_reconstruction/              -> experimental A2
+- phase_03_structure/                 -> F03 R4 histórica/comparativa
+- phase_04_rooms/                     -> legacy
+- phase_05_validation/                -> legacy
+- phase_06_contract/                  -> legacy
+- Proposal C A1.3/A1.4/A1.5/A1.6     -> version_archive
+- ZIPs FIX/R2/R3/R4/A1...             -> version_archive
+- overlays/resultados históricos      -> test_evidence
+- pruebas de recovery/legacy          -> old_tests
+- __pycache__/ y *.pyc                -> eliminados; no son documentación útil
+
+NOTA
+No se borró información histórica: se entrega en el archivo documental separado.

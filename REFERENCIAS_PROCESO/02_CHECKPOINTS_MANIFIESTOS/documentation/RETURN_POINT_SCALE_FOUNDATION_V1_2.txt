@@ -1,0 +1,10 @@
+PUNTO DE RETORNO — SCALE FOUNDATION V1.2
+Base: QUANTIA_V2L_SCALE_FOUNDATION_V1_1_2026-09-10.zip
+SHA256: 71115f1fc46a43f8e62e28d42a76ac031c88499e3ea5c0c987393dd180f0255e
+
+Para revertir esta ronda:
+- restaurar phase_015_evidence/gemini_semantic_extractor.py desde V1.1;
+- restaurar phase_015_evidence/gemini_evidence_adapter.py desde V1.1;
+- restaurar los tests Scale Foundation V1.1.
+
+No se modificaron F01, F02, ScaleEvidenceResolver, clasificación V6.2 ni solver.

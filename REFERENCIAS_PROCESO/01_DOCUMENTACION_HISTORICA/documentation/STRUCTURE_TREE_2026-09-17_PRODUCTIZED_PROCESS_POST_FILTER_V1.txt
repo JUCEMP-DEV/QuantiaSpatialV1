@@ -1,0 +1,32 @@
+Quantia Spatial V1 — estructura vigente 2026-09-17
+
+quantia_spatialV1
+quantia_spatialV1/adaptive_reconstruction
+quantia_spatialV1/architectural_elements
+quantia_spatialV1/architectural_elements/knowledge
+quantia_spatialV1/contracts
+quantia_spatialV1/documentation
+quantia_spatialV1/documentation/PATTERN_CONTEXT_V3
+quantia_spatialV1/documentation/history
+quantia_spatialV1/experiments
+quantia_spatialV1/models
+quantia_spatialV1/parametric_model
+quantia_spatialV1/phase_015_evidence
+quantia_spatialV1/phase_01_level
+quantia_spatialV1/phase_02_boundaries
+quantia_spatialV1/post_reconstruction_filters
+quantia_spatialV1/prompts
+quantia_spatialV1/providers
+quantia_spatialV1/reconstruction_core
+quantia_spatialV1/tests
+quantia_spatialV1/tests/data
+quantia_spatialV1/tests/output
+quantia_spatialV1/transport
+
+Archivos principales nuevos:
+quantia_spatialV1/process_engine.py
+quantia_spatialV1/post_reconstruction_filters/contracts.py
+quantia_spatialV1/post_reconstruction_filters/selector.py
+quantia_spatialV1/post_reconstruction_filters/filter_engine.py
+quantia_spatialV1/post_reconstruction_filters/wall_hypothesis_canonicalizer.py
+quantia_spatialV1/post_reconstruction_filters/artifact_renderer.py

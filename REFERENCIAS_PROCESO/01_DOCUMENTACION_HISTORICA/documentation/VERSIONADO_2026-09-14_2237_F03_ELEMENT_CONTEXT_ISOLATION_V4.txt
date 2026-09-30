@@ -1,0 +1,49 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-14 22:37 -06:00
+Versión: F03 Element Context Isolation V4 + Selection Contracts V1.5
+Estado: CANDIDATA
+Base auditada: F03 Element Context Isolation V3 del ZIP recibido
+Punto de retorno de auditoría: QUANTIA_V2L_RETURN_POINT_CURRENT_V3_2026-09-14_2237.zip
+SHA256 retorno: b9faf204b444ce045eb9a688b6662d968428bb4ffe5c61e82f1d897b8d89459f
+Base estable: Canonical Metric Raster V2.3 VALIDATED
+
+OBJETIVO
+Corregir la desconexión de semántica/provenance detectada en el estado real actual sin tocar F02, CandidateGraph, GlobalTopologySolver ni la prueba real congelada.
+
+ARCHIVOS DE EJECUCIÓN MODIFICADOS
+- reconstruction_core/drawing_builder.py
+- reconstruction_core/element_context_detector.py
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/reconstruction_pipeline.py
+- reconstruction_core/context_region_detector.py (versionado/comentario)
+- reconstruction_core/wall_candidate_generator.py (versionado/comentario)
+- reconstruction_core/wall_track_consolidator.py (versionado/comentario)
+
+PRUEBAS ACTIVAS NUEVAS/ACTUALIZADAS
+- tests/test_quantia_spatial_f03_element_context_isolation_v4_synthetic.py
+- tests/test_quantia_spatial_f03_selection_contracts_v1_5_synthetic.py
+- tests/test_quantia_spatial_f03_element_isolation_probe_all_3_v3.py
+
+CAMBIOS FUNCIONALES
+1. semantic_category de Gemini llega al DrawingModel.
+2. DOOR/WINDOW pueden usar SPACE anfitrión relacionado por LOCATED_IN como restricción de búsqueda.
+3. WINDOW no puede hard-quarantine por paralelismo solamente.
+4. FLOOR/HATCH/FURNITURE no pueden hard-quarantine por pair_support sin pertenencia directa.
+5. evidence_ids participa en provenance de candidato con soporte conservador.
+6. diagnóstico de regiones de elemento deja de estar fijado a V2.
+7. versionado Probe queda coherente en V3.
+
+LIMPIEZA DE VERSIONES
+- contratos supersedidos se movieron a documentation/history/tests.
+- pruebas F02 experimentales rotas se archivaron.
+- outputs Probe V1/V2 se movieron a documentation/history/output.
+- caches compilados se eliminan del paquete final.
+
+VALIDACIÓN LOCAL
+- 34 pruebas sintéticas vigentes PASS.
+- compileall PASS.
+- 0 imports app.quantia_spatial faltantes en árbol activo.
+- frozen real test SHA256: 17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f
+
+VALIDACIÓN REAL
+PENDIENTE. No se promueve V4 hasta ejecutar el Probe V3 real de Casa Viri, Miguel H y Miguel V.

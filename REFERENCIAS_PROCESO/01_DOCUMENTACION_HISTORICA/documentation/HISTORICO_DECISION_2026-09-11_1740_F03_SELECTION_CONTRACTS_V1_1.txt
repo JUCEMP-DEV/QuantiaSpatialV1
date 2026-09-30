@@ -1,0 +1,22 @@
+QUANTIA V2L — DECISIÓN F03 SELECTION CONTRACTS V1.1
+
+La corrida real de V1 confirmó mejora, pero no cierre.
+
+EVIDENCIA RESIDUAL OBSERVADA
+- Miguel V PB: aún existen selecciones dentro de STAIR_FLIGHT_REGION.
+- Miguel V PA: aún existen selecciones dentro de STAIR_FLIGHT_REGION.
+- Casa Viri PB: todavía sobreviven candidatos FLOOR_FINISH_GRID seleccionados pese a región contextual de alta confianza.
+- Miguel H PA: sobreviven numerosas parejas DOUBLE_FACE con espesor métrico de ~2–3 cm y sin conectividad estructural suficiente.
+
+CAUSA RAÍZ V1.1
+El contexto seguía dependiendo demasiado de coincidencia con perfiles/face_ids y la escala métrica solo aplicaba una penalización pequeña. Esto permitía que una pareja local con pair_overlap/region_support altos venciera evidencia física y contextual negativa.
+
+DECISIÓN
+No añadir más reglas por caso ni cambiar thresholds de cada plano. Se refuerzan contratos generales:
+- interior de patrón 2D fuerte != muro salvo evidencia de borde/continuidad independiente;
+- axis_support es restricción, no prueba autónoma de identidad;
+- la escala canónica participa materialmente en identidad de muro;
+- una micro-región fragmentada no convierte una extensión ligera en continuación estructural.
+
+NO TOCAR
+F01, F01.5, F02, Canonical Metric Raster V2.3, prueba real congelada y PDFs/casos.

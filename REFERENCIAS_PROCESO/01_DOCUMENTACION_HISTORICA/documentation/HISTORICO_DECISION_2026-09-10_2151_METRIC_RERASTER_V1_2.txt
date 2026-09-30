@@ -1,0 +1,17 @@
+QUANTIA V2L — HISTORICO DECISIVO
+Fecha: 2026-09-10 21:51 -06:00
+
+RESULTADO V1.1
+- Casa Viri: FAIL por mismatch LevelView.id vs F02 congelado.
+- Miguel H: FAIL por el mismo mismatch.
+- Miguel V: Scale Foundation V1.4 devolvió CONFLICT en bootstrap.
+
+DECISIONES
+- No tocar clasificación V6.2 ni solver para corregir estos fallos.
+- Tratar F02 congelado como referencia geométrica versionada y adaptar solo su asociación/escala de coordenadas al LevelView de cada ejecución.
+- No resolver Miguel V escogiendo a mano H o V ni imponiendo 1:30.
+- Reforzar la observación directa de cotas GENERAL para soportar líneas CAD fragmentadas.
+- Evitar votación por cantidad de derivados de una misma cadena: evidencia correlacionada no equivale a fuentes independientes.
+
+PUNTO DE RETORNO
+Scale Foundation V1.4 + Metric Reraster V1.1.

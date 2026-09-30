@@ -1,0 +1,19 @@
+QUANTIA V2L — HISTÓRICO DECISIVO
+Fecha: 2026-09-16 12:49 -06:00
+
+EVIDENCIA V1 REAL RECIBIDA
+- 6 LevelViews.
+- 157 muros Spatial recibidos.
+- 15 regiones/propuestas de opening.
+- 11 accepted, 4 review.
+- 11 ventanas publicadas.
+- 0 puertas.
+- Todas las propuestas reales provenían esencialmente de F03_ELEMENT_CONTEXT_ISOLATION_V5.
+- Miguel H PB: 0 opening regions / 0 proposals.
+
+DECISIÓN
+La arquitectura del mini-motor se conserva, pero se elimina su dependencia de ElementContextDetector como proposer.
+V2 debe descubrir elementos desde F01.5 + muros finales + semántica persistida. Spatial sigue siendo autoridad de muros.
+
+PUNTO DE RETORNO
+Architectural Elements Mini-Engine V1, SHA256 14888715fbd32359683a4026f857d6ead60efb08cd4a9b2d9a88588f5386db67.

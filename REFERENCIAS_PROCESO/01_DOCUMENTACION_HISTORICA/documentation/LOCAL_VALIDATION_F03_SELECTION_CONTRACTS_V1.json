@@ -1,0 +1,18 @@
+{
+  "version": "F03_SELECTION_CONTRACTS_V1",
+  "base": "CANONICAL_METRIC_RASTER_V2_3_VALIDATED",
+  "compileall_reconstruction_core": "PASS",
+  "targeted_synthetic_tests": {
+    "status": "PASS",
+    "passed": 28,
+    "suites": [
+      "test_quantia_spatial_context_classification_v6_2_synthetic.py",
+      "test_quantia_spatial_solver_evidence_v1_synthetic.py",
+      "test_quantia_spatial_f03_selection_contracts_v1_synthetic.py"
+    ]
+  },
+  "frozen_flow_test_sha256": "389552f6d7d06e85b29ac9cdfb7a1e374fd692ac70cc560df083924869d8437f",
+  "frozen_selection_test_sha256": "17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f",
+  "real_three_case_validation": "PENDING_USER_MACHINE",
+  "promotion_state": "NOT_PROMOTED"
+}

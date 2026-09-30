@@ -1,0 +1,13 @@
+DECISIÓN DE CONTINUIDAD — 2026-09-08
+
+Después de A1.3/A1.4 y de los subprocessos Recovery A1.5/A1.6, se concluye:
+- Discovery ya recuperaba gran parte de los candidatos relevantes.
+- El problema principal era clasificación/exclusión/interpretación global.
+- Recovery produjo mejoras insuficientes y, en A1.6, todos los runs recuperados fueron
+  detenidos por endpoint gate en la prueba observada.
+- No se seguirá acumulando lógica Recovery sobre el baseline.
+
+Se fija como código activo de Proposal C la versión A1.2 exacta.
+A1.3-A1.6 pasan a documentación histórica.
+El siguiente desarrollo debe aportar evidencia independiente para decidir entre los
+candidatos existentes, manteniendo su geometría y trazabilidad.

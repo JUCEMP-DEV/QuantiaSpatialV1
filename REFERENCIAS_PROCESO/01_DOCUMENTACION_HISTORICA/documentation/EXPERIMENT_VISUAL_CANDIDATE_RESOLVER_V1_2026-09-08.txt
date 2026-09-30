@@ -1,0 +1,55 @@
+QUANTIA V2L — EXPERIMENTO VISUAL CANDIDATE RESOLVER V1
+Fecha: 2026-09-08
+
+BASE
+- QUANTIA_V2L_SPATIAL_CANDIDATE_BASELINE_2026-09-08
+- Proposal C A1.2 Candidate Discovery.
+- F01/F01.5 usan replay fijo.
+- F02 permanece inmutable.
+- No usa Recovery A1.5/A1.6.
+
+OBJETIVO
+Comprobar si una sola resolución visual Gemini puede clasificar y agrupar los
+candidatos geométricos que Quantia ya descubrió, sin permitir que Gemini invente
+coordenadas.
+
+FLUJO
+PDF limpio Miguel H
+-> F01/F01.5 replay fijo
+-> F02
+-> Proposal C A1.2 Candidate Discovery
+-> imagen compuesta PB+PA:
+   izquierda original / derecha todos los candidatos etiquetados
+-> UNA invocación lógica Visual Resolver Gemini
+-> JSON estructurado por candidate_labels
+-> overlay de resultado.
+
+SALIDA GEMINI
+- wall_groups[] con candidate_labels existentes
+- axis_candidates[]
+- dimension_candidates[]
+- uncertain_candidates[]
+
+REGLA GEOMÉTRICA
+Gemini nunca genera px, líneas nuevas ni IDs nuevos. Solo selecciona etiquetas
+existentes; Quantia conserva la geometría original de los candidatos.
+
+PERSISTENCIA
+La primera ejecución guarda raw + normalizado + hashes en:
+ tests/output/proposal_c_visual_resolver_v1_miguel_h/visual_resolver_history.jsonl
+Una ejecución idéntica reutiliza replay y no consume otra llamada.
+Para forzar una nueva llamada:
+ $env:QUANTIA_VISUAL_RESOLVER_FORCE_CALL="1"
+
+ARCHIVOS NUEVOS
+- experiments/__init__.py
+- experiments/visual_candidate_resolver_v1.py
+- tests/test_quantia_spatial_proposal_c_visual_resolver_v1_miguel_h.py
+
+NO MODIFICADO
+- engine.py
+- phase_01_level/
+- phase_015_evidence/
+- phase_02_boundaries/
+- reconstruction_core/ A1.2
+- parametric_model/

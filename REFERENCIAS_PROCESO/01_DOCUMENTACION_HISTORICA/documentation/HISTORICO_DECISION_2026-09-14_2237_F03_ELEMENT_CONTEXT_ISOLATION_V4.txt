@@ -1,0 +1,16 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-14 22:37 -06:00
+
+DECISIÓN
+No continuar corrigiendo ventanas/puertas mediante thresholds globales. La auditoría demuestra que semantic_category y relaciones LOCATED_IN existentes no estaban llegando a la capa F03. Se corrige primero la identidad de evidencia.
+
+DECISIONES DE ARQUITECTURA
+- SPACE semántico es una restricción de búsqueda para openings, nunca una máscara negativa.
+- Un WINDOW_REGION solo puede excluir geometría con opening_verified; un frame ambiguo queda REVIEW.
+- FLOOR/HATCH/FURNITURE requieren provenance directa para QUARANTINE.
+- STAIR conserva reglas geométricas específicas porque sus tracks repetitivos sí son parte de la firma del elemento.
+- Solver y CandidateGraph permanecen congelados durante esta corrección.
+- Pruebas históricas no se adaptan para hacerlas pasar: se archivan con su versión original.
+
+PUNTO DE RETORNO
+Snapshot exacto V3 recibido: SHA256 b9faf204b444ce045eb9a688b6662d968428bb4ffe5c61e82f1d897b8d89459f.

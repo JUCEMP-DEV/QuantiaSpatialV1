@@ -1,0 +1,30 @@
+HISTÓRICO DE DECISIÓN — QUANTIA V2L
+Fecha: 2026-09-11 13:00
+
+EVIDENCIA REAL
+Casa Viri:
+- final scale RESOLVED;
+- ~89.872 / 90.213 px/m;
+- F02 presente en ambas plantas;
+- F03 ejecutado en ambas plantas.
+
+Miguel H:
+- final scale RESOLVED;
+- ~90.029 / 89.584 px/m;
+- F02 presente en ambas plantas;
+- F03 ejecutado en ambas plantas.
+
+ÚNICO FALLO DEL PROBE
+Los perfiles F03 publicaban state=F02_METRIC.
+El probe exige state=RESOLVED porque `state` debe expresar resolución, no procedencia.
+
+DECISIÓN
+No tocar el probe congelado.
+Corregir ProjectLevelScaleNormalizer para:
+- state=RESOLVED cuando existe escala local+canónica;
+- state=UNRESOLVED cuando falta;
+- conservar procedencia en source.
+
+ARCHIVO DE MOTOR MODIFICADO
+reconstruction_core/level_scale_normalizer.py
+VERSION → PROJECT_LEVEL_SCALE_NORMALIZER_V6_3

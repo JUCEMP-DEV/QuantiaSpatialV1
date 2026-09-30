@@ -1,0 +1,17 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-10 20:45 -06:00
+
+DECISIONES CLAVE
+1. V1.3 interna fue descartada porque usar extensión total del perímetro para validar una cota vertical era conceptualmente incorrecto.
+2. La cota GENERAL se trata como evidencia física autónoma: valor métrico + línea gráfica real.
+3. El motor ya no necesita que el plano declare 1:N para poder resolver escala cuando existen cotas generales verificables.
+4. Las cadenas "horizontal superior/inferior" y "vertical izquierda/derecha" se normalizan manteniendo el lado.
+5. Un conflicto de AxisGridResolver no bloquea el cierre si existen GENERAL H/V gráficas fuertes y convergentes; el conflicto queda como diagnóstico.
+6. No se añadieron llamadas Gemini ni cambios en F02, V6.2 o GlobalTopologySolver.
+
+EVIDENCIA MIGUEL V
+PB: 20.00/1497 y 7.70/578 convergen en ~0.01334 m/px; render objetivo ~0.953.
+PA: 20.80/1466, 8.50/601 y 7.70/544 convergen en ~0.01416 m/px; render objetivo ~1.012.
+
+VALIDACIÓN
+36 pruebas sintéticas/regresión PASS + compileall PASS.

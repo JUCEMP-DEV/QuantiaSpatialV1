@@ -1,0 +1,19 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Cambio: F03 Element Context Isolation V4 + Selection Contracts V1.5
+Fecha: 2026-09-14 22:37 -06:00
+
+RETORNO INMEDIATO DE AUDITORÍA
+Archivo: QUANTIA_V2L_RETURN_POINT_CURRENT_V3_2026-09-14_2237.zip
+SHA256: b9faf204b444ce045eb9a688b6662d968428bb4ffe5c61e82f1d897b8d89459f
+Descripción: copia exacta del estado recibido antes de aplicar V4. Es candidata V3, no se declara validada.
+
+RETORNO FUNCIONAL PREVIO
+F03 Element Context Isolation V1
+SHA256: c7cf109552a097a1f7961f415ed404010b823445f0b7aa46ad4112b0b80f8cd7
+
+RETORNO ESTABLE GLOBAL
+Canonical Metric Raster V2.3 VALIDATED
+SHA256: 6c40ed3a11ae651d1e3114e2545fae27321fef4e58af1012d2707c376ae5d296
+
+PRUEBA REAL CONGELADA
+SHA256: 17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f

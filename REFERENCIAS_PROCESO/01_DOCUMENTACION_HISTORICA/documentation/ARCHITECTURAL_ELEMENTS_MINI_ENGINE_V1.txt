@@ -1,0 +1,71 @@
+QUANTIA V2L — ARCHITECTURAL ELEMENTS MINI-ENGINE V1
+Fecha: 2026-09-16
+Estado: EXPERIMENTAL AISLADO / LISTO PARA PROBE REAL
+
+OBJETIVO
+Separar la interpretación de elementos arquitectónicos de la reconstrucción de muros.
+Spatial conserva autoridad exclusiva sobre perímetro, divisiones y geometría métrica.
+El mini-motor interpreta únicamente DOOR / WINDOW / NOT_OPENING y publica openings
+asociados a muros ya resueltos, sin modificar esos muros.
+
+FLUJO V1
+DrawingModel + Spatial ParametricModel + LevelView
+    -> OpeningHypothesisGenerator
+       - regiones estrictas V5 ya existentes
+       - hipótesis semánticas con bbox
+       - hipótesis amplias de curvas cúbicas para puertas
+    -> HostWallMatcher
+    -> ElementFeatureBuilder
+    -> ArchitecturalRAGIndex
+       - base propia Quantia, auditable, sin pesos externos
+    -> resolver multimodal opcional (puerto preparado; no obligatorio en V1)
+    -> decisión ACCEPTED / REVIEW / REJECTED
+    -> OpeningReconciler
+    -> QuantiaParametricModel con openings
+
+REGLA DE AISLAMIENTO
+- El mini-motor NO crea muros.
+- El mini-motor NO elimina muros.
+- El mini-motor NO recorta muros.
+- El mini-motor NO modifica CandidateGraph ni GlobalTopologySolver.
+- Un opening ACCEPTED debe tener host_wall resuelto antes de publicarse.
+- REVIEW nunca se publica automáticamente.
+
+RAG V1
+La base inicial usa ejemplos propios de patrones interpretables:
+- puerta con arco + hoja + host;
+- puerta parcial con semántica;
+- ventana embebida en host;
+- ventana parcial con semántica;
+- falso opening por muro continuo;
+- falso opening por curva/burbuja sin host.
+
+No se copiaron pesos, datasets ni outputs masivos del checkpoint FloorplanVLM probado.
+La arquitectura rescata la relación conceptual Wall -> Opening -> Door/Window y la
+aplica sobre evidencia propia Quantia.
+
+INTEGRACIÓN CON MODELOS EXISTENTES
+- Gemini ya persistido en F01.5 entra como SemanticObservation dentro de DrawingModel.
+- V1 no fuerza nuevas llamadas.
+- ElementSemanticResolver deja preparado un puerto para Gemini/VLM futuro con un
+  único crop por consulta y ejemplos RAG recuperados.
+
+PUBLICACIÓN
+OpeningReconciler agrega ParametricOpening a QuantiaParametricModel y aumenta
+model_revision solo cuando existe al menos un opening nuevo publicado.
+Los muros antes/después deben permanecer byte-lógicamente equivalentes en sus campos.
+
+SIGUIENTE PRUEBA
+Ejecutar:
+  app/quantia_spatial/tests/test_quantia_spatial_architectural_elements_probe_all_3_v1.py
+
+Salidas visuales por LevelView:
+- elements_merged_clean.png
+- elements_merged_overlay.png
+- elements_review_audit.png
+
+Leyenda:
+- negro: muros Spatial
+- magenta: puertas ACCEPTED/publicadas
+- cian: ventanas ACCEPTED/publicadas
+- naranja: bbox REVIEW, no publicado

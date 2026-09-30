@@ -1,0 +1,18 @@
+QUANTIA V2L — DECISIÓN 2026-09-10 09:14
+
+Se rechaza ajustar scoring específicamente para Planta Baja Casa Viri.
+La misma política debe operar sobre Casa Viri, Miguel H y Miguel V.
+
+Hallazgo:
+- Context Gate V5 ya aporta clasificación espacial útil.
+- REVIEW llegaba al CandidateGraph sin informar al solver de su riesgo.
+- vector_support se estaba usando dentro de prior_score como si ayudara a identidad WALL, aunque líneas de baldosa/mobiliario también pueden tener vector_support=1.
+- En Miguel H/Miguel V, ausencia de soporte vectorial o menor consenso empuja muchos candidatos geométricamente plausibles a unary<=0.
+
+Decisión:
+Implementar Solver Evidence V1 sin tocar F01/F01.5/F02 ni crear reglas por caso.
+Separar identidad WALL, certeza de observación y riesgo contextual.
+Mantener QUARANTINE duro fuera del grafo; REVIEW sigue compitiendo con penalización continua.
+
+Prueba:
+Un único runner parametrizado para los tres casos; 1 PNG por LevelView y 1 JSON por caso.

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="108" time="7.769" timestamp="2026-09-28T09:23:38.356677-06:00" hostname="JucempDevs"><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_adaptive_call2_contract_v1_synthetic" name="test_call2_packet_and_delta_application_are_provider_agnostic" time="0.072" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_adaptive_module_decision_engine_v1_synthetic" name="test_adaptive_routes_are_evidence_driven_not_case_driven" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_adaptive_module_decision_engine_v1_synthetic" name="test_post_topology_escalates_to_call2_when_geometry_is_incomplete" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_rag_default_recovers_window_pattern" time="0.033" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_verified_window_is_accepted_and_hosted" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_verified_door_is_accepted_and_spatial_walls_are_immutable" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_continuous_wall_window_conflict_is_not_published" time="0.012" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_opening_without_host_remains_review_and_is_not_published" time="0.011" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_duplicate_openings_are_suppressed_in_publication" time="0.013" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_publish_false_never_changes_model_revision_or_openings" time="0.009" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_broad_curve_hypothesis_survives_as_review_or_accept_without_touching_walls" time="0.011" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_v2_discovers_door_and_window_without_f03_regions" time="0.012" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_v2_no_longer_depends_on_element_context_detector_for_generation" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_architectural_elements_mini_engine_v2_synthetic" name="test_v2_wall_gap_plus_persisted_semantics_recovers_door_without_curve" time="0.013" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_call2_delta_validator_v2_synthetic" name="test_call2_validator_rejects_unsafe_deltas_and_preserves_valid_ones" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_call2_prompt_v2_synthetic" name="test_call2_v2_prompt_is_source_anchored_and_compact" time="0.022" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_call2_provider_schema_adapters_v1_synthetic" name="test_call2_strict_schema_adapter_closes_every_object" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_call2_provider_schema_adapters_v1_synthetic" name="test_groq_request_uses_qwen_vision_and_strict_schema" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_call2_provider_schema_adapters_v1_synthetic" name="test_mistral_request_uses_medium_3_5_vision_and_json_schema" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_metric_raster_v2_synthetic" name="test_f02_se_reproyecta_sin_redetectarse_y_f03_recibe_escala_levelview" time="0.719" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_metric_raster_v2_synthetic" name="test_f02_reproyectado_permanece_valido_en_raster_final" time="0.515" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rebuilds_relations_and_contract" time="0.020" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rejects_invalid_input[id]" time="0.005" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rejects_invalid_input[geometry]" time="0.005" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rejects_invalid_input[zero_length]" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rejects_invalid_input[nan]" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rejects_invalid_input[mapping]" time="0.005" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_finalizer_rejects_invalid_input[partition]" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_failed_integrity_is_not_published" time="0.012" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_bundle_round_trip_preserves_artifacts_and_inputs" time="0.079" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic" name="test_corrections_preserve_final_ancestry_and_seed_coverage" time="0.017" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_project_scale_normalizer_interrelaciona_plantas" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_no_infiere_escala_faltante_de_otra_planta" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_misma_escalera_mantiene_clase_con_dos_escalas" time="0.023" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_dimension_region_permanece_local_y_no_absorbe_muro_largo" time="0.008" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_escalera_tiene_prioridad_sobre_dimension_superpuesta" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_regresion_detecta_celdas_repetidas_como_acabado" time="0.019" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_regresion_detecta_hatch_diagonal" time="0.011" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_regresion_detecta_ejes_discontinuos_largos" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_regresion_detecta_region_de_cota_local" time="0.006" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_regresion_publica_proteccion_f02" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_regresion_gate_cuarentena_celda_y_protege_perimetro" time="0.020" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_detecta_baldosa_segmentada_sin_celdas_cerradas" time="0.016" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_patron_superficie_aislado_no_se_trata_como_muro" time="0.020" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_muro_colineal_con_ancla_fuerte_sobrevive_patron_repetitivo" time="0.026" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_context_classification_v6_2_synthetic" name="test_v6_2_paralelismo_sin_eje_ni_ancla_no_activa_linaje" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_drawing_builder_uses_semantic_category_as_family" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_semantic_space_miss_does_not_veto_strong_local_door_geometry" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_door_curve_outside_architectural_polygon_is_rejected_even_with_shape" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_isolated_curve_without_leaf_and_host_is_not_a_door" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_semantic_space_allows_partial_door_geometry_inside_host_space" time="0.005" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_window_outside_semantic_host_space_is_not_hard_verified" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_floor_pair_without_direct_membership_stays_review_but_carries_pair_risk" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_element_context_isolation_v5_synthetic" name="test_v5_stair_profile_pair_without_real_segment_provenance_cannot_quarantine" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_axis_bbox_does_not_quarantine_plausible_wall_centered_on_axis" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_direct_thin_axis_primitive_can_still_be_quarantined" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_floor_containment_alone_is_review_not_quarantine" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_floor_pair_without_direct_provenance_is_review_even_if_bracketed" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_floor_direct_member_can_still_be_quarantined" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_spatial_alignment_with_profile_is_not_enough_for_quarantine" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_stair_interior_crossed_by_multiple_treads_can_still_be_quarantined" time="0.005" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_f03_selection_contracts_v1_6_synthetic" name="test_stair_side_wall_where_treads_terminate_is_review" time="0.005" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_contract_v1_synthetic" name="test_filter_preserves_evidence_and_excludes_graphics_without_deleting" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_contract_v1_synthetic" name="test_parallel_overlapping_wall_hypotheses_become_one_centerline" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_repetitive_parallel_family_is_encapsulated_not_deleted" time="0.007" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_orthogonal_repetitive_grid_is_graphic_evidence" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_angular_hub_is_encapsulated_as_roof_cover_candidate" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_structural_conflict_is_unresolved_not_excluded" time="0.006" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_wall_face_pair_becomes_one_centerline" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_two_real_thick_parallel_walls_are_not_collapsed_as_faces" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_filter_does_not_mutate_adaptive_input_graph" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v2_synthetic" name="test_v2_analyzer_does_not_classify_two_parallel_walls_as_repetitive_pattern" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v3_synthetic" name="test_v3_selector_plan_is_operational_not_only_audit" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v3_synthetic" name="test_v3_enabled_pattern_records_responsible_module" time="0.006" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v3_synthetic" name="test_v3_near_coincident_role_conflict_becomes_one_centerline" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v3_synthetic" name="test_v3_near_coincident_does_not_absorb_short_unrelated_segment" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_post_filter_layer_v3_synthetic" name="test_v3_selector_can_disable_all_canonicalizers" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_raster_policy_matches_reference_factors" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_declared_scale_pdf_becomes_metric_candidate" time="0.008" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_f01_gemini_scale_hint_is_preserved_in_level_view_evidence" time="0.019" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_old_localization_payload_without_scale_remains_compatible" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_axis_dimension_fit_can_resolve_scale_without_printed_scale" time="0.011" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_conflicting_strong_scale_sources_are_not_silently_merged" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_project_reconciler_normalizes_different_local_scales" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_project_reconciler_does_not_invent_missing_scale" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_grounded_policy_preserves_target_density" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_resolved_axis_span_fallback_resolves_without_declared_scale_or_affine_chain" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_single_tramo_axis_span_does_not_resolve_global_scale_alone" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_unique_gemini_level_fallback_recovers_semantics_for_single_level_view" time="0.009" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_unique_gemini_level_fallback_is_disabled_without_single_view_policy" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_multilevel_payload_never_uses_unique_level_fallback_without_exact_match" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_dimension_reference_normalizes_miguel_v_planta_alta_sides" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_miguel_v_pb_graphic_general_spans_resolve_without_declared_scale" time="0.009" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_miguel_v_pa_graphic_general_spans_resolve_three_sides" time="0.009" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_fragmented_general_dimension_graphics_are_stitched_before_scale_resolution" time="0.010"><failure message="AssertionError: assert 'UNRESOLVED' == 'RESOLVED'&#10;  &#10;  - RESOLVED&#10;  + UNRESOLVED&#10;  ? ++">def test_fragmented_general_dimension_graphics_are_stitched_before_scale_resolution() -&gt; None:
+        level = _level()
+        perimeter = _rect_perimeter(
+            level,
+            x_min=128,
+            y_min=276,
+            x_max=1623,
+            y_max=854,
+        )
+        evidence = [
+            # Cota H general 20 m fragmentada por ticks/exportación CAD.
+            _observed_line("H1", x1=128, y1=902, x2=600, y2=902),
+            _observed_line("H2", x1=606, y1=902, x2=1100, y2=902),
+            _observed_line("H3", x1=1105, y1=902, x2=1625, y2=902),
+            # Cota V general 7.70 m fragmentada.
+            _observed_line("V1", x1=1687, y1=276, x2=1687, y2=460),
+            _observed_line("V2", x1=1687, y1=465, x2=1687, y2=650),
+            _observed_line("V3", x1=1687, y1=655, x2=1687, y2=854),
+            _general_dimension_with_side(
+                "DG_H",
+                orientation="HORIZONTAL",
+                value_m=20.0,
+            ),
+            _general_dimension_with_side(
+                "DG_V",
+                orientation="VERTICAL",
+                value_m=7.70,
+            ),
+        ]
+    
+        result = ScaleEvidenceResolver().resolve(
+            level_view=level,
+            evidence=evidence,
+            perimeter=perimeter,
+        )
+    
+        graphics = [
+            item for item in result.candidates
+            if item.method == "DIMENSION_GENERAL_GRAPHIC_SPAN"
+        ]
+&gt;       assert result.state == "RESOLVED"
+E       AssertionError: assert 'UNRESOLVED' == 'RESOLVED'
+E         
+E         - RESOLVED
+E         + UNRESOLVED
+E         ? ++
+
+app\quantia_spatialV1\tests\test_quantia_spatial_scale_foundation_v1_6_synthetic.py:728: AssertionError</failure></testcase><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_direct_hv_graphic_consensus_cannot_be_outvoted_by_many_correlated_axis_spans" time="0.002"><failure message="AttributeError: 'ScaleEvidenceResolver' object has no attribute '_has_hv_graphic_crosscheck'">def test_direct_hv_graphic_consensus_cannot_be_outvoted_by_many_correlated_axis_spans() -&gt; None:
+        resolver = ScaleEvidenceResolver()
+        graphics = [
+            ScaleEvidenceCandidate(
+                id="G_H",
+                level_view_id="LV",
+                method="DIMENSION_GENERAL_GRAPHIC_SPAN",
+                m_per_px=0.01334,
+                confidence=0.96,
+                semantic_orientation="HORIZONTAL",
+                graphic_side="BOTTOM",
+            ),
+            ScaleEvidenceCandidate(
+                id="G_V",
+                level_view_id="LV",
+                method="DIMENSION_GENERAL_GRAPHIC_SPAN",
+                m_per_px=0.01336,
+                confidence=0.95,
+                semantic_orientation="VERTICAL",
+                graphic_side="RIGHT",
+            ),
+        ]
+        derived = [
+            ScaleEvidenceCandidate(
+                id="FIT_V",
+                level_view_id="LV",
+                method="DIMENSION_AXIS_FIT",
+                m_per_px=0.01691,
+                confidence=0.99,
+                semantic_orientation="VERTICAL",
+            )
+        ]
+        derived.extend(
+            ScaleEvidenceCandidate(
+                id=f"SPAN_{index}",
+                level_view_id="LV",
+                method="DIMENSION_RESOLVED_AXIS_SPAN",
+                m_per_px=0.01690 + index * 1e-7,
+                confidence=0.72,
+                semantic_orientation="VERTICAL",
+            )
+            for index in range(20)
+        )
+    
+        clusters = resolver._cluster_candidates([*graphics, *derived])
+        best = resolver._select_best_cluster(clusters)
+    
+&gt;       assert resolver._has_hv_graphic_crosscheck(best)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'ScaleEvidenceResolver' object has no attribute '_has_hv_graphic_crosscheck'
+
+app\quantia_spatialV1\tests\test_quantia_spatial_scale_foundation_v1_6_synthetic.py:783: AttributeError</failure></testcase><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_miguel_v_pb_real_diagnostic_prefers_cross_family_horizontal_consensus" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_axis_fit_and_axis_spans_count_as_one_independent_family" time="0.003" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_real_miguel_v_pb_conflict_policy_closes_only_self_inconsistent_orientation" time="0.010"><failure message="AssertionError: assert 'CONFLICT' == 'RESOLVED'&#10;  &#10;  - RESOLVED&#10;  + CONFLICT">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C46C7263F0&gt;
+
+    def test_real_miguel_v_pb_conflict_policy_closes_only_self_inconsistent_orientation(monkeypatch) -&gt; None:
+        from types import SimpleNamespace
+        from app.quantia_spatialV1.reconstruction_core.general_dimension_graphic_span import GraphicDimensionSpan
+        from app.quantia_spatialV1.reconstruction_core import scale_evidence_resolver as resolver_module
+    
+        level = _level()
+        perimeter = _rect_perimeter(level, x_min=128, y_min=276, x_max=1623, y_max=854)
+        evidence = [_vector_line("OBS", 100, render_scale=0.7936603584094404)]
+    
+        graphic_rows = [
+            GraphicDimensionSpan(
+                dimension_evidence_id="DG_H",
+                semantic_orientation="HORIZONTAL",
+                side="BOTTOM",
+                value_m=20.0,
+                span_px=1497.0,
+                m_per_px=0.013360053440213761,
+                line_coordinate_px=1036.658,
+                line_start_px=0.0,
+                line_end_px=1497.0,
+                score=0.539,
+                confidence=0.9106341456529072,
+                geometric_evidence_ids=("GH",),
+                source="PYMUPDF",
+            ),
+            GraphicDimensionSpan(
+                dimension_evidence_id="DG_V",
+                semantic_orientation="VERTICAL",
+                side="RIGHT",
+                value_m=7.7,
+                span_px=754.0,
+                m_per_px=0.010212201591511937,
+                line_coordinate_px=1742.635,
+                line_start_px=0.0,
+                line_end_px=754.0,
+                score=0.473,
+                confidence=0.8993834854438252,
+                geometric_evidence_ids=("GV",),
+                source="PYMUPDF",
+            ),
+        ]
+        monkeypatch.setattr(
+            resolver_module.GeneralDimensionGraphicSpanResolver,
+            "resolve",
+            lambda self, **kwargs: graphic_rows,
+        )
+    
+        def fit(orientation: str, m_per_px: float):
+            return SimpleNamespace(
+                state="RESOLVED",
+                affine_pixels_per_semantic_unit=1.0 / m_per_px,
+                matched_fraction=1.0,
+                median_residual_px=0.0,
+                match_tolerance_px=10.0,
+                general_span_consistent=True,
+                chain_dimension_evidence_ids=[],
+                semantic_orientation=orientation,
+            )
+    
+        axis_result = SimpleNamespace(
+            state="RESOLVED",
+            axes=[],
+            diagnostics=SimpleNamespace(
+                fits=[
+                    fit("HORIZONTAL", 0.013382198952879579),
+                    fit("VERTICAL", 0.0169164265129683),
+                ]
+            ),
+        )
+        monkeypatch.setattr(
+            resolver_module.AxisGridResolver,
+            "resolve",
+            lambda self, **kwargs: axis_result,
+        )
+    
+        result = ScaleEvidenceResolver().resolve(
+            level_view=level,
+            evidence=evidence,
+            perimeter=perimeter,
+        )
+    
+&gt;       assert result.state == "RESOLVED"
+E       AssertionError: assert 'CONFLICT' == 'RESOLVED'
+E         
+E         - RESOLVED
+E         + CONFLICT
+
+app\quantia_spatialV1\tests\test_quantia_spatial_scale_foundation_v1_6_synthetic.py:974: AssertionError</failure></testcase><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_foundation_v1_6_synthetic" name="test_two_internally_consistent_orientations_that_disagree_still_block" time="0.031" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_solver_evidence_v1_synthetic" name="test_vector_support_no_cambia_identidad_de_muro" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_solver_evidence_v1_synthetic" name="test_prior_bajo_no_convierte_geometria_fuerte_en_weak_evidence" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_solver_evidence_v1_synthetic" name="test_review_con_riesgo_reduce_score_sin_excluir" time="0.002" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_solver_evidence_v1_synthetic" name="test_active_no_recibe_penalizacion_contextual" time="0.004" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_resolver_v1_7_contract" name="test_scale_resolver_contract_is_v1_7" time="0.001" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_resolver_v1_7_contract" name="test_scale_resolver_without_metric_evidence_is_unresolved" time="0.010" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_resolver_v1_7_contract" name="test_declared_pdf_scale_resolves_through_public_contract" time="0.013" /><testcase classname="app.quantia_spatialV1.tests.test_quantia_spatial_scale_resolver_v1_7_contract" name="test_incompatible_strong_declared_scales_block_publication" time="0.015" /></testsuite></testsuites>

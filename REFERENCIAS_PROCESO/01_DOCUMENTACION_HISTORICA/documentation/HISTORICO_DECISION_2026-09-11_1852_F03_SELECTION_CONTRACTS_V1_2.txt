@@ -1,0 +1,29 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11 18:52
+Fase: F03 Candidate Selection
+
+DECISIÓN
+No continuar ajustando el test ni establecer cantidades objetivo por caso. La prueba F03_SELECTION_ALL_3_V1 se mantiene congelada y solo observa el comportamiento del motor.
+
+EVIDENCIA QUE MOTIVA V1.2
+- Casa Viri PB: V1.1 todavía dejó candidatos seleccionados dentro de FLOOR_FINISH_GRID_REGION y una cantidad alta de hipótesis asociadas a AXIS_GRID_REGION.
+- Miguel V: V1.1 redujo de forma fuerte la contaminación de escalera, pero quedó al menos una selección REVIEW dentro de STAIR_FLIGHT_REGION por planta.
+- Miguel H: V1.1 eliminó gran parte de los DOUBLE_FACE ultradelgados, pero persistieron fragmentos aislados con geometría local fuerte.
+
+CAUSA GENERAL
+Las últimas falsas selecciones ya no provenían principalmente de escala/F02. El problema estaba en la modelación física y contextual de la hipótesis:
+- ventana métrica demasiado plana;
+- borde contextual basado en bbox;
+- ausencia de detección explícita de pareja de pistas del patrón;
+- relaciones de grafo sensibles a espesores contaminados.
+
+CAMBIO DE FASE/ARCHIVOS
+Rama: F03 Selection Contracts V1.2
+Archivos de motor modificados:
+- reconstruction_core/reconstruction_pipeline.py
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/global_topology_solver.py
+- reconstruction_core/candidate_graph.py
+
+PUNTO DE RETORNO
+F03 Selection Contracts V1.1.

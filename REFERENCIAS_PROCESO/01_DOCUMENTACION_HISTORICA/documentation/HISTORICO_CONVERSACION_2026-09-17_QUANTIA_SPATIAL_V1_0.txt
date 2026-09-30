@@ -1,0 +1,46 @@
+HISTÓRICO — QUANTIA SPATIAL V1.0
+Fecha: 2026-09-17 (-06:00)
+
+DECISIÓN PRINCIPAL
+No continuar corrigiendo Perimeter V2 ni Wall Mask Reconstruction V1 con thresholds por caso.
+Se adopta un probe híbrido que reutiliza únicamente la mejor responsabilidad demostrada de cada línea previa.
+
+EVIDENCIA QUE MOTIVÓ EL CAMBIO
+- Casa Viri: Wall Mask Reconstruction V1 produce topología/espacios muy cercanos al plano, especialmente PA.
+- Miguel H: resultado bueno, pero dependiente de numerosos puentes virtuales y no claramente superior a F03.
+- Miguel V: regresión fuerte; red física llega fragmentada y no forma espacios.
+- F03 anterior conserva una estructura útil en Miguel V.
+- Context Gate previo ya distingue FLOOR_FINISH/HATCH/STAIR/DIMENSION/AXIS graphic.
+- Wall Canonicalization previo aporta Single-Line WallGraph y gaps más controlados.
+
+CAUSA RAÍZ RELEVANTE
+Perimeter Wall Tracks V2 introdujo una penalización por axis_support para intentar eliminar ejes gráficos.
+Esto es conceptualmente incorrecto para Quantia porque un eje arquitectónico puede coincidir con el centro de un muro real.
+La nueva prueba no penaliza axis_support; solo el miembro gráfico explícito del eje puede ser filtrado por Context Gate.
+
+ARQUITECTURA DEL PROBE HÍBRIDO
+F01.5 / DrawingModel
+  -> Candidate Discovery sin perímetro F02 como verdad de muro
+  -> Context Gate V5/V6.x
+  -> F03 Structural Seed Rescue
+  -> WallTrack Consolidation
+  -> Strict Logical Bridges
+  -> WallMask
+  -> Room Topology
+  -> PERIMETER / DIVIDER / REVIEW
+
+REGLA DE ROLES
+PERIMETER = EXTERIOR <-> INTERIOR
+DIVIDER = INTERIOR A <-> INTERIOR B distinto
+REVIEW = topología insuficiente; no se fuerza clasificación.
+
+CALL 2
+No se integra todavía al probe. Se mantiene como siguiente capa prevista después de validar la red híbrida determinista.
+Deberá operar por deltas/correcciones, no reconstruir desde cero.
+
+CALL 3
+Permanece posterior a la validación del WallGraph lógico para DOOR/WINDOW/NOT_OPENING y grounding exacto de openings.
+
+PUNTO DE RETORNO
+QuantiaV2L_CLEAN_V4_WALL_MASK_RECONSTRUCTION_PROBE_V1.zip
+SHA256 f3af88ad38070699b2607b6cd3d316f7ab117c1d464b0c3759983eb43c3ca677

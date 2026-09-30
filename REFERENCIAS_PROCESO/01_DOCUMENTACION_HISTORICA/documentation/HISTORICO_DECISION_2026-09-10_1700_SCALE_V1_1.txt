@@ -1,0 +1,22 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN SCALE FOUNDATION V1.1
+Fecha: 2026-09-10 17:00 -06:00
+
+DECISIÓN
+Implementar un fallback de escala para el caso donde no existe texto 1:N ni affine fit completo, pero sí existen cotas métricas y ejes con coordenadas px ya resueltas.
+
+CAUSA RAÍZ
+Miguel V V1:
+- declared_scale_denominators = [];
+- candidates = [];
+- axis_fit_state = RESOLVED;
+- selected_m_per_px = null.
+La retícula geométrica existía, pero ScaleEvidenceResolver solo consumía affine_pixels_per_semantic_unit de las cadenas completas.
+
+IMPLEMENTACIÓN
+DIMENSION_RESOLVED_AXIS_SPAN:
+valor_m / |coord_eje_B - coord_eje_A|.
+Solo se acepta cuando ambos ejes ya fueron publicados por AxisGridResolver con soporte geométrico.
+Una cota GENERAL puede ser evidencia fuerte. Un TRAMO aislado no puede resolver por sí solo.
+
+PUNTO DE RETORNO
+Scale Foundation V1, SHA256 4810d2c3f5172e25f0bf913889dade67f5f7fea6a74b9d228b4f7aee61635164.

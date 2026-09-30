@@ -1,0 +1,22 @@
+QUANTIA V2L — VERSIONADO 2026-09-11 13:30
+Versión: CANONICAL METRIC RASTER V2.2
+Base: CANONICAL METRIC RASTER V2.1
+Rollback SHA256: 654a2c6060d0c0ec44e09abb9b4c62580c01baf4031dcd047f2ba8bb05a88327
+
+Archivo de ejecución modificado:
+- phase_015_evidence/evidence_parameterizer.py
+
+Cambio:
+- model_copy(deep=True) -> model_copy(deep=False) al publicar parameters.
+
+Motivo:
+- Miguel V quedó detenido en copy.deepcopy() durante F01.5 antes de alcanzar escala/F02/F03.
+- RawEvidence crudo no necesita duplicarse; F01.5 solo agrega/reemplaza parameters.
+
+No modificado:
+- pruebas canónicas;
+- Scale Foundation V1.4;
+- reraster/reproyección F02;
+- Context Classification V6.2;
+- Structural Lineage;
+- solver.

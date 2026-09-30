@@ -1,0 +1,29 @@
+QUANTIA V2L — AUDITORÍA DEL ESTADO ACTUAL
+Fecha: 2026-09-14 22:37 -06:00
+Entrada auditada: quantia_spatial(10).zip
+Snapshot de retorno SHA256: b9faf204b444ce045eb9a688b6662d968428bb4ffe5c61e82f1d897b8d89459f
+
+HALLAZGOS CRÍTICOS
+A1 — SEMÁNTICA GEMINI DESCONECTADA
+GeminiEvidenceAdapter persiste semantic_category y relations, pero DrawingModelBuilder no usaba semantic_category. Resultado: DOOR/WINDOW/SPACE se degradaban a GEMINI_OBSERVATION y la capa funcional no podía consumirlos.
+
+A2 — OPENINGS SIN BBOX NO APROVECHABAN SU SPACE
+GeminiSemanticExtractor crea DOOR/WINDOW relacionados por LOCATED_IN con SPACE. DOOR/WINDOW pueden no tener bbox propio; SPACE sí. F03 no usaba esa relación como restricción espacial.
+
+A3 — FLOOR HARD-QUARANTINE SIN PROVENANCE
+CandidateContextGate permitía que pair_support geométrico bastara para encapsular acabados. Esto contradice el contrato vigente de pertenencia directa y explica cuarentenas reales con direct_member_support=0.
+
+A4 — DIAGNÓSTICO ANCLADO A V2
+ReconstructionPipeline solo contaba detector == F03_ELEMENT_CONTEXT_ISOLATION_V2. En V3 el diagnóstico element_context_region_count quedaba desactualizado.
+
+A5 — VERSIONADO DE PROBE MEZCLADO
+Probe V2 escribía/mostraba identificadores V1. Riesgo de comparar evidencia bajo nombre equivocado.
+
+A6 — PRUEBAS OBSOLETAS ACTIVAS
+Dos pruebas F02 experimentales importaban phase_02_boundaries_experimental inexistente. Además contratos históricos V6.1 y Scale Foundation V1.x permanecían activos y fallaban contra el motor actual. Se archivaron, no se reescribieron.
+
+A7 — ARTEFACTOS DE CACHE EN FUENTE
+.pytest_cache, __pycache__ y .pyc estaban incluidos en el ZIP. Se eliminan del entregable V4.
+
+DICTAMEN
+El problema principal de V3 no era falta de más thresholds, sino pérdida de identidad semántica/provenance entre F01.5 y F03, más mezcla de contratos históricos. V4 corrige la ruta de evidencia antes de modificar solver o topología.

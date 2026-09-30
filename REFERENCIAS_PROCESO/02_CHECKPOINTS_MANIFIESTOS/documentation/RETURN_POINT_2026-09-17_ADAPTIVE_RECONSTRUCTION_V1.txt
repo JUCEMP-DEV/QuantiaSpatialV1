@@ -1,0 +1,5 @@
+RETURN POINT
+Archivo: Quantia Spatial V1.0.zip
+SHA256: d3d2a84915a85fd4cc0dd80504ecc5a14e5a0b9abb41b45725a85c65b4bf0e86
+
+La versión anterior no fue modificada. La nueva lógica vive en app/quantia_spatialV1.

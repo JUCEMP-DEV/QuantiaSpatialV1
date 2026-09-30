@@ -1,0 +1,13 @@
+QUANTIA V2L — PACKAGE EXCLUSIONS
+Date: 2026-09-16 18:20 America/Mexico_City
+
+The cleaned deliverable excludes generated/reproducible environment directories only at packaging time:
+- Backend/.venv/
+- Frontend/node_modules/
+- __pycache__/
+- .pytest_cache/
+- *.pyc / *.pyo
+
+No source files outside the requested Quantia Spatial/Mini-Engine cleanup were modified for these exclusions.
+Environment reconstruction remains available through Backend/requirements.txt and Frontend/package-lock.json/package.json.
+Original ZIP remains the exact rollback source.

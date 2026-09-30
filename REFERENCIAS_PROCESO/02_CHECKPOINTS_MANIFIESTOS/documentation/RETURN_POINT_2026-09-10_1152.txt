@@ -1,0 +1,13 @@
+PUNTO DE RETORNO — ANTES DE CONTEXT CLASSIFICATION V6.1
+
+Archivo:
+QUANTIA_V2L_CONTEXT_CLASSIFICATION_V6_2026-09-10.zip
+SHA256: 877235649cd25eedea6c4411383f9c3c6c0b3127929b2f324ef32054ef14d125
+
+Estado funcional:
+Proposal C A1.2 + Context Classification V6 + Solver Evidence V1.
+
+Resultado real V6 ya recibido y preservado en el histórico de conversación.
+V6.1 no modifica F01, F01.5, F02, engine.py, Candidate Discovery A1.2 ni scoring del solver.
+
+Para volver atrás, restaurar el ZIP anterior completo.

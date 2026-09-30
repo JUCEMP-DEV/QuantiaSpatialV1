@@ -1,0 +1,15 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-11 13:30
+
+DECISIÓN
+No interpretar el KeyboardInterrupt de Miguel V como fallo de escala.
+La traza demuestra que aún estaba en F01.5/EvidenceParameterizer y fue interrumpida dentro de copy.deepcopy().
+
+CAUSA RAÍZ
+EvidenceParameterizer copiaba profundamente cada RawEvidence aun cuando solo reemplaza parameters. En documentos CAD densos esto multiplica CPU/memoria sin aportar aislamiento funcional.
+
+CAMBIO
+Usar model_copy(deep=False) conservando geometry/text/metadata y sustituyendo únicamente parameters.
+
+REGLA
+La prueba F03 permanece congelada. Si Miguel V falla después de este punto, se diagnostica la siguiente etapa real; no se ajusta la prueba por caso.

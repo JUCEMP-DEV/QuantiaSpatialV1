@@ -1,0 +1,19 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Cambio: F03 Element Context Isolation V3
+Fecha: 2026-09-14 14:01 -06:00
+
+RETORNO INMEDIATO VALIDADO PARA ESTA RAMA
+F03 Element Context Isolation V1
+Paquete: QUANTIA_V2L_F03_ELEMENT_CONTEXT_ISOLATION_V1.zip
+SHA256: c7cf109552a097a1f7961f415ed404010b823445f0b7aa46ad4112b0b80f8cd7
+
+PREDECESOR DIAGNÓSTICO
+F03 Element Context Isolation V2
+No promover. Se conserva para trazabilidad de la regresión de ventanas y pérdida de puertas.
+
+RETORNO ESTABLE GLOBAL
+Canonical Metric Raster V2.3 VALIDATED
+SHA256: 6c40ed3a11ae651d1e3114e2545fae27321fef4e58af1012d2707c376ae5d296
+
+REGLA
+Si V3 vuelve a sobreclasificar muros como ventana, pierde puertas o degrada elementos ya correctos, volver a V1. No modificar la prueba real congelada.

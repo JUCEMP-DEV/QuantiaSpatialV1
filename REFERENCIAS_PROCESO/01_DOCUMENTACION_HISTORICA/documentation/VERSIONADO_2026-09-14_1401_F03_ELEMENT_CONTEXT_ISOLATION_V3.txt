@@ -1,0 +1,37 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-14 14:01 -06:00
+Versión: F03 Element Context Isolation V3
+Estado: CANDIDATA
+Base de trabajo: F03 Element Context Isolation V2 (diagnóstica)
+Punto de retorno inmediato: F03 Element Context Isolation V1
+Base estable: Canonical Metric Raster V2.3 VALIDATED
+
+OBJETIVO
+Corregir las regresiones reales de V2 sin tocar solver, CandidateGraph, F02 ni la base métrica validada.
+
+CAUSA RAÍZ VERIFICADA
+- V2 recuperó provenance directa, pero WINDOW_REGION usaba una firma geométrica que también describe bandas completas de muro.
+- V2 endureció demasiado DOOR_REGION y eliminó puertas reales junto con falsos positivos.
+- Escalera y acabado todavía publicaban member_line_ids sin expandir completamente evidence_ids, por lo que direct_member_support seguía en cero en parte de los casos.
+
+CAMBIOS V3
+1. DOOR_REGION permite hoja parcial/fragmentada si existe arco compatible + host wall inequívoco + contexto arquitectónico.
+2. DOOR_REGION mantiene rechazo de burbujas/ejes fuera de la planta y nunca acepta curva aislada.
+3. WINDOW_REGION deja de aceptar simple triple banda paralela/perimetral.
+4. WINDOW_REGION exige frame local flanqueado por host wall a ambos lados del opening.
+5. Una línea continua que atraviesa el supuesto opening invalida la ventana geométrica.
+6. WINDOW_REGION publica host_line_ids explícitos y CandidateContextGate preserva esos hosts como ACTIVE.
+7. Un miembro directo de ventana con continuidad estructural fuerte queda REVIEW, no QUARANTINE automático.
+8. ContextRegionDetector, SurfacePatternDetector y RepeatedCellDetector expanden member_line_ids con evidence_ids para mejorar provenance de escalera/acabados/celdas.
+9. Prueba sintética V2 se archiva como contrato histórico supersedido; nueva prueba V3 cubre las reglas corregidas.
+10. Nueva probe V2 mantiene visual walls_only y aislamiento por elemento con baseline V3.
+
+NO MODIFICADO
+- F02.
+- Canonical Metric Raster V2.3.
+- CandidateGraph.
+- GlobalTopologySolver.
+- tests/test_quantia_spatial_f03_selection_all_3_v1.py.
+
+PRUEBA REAL CONGELADA
+SHA256: 17c55356c9662eb5d0ff9cd0aa464ded70fbcbc5f8a87f38ee2803805c4df78f

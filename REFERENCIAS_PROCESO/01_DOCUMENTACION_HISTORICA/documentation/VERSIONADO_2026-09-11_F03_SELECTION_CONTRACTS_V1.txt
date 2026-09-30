@@ -1,0 +1,62 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-11
+Versión de trabajo: F03 SELECTION CONTRACTS V1
+Base: CANONICAL METRIC RASTER V2.3 VALIDATED
+Estado: CANDIDATA / EN VALIDACIÓN
+
+PUNTO DE RETORNO
+quantia_spatial(9).zip
+SHA256: 6c40ed3a11ae651d1e3114e2545fae27321fef4e58af1012d2707c376ae5d296
+
+CAMBIOS FUNCIONALES
+A. Evidencia de origen
+- OPENCV, LSD_LOCAL y REGION_LOCAL se agrupan en RASTER.
+- PYMUPDF se mantiene como VECTOR independiente.
+- independent_source_count usa modalidades reales y no nombres de algoritmos.
+
+B. Familias de espesor
+- Se elimina el voto por cantidad de pares.
+- Cada pareja aporta longitud solapada ponderada por independencia de modalidad.
+
+C. Context Gate
+- Clasifica contexto antes de calcular linaje.
+- El riesgo contextual se conserva también en ACTIVE contextual, no solo REVIEW.
+- Un mismatch de orientación en región 2D repetitiva pasa a REVIEW cuando el contexto es suficiente.
+
+D. Structural Lineage
+- REVIEW/QUARANTINE no son anclas.
+- Candidatos del mismo region_id repetitivo no se rescatan entre sí.
+- Excepción solo para ancla ACTIVE mucho más larga, mayormente externa al patrón.
+- axis_support aislado no genera strong=True.
+
+E. Candidate Graph
+- No genera JUNCTION/CONTINUATION positivo entre miembros del mismo patrón repetitivo.
+- JUNCTION requiere ángulo estructural >=25° y <=155°.
+- La fuerza de junction depende de proximidad real al extremo.
+
+F. Solver
+- Menor peso de axis_support en identidad de muro.
+- Mayor penalización de dashed/reference.
+- context_risk ya no es aliviado por axis_support aislado.
+- Se añade metric_thickness_support como penalización suave, nunca filtro duro.
+
+G. Escala métrica
+- Reconstruction Pipeline anota thickness_m y metric_thickness_support usando LevelScaleProfile V2.3 RESOLVED.
+
+ARCHIVOS MODIFICADOS
+- reconstruction_core/wall_candidate_generator.py
+- reconstruction_core/wall_track_consolidator.py
+- reconstruction_core/candidate_context_gate.py
+- reconstruction_core/structural_lineage.py
+- reconstruction_core/candidate_graph.py
+- reconstruction_core/global_topology_solver.py
+- reconstruction_core/reconstruction_pipeline.py
+
+ARCHIVOS AÑADIDOS
+- tests/test_quantia_spatial_f03_selection_contracts_v1_synthetic.py
+- tests/test_quantia_spatial_f03_selection_all_3_v1.py (prueba previamente entregada, incluida sin cambios)
+
+ARCHIVOS EXPLÍCITAMENTE NO MODIFICADOS
+- tests/test_quantia_spatial_f03_flow_all_3_v1.py
+- F02
+- archivos de Canonical Metric Raster V2.3

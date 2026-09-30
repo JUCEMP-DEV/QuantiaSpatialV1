@@ -1,0 +1,23 @@
+HISTÓRICO — 2026-09-18 — CALL 2 DELTA REVIEW V1
+
+DECISIONES
+- Los resultados walls-only V4 se consideran suficientemente limpios para iniciar Call 2.
+- No se realizará otra iteración grande de filtros antes de probar la segunda llamada.
+- Call 2 trabaja por DELTAS y no reconstruye el plano desde cero.
+- Plano original es fuente visual primaria; WallGraph filtrado es hipótesis corregible.
+- F02/perímetro no es inmutable.
+- Elementos no-muro se conservan como evidencia y candidatos arquitectónicos para la siguiente capa.
+- Antes de aplicar deltas multimodales se introduce validación determinista.
+- La salida visual solicitada para esta prueba es únicamente el WallGraph final de muros.
+
+FAMILIAS DE INTERÉS PARA SIGUIENTE CAPA
+DOOR, WINDOW, FLOOR_TO_CEILING_GLAZING, RAILING_GUARDRAIL, STAIR, STAIR_HANDRAIL,
+ROOF_COVER, TERRACE, OPENING_CLOSURE, SLAB_EDGE_LEVEL_CHANGE, OTHER, UNCERTAIN.
+
+CASOS DE VALIDACIÓN
+- Casa Viri PB/PA
+- Miguel H PB/PA
+- Miguel V PB/PA
+
+PENDIENTE DECISIVO
+Ejecutar test real de Call 2 en Windows y comparar los seis PNG walls-only finales contra el plano original antes de diseñar/cerrar el contrato F04.

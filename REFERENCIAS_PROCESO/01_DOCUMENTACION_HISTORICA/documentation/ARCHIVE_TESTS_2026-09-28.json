@@ -1,0 +1,2357 @@
+{
+  "source_root": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\QuantiaV2L\\Backend\\app\\quantia_spatialV1",
+  "archive_root": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\REFERENCIAS Y ANEXOS Quantia General\\quantia_spatialV1\\archivo_pruebas_20260928_092025_final",
+  "entries": [
+    "tests/test_quantia_spatial_perimeter_wall_tracks_all_3_v1.py",
+    "tests/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.py",
+    "tests/test_quantia_spatial_wall_mask_reconstruction_all_3_v1.py",
+    "tests/test_quantia_spatial_wall_canonicalization_isolated_all_3_v1.py",
+    "tests/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.py",
+    "tests/test_quantia_spatial_f03_architectural_core_visual_all_3_v1.py",
+    "tests/test_quantia_spatial_wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback.py",
+    "tests/test_quantia_spatial_v1_call2_all_3_v1.py",
+    "tests/output/perimeter_wall_tracks_v1",
+    "tests/output/perimeter_wall_tracks_v2",
+    "tests/output/wall_mask_reconstruction_v1",
+    "tests/output/wall_canonicalization_isolated_v1",
+    "tests/output/f03_mask_topology_hybrid_v1",
+    "tests/output/f03_architectural_core_visual_v1",
+    "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback",
+    "tests/output/quantia_spatial_v1_call2",
+    "tests/F03_MASK_TOPOLOGY_HYBRID_PROBE_V1.txt",
+    "tests/WALL_MASK_RECONSTRUCTION_PROBE_V1.txt",
+    "documentation/history",
+    "tests/__pycache__/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.cpython-313-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.cpython-313-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_quantia_spatial_v1_call2_all_3_v1.cpython-313-pytest-9.1.1.pyc"
+  ],
+  "files": [
+    {
+      "relative_path": "tests/test_quantia_spatial_perimeter_wall_tracks_all_3_v1.py",
+      "bytes": 27299,
+      "sha256": "c0675599c13989e2b76b12d28f8056c5ca06e01fb11d97a854059ec517229675"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.py",
+      "bytes": 28146,
+      "sha256": "30812537f0125cb8a5611dcac71c7665e9993a71c1f6fe4ea9ea63395ca42c10"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_wall_mask_reconstruction_all_3_v1.py",
+      "bytes": 24187,
+      "sha256": "439acac2b3f6b8a653102d41bef488a82a01d64a4fb2bf937714e579dbc11673"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_wall_canonicalization_isolated_all_3_v1.py",
+      "bytes": 23960,
+      "sha256": "93449fae4dc4aa3333f9bd70b29fbd22d5a12a20edbd2471f0388fdedcf913e9"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.py",
+      "bytes": 35356,
+      "sha256": "1360287358227efb5aa114ef8c67ca0e91a9415a0cd4e7c920ccd8afa5ac98e2"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_f03_architectural_core_visual_all_3_v1.py",
+      "bytes": 11161,
+      "sha256": "68fad97a1ff99b3912465506f025caaa841f345a0889fcdb3ab03007af07aca4"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback.py",
+      "bytes": 33443,
+      "sha256": "e7e32539b8aff84ed4982e314570c5a56fd905e1431ca339eacf8bd36324a3b0"
+    },
+    {
+      "relative_path": "tests/test_quantia_spatial_v1_call2_all_3_v1.py",
+      "bytes": 5223,
+      "sha256": "b711a7cbabfd665b9de3cf03cd03a92091374ebf6a8b17f5aabec3918e5138ce"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__01_planta_baja_copia_1__all_physical_wall_tracks.png",
+      "bytes": 72424,
+      "sha256": "4755b91f1d2cbcdd6251febbfc50b9523cb64bc8b2cd2b0ad37bc4c8014083b6"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__01_planta_baja_copia_1__building_footprint_mask.png",
+      "bytes": 13353,
+      "sha256": "1d826942c3d6f87f21460266ee85542f4346c20a4d61537feb37d029649632ee"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__01_planta_baja_copia_1__closed_wall_mask.png",
+      "bytes": 35234,
+      "sha256": "9d7183abc037ef4f636d77b96b7dae124ad1abfda89ce33fef524fe3a1b562df"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__01_planta_baja_copia_1__perimeter_clean.png",
+      "bytes": 34921,
+      "sha256": "333cc9dfa13ab65a81363efc5c297a5e29e9ea5d54dbf683baeb8c675ef838f1"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__01_planta_baja_copia_1__perimeter_overlay.png",
+      "bytes": 357449,
+      "sha256": "40254d6fe374ddc9463fbcb833e107dd5f0946a30db5c0e9977c19542dcb76bb"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__01_planta_baja_copia_1__wall_mask.png",
+      "bytes": 36368,
+      "sha256": "1dbe0087f6a5767609ed0b32cf32676b54df7c1e130aaf356e6e4e491b6d5c94"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__02_planta_alta_copia_1__all_physical_wall_tracks.png",
+      "bytes": 36778,
+      "sha256": "f50959c746eb4c95bfd7bccecbc2c325aab8a99aef09b882e466ac1efd71a3b8"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__02_planta_alta_copia_1__building_footprint_mask.png",
+      "bytes": 13032,
+      "sha256": "78874735edaf033257baca4b797cfbd63921e86e94afa7a819dbc09ee5147fe8"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__02_planta_alta_copia_1__closed_wall_mask.png",
+      "bytes": 18075,
+      "sha256": "005e2249f18922171fd928ef62d0f60b28a8d64b66cadaf0cc9883195dc306e2"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__02_planta_alta_copia_1__perimeter_clean.png",
+      "bytes": 24391,
+      "sha256": "c80611c72ef712c5964355bb0ecec8028508581c6c39a45dae2a4d29e2c94bf3"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__02_planta_alta_copia_1__perimeter_overlay.png",
+      "bytes": 193785,
+      "sha256": "dfed7bb2f008e28ea7da114b6dd6b32d7cdd3970d82f133b81d80db9558b5ce1"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__02_planta_alta_copia_1__wall_mask.png",
+      "bytes": 18801,
+      "sha256": "9b4766d717150e51b3a2ab8b58eed2bd6ca39a048105a3f97b7eb0604eaa2370"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/casa_viri/casa_viri__perimeter_wall_tracks_v1.json",
+      "bytes": 89536,
+      "sha256": "7caf00c0f89871f38cf36cac3167f37940c8b979a4ffbb02bda864d6142241b4"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__perimeter_wall_tracks_v1.json",
+      "bytes": 40098,
+      "sha256": "d4b7144a9b4e6649537a3a7d5e99ad3b2a2c0dc0c687c313f60b47482f6b1792"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_alta__all_physical_wall_tracks.png",
+      "bytes": 21545,
+      "sha256": "f80131c80bfcf89a6ea93af8effa9379c13e3bd3cbd2e8f4848d2fc67e928779"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_alta__building_footprint_mask.png",
+      "bytes": 5457,
+      "sha256": "1de9bb0f0991f32332fe45b610d632265262912965ce8bc0e3c8c46977df6a71"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_alta__closed_wall_mask.png",
+      "bytes": 10225,
+      "sha256": "a4d7f58e63f55aee039f406a718902b6de2b3479492424226603afdf8a3927da"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_alta__perimeter_clean.png",
+      "bytes": 12525,
+      "sha256": "bf1348d98db5ca9343e0812fe1c2af6d3392287f48740510d44ac6b0c4d17d44"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_alta__perimeter_overlay.png",
+      "bytes": 134592,
+      "sha256": "70d4096428f1ee0d352f24ca787ef1a0eea5db9de3d30b82a946ff243b13b8af"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_alta__wall_mask.png",
+      "bytes": 10637,
+      "sha256": "974a1da5bbe43fd28930e36fa1bb0724537b38f07fb3b8c1a1887561a9ed2538"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_baja__all_physical_wall_tracks.png",
+      "bytes": 21531,
+      "sha256": "c635843433ddb56431c48644992d113858ac594f59e0c4a62e73b87dec855705"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_baja__building_footprint_mask.png",
+      "bytes": 4126,
+      "sha256": "dddb1c4bded0c4cf0d9b4874c427c805cb0eceb466627b262085089651b5ceae"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_baja__closed_wall_mask.png",
+      "bytes": 10684,
+      "sha256": "0489370a40b244ce82850f623c56548db5533b5010192879f782b5a39596f17a"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_baja__perimeter_clean.png",
+      "bytes": 8373,
+      "sha256": "db1843711b5fe49921b5086f686aad031d84fea4c7d979814cc0e0741e105939"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_baja__perimeter_overlay.png",
+      "bytes": 133025,
+      "sha256": "fd4b6c595c2bcf9853e975f3b501e75974e1edf18c5fa273524362d47a65657a"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_h/miguel_h__planta_baja__wall_mask.png",
+      "bytes": 10776,
+      "sha256": "cff037f3852b64dd0a13d3c6b3e2bf9d9bc7e91a9362115c0298623d76296c27"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__perimeter_wall_tracks_v1.json",
+      "bytes": 56872,
+      "sha256": "02e41751bb6f6dff3ca21adbe5519ece9098bb3fe3ac2ee37c6d9a79fa0394b7"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_alta__all_physical_wall_tracks.png",
+      "bytes": 48817,
+      "sha256": "f6c56c33d5adc307ae21ff795438c8f306fd86d971fa97d392e65f12b27641d2"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_alta__building_footprint_mask.png",
+      "bytes": 20796,
+      "sha256": "3fce8dd8f21d46df304b051661a18bbbe8e060f702ab9e0366910daaa8e5d4a4"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_alta__closed_wall_mask.png",
+      "bytes": 23946,
+      "sha256": "d7ff4232006d82b15c9093e77e401949eb6186a6ecf7aea5f359582c7363119f"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_alta__perimeter_clean.png",
+      "bytes": 34677,
+      "sha256": "880689104087a030650ea9f1ba546614aae89262b0bbe91a60562ecff3406dc9"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_alta__perimeter_overlay.png",
+      "bytes": 365049,
+      "sha256": "0b2c253406b1dcf723d1f51ff1c8e231e5655f2fc0e7c8d2c81d5715534ad8c4"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_alta__wall_mask.png",
+      "bytes": 23741,
+      "sha256": "7d864f3e0800e57470677ff672e0b21d7c71ac838dde6adecc053a6764c44e23"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_baja__all_physical_wall_tracks.png",
+      "bytes": 63391,
+      "sha256": "aa828a2d8a2b74564ded2348465a620cdc4f216b01ea3a05dac8a8b53854b6a6"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_baja__building_footprint_mask.png",
+      "bytes": 19830,
+      "sha256": "e1c201e34624d63105a8eb5d83197ad42e3c9b68a72cc43a5eeef5e99f21a702"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_baja__closed_wall_mask.png",
+      "bytes": 31488,
+      "sha256": "84cb56500ed532cf54571074f9af5e6d071f2104af1cb4309a446206a3e9bcaf"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_baja__perimeter_clean.png",
+      "bytes": 35278,
+      "sha256": "46dad3a2b39b6ef11d5073e801eed1867efc3bb438e7eace4b576d0cd14dfc3e"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_baja__perimeter_overlay.png",
+      "bytes": 399314,
+      "sha256": "8d02fc7d9404859a05ee0f2ba5dbfe5a4deb0a15bbb8689e3bd912583f168ef7"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/miguel_v/miguel_v__planta_baja__wall_mask.png",
+      "bytes": 31416,
+      "sha256": "f98ce3303c11b36d12498c108336f80b9ec8f02f768dbc1a53d20b16a97e30fc"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v1/perimeter_wall_tracks_v1.zip",
+      "bytes": 1173106,
+      "sha256": "090cdc38ef6ae1ecf0036104037599d8ef5707e8d36acdd84b62ab651718a4fd"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__01_planta_baja_copia_1__all_physical_wall_tracks_v2.png",
+      "bytes": 86963,
+      "sha256": "5beda073b5a199dc67c5c8d57819bc0a03c7d33d61a44d019a48c746fe4b5da1"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__01_planta_baja_copia_1__building_footprint_mask_v2.png",
+      "bytes": 18381,
+      "sha256": "5dd23cd9355fbb0abfa6e80bd0cc088476f6cf181c407a853a2474ae07d265bd"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__01_planta_baja_copia_1__closed_wall_mask_v2.png",
+      "bytes": 35978,
+      "sha256": "ab597723f78caed67601467498d139f74333bde9485b5703bd1357cbf41b4016"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__01_planta_baja_copia_1__perimeter_clean_v2.png",
+      "bytes": 40433,
+      "sha256": "69f0972f79e910c724cff4c8d9e3de37d2043f0e2fb80c4af91285dbc23a0a2d"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__01_planta_baja_copia_1__perimeter_overlay_v2.png",
+      "bytes": 345448,
+      "sha256": "54035bd7fb8fb6ddc5dc9e79df5909f3f2e3a647cb2dd70dfeac62e959bb5752"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__01_planta_baja_copia_1__wall_mask_v2.png",
+      "bytes": 42255,
+      "sha256": "44e63a5762680ca8806222834ec198e64c4e503c7e5761e7ee2c7a5e492e9c61"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__02_planta_alta_copia_1__all_physical_wall_tracks_v2.png",
+      "bytes": 51745,
+      "sha256": "89e29ae7a4a7130580ef64f413cc188023b1596cfe3f4e393f086941b35baf80"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__02_planta_alta_copia_1__building_footprint_mask_v2.png",
+      "bytes": 13882,
+      "sha256": "6d93521a5c37e0e2c718635e758609add44bf5cfbae5a6e57314cf82901bcb8b"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__02_planta_alta_copia_1__closed_wall_mask_v2.png",
+      "bytes": 22798,
+      "sha256": "51683c6ac5b250f5964aa839374d92e86b07b6c43b7eb079aa4fbc59812dbc7e"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__02_planta_alta_copia_1__perimeter_clean_v2.png",
+      "bytes": 27794,
+      "sha256": "bed19a1830aca49c5467d6772b7e04db06713cf5a0f9174e7ae95e74eae330e5"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__02_planta_alta_copia_1__perimeter_overlay_v2.png",
+      "bytes": 183478,
+      "sha256": "82ecedec8c44caf773f9ff59cfd4d4d1d1e8eb311208202dd1fdb0f0752cdf97"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__02_planta_alta_copia_1__wall_mask_v2.png",
+      "bytes": 25308,
+      "sha256": "933114df65e85f6124b17c96c0fed39d5799c75d139d01490571e181c26aacd0"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/casa_viri/casa_viri__perimeter_wall_tracks_v2.json",
+      "bytes": 499892,
+      "sha256": "ccf4897139479709fa1870ad001f9de74b0d710b067056c70593a3434178b77b"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__perimeter_wall_tracks_v2.json",
+      "bytes": 414472,
+      "sha256": "ce443a1a540d2be44a4ae8bd08509673efca79379cb22c40d73fcb13ae445f05"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_alta__all_physical_wall_tracks_v2.png",
+      "bytes": 47691,
+      "sha256": "bc63d5265ae3a2f09c5294f887f7c1d69b68dacc72fe06872ee90307186dcb69"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_alta__building_footprint_mask_v2.png",
+      "bytes": 6387,
+      "sha256": "a7d649ad5f4c6e125e4d0af4ce6c0d83ad29e00b9a92cb06a086d695b04e72a4"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_alta__closed_wall_mask_v2.png",
+      "bytes": 20281,
+      "sha256": "3059a2afcb514d334a8d891e61a7bcb751e5b4963d70f244b661489433441e4c"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_alta__perimeter_clean_v2.png",
+      "bytes": 17531,
+      "sha256": "1dff4c34f91962197f8f02b990217480ef83faaed2356f2a8c7f29f63c5c062c"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_alta__perimeter_overlay_v2.png",
+      "bytes": 141496,
+      "sha256": "9525981022a71a9167e9f1760ac14fdfca9ff7fd1f8846223566cea2891883c1"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_alta__wall_mask_v2.png",
+      "bytes": 21769,
+      "sha256": "877356429a79a0c50d0a8665805f7b02a080de24f92eb73341a96d70f576914d"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_baja__all_physical_wall_tracks_v2.png",
+      "bytes": 45400,
+      "sha256": "e7f577889a85ab00c3cfad599d660fb952711c86c47d9becf823dca61175a048"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_baja__building_footprint_mask_v2.png",
+      "bytes": 8499,
+      "sha256": "e4f4644022abc27170932142815fb49f5e9738f9699852317e9aae9d2ff6b22d"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_baja__closed_wall_mask_v2.png",
+      "bytes": 19458,
+      "sha256": "9814b61eb5970b4900dd3356dc151fb320d8e37b447dedce013b07a6297d95a0"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_baja__perimeter_clean_v2.png",
+      "bytes": 14940,
+      "sha256": "bd51ff5913157d81fd4e8af519bead19624362971c3787b03e28b0316a24c508"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_baja__perimeter_overlay_v2.png",
+      "bytes": 142241,
+      "sha256": "ada012a399476358f7143d567d3587a49ea2ff763d4e797634f52c2d91c81df7"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_h/miguel_h__planta_baja__wall_mask_v2.png",
+      "bytes": 21095,
+      "sha256": "6c855394e85e6392c68f562cb6a3128cec3204ad66a2ad3a138b221c35de5718"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__perimeter_wall_tracks_v2.json",
+      "bytes": 123541,
+      "sha256": "28bab6c61d1dd0a6122e70d92592df4a2ead22e2babde0bb53b2edfe522bdbff"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_alta__all_physical_wall_tracks_v2.png",
+      "bytes": 52882,
+      "sha256": "bd1f91bcd17c7e837e4a7eb48f75a960dc7cc7ea59cad972e83f8c138020ec83"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_alta__building_footprint_mask_v2.png",
+      "bytes": 21486,
+      "sha256": "4680060655410aeaffc09b1f7ec890973e974e38d810c883e470c37c43f52851"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_alta__closed_wall_mask_v2.png",
+      "bytes": 25087,
+      "sha256": "9e0b44c8241f044e6b280e66173da4d759aafe8565c7f1715c930971c8b11d13"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_alta__perimeter_clean_v2.png",
+      "bytes": 20795,
+      "sha256": "a9f6bb29fb89b73954ee419fe1104cf5c6ad223fd0d03105f887bee17fc34810"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_alta__perimeter_overlay_v2.png",
+      "bytes": 377167,
+      "sha256": "dc2cead57cb186e42d8920eb6c111c7d4d810599919bdde0c9dcd9cb8cea20b1"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_alta__wall_mask_v2.png",
+      "bytes": 24911,
+      "sha256": "11fb1c530940b4d3db437ccf845df844269633f157dd6f61efc35c4a82f397c5"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_baja__all_physical_wall_tracks_v2.png",
+      "bytes": 57058,
+      "sha256": "2f6dd6446c00e42fd5471cdd3a1dff8ee042485657938f53e365c1091bf5ded6"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_baja__building_footprint_mask_v2.png",
+      "bytes": 17929,
+      "sha256": "a98a23798372ccf24fb65c5869c56a6e7fc78b86b24e8386f6302b513051b1d8"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_baja__closed_wall_mask_v2.png",
+      "bytes": 26414,
+      "sha256": "50b0fece4a4582fe42cc95054c3a85b1890604cde029812ec636d24cc67b20fd"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_baja__perimeter_clean_v2.png",
+      "bytes": 18699,
+      "sha256": "732ebb8a37dc5e56e5fe064c02a476e8d0a90e3acce70a338e3a335cc2474caf"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_baja__perimeter_overlay_v2.png",
+      "bytes": 398593,
+      "sha256": "5ac4cac5769e232196db010f78e9e65f4e21be5ae4919260937beaeb70838119"
+    },
+    {
+      "relative_path": "tests/output/perimeter_wall_tracks_v2/miguel_v/miguel_v__planta_baja__wall_mask_v2.png",
+      "bytes": 26860,
+      "sha256": "d6e65a58fd1460131aff0b22662160b0f139d5b44c104c115c67bacd6bb71f8f"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__01_planta_baja_copia_1__01_wall_mask.png",
+      "bytes": 42181,
+      "sha256": "79280c835bc1d6e4b0c0daa4f8559fa0a2f238fcb83975bf77d2629d2d26ffd1"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__01_planta_baja_copia_1__02_logical_seal_mask.png",
+      "bytes": 38062,
+      "sha256": "571d8299b02b4ab4027cdd2bf5a90f6587dc3e9e6f29d2e60932c4de614309b1"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__01_planta_baja_copia_1__03_wall_centerlines.png",
+      "bytes": 181235,
+      "sha256": "83c1be2b63a071e936deebcb113ee952ad4144a705291994e91218946b14e1c7"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__01_planta_baja_copia_1__04_wallgraph_clean.png",
+      "bytes": 172343,
+      "sha256": "19710ab0d1b07e134bb417d0c2e199feac0b205d20a8cfd6805e1bfc479f2699"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__01_planta_baja_copia_1__05_rooms_clean.png",
+      "bytes": 78653,
+      "sha256": "6facafb3725de08d3c434f93a17282a9c05aca2305df11d52765050a09082b14"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__01_planta_baja_copia_1__06_topology_audit.png",
+      "bytes": 466755,
+      "sha256": "c04a3714f15329f662cd36520a7638f6a44f45510f4fcf2573b6acf82bd9dc70"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__02_planta_alta_copia_1__01_wall_mask.png",
+      "bytes": 24469,
+      "sha256": "20f25bb60a61a5ad7274f24ba1caad4d487cb3ce19f10fccbf584689d6ff50e7"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__02_planta_alta_copia_1__02_logical_seal_mask.png",
+      "bytes": 22382,
+      "sha256": "a85379306e6d056a607c45c52e3fbce6b80498e0f982c42e3977d35125079cb8"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__02_planta_alta_copia_1__03_wall_centerlines.png",
+      "bytes": 86635,
+      "sha256": "12d58b74191223d7e2d5519e18eb9830deece7b3b75ea69d91cd6f11a21ef1b1"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__02_planta_alta_copia_1__04_wallgraph_clean.png",
+      "bytes": 70540,
+      "sha256": "2c152005aae390b273fe8dcd4bbac28881f7997890f201446687d3c46b021bed"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__02_planta_alta_copia_1__05_rooms_clean.png",
+      "bytes": 41574,
+      "sha256": "f3ac359b79587423e08179c0cb6d32341d4fcba69df40a9ca94b37df95805aef"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__02_planta_alta_copia_1__06_topology_audit.png",
+      "bytes": 211570,
+      "sha256": "08eb0c2a32db2d0f1d0c59f86724c5a3cacd25f1221c33b6609e36bb996ac775"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/casa_viri/casa_viri__wall_mask_reconstruction_v1.json",
+      "bytes": 472324,
+      "sha256": "cdab23c98b7d70437950dce653ebca028adfe23c39b4eb21fb5eb1108126d1ef"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_alta__01_wall_mask.png",
+      "bytes": 21450,
+      "sha256": "49d8167bf33cb680daa34248af68f0de31697f360aa0017487e5885ba7ef0b82"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_alta__02_logical_seal_mask.png",
+      "bytes": 19973,
+      "sha256": "017c87f8b919762543a4fa0245fcc3b77a73ba32c39e85e1232aba55ce538a77"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_alta__03_wall_centerlines.png",
+      "bytes": 45446,
+      "sha256": "b37d7e406d1ceaf66363a28208f86313c28a27c81e2aca9a40112a71ba27840e"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_alta__04_wallgraph_clean.png",
+      "bytes": 47804,
+      "sha256": "b1acefb35298282fbd1d581de7187daacd6d692c7a05dcf81eec98976506ea51"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_alta__05_rooms_clean.png",
+      "bytes": 39299,
+      "sha256": "5b0454489a054fe0fc6ad8942e050f5a2d07ce5274f6a95d11a404a951fa5e28"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_alta__06_topology_audit.png",
+      "bytes": 150884,
+      "sha256": "1a94734a0774f3833edd2d140f678fe731849eb2b7704f32573503428263ea40"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_baja__01_wall_mask.png",
+      "bytes": 20536,
+      "sha256": "cda50f055776df6f22e45786cf3d28afca62790093d066e78e3ce921e83afbb6"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_baja__02_logical_seal_mask.png",
+      "bytes": 18719,
+      "sha256": "2cc960688dd802adb49d2534c4d5058afe70843d5dc3dc1b46e323c0b847c418"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_baja__03_wall_centerlines.png",
+      "bytes": 41339,
+      "sha256": "a4e31ff648a2ee87883949169bf829fe8f751e50d8ba51555cc6211458bbce4d"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_baja__04_wallgraph_clean.png",
+      "bytes": 43706,
+      "sha256": "bff120eb5f10f717adc72ee926319e02c75d2076993df8944e0fca32895fe451"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_baja__05_rooms_clean.png",
+      "bytes": 39893,
+      "sha256": "1be814d01d591843e95ae2cb3c49685e34ab7eabcfafd55a36e16e858381bffb"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__planta_baja__06_topology_audit.png",
+      "bytes": 141915,
+      "sha256": "22e838df8e9d5db43e1d3f2e191eb6567e47b4b18c77bae1b83d744d4c0bb093"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_h/miguel_h__wall_mask_reconstruction_v1.json",
+      "bytes": 636739,
+      "sha256": "b2bd73e4a0be1fe53abdeae6cb1ff79400b1a995466e9e7f45ec44152034331d"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_alta__01_wall_mask.png",
+      "bytes": 22427,
+      "sha256": "8fa91b80d43df55b06e92820975343f7996596ae36a4ecec4470ae109fd283d8"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_alta__02_logical_seal_mask.png",
+      "bytes": 21934,
+      "sha256": "5e3a57e69ecb441a9703a1883eb7d55852b97acd9df57bb7890a3a93aff83912"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_alta__03_wall_centerlines.png",
+      "bytes": 45248,
+      "sha256": "4b0abe69258d6df3a59a94a4b65370837a2b485e674a90c0d9dd99422f27335c"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_alta__04_wallgraph_clean.png",
+      "bytes": 45889,
+      "sha256": "b2e5e9cb92b95c194ea169a0f0379bf3c0610d7598ecdbe0c0053857eedd2e67"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_alta__05_rooms_clean.png",
+      "bytes": 18296,
+      "sha256": "41f3dff503a0bba9a8858378004ab6ccecf0eaf2e4aaea2f6a920a699d62965c"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_alta__06_topology_audit.png",
+      "bytes": 370760,
+      "sha256": "c91d1c7d602f6265b22c5f82be6d8b24b4e03467144529f5a712dd722fc3b0dc"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_baja__01_wall_mask.png",
+      "bytes": 24177,
+      "sha256": "ceaeefabdf639ea39273ccc79dd3c8b17b586b49e880d467c0c8e0e6252d1a2a"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_baja__02_logical_seal_mask.png",
+      "bytes": 24271,
+      "sha256": "baf3453a4192d331e19985e1fe7989090d75c5595ccf1dfd02677b7a558c1a57"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_baja__03_wall_centerlines.png",
+      "bytes": 46427,
+      "sha256": "ce51b09225d1f51107a28c7777b72d7c47cf2c5625a3cac34e3bc30b338dab56"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_baja__04_wallgraph_clean.png",
+      "bytes": 47581,
+      "sha256": "07218ea888e9a24f628e399f659ed79f8304a56bbe32a074f2ddf819bcba9613"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_baja__05_rooms_clean.png",
+      "bytes": 16660,
+      "sha256": "c228ea9a3f2d2bba248312adead9a0eb60611470e2290f807b0aa6694faf0620"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__planta_baja__06_topology_audit.png",
+      "bytes": 219396,
+      "sha256": "81c6ace5854b7563ebb5ae29184c586473fa5599c62f3d9f85db59c1d0e77001"
+    },
+    {
+      "relative_path": "tests/output/wall_mask_reconstruction_v1/miguel_v/miguel_v__wall_mask_reconstruction_v1.json",
+      "bytes": 90127,
+      "sha256": "730dd1664d06f92b95bceb35086aa88956391015128fc62205f2b9518247750d"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__01_planta_baja_copia_1__wall_canonicalization_after.png",
+      "bytes": 73001,
+      "sha256": "229f97e137548525414ffba3732b0edfbd6ecccf58226b2352811a16341e2a26"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__01_planta_baja_copia_1__wall_canonicalization_before.png",
+      "bytes": 85430,
+      "sha256": "162362dcca3f43c4c34e17962a1490d63c71760760479b2725eb64b9d7a99173"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__01_planta_baja_copia_1__wall_canonicalization_gap_audit.png",
+      "bytes": 387183,
+      "sha256": "2613d322962ada9ef04b49e907c6f4a7353074df2d83d05dc923de1163c5d415"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__01_planta_baja_copia_1__wall_canonicalization_overlay.png",
+      "bytes": 379866,
+      "sha256": "1a435848b7351e6500a09ac8caa2014884e33141701aad1eb40971f109cdcea5"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__02_planta_alta_copia_1__wall_canonicalization_after.png",
+      "bytes": 35172,
+      "sha256": "fb4dedccb92c79a9e1614df06bf4ef341d1948f63da9ea137c095d9610ce4d6d"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__02_planta_alta_copia_1__wall_canonicalization_before.png",
+      "bytes": 40258,
+      "sha256": "871da7415aaafdd5e9009a0a977fae0594632e89a129bce99e795b3b99f2f49d"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__02_planta_alta_copia_1__wall_canonicalization_gap_audit.png",
+      "bytes": 203933,
+      "sha256": "dbb95bc93fce03e8f3c314187b5b459522430f57485da074a5048918ce63e807"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__02_planta_alta_copia_1__wall_canonicalization_overlay.png",
+      "bytes": 203705,
+      "sha256": "0fdaf601b99dbf7622ed3843196cc494757609be912150e663f9460a748c3ccc"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/casa_viri/casa_viri__wall_canonicalization_isolated_v1.json",
+      "bytes": 74599,
+      "sha256": "6f88c120e5462ddc845c03fe4b92290f4e04ce69cd46e56541b29873631b9e78"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_alta__wall_canonicalization_after.png",
+      "bytes": 19047,
+      "sha256": "3ce994267ef4d0b738eabb314cd6c6fa047e64c57761dca543fe772ccdf78731"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_alta__wall_canonicalization_before.png",
+      "bytes": 23513,
+      "sha256": "cf5a25a6b792f8f1aa903982640c8b3743a0dcc5c66d4fac5d8d071bf6080400"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_alta__wall_canonicalization_gap_audit.png",
+      "bytes": 145510,
+      "sha256": "f89a5ddcee0c51f8eecc82d76b346e8521a5a986bf8c5e51395a3870a0ae3ae5"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_alta__wall_canonicalization_overlay.png",
+      "bytes": 145062,
+      "sha256": "9b54fd5966a7bae18f37cf31c0f47a87968941643cf711fb559916e3201bbc6c"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_baja__wall_canonicalization_after.png",
+      "bytes": 19358,
+      "sha256": "05aaacb70f1d6c5a79a9413f83cc5d98b5f8051d8ef8215e5db58e5ee006fdc2"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_baja__wall_canonicalization_before.png",
+      "bytes": 21029,
+      "sha256": "01d20b04689cfb4662dfe51fd51dc6c2e533b20c9b383adbf462e5fe57b39955"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_baja__wall_canonicalization_gap_audit.png",
+      "bytes": 150914,
+      "sha256": "45a6af5b795e2b4d3510c896dd72044e72647fca050c75bacbf37873f7e6cb40"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__planta_baja__wall_canonicalization_overlay.png",
+      "bytes": 150645,
+      "sha256": "bf7086b1d22a7dce865fd6e66cfc5b4ce2d70856478b7a2db1d47de7bb910ffa"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_h/miguel_h__wall_canonicalization_isolated_v1.json",
+      "bytes": 29837,
+      "sha256": "7c265c717d9eaf3076e493ef9d25d7d8c0df7e6a844e2427844b9f68cb2e6420"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_alta__wall_canonicalization_after.png",
+      "bytes": 45583,
+      "sha256": "ae0bef4cc74d5feadef63f26aae702d5839b6be843c243e09f6074c802f533b8"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_alta__wall_canonicalization_before.png",
+      "bytes": 48455,
+      "sha256": "5645120ff0eecb45c18cf94fc0f1d410503e8d280fc19dbc44494d36809339c4"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_alta__wall_canonicalization_gap_audit.png",
+      "bytes": 381245,
+      "sha256": "c8dc97ed4ec168336c7bd9cdceb1dbf322d08f970a38c51ed321ad3be252915c"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_alta__wall_canonicalization_overlay.png",
+      "bytes": 381105,
+      "sha256": "757a6d5e4de156502eb0786766b28601ed48df521ca966ba05f5edeb1004b415"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_baja__wall_canonicalization_after.png",
+      "bytes": 57390,
+      "sha256": "ea68f82042cd94cbf04c890a394ce2b5a167b840c2d6bf30b5fabff8cba5a70e"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_baja__wall_canonicalization_before.png",
+      "bytes": 63684,
+      "sha256": "e9bd56c5d237c3825666a540dc0d4dc084e3b7cd69890a1a08914a37203b20a5"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_baja__wall_canonicalization_gap_audit.png",
+      "bytes": 401355,
+      "sha256": "bb8d84e023175bc091bad40ff97538a24489bc04f7c742ec246f4d460cbd0ef4"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__planta_baja__wall_canonicalization_overlay.png",
+      "bytes": 400535,
+      "sha256": "dd90cd79d7428825f5d3d37f5f5f3a38ed3fc0eda23c2bcc44753a64ad8f392d"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/miguel_v/miguel_v__wall_canonicalization_isolated_v1.json",
+      "bytes": 44140,
+      "sha256": "21bd59f30d5aeae7d2d5ee9c080992f9f4f9a7ffa1ba3a2f275a78115dd69527"
+    },
+    {
+      "relative_path": "tests/output/wall_canonicalization_isolated_v1/wall_canonicalization_isolated_v1.zip",
+      "bytes": 2183508,
+      "sha256": "69206ff0577b2dc78c1120c6ce5aa990c51c5b67b0f1d03282ed2246f66c49ff"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__01_f03_structural_seed.png",
+      "bytes": 54750,
+      "sha256": "d2a36163f915c6c061b3931038225e6ed09fcdac26ceab2e5285eb069d34eeeb"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__02_context_clean_candidates.png",
+      "bytes": 157726,
+      "sha256": "06af78e4f84561c944fa14a80633870d91e7ddb0392b3da94885bb71e4ee1389"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__03_hybrid_wall_mask.png",
+      "bytes": 40654,
+      "sha256": "5f95ba4eff1152ac29a1af4e35adb0f8f06ea5e485b5a49949a4bcba72aee4bc"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__04_hybrid_logical_seal_mask.png",
+      "bytes": 39850,
+      "sha256": "48c5166a69a41c179bc9a781cfb323a84e96f27913ecca785d70a070582e1991"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__05_hybrid_wallgraph_clean.png",
+      "bytes": 149222,
+      "sha256": "4658e911e72e315e002291e600e32069e5521b8155a3da88b5f64f52f92dcbe3"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__06_hybrid_rooms_clean.png",
+      "bytes": 85781,
+      "sha256": "a832b52c658096c0cb26abb8ea16f8c8c0628f0851dcc6e6d239b2677865ef2d"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__07_hybrid_topology_audit.png",
+      "bytes": 455461,
+      "sha256": "487e0ec382ef771db60945a7b9e5e35d888cbb3b060e67f69fe61b6744ef01aa"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__01_planta_baja_copia_1__08_context_exclusion_audit.png",
+      "bytes": 394157,
+      "sha256": "88c375637d31b538ef0f80daad101bb38ba1ebf43fa767f244913fe526fa1bde"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__01_f03_structural_seed.png",
+      "bytes": 27197,
+      "sha256": "29a9d37f915e552cdf46f4723294214d039532b5934c541d5c697249fa673957"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__02_context_clean_candidates.png",
+      "bytes": 76432,
+      "sha256": "42489f492a151993241ea6b6e5de069e25ac4e18c2be0cd16b61f08b5d0e61f0"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__03_hybrid_wall_mask.png",
+      "bytes": 22096,
+      "sha256": "4a83005411d9929b1e23163cc33ba35546261d9537771777bb88e20ba1e64b4e"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__04_hybrid_logical_seal_mask.png",
+      "bytes": 21834,
+      "sha256": "0b2fc707ed4831fa79206c199f2ea6b2fff61378374787df8266c50ea982e44c"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__05_hybrid_wallgraph_clean.png",
+      "bytes": 52862,
+      "sha256": "215dd672ffb660eeb537585929353d62cf611b225eb95a0acde84647d1844233"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__06_hybrid_rooms_clean.png",
+      "bytes": 41712,
+      "sha256": "316d8dc0271d4ca8fd56b0d6fd0489f861458982428232426ddd18f77a27bd3d"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__07_hybrid_topology_audit.png",
+      "bytes": 207969,
+      "sha256": "98cec20288bcad44f7f782be38f67b1fbf4b2e5b928dd87dbdebd907dd9c670b"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__02_planta_alta_copia_1__08_context_exclusion_audit.png",
+      "bytes": 210085,
+      "sha256": "55f3a66d48ed718c0ddb9edfa01c8dcf48769492fa5f789fbc0d9fe8e599535a"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/casa_viri/casa_viri__f03_mask_topology_hybrid_v1.json",
+      "bytes": 298315,
+      "sha256": "1949a1bfc0445dfed4527c68f9f0c89159aa3c139879e94e6053fa4fcdc3b668"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/f03_mask_topology_hybrid_v1.zip",
+      "bytes": 2776183,
+      "sha256": "321254d611093ee8cf273005a9c6be2775c7d32f66015a3d61e00168fba2e7fa"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__f03_mask_topology_hybrid_v1.json",
+      "bytes": 548318,
+      "sha256": "748885316e75ca88b6fdce0c16f849954b28a40a5a854894e107e6719076fc95"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__01_f03_structural_seed.png",
+      "bytes": 14541,
+      "sha256": "4efd4c81bbadea6afc0c088032c24f2e97f9ae2bb1e03862da3a7543b377da7f"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__02_context_clean_candidates.png",
+      "bytes": 54066,
+      "sha256": "83226a1fcab8dc444c73b620434ff5e9e471ea5a711db07976af41efb2d5c5d4"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__03_hybrid_wall_mask.png",
+      "bytes": 17688,
+      "sha256": "b102c346dbdf0fdbb778738b0b35a054e7ee4d29589da8155b22503eff0dac24"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__04_hybrid_logical_seal_mask.png",
+      "bytes": 15946,
+      "sha256": "ace569745bf52ad7efe37b9d19fbedc077e87ef6d71384361c764eeb129a0abd"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__05_hybrid_wallgraph_clean.png",
+      "bytes": 43467,
+      "sha256": "4fe288814098326298130b69c6d53b2de78374bff649f8b12338e6c92a3bfb48"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__06_hybrid_rooms_clean.png",
+      "bytes": 36471,
+      "sha256": "3c5ae0a2cbde85ed8e3f516c8f5dd34f8e422eae527abfb5c01738f978215daf"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__07_hybrid_topology_audit.png",
+      "bytes": 137879,
+      "sha256": "23565c368d2a95a2c7ca242c3220e1b501579e19e56030aacbde02fceacc12f0"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_alta__08_context_exclusion_audit.png",
+      "bytes": 141829,
+      "sha256": "2c07895be26a69ae18ece41e71bc6d77aee62a02030566a8964a579a0eee872c"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__01_f03_structural_seed.png",
+      "bytes": 12283,
+      "sha256": "3683f647cf578816ddbe6527f7cc10a41950e4a4bca00e31c8209a8b8b3e3fe4"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__02_context_clean_candidates.png",
+      "bytes": 59550,
+      "sha256": "e8a4e8368ca2f6f239f34e66a2f2b9a14c57ebc7c320f5c0f37f55bcba6223ce"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__03_hybrid_wall_mask.png",
+      "bytes": 24306,
+      "sha256": "ed097a5636c34908d84c6bc8ec00eb745f12ccd98ef0151d4dda94259bb9eef2"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__04_hybrid_logical_seal_mask.png",
+      "bytes": 22293,
+      "sha256": "d39cb194b07e28c7d8e29f0014474f00d4675ea7ee6daa87e64ad3c348be34db"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__05_hybrid_wallgraph_clean.png",
+      "bytes": 56449,
+      "sha256": "2c437298915c72abce7aa50bd2d453c1f33ad8f21d47094b8c612c3133c97193"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__06_hybrid_rooms_clean.png",
+      "bytes": 43599,
+      "sha256": "c7f4f68e58a7d126402de7529ad35006359c1b16865b27e4f2e5b8eff5754362"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__07_hybrid_topology_audit.png",
+      "bytes": 155113,
+      "sha256": "9d9cb24dd64c7e66f7c66c6a8639b628fcf66d1af0d044294ee5fb441789aea1"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_h/miguel_h__planta_baja__08_context_exclusion_audit.png",
+      "bytes": 140957,
+      "sha256": "89b8df6c5ffb11377d1c6da36aeb6c99c2d23cdcd3b351978f30042a6038a232"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__f03_mask_topology_hybrid_v1.json",
+      "bytes": 313182,
+      "sha256": "58d0cacaacdc5eec0a72ea094306a8b6f3b2b68170e5be1616a7535b0a6455ed"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__01_f03_structural_seed.png",
+      "bytes": 31600,
+      "sha256": "be6871e365c4c33259d3f73492081e5db053119176b6aa2a7f3ff8a8528ed1ca"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__02_context_clean_candidates.png",
+      "bytes": 129695,
+      "sha256": "495293015b5863e0be71f252d94ae2f4a0d1f09424bb27424aec2d9710952878"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__03_hybrid_wall_mask.png",
+      "bytes": 36949,
+      "sha256": "f4db0786e7f3adb4295c1a030bec647f85ffd54391f933c849c060ddafc8bbb9"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__04_hybrid_logical_seal_mask.png",
+      "bytes": 36961,
+      "sha256": "75accbbeab6c5f6d3911b7994dfbcd97e54d4719fe1f7b25ac1acc85ecce2ca7"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__05_hybrid_wallgraph_clean.png",
+      "bytes": 112415,
+      "sha256": "ec192cb9a0f5a842938db58c83ec4006bcde6aa29ac5d657727d018b4a181941"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__06_hybrid_rooms_clean.png",
+      "bytes": 79919,
+      "sha256": "f79a835b4a124e4b8d854c163c54dac6f3a0c416c1a4094a8db45572fd9950e2"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__07_hybrid_topology_audit.png",
+      "bytes": 410799,
+      "sha256": "bc3343c0338f42f73a7cb9268d21ba3b39d3596f9ced5005a699197ea054edb6"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_alta__08_context_exclusion_audit.png",
+      "bytes": 378603,
+      "sha256": "d2cf745731e8cfc24a90b949e53e64d3a4ec0e890def841952afc8354786a642"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__01_f03_structural_seed.png",
+      "bytes": 44695,
+      "sha256": "534ae3f0383e2592b5bb15750c5c1083e5015ca48b9ddd2536b5c1f1918d507b"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__02_context_clean_candidates.png",
+      "bytes": 69809,
+      "sha256": "754885c8e19a52ec5a45938f33d5c867f3ef8ddb469d958a676885f4b53d3029"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__03_hybrid_wall_mask.png",
+      "bytes": 29964,
+      "sha256": "e251a497214c32747fa4115b6737421ae40e75829ff2357de5e26ffcbfcde10f"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__04_hybrid_logical_seal_mask.png",
+      "bytes": 29782,
+      "sha256": "88b0736085883da50be84261a64eff4b31e348a7357f73c819e3da5cbef24486"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__05_hybrid_wallgraph_clean.png",
+      "bytes": 60457,
+      "sha256": "936302e0756b56c06482a0c1839d862bc757d3003cff4bbba8e9757e6635168f"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__06_hybrid_rooms_clean.png",
+      "bytes": 50101,
+      "sha256": "1e34025df4ca8fa3bfe59fbabc5ce9c74711ab23cbc5843575aff435f667f970"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__07_hybrid_topology_audit.png",
+      "bytes": 398983,
+      "sha256": "744d916bf17e1970fe18c7ed5e603f59e6a6cba56f57262e35f6f08842a44874"
+    },
+    {
+      "relative_path": "tests/output/f03_mask_topology_hybrid_v1/miguel_v/miguel_v__planta_baja__08_context_exclusion_audit.png",
+      "bytes": 389658,
+      "sha256": "719cfaab69faf1cb6194f2a1f5f1697a04d1f27239199d840902a6af88ce2294"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/casa_viri/casa_viri__01_planta_baja_copia_1__architectural_core_clean.png",
+      "bytes": 78972,
+      "sha256": "c2e95db4fb6cf89ac8261b65f2cd142870e2ee4e6f9b38fbe9e4820af90e24fc"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/casa_viri/casa_viri__01_planta_baja_copia_1__architectural_core_overlay.png",
+      "bytes": 375453,
+      "sha256": "471120580e5ad38e95dfac83003f9e0ddc2f3b6806c01d18d487bcf2e430fef1"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/casa_viri/casa_viri__02_planta_alta_copia_1__architectural_core_clean.png",
+      "bytes": 38190,
+      "sha256": "32c392934d25a62088fa775cdafab257fa654aa84547265295dd3b09507b6fd9"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/casa_viri/casa_viri__02_planta_alta_copia_1__architectural_core_overlay.png",
+      "bytes": 203497,
+      "sha256": "7b55e791db4d7f80397ba247a4e161060181f17b71da2a76fa3d1666b98dd913"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/casa_viri/casa_viri__f03_architectural_core_visual_v1.json",
+      "bytes": 4830,
+      "sha256": "7b247f73a2bafe866c3f203500b0474ab1a8ee231d9b42e25459a053b92889c3"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_h/miguel_h__f03_architectural_core_visual_v1.json",
+      "bytes": 4757,
+      "sha256": "986f572e892006dc5d21a2a83c015239df4478b25dfd6a266ac5fedfea984432"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_h/miguel_h__planta_alta__architectural_core_clean.png",
+      "bytes": 22262,
+      "sha256": "0450e3df54fd959f6a8298b83876fce42d64b56f9cbfb9deae7226f9ab45d02c"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_h/miguel_h__planta_alta__architectural_core_overlay.png",
+      "bytes": 144976,
+      "sha256": "37ffb29bb3349e877089df264fab2be19e547df041a40305a71762abf56bf285"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_h/miguel_h__planta_baja__architectural_core_clean.png",
+      "bytes": 19411,
+      "sha256": "5546ffc7e1e270ec50052e6c5493a043198f1a608b96243c6bc900419d2df2d2"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_h/miguel_h__planta_baja__architectural_core_overlay.png",
+      "bytes": 150567,
+      "sha256": "90e2611118595e66240979d3e0450021db334ffca3534f2614996750c4af9e13"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_v/miguel_v__f03_architectural_core_visual_v1.json",
+      "bytes": 4751,
+      "sha256": "3a26f7c964351a6433c2ec8d37a1f80426cb8ddb331052cd2f4037abf9b1fcfa"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_v/miguel_v__planta_alta__architectural_core_clean.png",
+      "bytes": 46504,
+      "sha256": "b4e72fa94de44daf98080c53d648637cbca4a4b8603b0c8c9153b47630b3d68b"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_v/miguel_v__planta_alta__architectural_core_overlay.png",
+      "bytes": 380030,
+      "sha256": "3eb671126c2cc401e65897dd73a1d68d4b7466bc612f65c0ed3fc53c72052e34"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_v/miguel_v__planta_baja__architectural_core_clean.png",
+      "bytes": 61311,
+      "sha256": "34d1d385088f05beddbaa5781958206ba58f700eda3b70cac49c1202008b942b"
+    },
+    {
+      "relative_path": "tests/output/f03_architectural_core_visual_v1/miguel_v/miguel_v__planta_baja__architectural_core_overlay.png",
+      "bytes": 396248,
+      "sha256": "68972b93311c141ed01b86c09a945827ed637153e187da20b0b26c980d886e71"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/gemini_second_call_history.jsonl",
+      "bytes": 4489,
+      "sha256": "c6103704f86651bf456a3099d9d8aeddcf019d4c808e734a6352ee3ac49a5935"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_audit.json",
+      "bytes": 4791,
+      "sha256": "85fa140b11b22ffaa70b3547ca8f16356edb8ab44f40d02811e2e6497b92e2a2"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_consolidation_preview.png",
+      "bytes": 659443,
+      "sha256": "641d1eea24d48d5f8877bfa1336534190978c6cf706d484dfaeed2eb2c827c20"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_input_original_levelview.png",
+      "bytes": 663298,
+      "sha256": "62e0f9b7abac600741cee6299a32cc1d83a4101cc1e454a898b946749d77bc27"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_raw.json",
+      "bytes": 42418,
+      "sha256": "47459b2004669af034b3b538fa9fedf202d655aa44de8915b5c0edf1ecab03dc"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_result.json",
+      "bytes": 3939,
+      "sha256": "56944c158fc50832f9b730a4176a4904e301dcb7f03dfdeec18520ba0151fa7f"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_text.txt",
+      "bytes": 3651,
+      "sha256": "58e98c60b7a3a9a1dfdd25033679a19388d9b655a0d258d7bf9b1257b72a6324"
+    },
+    {
+      "relative_path": "tests/output/wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback/miguel_v__planta_baja__second_call_transport_attempts.json",
+      "bytes": 2317,
+      "sha256": "629529ff9061e325d892eb8dc3712d9c26cdf4cb73ca9823089a1de33330e967"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__01_planta_baja_copia_1__01_call2_walls_only.png",
+      "bytes": 67735,
+      "sha256": "b358560fd36d3522ca48787f534020ef754dc5bdf4dbfb17955eacf689f13ffa"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__01_planta_baja_copia_1__call2_review.json",
+      "bytes": 4828,
+      "sha256": "5f9a147ce1a6a5def5c9ea9106205a350babad7e1c842ec4c9a64e331d6ebbe3"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__01_planta_baja_copia_1__call2_validation.json",
+      "bytes": 10432,
+      "sha256": "910681e73584b371aabf1d5a87c5e2010910067e2f7d7e9f643a85434420f5f0"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__01_planta_baja_copia_1__final_wallgraph.json",
+      "bytes": 182738,
+      "sha256": "3b9fddf2780b126272259ee165315d1105eec9c393f54cf22a8a42a059f8cca0"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__02_planta_alta_copia_1__01_call2_walls_only.png",
+      "bytes": 34418,
+      "sha256": "0a0143fa0cd024dba4bb21dc2b455eae867bd0e9545b0f6918a340ea8c312903"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__02_planta_alta_copia_1__call2_review.json",
+      "bytes": 4362,
+      "sha256": "b71efcd258d1bb8ed1c35ff3eb4c86620c851dbfcafa57235e7917c655d72572"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__02_planta_alta_copia_1__call2_validation.json",
+      "bytes": 9611,
+      "sha256": "de212daeb1ef7ffcf6012544f940f126ddc1bd7002dc4beb1087dc53dd72bd4b"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__02_planta_alta_copia_1__final_wallgraph.json",
+      "bytes": 95775,
+      "sha256": "499c60c7c67201880d58f60b0a6c83df09a9ebf953538cd502cdb29e2f37d299"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__call2_history.jsonl",
+      "bytes": 18080,
+      "sha256": "5fef89d526ccf9a22e9f861eb80770be5a4ff7c1f234689e971e9d4429e1e424"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/casa_viri/casa_viri__call2_report.json",
+      "bytes": 1573,
+      "sha256": "82b45a7d57f27cd1e684080e0b79b409b35c0fe3f636e2402f7ad50ea7fbd4f2"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__call2_history.jsonl",
+      "bytes": 40694,
+      "sha256": "b275055b8b9bb5293e768efb8b26f6417e068f1b0b25bd7ecec71012377f61c8"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__call2_report.json",
+      "bytes": 1620,
+      "sha256": "07996ae6697b236d55bd3fc11fda99494fdb5b7592d99904c0d3ccc6abe9f2b8"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_alta__01_call2_walls_only.png",
+      "bytes": 23623,
+      "sha256": "bc3e708a42b2f10a3c1c918b73a69e263e06012d55fefadf5ab38f79efe88e19"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_alta__call2_review.json",
+      "bytes": 14747,
+      "sha256": "edd01001483e385b54a90ed4e03f81a2356ca2f4d105d8224bc70ee7b14ae63f"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_alta__call2_validation.json",
+      "bytes": 34366,
+      "sha256": "0df74b9707df47f0b19a3561f0c4eb360ef6eb9518954f708b2d1beba17ef404"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_alta__final_wallgraph.json",
+      "bytes": 205790,
+      "sha256": "4d213814dd359a93f665f4842385463310ccbfb295fa2c3a296aa069b7036b32"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_baja__01_call2_walls_only.png",
+      "bytes": 41914,
+      "sha256": "e1b350ec90d389fd3b9324889451a6b81d6b9b7cdc4bb7d8b86cde12dbb38690"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_baja__call2_review.json",
+      "bytes": 11474,
+      "sha256": "feb6c830ac08526326a27634ad002234c20a4d07db8a961b7256af67f143ad02"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_baja__call2_validation.json",
+      "bytes": 23156,
+      "sha256": "827853efdd93ed2b40bb7e1c7db77853eb124479a68343d175db038cfc18995f"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_h/miguel_h__planta_baja__final_wallgraph.json",
+      "bytes": 280125,
+      "sha256": "26b7f7ba583529213ca8ef448cc90d35146297aee4633fbfca01f237e3050e70"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__call2_history.jsonl",
+      "bytes": 17185,
+      "sha256": "6a77bc22e015dec9d53b2b3ddceb1a6420006188f866039fd0a3821fa07d017c"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__call2_report.json",
+      "bytes": 1366,
+      "sha256": "7f12bbf8334316a4d98f9fd7990762c5e08649028976a4757ad6605621dc3a95"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_alta__01_call2_walls_only.png",
+      "bytes": 78824,
+      "sha256": "663bba0f09c13403ac0b5c612c1ab0a066f3ec6807cca949d443aebfb62656d3"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_alta__call2_review.json",
+      "bytes": 3085,
+      "sha256": "b0059ffeb93cd461b23b6c3300799e8772285cc7ceeb9e276ecfbe50809018bd"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_alta__call2_validation.json",
+      "bytes": 6657,
+      "sha256": "d349f3a64520d1ca02f55d17c135e0a6881e479ba734b710e2762d55365472b5"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_alta__final_wallgraph.json",
+      "bytes": 153571,
+      "sha256": "ccc810e0bb632535bf0ac87b386f990aa5715b7d8101bf1b8516e19662cb42c8"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_baja__01_call2_walls_only.png",
+      "bytes": 46348,
+      "sha256": "a735811fa5a87418a8b1280cb1f85cd36e8ee700a4141deb9edebf0331ee6fdb"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_baja__call2_review.json",
+      "bytes": 5442,
+      "sha256": "a541a5619061d21a2eb8469095c0c5023c4b544e5e9a5025f4abbf41aaf242d6"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_baja__call2_validation.json",
+      "bytes": 12579,
+      "sha256": "c081e9fce9c105e68a2209435120d0c3b306c801065f1f343c9d6f6f7623cb09"
+    },
+    {
+      "relative_path": "tests/output/quantia_spatial_v1_call2/miguel_v/miguel_v__planta_baja__final_wallgraph.json",
+      "bytes": 89843,
+      "sha256": "26aa98a025e911fb027611ba690cf5cd38d201f54052cd2eb6329b60740a73bf"
+    },
+    {
+      "relative_path": "tests/F03_MASK_TOPOLOGY_HYBRID_PROBE_V1.txt",
+      "bytes": 386,
+      "sha256": "593631a1e1fc6d8b96ebafeb21c00bb23c6efda71aac4a8408ffb30d959f2568"
+    },
+    {
+      "relative_path": "tests/WALL_MASK_RECONSTRUCTION_PROBE_V1.txt",
+      "bytes": 890,
+      "sha256": "3e52d514b8318f3bfb9a2f5e5d1d3aae98c2282fa16b509f5d82fd25485a5816"
+    },
+    {
+      "relative_path": "documentation/history/output/casa_viri/casa_viri__01_planta_baja_copia_1__solver_exclusions_probe_v5.png",
+      "bytes": 172405,
+      "sha256": "a5829e16fc590e5bfa8e98e0198adb84eb8d3c02de0e507a9198871e8a946b20"
+    },
+    {
+      "relative_path": "documentation/history/output/casa_viri/casa_viri__02_planta_alta_copia_1__solver_exclusions_probe_v5.png",
+      "bytes": 84809,
+      "sha256": "1bc9817aff7400c6f6b18fb4acbc56076df6f0d2baf81cb4a52ddfda65464fa8"
+    },
+    {
+      "relative_path": "documentation/history/output/casa_viri/casa_viri__solver_exclusions_probe_v5.json",
+      "bytes": 698753,
+      "sha256": "3b1d1900c426e3ac88eee104c4fc3f0a1ad3fe019665d178a2fdbc08c99b0bb2"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/casa_viri/casa_viri__01_planta_baja_copia_1__f02_compare.png",
+      "bytes": 184243,
+      "sha256": "7430af56a561503e23b5d26a5fe3fca1f1d9bfee8495d9347228d202c76e6110"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/casa_viri/casa_viri__02_planta_alta_copia_1__f02_compare.png",
+      "bytes": 107020,
+      "sha256": "434fe973e868d0afe8316cb564fe90452d42ecba40760599bbe1c8d68f4215ad"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/casa_viri/casa_viri__f02_global_context.json",
+      "bytes": 18285,
+      "sha256": "4975db0af00e7f2e9ed12f5a5730452eceb15a270364ad2209f966a2ef4b5849"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/miguel_h/miguel_h__f02_global_context.json",
+      "bytes": 13951,
+      "sha256": "5cad9767fe2920b9ac75a2a11b8a851ac29ce38be778cae91d80787bb3a08969"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/miguel_h/miguel_h__planta_alta__f02_compare.png",
+      "bytes": 214893,
+      "sha256": "4122484d7decc5f264f28ea196624f7bf793608ef3dfd0bb3b924258266af33b"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/miguel_h/miguel_h__planta_baja__f02_compare.png",
+      "bytes": 228760,
+      "sha256": "208d00a6787d42792b72175a0d2fd12a27fa782192ab2fd938632e721fa31af4"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/miguel_v/miguel_v__f02_global_context.json",
+      "bytes": 18130,
+      "sha256": "8228a7a67637e196045affc8eb58ed045fab9dc911ec4d4bc23d2a8dd14e6521"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/miguel_v/miguel_v__planta_alta__f02_compare.png",
+      "bytes": 387098,
+      "sha256": "b6ff54fd0d70d779534bd93c1f4ae95bd7c9fda2c2391295fa8bc9923dd04cc7"
+    },
+    {
+      "relative_path": "documentation/history/output/f02_global_context_standardized/miguel_v/miguel_v__planta_baja__f02_compare.png",
+      "bytes": 519335,
+      "sha256": "8a96c9ad2dd3d9b59c00a4485b6f77cd732bdf8b54ecc2b1b02bf9fd7678af7d"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__01_planta_baja_copia_1__element_dimension.png",
+      "bytes": 455867,
+      "sha256": "70c8250f4edbb9b57b3c7d0444490545e45f36106a32732da781cdb92e61bc94"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__01_planta_baja_copia_1__element_floor_finish.png",
+      "bytes": 389403,
+      "sha256": "d8cb731815ff574875a0cd6b0cf1271943d925d0285ad956e8a09b7b67dd0774"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__01_planta_baja_copia_1__element_stair.png",
+      "bytes": 376140,
+      "sha256": "1785852ab036ffd7f24fe632e50fc18118e32eb1f254d5218029764ddfd9ee7f"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__01_planta_baja_copia_1__element_text_symbol.png",
+      "bytes": 390744,
+      "sha256": "247b291f0c0c71eec5c343156e9698ab25fc7a6e6fbe7e78d59bdca3cf2fc178"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__01_planta_baja_copia_1__element_window.png",
+      "bytes": 384743,
+      "sha256": "9bb0a18861ac22e98e24b5bb7332fcae5236d970a394a1f7b20dd43f7a31d8f2"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__01_planta_baja_copia_1__walls_only.png",
+      "bytes": 397810,
+      "sha256": "0ad7d8497ad5963e53c075ca558d3ea7d8c979e28d76975d5bf8ba4109ae0fba"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__02_planta_alta_copia_1__element_dimension.png",
+      "bytes": 257658,
+      "sha256": "19ca9c6c1be6a58dd89512ad7781734854e454b2640e2bc7fa57ecda8f70df16"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__02_planta_alta_copia_1__element_stair.png",
+      "bytes": 205679,
+      "sha256": "8083cd2839790c317d53fada2d4583bfec8cdf87c881f4080afd0f1fc690403a"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__02_planta_alta_copia_1__element_text_symbol.png",
+      "bytes": 219982,
+      "sha256": "c019e916c08c3e92c98a9ed65249eae4d47b8ee0dea608d9015f62153c338807"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__02_planta_alta_copia_1__element_window.png",
+      "bytes": 207509,
+      "sha256": "06c93a46de77488597b27d579b90abf565d229527c3aa820ac1093c261c53a97"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__02_planta_alta_copia_1__walls_only.png",
+      "bytes": 213161,
+      "sha256": "de9d8ddc558919e5264e1dc603cedcf3a335cc968d72ad25c3a6b572cc090f95"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/casa_viri/casa_viri__f03_element_isolation_probe_v1.json",
+      "bytes": 144331,
+      "sha256": "e9df37a1a392b0289a7d108621fd8de8715816af272d7e3e8d60b83ac113cdfe"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__f03_element_isolation_probe_v1.json",
+      "bytes": 91050,
+      "sha256": "6258306fde42171d43e8885578bc4dac297f3a22bb279e5b07f05c080f833a95"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_alta__element_dimension.png",
+      "bytes": 169923,
+      "sha256": "5eeb98ed9a1cc6b97da16fccbc88edfc6a57fd1d7c2f9eba31e23566fa570fe7"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_alta__element_floor_finish.png",
+      "bytes": 161844,
+      "sha256": "2d59897d803e23ea8971b6106b8b9873d1e199562944f44590b2a1f2071c90b1"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_alta__element_stair.png",
+      "bytes": 166696,
+      "sha256": "9edf95a75d1d959d3a2006f4495b7ecb84e37182eecb32513de787bc38ce1489"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_alta__element_text_symbol.png",
+      "bytes": 162953,
+      "sha256": "93134f37824278c73d79431247b45fc0e9de321f9db0b0dd674fbeb325cbb6af"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_alta__element_window.png",
+      "bytes": 158814,
+      "sha256": "fb81671793a09340e6d75c344eb4fcee8679243498f443df068ab63a8517cc77"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_alta__walls_only.png",
+      "bytes": 162402,
+      "sha256": "0ae47b9faf19629cb1c350b82dd40f2850568730f78152d325b2fb222802fd3f"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_baja__element_dimension.png",
+      "bytes": 176691,
+      "sha256": "f2d8c43e14521f39f6d612806a46525f007d21050fbc702549bef0fd8154aa21"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_baja__element_text_symbol.png",
+      "bytes": 171711,
+      "sha256": "d1de3cd3578f7c3c31e4eae79efb8a20a36f6d71d9ab782709def492ca56820e"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_baja__element_window.png",
+      "bytes": 163257,
+      "sha256": "3816875c609f73515dcf64f9a5f3780f97a0d90cb29cc36beccb1dd4153f1a25"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_h/miguel_h__planta_baja__walls_only.png",
+      "bytes": 177101,
+      "sha256": "ad57b7f28c056053452e02f01c25f342c68752dd7a7a16c37b70db504cb3f909"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__f03_element_isolation_probe_v1.json",
+      "bytes": 221874,
+      "sha256": "a76624fdfdbfafaf5c8aef2b2357141fbe2749b96a01c9000453ce93db2bb3cf"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_alta__element_dimension.png",
+      "bytes": 475161,
+      "sha256": "0fe8eeeef121173d7eae4106910d2a06221e69a1d7c029e671e818b77397112c"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_alta__element_floor_finish.png",
+      "bytes": 426971,
+      "sha256": "73e99e3b2869079856ebf76d8e310c044d4ef6efb888bca72d913ce11fec6e34"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_alta__element_stair.png",
+      "bytes": 414265,
+      "sha256": "0e597ae8e3a05e91d40b2e8e57e1fe7cb1b09366d4b4c9f7364ff6e5adfb150c"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_alta__element_text_symbol.png",
+      "bytes": 442193,
+      "sha256": "be53bdb06bc8dc10b4f7f4556e8c61d15bdb6738437b711bc54455148a5e29b0"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_alta__element_window.png",
+      "bytes": 412140,
+      "sha256": "9c33e64fe5d78e8133b3fcad83f608ffb812bf3289113cecfd4b51f44ce4e3b2"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_alta__walls_only.png",
+      "bytes": 418551,
+      "sha256": "604f81c95875c8a290125a6486e523eeaffeeb4de633fbc81934bd06009583b4"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_baja__element_dimension.png",
+      "bytes": 506636,
+      "sha256": "726f412c84eec0351b17f3d5ac77fe1a5c3f0fc388e398cc231f2c4288c8ac13"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_baja__element_floor_finish.png",
+      "bytes": 473129,
+      "sha256": "2d8fd808d1f92975a71417ba4aeac424d42c84a5d74131738eb54dcb3f206b48"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_baja__element_stair.png",
+      "bytes": 465743,
+      "sha256": "b50f8f531eb7e5d2154a04d28842846227c12b6046fa47c212e82cdef020634d"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_baja__element_text_symbol.png",
+      "bytes": 488479,
+      "sha256": "3581fa43f705955d69e5697f77abf7f61e882fcfcb10e0780edb428d864f7925"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_baja__element_window.png",
+      "bytes": 459247,
+      "sha256": "71ad21f5dfebf022bd36f7cbe5807e88583eac7500f5b12a18b1d720fc55da60"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/miguel_v/miguel_v__planta_baja__walls_only.png",
+      "bytes": 463266,
+      "sha256": "833d3ca6b68a9fb67b5ec6eb7330044c7b7a00c5b6a7e433868746f90a816375"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v1/resutados pruebas.zp",
+      "bytes": 7156580,
+      "sha256": "a87d91ba7c85eba7afe2897587eccbe7483863925df694dcd820e586602452dd"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__01_planta_baja_copia_1__element_dimension.png",
+      "bytes": 455867,
+      "sha256": "70c8250f4edbb9b57b3c7d0444490545e45f36106a32732da781cdb92e61bc94"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__01_planta_baja_copia_1__element_floor_finish.png",
+      "bytes": 389403,
+      "sha256": "d8cb731815ff574875a0cd6b0cf1271943d925d0285ad956e8a09b7b67dd0774"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__01_planta_baja_copia_1__element_stair.png",
+      "bytes": 376140,
+      "sha256": "1785852ab036ffd7f24fe632e50fc18118e32eb1f254d5218029764ddfd9ee7f"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__01_planta_baja_copia_1__element_text_symbol.png",
+      "bytes": 390744,
+      "sha256": "247b291f0c0c71eec5c343156e9698ab25fc7a6e6fbe7e78d59bdca3cf2fc178"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__01_planta_baja_copia_1__element_window.png",
+      "bytes": 376214,
+      "sha256": "ad18960a20cd9f6b2766bc6b6c749ffce56d68d310348faff10f89d76288733e"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__01_planta_baja_copia_1__walls_only.png",
+      "bytes": 396590,
+      "sha256": "8001197672c1338a947e881e86b8d4d1dd00614705e97e1bca9251fe63ff00eb"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__02_planta_alta_copia_1__element_dimension.png",
+      "bytes": 257658,
+      "sha256": "19ca9c6c1be6a58dd89512ad7781734854e454b2640e2bc7fa57ecda8f70df16"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__02_planta_alta_copia_1__element_stair.png",
+      "bytes": 205679,
+      "sha256": "8083cd2839790c317d53fada2d4583bfec8cdf87c881f4080afd0f1fc690403a"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__02_planta_alta_copia_1__element_text_symbol.png",
+      "bytes": 219982,
+      "sha256": "c019e916c08c3e92c98a9ed65249eae4d47b8ee0dea608d9015f62153c338807"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__02_planta_alta_copia_1__element_window.png",
+      "bytes": 203399,
+      "sha256": "bebbfdde593d2321f96f9200591ba2764869894bbafc2f22616d1548b79de783"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__02_planta_alta_copia_1__walls_only.png",
+      "bytes": 212828,
+      "sha256": "20d3b397e02ace35380025740435c3c8f5981ae36a7241e43b8ee86ce919bbcd"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/casa_viri/casa_viri__f03_element_isolation_probe_v1.json",
+      "bytes": 112341,
+      "sha256": "708e9941e36dce4ab88cb79dbb39ab3248be221aa3688d225f86b48d4952a2a9"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__f03_element_isolation_probe_v1.json",
+      "bytes": 66112,
+      "sha256": "29279c86d4fa920df66da0d85e057ce9f3d3c75aa6969e9f6f02d690fe3a262d"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_alta__element_dimension.png",
+      "bytes": 169923,
+      "sha256": "5eeb98ed9a1cc6b97da16fccbc88edfc6a57fd1d7c2f9eba31e23566fa570fe7"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_alta__element_floor_finish.png",
+      "bytes": 161844,
+      "sha256": "2d59897d803e23ea8971b6106b8b9873d1e199562944f44590b2a1f2071c90b1"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_alta__element_stair.png",
+      "bytes": 166696,
+      "sha256": "9edf95a75d1d959d3a2006f4495b7ecb84e37182eecb32513de787bc38ce1489"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_alta__element_text_symbol.png",
+      "bytes": 162953,
+      "sha256": "93134f37824278c73d79431247b45fc0e9de321f9db0b0dd674fbeb325cbb6af"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_alta__element_window.png",
+      "bytes": 161471,
+      "sha256": "80ff5568f81cb74fe2afb3319742cffd94556cbd7d65dabd68d8b8737d38ac30"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_alta__walls_only.png",
+      "bytes": 162211,
+      "sha256": "c252bf0afad235027112172b85a5082439d6c5cc5f512522a06f21efed8630d0"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_baja__element_dimension.png",
+      "bytes": 176691,
+      "sha256": "f2d8c43e14521f39f6d612806a46525f007d21050fbc702549bef0fd8154aa21"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_baja__element_text_symbol.png",
+      "bytes": 171711,
+      "sha256": "d1de3cd3578f7c3c31e4eae79efb8a20a36f6d71d9ab782709def492ca56820e"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_baja__element_window.png",
+      "bytes": 165413,
+      "sha256": "9707a56eee3e29202a833933daf38a81f3ba756dc6a70d824975c3596311a778"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_h/miguel_h__planta_baja__walls_only.png",
+      "bytes": 177097,
+      "sha256": "6ce27f2ab836c879f612506a444c290ad57b3f925dc441cf04b853422398a35e"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__f03_element_isolation_probe_v1.json",
+      "bytes": 191315,
+      "sha256": "2e7028f7d4d6ec3b6d13e90aeb1a3d24762fe6a6c20bcb6868fb185fc779bdd1"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_alta__element_dimension.png",
+      "bytes": 475161,
+      "sha256": "0fe8eeeef121173d7eae4106910d2a06221e69a1d7c029e671e818b77397112c"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_alta__element_floor_finish.png",
+      "bytes": 426971,
+      "sha256": "73e99e3b2869079856ebf76d8e310c044d4ef6efb888bca72d913ce11fec6e34"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_alta__element_stair.png",
+      "bytes": 414265,
+      "sha256": "0e597ae8e3a05e91d40b2e8e57e1fe7cb1b09366d4b4c9f7364ff6e5adfb150c"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_alta__element_text_symbol.png",
+      "bytes": 442193,
+      "sha256": "be53bdb06bc8dc10b4f7f4556e8c61d15bdb6738437b711bc54455148a5e29b0"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_alta__element_window.png",
+      "bytes": 413932,
+      "sha256": "90729b4f26964024bac5588310e7c2d8dd7ff998e3c071eb35956bcb2751a20a"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_alta__walls_only.png",
+      "bytes": 418817,
+      "sha256": "62addec90622acf79d66e2a4d580af9219849dec8954ccc01760d44de029f3ba"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_baja__element_dimension.png",
+      "bytes": 506636,
+      "sha256": "726f412c84eec0351b17f3d5ac77fe1a5c3f0fc388e398cc231f2c4288c8ac13"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_baja__element_floor_finish.png",
+      "bytes": 473129,
+      "sha256": "2d8fd808d1f92975a71417ba4aeac424d42c84a5d74131738eb54dcb3f206b48"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_baja__element_stair.png",
+      "bytes": 465743,
+      "sha256": "b50f8f531eb7e5d2154a04d28842846227c12b6046fa47c212e82cdef020634d"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_baja__element_text_symbol.png",
+      "bytes": 488479,
+      "sha256": "3581fa43f705955d69e5697f77abf7f61e882fcfcb10e0780edb428d864f7925"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_baja__element_window.png",
+      "bytes": 464652,
+      "sha256": "5df5114d667239fa20c3ab7677584a7448d2c34f768fc1a7fabb9a31d3589a02"
+    },
+    {
+      "relative_path": "documentation/history/output/f03_element_isolation_probe_v2/miguel_v/miguel_v__planta_baja__walls_only.png",
+      "bytes": 463371,
+      "sha256": "7494bcc91e3fdf19b542ecff71827ea6ff7adc0180f8a8b0bfbee1cc8f64fcca"
+    },
+    {
+      "relative_path": "documentation/history/output/miguel_h/miguel_h__planta_alta__solver_exclusions_probe_v5.png",
+      "bytes": 187060,
+      "sha256": "89ffa27961472b55d77ebd801d2ed9db278ff085f2e7b9c7315abe53b88eaa8d"
+    },
+    {
+      "relative_path": "documentation/history/output/miguel_h/miguel_h__planta_baja__solver_exclusions_probe_v5.png",
+      "bytes": 207273,
+      "sha256": "66b8d2bde5202946d1967c21f0a89312a36a2d852943162b52f40fc79d44b2d8"
+    },
+    {
+      "relative_path": "documentation/history/output/miguel_h/miguel_h__solver_exclusions_probe_v5.json",
+      "bytes": 590877,
+      "sha256": "f6c7991a9032963998349a4489cd5b18afebc4ceb68d9bdbdc7223b8efe56425"
+    },
+    {
+      "relative_path": "documentation/history/output/miguel_v/miguel_v__planta_alta__solver_exclusions_probe_v5.png",
+      "bytes": 353926,
+      "sha256": "bc2d5dadee90288c0a000204eabaf05e305d7a72713efbb0a781e2b0501cd122"
+    },
+    {
+      "relative_path": "documentation/history/output/miguel_v/miguel_v__planta_baja__solver_exclusions_probe_v5.png",
+      "bytes": 471608,
+      "sha256": "e1794d1ec083393530b96849fb8cc355545f967266724984d63479f7b8856708"
+    },
+    {
+      "relative_path": "documentation/history/output/miguel_v/miguel_v__solver_exclusions_probe_v5.json",
+      "bytes": 847078,
+      "sha256": "ff3604fa90bba30c1957ee90677012a358fa5c80755260ddbf460f9e2f6815c8"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_adaptive_reconstruction_all_3_v1.cpython-313.pyc",
+      "bytes": 10556,
+      "sha256": "092c619c366a653b6e0be09489bf7b8d6504655271c8d33604e5e36eb6b06fe2"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_context_gate_v5_standardized.cpython-313.pyc",
+      "bytes": 39162,
+      "sha256": "ce6dd97101e0b31cf7ea89514257edab2a8ef0585465c539b20667251cf2f122"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_f03_architectural_core_visual_all_3_v1.cpython-313.pyc",
+      "bytes": 17632,
+      "sha256": "afec6c9cd26fa61ffdcde8ec605ae3d13b55fad1e2de9d34154bc0699e64aea0"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_f03_flow_all_3_v1.cpython-313.pyc",
+      "bytes": 16454,
+      "sha256": "7f1f26cf532950c097ccbc146fd693fa533f8ad75c8bd4643dd66253590e0e6c"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.cpython-313.pyc",
+      "bytes": 48437,
+      "sha256": "715e92d87f748fc3bf8232368f1a3cb3c478f91620e19462410131d1a9aeed84"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_metric_reraster_v1_3_standardized.cpython-313.pyc",
+      "bytes": 42406,
+      "sha256": "dfd543882b94da6be22fcb800f8dd182b9c823b8b0987fcbebe5baa6f0a8462a"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_perimeter_wall_tracks_all_3_v1.cpython-313.pyc",
+      "bytes": 41348,
+      "sha256": "d2cc09c1b1e930120276a33b36d93e434f83f9f8acd2ce5553ec8941fdf1fa4e"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.cpython-313.pyc",
+      "bytes": 38550,
+      "sha256": "37a72c62d5de673f321959f95ece385086c27007bddc1eb6c3db99e1e1ef1f15"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_scale_foundation_v1_6_synthetic.cpython-313.pyc",
+      "bytes": 36502,
+      "sha256": "8c80a11697ef5b47f1b4b5e5c5205f2fb3d4a05f652ddfa23630ad790da51cd7"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_wall_canonicalization_isolated_all_3_v1.cpython-313.pyc",
+      "bytes": 35994,
+      "sha256": "4cd745e71762f78dfec1bde0469a838fdc873ebf5327fa9f6f2c4e41f384c7ea"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback.cpython-313.pyc",
+      "bytes": 35705,
+      "sha256": "c8a9687a9bfc4f105b7b5defbd3a20e4c418a0ccaff832054dd34276b8d0e833"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/__pycache__/test_quantia_spatial_wall_mask_reconstruction_all_3_v1.cpython-313.pyc",
+      "bytes": 34586,
+      "sha256": "f6e5fd389ee06c8afb277afa00bd6b47d0c362da5f88e7e7417a86cd44c614af"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/README.txt",
+      "bytes": 397,
+      "sha256": "00da7491db8a40840c23169af5ab1406333a22c39292bc3068b2293a025309c8"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_adaptive_reconstruction_all_3_v1.py",
+      "bytes": 6999,
+      "sha256": "e0b5b18aeb75eeb7f95f8d8ada6dbd69d319a279af96d7bb7248a7c133cda92b"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_context_gate_v5_standardized.py",
+      "bytes": 28934,
+      "sha256": "5c04297467f07605d5e2e6906226d798c121e53978abbf18e643aa7efcebbcc2"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_f03_architectural_core_visual_all_3_v1.py",
+      "bytes": 11161,
+      "sha256": "68fad97a1ff99b3912465506f025caaa841f345a0889fcdb3ab03007af07aca4"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_f03_flow_all_3_v1.py",
+      "bytes": 12960,
+      "sha256": "4be5b7f3ecda221af3b860b793a94bcc9e5f1178f8073bc2ea900223480113de"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.py",
+      "bytes": 35356,
+      "sha256": "1360287358227efb5aa114ef8c67ca0e91a9415a0cd4e7c920ccd8afa5ac98e2"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_metric_reraster_v1_3_standardized.py",
+      "bytes": 34776,
+      "sha256": "bc56a512f19cbc703a365ac64e91a0db2aaf7dc1b92f4aa7afac28178e9bc5db"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_perimeter_wall_tracks_all_3_v1.py",
+      "bytes": 27299,
+      "sha256": "c0675599c13989e2b76b12d28f8056c5ca06e01fb11d97a854059ec517229675"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.py",
+      "bytes": 28146,
+      "sha256": "30812537f0125cb8a5611dcac71c7665e9993a71c1f6fe4ea9ea63395ca42c10"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_scale_foundation_v1_6_synthetic.py",
+      "bytes": 35259,
+      "sha256": "e88a8f39de01f5436423756325293a4703deeee437f02d01339dee5ef13940e6"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_wall_canonicalization_isolated_all_3_v1.py",
+      "bytes": 23960,
+      "sha256": "93449fae4dc4aa3333f9bd70b29fbd22d5a12a20edbd2471f0388fdedcf913e9"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback.py",
+      "bytes": 33443,
+      "sha256": "e7e32539b8aff84ed4982e314570c5a56fd905e1431ca339eacf8bd36324a3b0"
+    },
+    {
+      "relative_path": "documentation/history/probes_2026-09-17/test_quantia_spatial_wall_mask_reconstruction_all_3_v1.py",
+      "bytes": 24187,
+      "sha256": "439acac2b3f6b8a653102d41bef488a82a01d64a4fb2bf937714e579dbc11673"
+    },
+    {
+      "relative_path": "documentation/history/tests/architectural_elements_v1/__pycache__/test_quantia_spatial_architectural_elements_mini_engine_v1_synthetic.cpython-313.pyc",
+      "bytes": 15086,
+      "sha256": "6a4e4c3f9cac110aef2e302248339512233f87f2b5f74cd794754a5d2cfc1ff7"
+    },
+    {
+      "relative_path": "documentation/history/tests/architectural_elements_v1/__pycache__/test_quantia_spatial_architectural_elements_probe_all_3_v1.cpython-313.pyc",
+      "bytes": 14391,
+      "sha256": "d5f5d927b3a0695bf446c27785bcb8235e4f4a4a6312d0c3fbed74ea91371a7d"
+    },
+    {
+      "relative_path": "documentation/history/tests/architectural_elements_v1/test_quantia_spatial_architectural_elements_mini_engine_v1_synthetic.py",
+      "bytes": 12752,
+      "sha256": "581f7c4d97e51cf65e4ae57ef3f8a56a0262f79c2ae631a372df5ed0186692b0"
+    },
+    {
+      "relative_path": "documentation/history/tests/architectural_elements_v1/test_quantia_spatial_architectural_elements_probe_all_3_v1.py",
+      "bytes": 9250,
+      "sha256": "497b69dd423f899ea7381b16491298b576dcf4051489b46a3d57757ce9aaa5fe"
+    },
+    {
+      "relative_path": "documentation/history/tests/CANONICAL_METRIC_RASTER_V1/__pycache__/test_quantia_spatial_canonical_metric_raster_v1_synthetic.cpython-313.pyc",
+      "bytes": 4267,
+      "sha256": "1432b3b91497b3f232bf632a80ac9658e6796dce0147bcec37d22171c7fba286"
+    },
+    {
+      "relative_path": "documentation/history/tests/CANONICAL_METRIC_RASTER_V1/test_quantia_spatial_canonical_metric_raster_v1_synthetic.py",
+      "bytes": 2626,
+      "sha256": "2eaa7878bb1f716e7d7eb99a58ea933e4492159aed66b7e8d4c8e971fc71228e"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6/__pycache__/test_quantia_spatial_context_classification_v6_standardized.cpython-313.pyc",
+      "bytes": 30112,
+      "sha256": "263d259d4ef83f64617d2cb6af6eb09a5f610757e71fc03a570fc3a061033b17"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6/__pycache__/test_quantia_spatial_context_classification_v6_synthetic.cpython-313.pyc",
+      "bytes": 11059,
+      "sha256": "b776ddba637b93a1362ee3574364a9fe85b45144c18bc7774eddfd3d53368b0e"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6/test_quantia_spatial_context_classification_v6_standardized.py",
+      "bytes": 20485,
+      "sha256": "dcd8b395483933a5cc9a561f2b1be40b448fa15b8fa345a7ab1535becf03f941"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6/test_quantia_spatial_context_classification_v6_synthetic.py",
+      "bytes": 8212,
+      "sha256": "a53f2bb78ded0828164b9743674c6aa8bd5d8f60c3faad93236fead4d032925c"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6_1/__pycache__/test_quantia_spatial_context_classification_v6_1_standardized.cpython-313.pyc",
+      "bytes": 31072,
+      "sha256": "a5c641fcaf7188c54adda7df9f5999018c915a31c389575cfc28e8fe4db27dff"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6_1/__pycache__/test_quantia_spatial_context_classification_v6_1_synthetic.cpython-313.pyc",
+      "bytes": 20958,
+      "sha256": "fc9fca21fc00ea8dad64c753a414e8e36b321a2c1fe38e07d0d0e90626eaa5e7"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6_1/test_quantia_spatial_context_classification_v6_1_standardized.py",
+      "bytes": 21415,
+      "sha256": "fb81ded2e555cf7c6a5694ade345fbcbd3fd421b6c5cb6f2a541b8d7b88a317e"
+    },
+    {
+      "relative_path": "documentation/history/tests/CONTEXT_CLASSIFICATION_V6_1/test_quantia_spatial_context_classification_v6_1_synthetic.py",
+      "bytes": 16211,
+      "sha256": "067547f3e402fa3e8a9728419128d221cae70d2e03a1fdc432d10a0771264057"
+    },
+    {
+      "relative_path": "documentation/history/tests/f02_global_context_experimental/__pycache__/test_quantia_spatial_f02_global_context_standardized.cpython-313.pyc",
+      "bytes": 9281,
+      "sha256": "7a8efaf2be83d6df1d344a921eb2bf3077d9dc6209dc8251f79ef7dc17988928"
+    },
+    {
+      "relative_path": "documentation/history/tests/f02_global_context_experimental/__pycache__/test_quantia_spatial_f02_global_context_synthetic.cpython-313.pyc",
+      "bytes": 6386,
+      "sha256": "27acf5ab1893b4208b1df21f533c257f5c31319c0f5bcb5f1a17233f6cbff38c"
+    },
+    {
+      "relative_path": "documentation/history/tests/f02_global_context_experimental/test_quantia_spatial_f02_global_context_standardized.py",
+      "bytes": 6016,
+      "sha256": "7a66eae4c80e6250628a065a1d557966c53f9f631a94a8e777b43bd78289e9bb"
+    },
+    {
+      "relative_path": "documentation/history/tests/f02_global_context_experimental/test_quantia_spatial_f02_global_context_synthetic.py",
+      "bytes": 5129,
+      "sha256": "5d0b531a476f3bdf1ab5ce95877e9501cb84bddb3d7e96021fa317319ea036ee"
+    },
+    {
+      "relative_path": "documentation/history/tests/F02_GLOBAL_CONTEXT_EXPERIMENTAL_BROKEN/__pycache__/test_quantia_spatial_f02_global_context_standardized.cpython-313.pyc",
+      "bytes": 9288,
+      "sha256": "ad853c691f42c89df0b89234439099aa64ed75bb36f7c680f45e5a08ca12d651"
+    },
+    {
+      "relative_path": "documentation/history/tests/F02_GLOBAL_CONTEXT_EXPERIMENTAL_BROKEN/__pycache__/test_quantia_spatial_f02_global_context_synthetic.cpython-313.pyc",
+      "bytes": 6393,
+      "sha256": "a2664567f99602e5aef134603f851f627742830c299e42e7cb7f65f90c2438f9"
+    },
+    {
+      "relative_path": "documentation/history/tests/F02_GLOBAL_CONTEXT_EXPERIMENTAL_BROKEN/test_quantia_spatial_f02_global_context_standardized.py",
+      "bytes": 6016,
+      "sha256": "7a66eae4c80e6250628a065a1d557966c53f9f631a94a8e777b43bd78289e9bb"
+    },
+    {
+      "relative_path": "documentation/history/tests/F02_GLOBAL_CONTEXT_EXPERIMENTAL_BROKEN/test_quantia_spatial_f02_global_context_synthetic.py",
+      "bytes": 5129,
+      "sha256": "5d0b531a476f3bdf1ab5ce95877e9501cb84bddb3d7e96021fa317319ea036ee"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V1/__pycache__/test_quantia_spatial_f03_element_context_isolation_v1_synthetic.cpython-313.pyc",
+      "bytes": 9475,
+      "sha256": "6c0492d9fbb0b20bc0bf46cd99069ee5f9f53324e1fb2402623eeacc5da364d9"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V1/test_quantia_spatial_f03_element_context_isolation_v1_synthetic.py",
+      "bytes": 7305,
+      "sha256": "23db6a8b5e276ebf2ab2a1e6692c2a698156206d8665579b6ce312ed62730f03"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V2/__pycache__/test_quantia_spatial_f03_element_context_isolation_v2_synthetic.cpython-313.pyc",
+      "bytes": 12405,
+      "sha256": "963f861c9a918316d7439728f93d4274b6bc5953b495ebc1dc73d2c5624bf03e"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V2/test_quantia_spatial_f03_element_context_isolation_v2_synthetic.py",
+      "bytes": 9126,
+      "sha256": "fb1a760d561179b0fc6ccf2ca29af2d87edd84ee7d2f0115a9f4b4abff2bbc08"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V3/__pycache__/test_quantia_spatial_f03_element_context_isolation_v3_synthetic.cpython-313.pyc",
+      "bytes": 12677,
+      "sha256": "46ef0169f1f1bb4e7174ebfe2ff9863b344f121dc5a19843c8b2897bcfab2a48"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V3/test_quantia_spatial_f03_element_context_isolation_v3_synthetic.py",
+      "bytes": 9839,
+      "sha256": "9438a43e764b1f5e5d13219e3c1559f2ff402ec0d0f592c39efbede4421fc7b5"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V4/__pycache__/test_quantia_spatial_f03_element_context_isolation_v4_synthetic.cpython-313.pyc",
+      "bytes": 13019,
+      "sha256": "5e851071b1b0a9d0e302a4cf39dd514ae83073ea91db1c4e026b8455c7d57b00"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_CONTEXT_ISOLATION_V4/test_quantia_spatial_f03_element_context_isolation_v4_synthetic.py",
+      "bytes": 9952,
+      "sha256": "57e8c376b686fdf2336429535cfe830a9a8ada2e8d1c14acedbc025866824aee"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_ISOLATION_PROBE_V1/__pycache__/test_quantia_spatial_f03_element_isolation_probe_all_3_v1.cpython-313.pyc",
+      "bytes": 23157,
+      "sha256": "b9e03a9286f5b3077125df7507643089d437de2cac011af9164960910581a61f"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_ISOLATION_PROBE_V1/test_quantia_spatial_f03_element_isolation_probe_all_3_v1.py",
+      "bytes": 14947,
+      "sha256": "1e4399894e807fd7bc7b6671923487ef07c3eae49863a2dbbf0c022318c7d98e"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_ISOLATION_PROBE_V2/__pycache__/test_quantia_spatial_f03_element_isolation_probe_all_3_v2.cpython-313.pyc",
+      "bytes": 23157,
+      "sha256": "bacea9cdc770cedd7faea4e8fe7f8ce4b53d9a5a6db723c9dd03b4ef694292c0"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_ISOLATION_PROBE_V2/test_quantia_spatial_f03_element_isolation_probe_all_3_v2.py",
+      "bytes": 14947,
+      "sha256": "c1aebe015834a8395c68ff7b98e58043ebf16955a01b27c349318769e9e183e7"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_ISOLATION_PROBE_V3/__pycache__/test_quantia_spatial_f03_element_isolation_probe_all_3_v3.cpython-313.pyc",
+      "bytes": 23157,
+      "sha256": "d421838c0b9d6005ee9cbac9bbad133423aa934199534fccd859c917e26c48e0"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_ELEMENT_ISOLATION_PROBE_V3/test_quantia_spatial_f03_element_isolation_probe_all_3_v3.py",
+      "bytes": 14947,
+      "sha256": "038db2579ac2b6f9208ccfe942368a0c985428b8626a2646847ea4fa7fddd11a"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1/__pycache__/test_quantia_spatial_f03_selection_contracts_v1_synthetic.cpython-313.pyc",
+      "bytes": 11111,
+      "sha256": "90c6d312beca5a593fccef2cbd7ed595710421d87ae8578e9cab9bf4a0314ced"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1/test_quantia_spatial_f03_selection_contracts_v1_synthetic.py",
+      "bytes": 8978,
+      "sha256": "415504d74684155d59d6e4ddd4b61bab8459d51805c909a5415058d98aa14077"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_1/__pycache__/test_quantia_spatial_f03_selection_contracts_v1_1_synthetic.cpython-313.pyc",
+      "bytes": 15150,
+      "sha256": "6404d63c6820b1fb7f60eb2084b0df59ea1982c3452e94c91c2257e6eef8cad9"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_1/test_quantia_spatial_f03_selection_contracts_v1_1_synthetic.py",
+      "bytes": 12904,
+      "sha256": "3b50ec3b12050b20a65da3768d84f513eccc943ae19473ecd549b1c72f667266"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_2/__pycache__/test_quantia_spatial_f03_selection_contracts_v1_2_synthetic.cpython-313.pyc",
+      "bytes": 7832,
+      "sha256": "8d06eb7ffd525c5dad239209d4ebb423c5efa6d6bc04a0c192dcb29d235f6b57"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_2/test_quantia_spatial_f03_selection_contracts_v1_2_synthetic.py",
+      "bytes": 6693,
+      "sha256": "61779123d144405e4f5b1daf861dc98472bf84b69a90501f369f483564429560"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_3/__pycache__/test_quantia_spatial_f03_selection_contracts_v1_3_synthetic.cpython-313.pyc",
+      "bytes": 7116,
+      "sha256": "d1af1b67ed056569d8e71e1a935f0fa929c3686174df38b841203ca5f82fc789"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_3/test_quantia_spatial_f03_selection_contracts_v1_3_synthetic.py",
+      "bytes": 6317,
+      "sha256": "0396ae80b08ecf9089028cec8473dd21fa95da87a5119b294f8131a1a1fd3c9e"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_4/__pycache__/test_quantia_spatial_f03_selection_contracts_v1_4_synthetic.cpython-313.pyc",
+      "bytes": 9849,
+      "sha256": "643309f47210d1a5386dfc74ba3a46f46d6b2c774f581cf2328a90349eb681f0"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_4/test_quantia_spatial_f03_selection_contracts_v1_4_synthetic.py",
+      "bytes": 8837,
+      "sha256": "04a8670f8850a192d550c7ea8e90182b80056e47b84adc284ef60f5b2ced1223"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_5/__pycache__/test_quantia_spatial_f03_selection_contracts_v1_5_synthetic.cpython-313.pyc",
+      "bytes": 10762,
+      "sha256": "5cb3303f3eb9c95d1a585e96968c79f8165120a11cac214fbd752f462fa7640e"
+    },
+    {
+      "relative_path": "documentation/history/tests/F03_SELECTION_CONTRACTS_V1_5/test_quantia_spatial_f03_selection_contracts_v1_5_synthetic.py",
+      "bytes": 9724,
+      "sha256": "737c1f243d77f39df2306dbdee2e23e1bc9da86e3a0d6376e195ff57908e6b40"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1/__pycache__/test_quantia_spatial_metric_reraster_v1_standardized.cpython-313.pyc",
+      "bytes": 34443,
+      "sha256": "a668817c41f53965a74ed876250c5a72f1c471195050cfd5b5883eb646f1fb50"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1/test_quantia_spatial_metric_reraster_v1_standardized.py",
+      "bytes": 26918,
+      "sha256": "ef22a974aa1cb396a6c92e859bd6a5f8f99e4b10563148038e4126eaffb3c3e1"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1_1/__pycache__/test_quantia_spatial_metric_reraster_v1_1_standardized.cpython-313.pyc",
+      "bytes": 41027,
+      "sha256": "b0f667e88c7e50a021957d79b55d83b81771b91177065b2d675a9130b9678675"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1_1/test_quantia_spatial_metric_reraster_v1_1_standardized.py",
+      "bytes": 33193,
+      "sha256": "e039553034b87da944d294084a92f83af1fcd034db243d39836e71fa410be8aa"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1_2/__pycache__/test_quantia_spatial_metric_reraster_v1_2_standardized.cpython-313.pyc",
+      "bytes": 42274,
+      "sha256": "002f430f7c92e50d3fe97b09657e33f6227a6fce5c6792cdf9cf9aef40a280bc"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1_2/test_quantia_spatial_metric_reraster_v1_2_standardized.py",
+      "bytes": 34544,
+      "sha256": "7af68f02938a0ff6cc02451e3aea56eda3bb8d6abf8b985c0b25aa15e8ef5915"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1_3/__pycache__/test_quantia_spatial_metric_reraster_v1_3_standardized.cpython-313.pyc",
+      "bytes": 42415,
+      "sha256": "fa0ddddf8460412ef6c07e3962e8ea6760086fcf7c5acbc38d3fb4753dc9b0a1"
+    },
+    {
+      "relative_path": "documentation/history/tests/METRIC_RERASTER_V1_3/test_quantia_spatial_metric_reraster_v1_3_standardized.py",
+      "bytes": 34776,
+      "sha256": "bc56a512f19cbc703a365ac64e91a0db2aaf7dc1b92f4aa7afac28178e9bc5db"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1/__pycache__/test_quantia_spatial_scale_foundation_v1_standardized.cpython-313.pyc",
+      "bytes": 4092,
+      "sha256": "290d4d79459585329b441af266a831141950e049f4b8ea15e71b8f8b51235111"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1/__pycache__/test_quantia_spatial_scale_foundation_v1_synthetic.cpython-313.pyc",
+      "bytes": 11184,
+      "sha256": "e05b03e183b543a515c96e83e284f4a032568a48d087b702aeed14aa3559840e"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1/test_quantia_spatial_scale_foundation_v1_standardized.py",
+      "bytes": 3290,
+      "sha256": "702ed9dcd993c9d1a5f06a5ec541bd6287892035ecb12600ef7318df47ba28b4"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1/test_quantia_spatial_scale_foundation_v1_synthetic.py",
+      "bytes": 8982,
+      "sha256": "44eb3ba9338e77fa61e2420e78c68b4295fa2c1f1a980b69737533eb395a43e5"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_1/__pycache__/test_quantia_spatial_scale_foundation_v1_1_standardized.cpython-313.pyc",
+      "bytes": 4102,
+      "sha256": "d69b80501c208d563e1b2b00f18b6e1e7c5bbfb75eed3a093c49742935c6722c"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_1/__pycache__/test_quantia_spatial_scale_foundation_v1_1_synthetic.cpython-313.pyc",
+      "bytes": 15723,
+      "sha256": "186e86037123329136a0bf670e492664ac10890a523644e4025cb486c203defb"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_1/test_quantia_spatial_scale_foundation_v1_1_standardized.py",
+      "bytes": 3296,
+      "sha256": "5bbb252b76010759660b383f72825883114f2fec02ebfaa286ca4ed8a61363fc"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_1/test_quantia_spatial_scale_foundation_v1_1_synthetic.py",
+      "bytes": 12818,
+      "sha256": "57a43cabab19e299b7691027b3aec3d284e903a09bdad303bbc89657cb64bd31"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_2/__pycache__/test_quantia_spatial_scale_foundation_v1_2_standardized.cpython-313.pyc",
+      "bytes": 4102,
+      "sha256": "b7192023596bbbe1e8db80ce5d04238ecdcfcbfb8c6323b0b6a9e530152f43a2"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_2/__pycache__/test_quantia_spatial_scale_foundation_v1_2_synthetic.cpython-313.pyc",
+      "bytes": 17678,
+      "sha256": "babf34d4c2ad367b99b3f486696d1d9cc1e805604de72d80822d61149498c284"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_2/test_quantia_spatial_scale_foundation_v1_2_standardized.py",
+      "bytes": 3296,
+      "sha256": "81d1888bcf65a9e5c3f3ff299eb45607fabc21e1aae90a4262ab6db905f43546"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_2/test_quantia_spatial_scale_foundation_v1_2_synthetic.py",
+      "bytes": 14797,
+      "sha256": "6f4610e696d0cfaf51738c49bc5ab3735a3e846467f4f2f12b97e8ec02123ce8"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_4/__pycache__/test_quantia_spatial_scale_foundation_v1_4_standardized.cpython-313.pyc",
+      "bytes": 4081,
+      "sha256": "b8bfc75d94b28de0af9d9a718cf2ab65b70363914acdb6f2d6f19522b38aae46"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_4/__pycache__/test_quantia_spatial_scale_foundation_v1_4_synthetic.cpython-313.pyc",
+      "bytes": 25696,
+      "sha256": "50bc8b003441f018f920a655a1c894022f159e467637d042ce058b777eda994d"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_4/test_quantia_spatial_scale_foundation_v1_4_standardized.py",
+      "bytes": 3372,
+      "sha256": "1521d784c4b5431711ea9a36b0b957bc8df2ba4829376756ea4c7e6c5ddffd02"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_4/test_quantia_spatial_scale_foundation_v1_4_synthetic.py",
+      "bytes": 23130,
+      "sha256": "f7178ae65d615001da697d84ad1df2b51f8132040b2bd9b144afe609553f9404"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_5/__pycache__/test_quantia_spatial_scale_foundation_v1_5_synthetic.cpython-313.pyc",
+      "bytes": 29266,
+      "sha256": "fff0d474816a0d45901f03a80ad5818097839ff963190d5c864345eec5a717a8"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_5/test_quantia_spatial_scale_foundation_v1_5_synthetic.py",
+      "bytes": 26396,
+      "sha256": "f1d650f67d2e3ab585d73043e531b60cbdc3df93a595a075e84a99304ed24f3e"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_6/__pycache__/test_quantia_spatial_scale_foundation_v1_6_synthetic.cpython-313.pyc",
+      "bytes": 36512,
+      "sha256": "63263ad9ed0ce4e9830a1d7cac1970976493a7c903843af8decc62f3a20d4ff7"
+    },
+    {
+      "relative_path": "documentation/history/tests/SCALE_FOUNDATION_V1_6/test_quantia_spatial_scale_foundation_v1_6_synthetic.py",
+      "bytes": 35259,
+      "sha256": "e88a8f39de01f5436423756325293a4703deeee437f02d01339dee5ef13940e6"
+    },
+    {
+      "relative_path": "documentation/history/tests/solver_evidence_v1/__pycache__/test_quantia_spatial_solver_evidence_v1_standardized.cpython-313.pyc",
+      "bytes": 25109,
+      "sha256": "9e68a6f0627fe6cadd7d08c7c14bd6ef079add83c174e5a5c0e2d2565df6760c"
+    },
+    {
+      "relative_path": "documentation/history/tests/solver_evidence_v1/test_quantia_spatial_solver_evidence_v1_standardized.py",
+      "bytes": 17618,
+      "sha256": "67e6326335414f9278f26ee4c0bfb2b21ba31ce4b86ecd0cebb8d649c452c300"
+    },
+    {
+      "relative_path": "documentation/history/tests/V6_1/__pycache__/test_quantia_spatial_context_classification_v6_1_standardized.cpython-313.pyc",
+      "bytes": 31049,
+      "sha256": "195821c0de45aea73c5276c66503fc9ce559e503952ddaeb1dd48bc0061b2e64"
+    },
+    {
+      "relative_path": "documentation/history/tests/V6_1/__pycache__/test_quantia_spatial_context_classification_v6_1_synthetic.cpython-313.pyc",
+      "bytes": 20935,
+      "sha256": "f225eab3a09ee35123347bc2fbf192b026277e0d79810624df22f3de25bbd6d5"
+    },
+    {
+      "relative_path": "documentation/history/tests/V6_1/test_quantia_spatial_context_classification_v6_1_standardized.py",
+      "bytes": 21415,
+      "sha256": "fb81ded2e555cf7c6a5694ade345fbcbd3fd421b6c5cb6f2a541b8d7b88a317e"
+    },
+    {
+      "relative_path": "documentation/history/tests/V6_1/test_quantia_spatial_context_classification_v6_1_synthetic.py",
+      "bytes": 16211,
+      "sha256": "067547f3e402fa3e8a9728419128d221cae70d2e03a1fdc432d10a0771264057"
+    },
+    {
+      "relative_path": "tests/__pycache__/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.cpython-313-pytest-9.1.1.pyc",
+      "bytes": 52168,
+      "sha256": "2740d0bc19c8030e80d0e7f53ac2e00a9a805020e42ba27cab31e5cfdc8482cc"
+    },
+    {
+      "relative_path": "tests/__pycache__/test_quantia_spatial_perimeter_wall_tracks_all_3_v2.cpython-313-pytest-9.1.1.pyc",
+      "bytes": 41531,
+      "sha256": "ac3cd5994343081eeae10d26cd34824717b2d0e4ded5d54a94b2c279f1b3734a"
+    },
+    {
+      "relative_path": "tests/__pycache__/test_quantia_spatial_v1_call2_all_3_v1.cpython-313-pytest-9.1.1.pyc",
+      "bytes": 16456,
+      "sha256": "ed825f146522903f18b0078e059c4d1a631c110c52cbc12a10553000e28e2cf7"
+    }
+  ],
+  "file_count": 462,
+  "total_bytes": 68459029,
+  "reasons": {
+    "perimeter_wall_tracks_all_3_v1": "Probe de red perimetral anterior a Adaptive; reemplazado por proceso canonico integral.",
+    "perimeter_wall_tracks_all_3_v2": "Probe perimetral V2 con helpers compartidos solo por otros probes archivados.",
+    "wall_mask_reconstruction_all_3_v1": "Reconstruccion experimental desde mascara previa al motor Adaptive.",
+    "wall_canonicalization_isolated_all_3_v1": "Canonicalizacion diagnostica local en test; sustituida por canonicalizador productivo y finalizador.",
+    "f03_mask_topology_hybrid_all_3_v1": "Prototipo hibrido anterior a AdaptiveReconstructionEngine productivo.",
+    "f03_architectural_core_visual_all_3_v1": "Probe visual F03 previo a reconstruccion Adaptive + PostFilter V4 y visor canonico.",
+    "wall_consolidation_second_call_miguel_v_pb_v5_retry_fallback": "Experimento de segunda llamada especifico de Miguel V, anterior al contrato Call 2 V2.",
+    "v1_call2_all_3_v1": "Harness Call 2 V1 sustituido por harness V2 y compatibilidad de proveedor por nivel."
+  },
+  "status": "ARCHIVED_SHA256_VERIFIED",
+  "previous_attempt_archive_root": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\REFERENCIAS Y ANEXOS Quantia General\\quantia_spatialV1\\archivo_pruebas_20260928_092025",
+  "support_snapshot": {
+    "quantia_case_loader.py": "62ad5816f26c1508c876083df4933e0d54f4c1e185d927aaa23927a756fd7950"
+  }
+}

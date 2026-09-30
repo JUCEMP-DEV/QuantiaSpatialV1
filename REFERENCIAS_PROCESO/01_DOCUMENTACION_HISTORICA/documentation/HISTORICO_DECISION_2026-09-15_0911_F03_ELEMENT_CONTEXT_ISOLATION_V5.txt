@@ -1,0 +1,15 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-15 09:11 -06:00
+Tema: cierre de auditoría Probe V3 y apertura V5/V1.6
+
+DECISIÓN
+No endurecer ventanas ni escaleras globalmente: V4 ya redujo falsos positivos y los leaks restantes de escalera están en REVIEW sin provenance directa, compatibles con bordes reales.
+
+CAMBIO DECISIVO
+- Recuperar DOOR eliminando el veto semántico absoluto, manteniendo geometría local + polígono arquitectónico.
+- Distinguir pair_support inferido de pair provenance real.
+- Mantener REVIEW para pair provenance de FLOOR sin member ids, pero elevar riesgo para impedir que una falsa banda modular gane por wall_band_support solamente.
+- Corregir el probe antes de interpretar direct_member_candidate_count como verdad del motor.
+
+PUNTO DE RETORNO
+V4/V1.5 ZIP SHA256 39e205363acca54d0bed54b58f9282599d79c18db6f958c34c4a9f3d91981654.

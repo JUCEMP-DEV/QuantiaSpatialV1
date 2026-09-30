@@ -1,0 +1,38 @@
+QUANTIA V2L — CANONICAL METRIC RASTER V1
+Fecha: 2026-09-10 22:58 -06:00
+
+BASE
+Scale Foundation V1.4 restaurada como punto de retorno.
+
+CAUSA RAÍZ
+La normalización a ~90 px/m existía como cálculo/prueba, pero QuantiaSpatialEngine publicaba y reutilizaba el LevelView bootstrap. Por eso OpenCV, OCR, DrawingModel/F03 y los visuales seguían consumiendo el raster anterior aunque ya existiera una recomendación de render_scale.
+
+CAMBIO CANÓNICO
+1. F01 localiza niveles sobre raster bootstrap.
+2. F01.5/F02 bootstrap generan evidencia suficiente para resolver escala.
+3. Scale Foundation V1.4 + RasterDensityPolicy calculan render_scale objetivo por página.
+4. La página PDF se rerasteriza sin redetectar niveles; bboxes/evidencias F01 se reproyectan y se conservan los mismos LevelView.id.
+5. La respuesta Gemini ya obtenida se reproyecta al nuevo marco; 0 llamadas Gemini adicionales.
+6. F01.5 se ejecuta otra vez: PyMuPDF/OpenCV/OCR/Gemini quedan en el mismo raster canónico.
+7. F02 se reconstruye sobre esa evidencia actualizada.
+8. El LevelView publicado por engine.py ya contiene el raster normalizado, por lo que DrawingModel/F03 y los visuales que consumen level_view.raster_bytes reciben la nueva base.
+9. Se valida nuevamente la escala final; el resultado publica diagnóstico explícito NORMALIZED/PARTIAL/REVIEW/FAILED_VALIDATION.
+
+NO MODIFICADO
+- ScaleEvidenceResolver V1.4.
+- GeneralDimensionGraphicSpan V1.
+- Context Classification V6.2.
+- Structural Lineage V6.2.
+- GlobalTopologySolver.
+- F02 lógica interna.
+- Prompts Gemini.
+
+ARCHIVOS DE EJECUCIÓN MODIFICADOS
+- engine.py
+- phase_01_level/level_view_rerasterizer.py (nuevo)
+- phase_015_evidence/gemini_evidence_adapter.py
+
+VALIDACIÓN LOCAL
+- 38 PASSED: Canonical Metric Raster V1 synthetic + Scale Foundation V1.4 synthetic + Context V6.2 synthetic + Solver Evidence synthetic.
+- compileall PASS.
+- Prueba sintética 1:50: 44. ~45 px/m bootstrap -> 90.046 px/m final; render_scale 0.7935 -> 1.5875; state NORMALIZED.

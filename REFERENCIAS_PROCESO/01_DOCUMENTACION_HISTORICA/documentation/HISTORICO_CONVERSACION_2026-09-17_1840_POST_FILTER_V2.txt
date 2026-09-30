@@ -1,0 +1,39 @@
+HISTÓRICO DE DECISIONES — QUANTIA SPATIAL V1 — 2026-09-17
+
+DECISIÓN PRINCIPAL
+El usuario estableció que no se debe regresar a modificar la reconstrucción adaptativa que ya funciona. Se crea una capa de filtros independiente posterior al resultado actual.
+
+SEMÁNTICA ACLARADA
+- Los filtros excluyen de una salida; no eliminan evidencia.
+- La capa debe distinguir:
+  WALL
+  ARCHITECTURAL_ELEMENT
+  EXCLUDED_GRAPHIC
+  UNRESOLVED
+- También debe consolidar muros para publicar una sola línea por muro físico.
+
+CAUSA IDENTIFICADA
+El resultado adaptativo todavía contiene:
+- hipótesis paralelas/solapadas del mismo muro;
+- caras de muro representadas como varias líneas;
+- patrones repetitivos arquitectónicos/gráficos;
+- líneas auxiliares no-muro.
+No se modifica F03/Mask/Topology para corregirlos.
+
+IMPLEMENTACIÓN
+Se crea Post-Reconstruction Filter Layer V2 con:
+- análisis geométrico post-reconstrucción;
+- selección de filtros por evidencia;
+- encapsulamiento conservador;
+- canonicalización física a centerline;
+- trazabilidad completa.
+
+REGLA DE SEGURIDAD
+Un patrón que choque con evidencia estructural fuerte no se descarta: pasa a UNRESOLVED.
+
+ESTADO CALL 2
+Permanece deshabilitada. Se usará después de validar los filtros para identificar con mayor certeza elementos arquitectónicos y preparar el contrato hacia F04.
+
+PUNTO DE RETORNO
+quantia_spatialV1_Productized_Process_PostFilter_V1.zip
+SHA256: 2a8d7ba19b24f6140e83a72f96b70dc02a3c1716972ef2b123adda9dd9391795

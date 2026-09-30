@@ -1,0 +1,18 @@
+HISTORICO — 2026-09-19 — CALL2 PROVIDER COMPAT V1
+
+DECISION
+No volver a ejecutar Casa Viri + Miguel H + Miguel V por proveedor hasta validar compatibilidad API/vision/schema con un único LevelView.
+
+SECUENCIA FIJADA
+1. Schema adapter synthetic: sin API.
+2. Smoke provider: un LevelView, imagen fuente y schema mínimo.
+3. Full Call2: mismo LevelView, mismo prompt Call2 V2, mismo contrato interno.
+4. Solo después cambiar de proveedor o de ejemplo para comparar razonamiento.
+
+CASO DEFAULT
+Casa Viri / Planta Alta, por tener WallGraph limpio y facilitar separar errores de API de errores de razonamiento.
+
+REGLA
+Un 400/422 en smoke se considera incompatibilidad de request/schema/modelo.
+Un JSON válido que falla Pydantic/DeltaValidator es incompatibilidad de normalización/contrato.
+Una ejecución completa técnicamente válida pero con malos deltas es problema de razonamiento del modelo.

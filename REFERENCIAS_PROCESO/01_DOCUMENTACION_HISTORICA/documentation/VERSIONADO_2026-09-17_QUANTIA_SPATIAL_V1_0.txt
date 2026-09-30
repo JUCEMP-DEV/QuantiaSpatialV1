@@ -1,0 +1,47 @@
+QUANTIA SPATIAL V1.0 — VERSIONADO DE PAQUETE
+Fecha: 2026-09-17 (-06:00)
+
+ETIQUETA DEL PAQUETE
+QUANTIA SPATIAL V1.0
+
+ALCANCE
+Este paquete consolida la rama Quantia Spatial vigente y añade un probe híbrido aislado para reconstrucción de muros/topología.
+No modifica lógica productiva de F01, F01.5, F02, F03, CandidateGraph, GlobalTopologySolver ni Architectural Elements Mini-Engine.
+
+NUEVO PROBE
+Backend/app/quantia_spatial/tests/test_quantia_spatial_f03_mask_topology_hybrid_all_3_v1.py
+
+OBJETIVO DEL PROBE
+Fusionar, sin mezclar responsabilidades:
+1. F03 selected walls como structural seed protegido.
+2. Context Gate V5/V6.x como filtro contextual de cotas, ejes gráficos, hatch, baldosas y ruido funcional.
+3. Candidate Discovery desde DrawingModel/F01.5 sin usar el perímetro F02 como fuente de muro.
+4. axis_support NO se penaliza; alineación con eje puede ser evidencia válida de muro.
+5. WallMask completion + WallTrack consolidation.
+6. Puentes lógicos estrictos, no muro sólido.
+7. Topología de espacios.
+8. PERIMETER/DIVIDER por adyacencia espacial.
+
+POLÍTICA F02
+F02 permanece inmutable y se usa como referencia de escala/pipeline existente.
+Su perímetro NO se inyecta como seed de muro ni se toma como geometría final obligatoria en el probe híbrido.
+
+SALIDAS VISUALES POR LEVELVIEW
+01_f03_structural_seed.png
+02_context_clean_candidates.png
+03_hybrid_wall_mask.png
+04_hybrid_logical_seal_mask.png
+05_hybrid_wallgraph_clean.png
+06_hybrid_rooms_clean.png
+07_hybrid_topology_audit.png
+08_context_exclusion_audit.png
+
+PUNTO DE RETORNO
+Archivo: QuantiaV2L_CLEAN_V4_WALL_MASK_RECONSTRUCTION_PROBE_V1.zip
+SHA256: f3af88ad38070699b2607b6cd3d316f7ab117c1d464b0c3759983eb43c3ca677
+
+ESTADO
+IMPLEMENTADO / COMPILEALL PASS.
+Regresiones seleccionadas: 27 PASS / 6 SKIPPED.
+142 archivos Python productivos comparados contra V4: 0 cambios.
+Ejecución real de los 3 casos del nuevo probe queda pendiente en el entorno Windows del usuario por dependencia de PDFs locales en los loaders.

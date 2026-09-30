@@ -1,0 +1,102 @@
+[
+  {
+    "level": "casa_viri__01_planta_baja_copia_1",
+    "input_walls": 140,
+    "canonical_walls": 87,
+    "collapsed": 53,
+    "patterns": {
+      "REPETITIVE_PARALLEL": 3
+    },
+    "families": {
+      "REPETITIVE_LINEAR_ELEMENT": 3
+    },
+    "pattern_members": 21,
+    "mapping_reasons": {
+      "parallel_wall_faces_to_centerline": 17,
+      "near_duplicate_hypotheses": 21,
+      "single_hypothesis": 49
+    }
+  },
+  {
+    "level": "casa_viri__02_planta_alta_copia_1",
+    "input_walls": 73,
+    "canonical_walls": 38,
+    "collapsed": 35,
+    "patterns": {
+      "REPETITIVE_PARALLEL": 1
+    },
+    "families": {
+      "REPETITIVE_LINEAR_ELEMENT": 1
+    },
+    "pattern_members": 7,
+    "mapping_reasons": {
+      "parallel_wall_faces_to_centerline": 12,
+      "near_duplicate_hypotheses": 9,
+      "single_hypothesis": 17
+    }
+  },
+  {
+    "level": "miguel_h__planta_alta",
+    "input_walls": 153,
+    "canonical_walls": 81,
+    "collapsed": 72,
+    "patterns": {
+      "ANGULAR_HUB": 1
+    },
+    "families": {
+      "ROOF_COVER_CANDIDATE": 1
+    },
+    "pattern_members": 4,
+    "mapping_reasons": {
+      "parallel_wall_faces_to_centerline": 17,
+      "near_duplicate_hypotheses": 14,
+      "single_hypothesis": 50
+    }
+  },
+  {
+    "level": "miguel_h__planta_baja",
+    "input_walls": 221,
+    "canonical_walls": 121,
+    "collapsed": 100,
+    "patterns": {
+      "REPETITIVE_PARALLEL": 2
+    },
+    "families": {
+      "REPETITIVE_LINEAR_ELEMENT": 2
+    },
+    "pattern_members": 10,
+    "mapping_reasons": {
+      "parallel_wall_faces_to_centerline": 22,
+      "near_duplicate_hypotheses": 25,
+      "single_hypothesis": 74
+    }
+  },
+  {
+    "level": "miguel_v__planta_alta",
+    "input_walls": 178,
+    "canonical_walls": 130,
+    "collapsed": 48,
+    "patterns": {},
+    "families": {},
+    "pattern_members": 0,
+    "mapping_reasons": {
+      "parallel_wall_faces_to_centerline": 3,
+      "near_duplicate_hypotheses": 28,
+      "single_hypothesis": 99
+    }
+  },
+  {
+    "level": "miguel_v__planta_baja",
+    "input_walls": 75,
+    "canonical_walls": 43,
+    "collapsed": 32,
+    "patterns": {},
+    "families": {},
+    "pattern_members": 0,
+    "mapping_reasons": {
+      "parallel_wall_faces_to_centerline": 3,
+      "near_duplicate_hypotheses": 14,
+      "single_hypothesis": 26
+    }
+  }
+]

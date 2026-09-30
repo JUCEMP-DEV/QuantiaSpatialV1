@@ -1,0 +1,14 @@
+QUANTIA SPATIAL V1.0 — EXCLUSIONES DE EMPAQUETADO
+Fecha: 2026-09-17
+
+El ZIP conserva código fuente, configuración del proyecto, tests, datos/replays de test, documentación y evidencias actuales.
+
+Se excluyen únicamente artefactos regenerables/no portables:
+- Backend/.venv/
+- Frontend/node_modules/
+- __pycache__/
+- .pytest_cache/
+- *.pyc / *.pyo
+- puntero local .git (no contiene el repositorio completo y no es portable)
+
+requirements.txt, package.json y package-lock.json permanecen para reconstruir entornos.

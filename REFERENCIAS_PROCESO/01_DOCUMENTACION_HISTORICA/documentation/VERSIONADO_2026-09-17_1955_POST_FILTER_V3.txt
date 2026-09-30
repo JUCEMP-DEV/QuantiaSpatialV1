@@ -1,0 +1,61 @@
+QUANTIA SPATIAL V1 — POST-RECONSTRUCTION FILTER LAYER V3
+Fecha: 2026-09-17 19:55
+Raíz: Backend/app/quantia_spatialV1
+
+PUNTO DE RETORNO
+- Archivo: quantia_spatialV1_PostFilterLayer_V2.zip
+- SHA256: 8c955e4e97d51db94b465af75fb36cf0f4f44a911a5c06978ad749a806795591
+- Estado: conservar intacto como rollback inmediato.
+- Adaptive Reconstruction permanece congelada.
+- Call 2 permanece OFF por defecto.
+
+OBJETIVO DEL CAMBIO
+Corregir dos lagunas detectadas en V2 sin reabrir F03/Mask/Topology:
+1. convertir PostFilterSelector en router operativo real y no solo auditoría;
+2. reducir líneas paralelas casi coincidentes que representan la misma centerline aun cuando el rol topológico difiere.
+
+CAMBIOS PRODUCTIVOS — SOLO post_reconstruction_filters/
+- selector.py
+  * añade NEAR_COINCIDENT_CANONICALIZER;
+  * detecta pares con solape >= 0.75, similitud longitudinal >= 0.55 y separación <= 0.09 m;
+  * mantiene decisión basada en evidencia, nunca por nombre de caso.
+- filter_engine.py
+  * _classify recibe PostFilterPlan;
+  * cada familia de filtro solo actúa si el selector la habilitó;
+  * canonicalizadores se habilitan/deshabilitan según el plan;
+  * cada FilterDecision registra applied_modules;
+  * audit expone selector_is_operational y enabled_modules.
+- wall_hypothesis_canonicalizer.py
+  * mantiene duplicados estrictos;
+  * añade bundles casi coincidentes -> una centerline;
+  * conserva face-pair canonicalization;
+  * no conecta gaps, no cierra openings, no crea muros.
+- contracts.py
+  * POST_RECONSTRUCTION_FILTER_V3;
+  * añade NEAR_COINCIDENT_CANONICALIZER;
+  * añade applied_modules y métricas de selector/canonicalización.
+
+REGLA FIJA
+- Filtrar = clasificar/excluir de WallGraph, nunca borrar evidencia.
+- Canonicalizar = varias representaciones del mismo muro físico -> una centerline.
+- No fusionar fragmentos separados longitudinalmente.
+- No cerrar gaps ni reinterpretar openings en esta capa.
+
+VALIDACIÓN
+- Suite activa completa: 70 PASSED, 9 SKIPPED, 0 FAILED.
+- compileall: PASS.
+- Nuevas pruebas V3: selector operativo, trazabilidad por módulo, role-conflict near-coincident, protección contra absorción de segmentos cortos y desactivación explícita de canonicalizadores.
+
+REPLAY GEOMÉTRICO SOBRE LOS 6 WALLGRAPH REALES
+V2 -> V3 canonical wall count:
+- Casa Viri PB: 87 -> 82
+- Casa Viri PA: 38 -> 35
+- Miguel H PB: 121 -> 113
+- Miguel H PA: 81 -> 78
+- Miguel V PB: 43 -> 38
+- Miguel V PA: 130 -> 126
+
+IMPORTANTE
+- Estos counts validan únicamente canonicalización geométrica sobre evidencia ya recibida.
+- La calidad final de encapsulamiento contextual debe verificarse con las salidas reales 02/03/04/05 generadas en Windows.
+- No activar Call 2 todavía.

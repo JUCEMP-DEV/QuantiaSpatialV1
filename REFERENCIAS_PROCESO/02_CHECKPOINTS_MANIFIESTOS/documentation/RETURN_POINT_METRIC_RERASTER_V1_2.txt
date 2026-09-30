@@ -1,0 +1,9 @@
+PUNTO DE RETORNO
+
+Scale Foundation V1.4 ZIP:
+d923e84edfbb5d48d4abaf7d277067612e4fcbcfa1c535d421167eb3ef4349d3
+
+Metric Reraster V1.1 ZIP:
+657515290889b6ac1f3d7581a7a152e1f79577afa290012eb7b18dc1664fa911
+
+Si V1.2 introduce regresión, restaurar ambos puntos anteriores.

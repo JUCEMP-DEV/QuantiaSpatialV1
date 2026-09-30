@@ -1,0 +1,36 @@
+QUANTIA V2L — HISTÓRICO DE DECISIÓN
+Fecha: 2026-09-14 14:01 -06:00
+
+DECISIÓN
+No ajustar solver ni scores globales. Corregir primero identidad funcional y reglas de encapsulamiento.
+
+EVIDENCIA REAL V2
+- Puertas: DOOR_REGION cayó a 0 en los tres casos; V2 fue demasiado restrictiva.
+- Ventanas: direct_member_candidate_count dejó de ser cero, pero WINDOW_REGION sobreclasificó bandas/muros completos.
+- Miguel H PA: 29 candidatos de WINDOW_REGION con 29 direct members y todos QUARANTINE.
+- Miguel V PA: selección walls_only cayó a 5 muros.
+- Escaleras mejoraron, pero provenance directa seguía sin llegar de forma uniforme.
+- TEXT_SYMBOL mejoró y no requiere nueva modificación en esta iteración.
+
+CONTRATO V3
+PUERTA
+- arco compatible obligatorio;
+- hoja puede estar fragmentada, pero debe ser radial a la bisagra;
+- host wall obligatorio;
+- debe estar dentro/en contacto con arquitectura;
+- curva aislada o burbuja/eje exterior no califican.
+
+VENTANA
+- 3–6 tracks paralelos locales y coherentes;
+- frame debe quedar embebido entre host izquierdo y derecho;
+- proximidad al perímetro solo suma confianza, no valida por sí sola;
+- una línea continua atravesando el frame invalida el opening;
+- host_line_ids se publica explícitamente;
+- pertenencia directa a WINDOW no elimina automáticamente una banda estructural fuerte.
+
+PROVENANCE
+Los member_line_ids de patrones repetitivos incluyen line.id + evidence_ids + physical_stroke_member_line_ids + context_equivalent_line_ids cuando estén disponibles.
+
+PUNTO DE RETORNO
+F03 Element Context Isolation V1.
+V2 se conserva solo como snapshot diagnóstico que demostró la recuperación de provenance y la regresión de ventanas/puertas.

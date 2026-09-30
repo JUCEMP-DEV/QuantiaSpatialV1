@@ -1,0 +1,32 @@
+VERSION: V1_ADAPTIVE_RECONSTRUCTION_PROTOTYPE_1
+FECHA: 2026-09-17 13:47 America/Mexico_City
+PUNTO_DE_RETORNO: Quantia Spatial V1.0.zip
+SHA256_RETORNO: d3d2a84915a85fd4cc0dd80504ecc5a14e5a0b9abb41b45725a85c65b4bf0e86
+
+CAMBIO DE FASE
+De pruebas con lógica embebida -> motor adaptativo modular bajo app/quantia_spatialV1/adaptive_reconstruction.
+
+MODULOS NUEVOS
+- contracts.py
+- decision_engine.py
+- decision_trace.py
+- hybrid_engine.py
+- multimodal_review.py
+- correction_applier.py
+- artifact_renderer.py
+
+PRINCIPIOS
+- No hay reglas por Casa Viri/Miguel H/Miguel V.
+- Los casos sirven como evidencia para aprender qué ruta funciona.
+- F03 = structural seed.
+- Wall Mask = recuperación/densificación.
+- Context Gate = aislamiento negativo.
+- Canonicalization = una línea por muro.
+- Topology = validación de espacios y rol.
+- Call 2 = corrección multimodal por deltas contra plano original.
+- El proveedor multimodal es inyectable para permitir modelo propio futuro.
+
+VALIDACION LOCAL
+- compileall: PASS
+- regresiones seleccionadas + nuevos tests: 30 PASSED / 3 SKIPPED
+- SKIPPED: casos reales por ausencia de PDFs Windows en este entorno.

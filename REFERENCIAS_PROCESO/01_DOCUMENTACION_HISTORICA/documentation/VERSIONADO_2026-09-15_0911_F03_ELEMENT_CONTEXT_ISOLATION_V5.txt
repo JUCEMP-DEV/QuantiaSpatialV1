@@ -1,0 +1,36 @@
+QUANTIA V2L — VERSIONADO
+Fecha: 2026-09-15 09:11 -06:00
+Versión: F03 Element Context Isolation V5 + Selection Contracts V1.6
+Estado: CANDIDATA
+Base de partida: V4/V1.5 probada con Probe V3 real
+Punto de retorno: QUANTIA_V2L_F03_ELEMENT_CONTEXT_ISOLATION_V4_SELECTION_CONTRACTS_V1_5.zip
+SHA256 retorno: 39e205363acca54d0bed54b58f9282599d79c18db6f958c34c4a9f3d91981654
+Base estable: Canonical Metric Raster V2.3 VALIDATED
+
+OBJETIVO
+Corregir únicamente fallas verificadas por Probe V3: puerta anulada por veto semántico, observabilidad incompleta de provenance y riesgo insuficiente para falsos DOUBLE_FACE bracketed por segmentos reales de patrón.
+
+ARCHIVOS DE EJECUCIÓN MODIFICADOS
+- reconstruction_core/element_context_detector.py
+- reconstruction_core/candidate_context_gate.py
+
+PRUEBAS ACTIVAS
+- tests/test_quantia_spatial_f03_element_context_isolation_v5_synthetic.py
+- tests/test_quantia_spatial_f03_selection_contracts_v1_6_synthetic.py
+- tests/test_quantia_spatial_f03_element_isolation_probe_all_3_v4.py
+
+CAMBIOS FUNCIONALES
+1. DOOR semantic miss deja de ser veto; geometría local fuerte puede validar la puerta.
+2. Burbuja/símbolo fuera de la planta sigue rechazado por architecture_support.
+3. pattern_pair_provenance usa únicamente pattern_segments reales.
+4. pair profile inferido no puede demostrar por sí solo pertenencia de STAIR/FLOOR/FURNITURE/HATCH.
+5. FLOOR bracketed sin member ids sigue REVIEW, pero con riesgo contextual elevado y trazable.
+6. Probe V4 usa la misma función canónica de direct_member_support del gate.
+
+VALIDACIÓN LOCAL
+- 35 pruebas sintéticas PASS.
+- compileall PASS.
+- frozen real test SHA256 intacto.
+
+VALIDACIÓN REAL
+PENDIENTE: Probe V4 Casa Viri / Miguel H / Miguel V.

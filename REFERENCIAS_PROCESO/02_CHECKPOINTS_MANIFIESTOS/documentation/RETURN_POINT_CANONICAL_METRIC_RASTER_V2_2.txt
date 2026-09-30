@@ -1,0 +1,6 @@
+QUANTIA V2L — PUNTO DE RETORNO DE V2.2
+Base segura anterior: CANONICAL METRIC RASTER V2.1
+Archivo: QUANTIA_V2L_CANONICAL_METRIC_RASTER_V2_1_2026-09-11.zip
+SHA256: 654a2c6060d0c0ec44e09abb9b4c62580c01baf4031dcd047f2ba8bb05a88327
+
+Para revertir V2.2, restaurar phase_015_evidence/evidence_parameterizer.py desde V2.1 y la documentación de estado/versionado correspondiente.

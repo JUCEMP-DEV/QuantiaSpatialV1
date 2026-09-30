@@ -1,0 +1,6 @@
+QUANTIA V2L — PUNTO DE RETORNO
+Fecha: 2026-09-15 09:11 -06:00
+Return point inmediato: F03 Element Context Isolation V4 + Selection Contracts V1.5
+Archivo: QUANTIA_V2L_F03_ELEMENT_CONTEXT_ISOLATION_V4_SELECTION_CONTRACTS_V1_5.zip
+SHA256: 39e205363acca54d0bed54b58f9282599d79c18db6f958c34c4a9f3d91981654
+Motivo: última versión ejecutada por el usuario con Probe V3 real antes de V5.
