@@ -1,0 +1,41 @@
+{
+  "cleanup_version": "MAIN_CLEAN_PROCESS_V1",
+  "date": "2026-10-01",
+  "repository": "JUCEMP-DEV/QuantiaSpatialV1",
+  "archive_branch": "archive/spatial-baseline-pre-clean-2026-10-01",
+  "archive_commit": "5bd65974340fd69f0371905df8ba734be6ac3e68",
+  "policy": "Generated test artifacts and historical replay-dependent probes are preserved on the archive branch and removed from main.",
+  "deleted_file_count": 135,
+  "deleted_bytes": 140071258,
+  "categories": {
+    "tests_output": 109,
+    "tests_data": 9,
+    "historical_test_scripts": 17
+  },
+  "historical_test_scripts": [
+    "tests/call2_editor_snapshot.py",
+    "tests/call2_provider_test_utils.py",
+    "tests/quantia_case_loader.py",
+    "tests/render_canonical_visual_review.py",
+    "tests/run_call2_interface04.py",
+    "tests/test_quantia_spatial_adaptive_reconstruction_all_3_v1.py",
+    "tests/test_quantia_spatial_call2_provider_smoke_v1.py",
+    "tests/test_quantia_spatial_call2_single_level_provider_v1.py",
+    "tests/test_quantia_spatial_context_classification_v6_2_standardized.py",
+    "tests/test_quantia_spatial_context_gate_v5_standardized.py",
+    "tests/test_quantia_spatial_f03_flow_all_3_v1.py",
+    "tests/test_quantia_spatial_metric_reraster_v1_3_standardized.py",
+    "tests/test_quantia_spatial_solver_evidence_v1_standardized.py",
+    "tests/test_quantia_spatial_v1_call2_all_3_v2.py",
+    "tests/test_quantia_spatial_v1_process_all_3_v1.py",
+    "tests/test_quantia_spatial_v1_space_closure_constraint_probe_v2.py",
+    "tests/test_quantia_spatial_v1_space_closure_probe_v1.py"
+  ],
+  "main_rules": [
+    "tests/output is generated and ignored",
+    "tests/data historical replay baselines are not embedded in main",
+    "historical comparison uses the archive branch",
+    "operational Spatial engine code remains in main",
+    "PROJECT_SITE_CONTEXT_V1 remains in main as candidate new-process code"
+  ]
+}

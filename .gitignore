@@ -15,3 +15,9 @@ REFERENCIAS_PROCESO/04_OUTPUTS_HISTORICOS/
 # Temporary files
 *.tmp
 *.log
+
+# Generated test artifacts and historical replay baselines
+# Frozen snapshot: archive/spatial-baseline-pre-clean-2026-10-01
+tests/output/
+tests/data/
+

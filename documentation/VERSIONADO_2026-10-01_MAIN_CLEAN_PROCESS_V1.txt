@@ -1,0 +1,34 @@
+MAIN CLEAN PROCESS V1 — CANDIDATE
+Fecha: 2026-10-01
+
+PUNTO DE RETORNO / BASELINE
+Branch: archive/spatial-baseline-pre-clean-2026-10-01
+Commit: 5bd65974340fd69f0371905df8ba734be6ac3e68
+
+OBJETIVO
+Separar completamente de main los artefactos generados por pruebas y los baselines
+históricos del proceso anterior, preservándolos en una rama paralela para comparación.
+
+CAMBIOS
+- tests/output/: retirado de main y preservado en archive.
+- tests/data/: retirado de main y preservado en archive.
+- probes/standardized tests dependientes de esos artefactos: retirados de main.
+- .gitignore: bloquea tests/output/ y tests/data/.
+- documentación: registra el baseline y la nueva política de pruebas limpias.
+
+CONSERVADO EN MAIN
+- motor QuantiaSpatial completo.
+- pruebas sintéticas/contractuales independientes.
+- PROJECT_SITE_CONTEXT_V1.
+- documentación operativa y referencias históricas generales.
+
+NO MODIFICADO
+- F02.
+- Adaptive Reconstruction.
+- PostFilter V4.
+- Canonical WallGraph.
+- Call 2.
+
+ESTADO
+CANDIDATE. Las nuevas pruebas deben generar artefactos desde cero.
+La comparación se realizará contra archive/spatial-baseline-pre-clean-2026-10-01.

@@ -1,0 +1,22 @@
+HISTORICO DE CONVERSACION — 2026-10-01 11:00
+Proyecto: QuantiaSpatialV1
+
+DECISION
+Los resultados y archivos generados por pruebas del proceso anterior no deben convivir
+con el nuevo proceso en main porque pueden provocar confusión, reutilización accidental
+de replay y comparaciones ambiguas.
+
+ACCION
+1. Se congela el estado completo anterior en:
+   archive/spatial-baseline-pre-clean-2026-10-01
+   commit 5bd65974340fd69f0371905df8ba734be6ac3e68
+2. Se retiran de main tests/output, tests/data y los probes/standardized tests que
+   dependen directamente de esos baselines.
+3. Main conserva el motor Spatial y pruebas independientes.
+4. tests/output y tests/data pasan a estar ignorados.
+5. Las nuevas corridas deben producir evidencia nueva.
+6. La comparación histórica se realiza contra la rama archive.
+
+MOTIVO
+Separar proceso operativo actual de evidencia histórica sin perder trazabilidad ni
+capacidad de comparación.

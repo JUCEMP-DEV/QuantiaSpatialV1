@@ -1,4 +1,4 @@
-QUANTIA SPATIALV1 — ESTRUCTURA DEPURADA 2026-09-30
+QUANTIA SPATIALV1 — MAIN CLEAN PROCESS V1 — 2026-10-01
 
 __init__.py
 adaptive_reconstruction/
@@ -17,27 +17,28 @@ process_engine.py
 prompts/
 providers/
 reconstruction_core/
-REFERENCIAS_PROCESO/  # material no operativo conservado
-tests/
+REFERENCIAS_PROCESO/  # material histórico/documental no operativo
+tests/                # solo pruebas activas sin baselines históricos embebidos
 transport/
 
-DOCUMENTACION OPERATIVA:
+SEPARACION DE BASELINE HISTORICO
+- branch: archive/spatial-baseline-pre-clean-2026-10-01
+- commit congelado: 5bd65974340fd69f0371905df8ba734be6ac3e68
+- contiene tests/output/, tests/data/, replays, historias Gemini, imágenes,
+  WallGraphs y probes/standardized tests del proceso anterior.
+
+POLITICA DE MAIN
+- tests/output/ no se versiona.
+- tests/data/ no se versiona.
+- cada nueva corrida parte sin outputs/replays heredados.
+- los resultados comparativos se contrastan con la rama archive, no se copian a main.
+- PROJECT_SITE_CONTEXT_V1 pertenece al proceso nuevo candidato.
+
+DOCUMENTACION OPERATIVA
 - documentation/CALL2_PROMPT_V2_SPEC.txt
 - documentation/CURRENT_STATE.txt
 - documentation/CURRENT_VERSION.txt
-- documentation/LOCAL_VALIDATION_CANONICAL_WALLGRAPH_INTEGRITY_V2.json
-- documentation/PRODUCT_CODE_CHANGESET_2026-09-17.txt
+- documentation/PROJECT_SITE_CONTEXT_V1.md
 - documentation/QUANTIA_SPATIAL_OBJECTIVES_AND_GATES.txt
-- documentation/REPORTE_CALL2_INTERFAZ04_REVISADO_2026-09-28.md
-- documentation/SPACE_CLOSURE_PROBE_V1.txt
-- documentation/VERSIONADO_2026-09-26_CANONICAL_WALLGRAPH_INTEGRITY_V2.txt
-
-OUTPUTS OPERATIVOS CONSERVADOS:
-- tests/output/.gitkeep
-- tests/output/call2_interface04
-- tests/output/canonical_integrity_v2
-- tests/output/canonical_visual_review
-- tests/output/quantia_spatial_v1_process
-- tests/output/space_closure_constraint_probe_v2
-- tests/output/space_closure_probe_v1
-- tests/output/space_closure_probe_v1.zip
+- documentation/MAIN_CLEAN_PROCESS_2026-10-01.md
+- documentation/VERSIONADO_2026-10-01_MAIN_CLEAN_PROCESS_V1.txt

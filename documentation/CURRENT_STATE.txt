@@ -59,3 +59,23 @@ base 1be317aab1cf0c80229f46819df63401be8735d4
 Estado: implementacion candidata; pytest local pendiente.
 No se modificaron F02, CandidateGraph, WallGraph, Call 2 ni rutas legacy.
 
+MAIN CLEAN PROCESS V1 — 2026-10-01
+
+Se separaron del branch main los resultados generados por pruebas, replays, historias
+Gemini, rasters/baselines históricos y los probes/standardized tests que dependen de
+ellos. El snapshot exacto anterior permanece congelado en:
+
+archive/spatial-baseline-pre-clean-2026-10-01
+commit base: 5bd65974340fd69f0371905df8ba734be6ac3e68
+
+Main conserva el código operativo de QuantiaSpatial y la suite sintética/contractual
+que no depende de artefactos históricos. tests/output/ y tests/data/ quedan ignorados
+para evitar que nuevas ejecuciones contaminen el proceso limpio.
+
+PROJECT_SITE_CONTEXT_V1 permanece en main como capa candidata del nuevo proceso.
+No se modificaron F02, Adaptive Reconstruction, PostFilter V4, Canonical WallGraph
+ni Call 2 durante esta limpieza estructural.
+
+Estado: MAIN_CLEAN_PROCESS_V1 CANDIDATE. La validación del nuevo proceso se ejecutará
+sobre artefactos nuevos; la comparación histórica se hará contra la rama archive.
+
