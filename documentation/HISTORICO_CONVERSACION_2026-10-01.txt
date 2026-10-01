@@ -1,0 +1,30 @@
+HISTORICO DE CONVERSACION — 2026-10-01
+Proyecto: QuantiaSpatialV1
+
+DECISIONES RELEVANTES
+
+1. La validacion espacial debe usar correlaciones simultaneas, no optimizar factores
+   de forma aislada.
+
+2. Se definio el predio como referencia territorial base, separado del footprint
+   construido de cada nivel. El area del terreno no obliga a que PB o PA tengan la
+   misma superficie.
+
+3. Deben conservarse explicitamente jardines, patios, cocheras, accesos y circulaciones,
+   ademas de contexto exterior como banquetas/calles y proyecciones como voladizos,
+   balcones o marquesinas.
+
+4. Se verifico QuantiaV2L y ya existen datos declarados por usuario:
+   anchoTerrenoM, largoTerrenoM, areaTerrenoM2, areaConstruccionPropuestaM2,
+   areaConstruccionM2, niveles, alturas y datos constructivos.
+
+5. Se verifico que esos datos no llegaban al primer llamado de QuantiaSpatial.
+
+6. Decision: crear PROJECT_SITE_CONTEXT_V1 como evidencia USER_DECLARED independiente
+   e inyectarla al primer llamado Gemini sin sustituir la evidencia del documento.
+
+7. Punto de retorno creado antes de modificar:
+   checkpoint/pre-project-site-context-v1-2026-10-01
+   base 1be317aab1cf0c80229f46819df63401be8735d4
+
+8. No se conectaron routers/endpoints legacy ni se modifico F02/WallGraph/Call 2.
