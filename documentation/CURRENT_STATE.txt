@@ -37,3 +37,25 @@ CHECKPOINTS
 documentation/checkpoints/pre_integrity_v2_*/source.zip: estado anterior a estos cambios.
 documentation/checkpoints/canonical_integrity_v2_*/source.zip: estado validado.
 Cada paquete incluye manifest.json externo y source.sha256.
+
+CANDIDATE LAYER — PROJECT SITE CONTEXT V1 — 2026-10-01
+
+Se agrego una capa interna candidata para recibir datos declarados por el usuario
+antes del primer llamado Gemini. El contexto se mantiene separado de la evidencia
+observada y derivada. El primer prompt puede recibir ancho/largo/area de terreno,
+area de construccion, niveles y otros datos de datosGeneralesObra.
+
+La regla central es:
+USER_DECLARED != DOCUMENT_OBSERVED != SPATIAL_DERIVED.
+
+Terreno, footprint de Planta Baja y footprint de Planta Alta no se fuerzan a ser
+iguales. Voladizos, balcones y marquesinas se consideran excepciones/proyecciones
+validas que requieren correlacion, no errores automaticos.
+
+Punto de retorno:
+checkpoint/pre-project-site-context-v1-2026-10-01
+base 1be317aab1cf0c80229f46819df63401be8735d4
+
+Estado: implementacion candidata; pytest local pendiente.
+No se modificaron F02, CandidateGraph, WallGraph, Call 2 ni rutas legacy.
+
