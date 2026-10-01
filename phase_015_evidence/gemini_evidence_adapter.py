@@ -21,6 +21,9 @@ from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_history import (
 from app.quantia_spatialV1.phase_015_evidence.project_site_prompt_context import (
     build_project_site_context_prompt,
 )
+from app.quantia_spatialV1.phase_015_evidence.replay_signature import (
+    ReplaySignatureValidator,
+)
 from app.quantia_spatialV1.providers.vision import (
     GeminiSpatialVisionProvider,
     SpatialVisionProviderError,
@@ -129,6 +132,20 @@ class GeminiEvidenceAdapter:
 
         try:
             if replay_payload is not None:
+                ReplaySignatureValidator.validate(
+                    replay_payload=replay_payload,
+                    current=ReplaySignatureValidator.build(
+                        prompt=prompt,
+                        schema=schema,
+                        raster_bytes=page_raster_bytes,
+                        raster_mime_type=page_raster_mime_type,
+                        project_site_context=(
+                            site_context.as_prompt_payload()
+                            if site_context is not None
+                            else None
+                        ),
+                    ),
+                )
                 payload, replay_model, replay_fallback = self._payload_from_replay(
                     replay_payload
                 )

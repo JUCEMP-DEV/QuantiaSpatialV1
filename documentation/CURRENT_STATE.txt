@@ -95,3 +95,22 @@ Punto de retorno antes de esta migración:
 checkpoint/pre-baseline-folder-migration-2026-10-01
 commit 3da48a747e599dacbe0ed977cebf8a30bab5966f
 
+FIRST CALL PROJECT SITE CONTEXT V1 — 2026-10-01
+
+F01.5 incorpora validación estricta de firma para replay. La equivalencia mínima es:
+prompt + schema + raster + MIME + project_site_context. Un replay sin signature
+verificable queda rechazado.
+
+Se agregó un runner aislado para la primera llamada Gemini real:
+tests/run_first_call_project_site_context_v1.py
+
+El runner no consume archive/, fuerza replay_payload=None y persiste prompt, schema,
+contexto declarado, respuesta raw del provider, payload normalizado, semántica,
+evidencia, historial y hashes bajo tests/output/first_call_project_site_context_v1/.
+
+Punto de retorno:
+checkpoint/pre-first-call-clean-test-v1-2026-10-01
+commit 5625e745411c5dc332d729699ab6561fece2136a
+
+Estado: código preparado; pytest local y llamada Gemini real pendientes.
+

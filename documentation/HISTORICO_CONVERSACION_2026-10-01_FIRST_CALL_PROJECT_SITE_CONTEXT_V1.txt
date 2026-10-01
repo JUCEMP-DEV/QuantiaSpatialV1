@@ -1,0 +1,21 @@
+HISTORICO DE CONVERSACION — 2026-10-01
+Proyecto: QuantiaSpatialV1
+
+DECISION
+Antes de iniciar la nueva prueba del primer llamado se cierra la equivalencia de
+replay y se crea un runner aislado que no puede reutilizar los artefactos históricos.
+
+REGLA
+Un replay solo es válido si coinciden prompt, schema, raster, MIME y
+project_site_context. Los replays sin firma verificable se rechazan.
+
+RUN NUEVO
+tests/run_first_call_project_site_context_v1.py ejecuta únicamente la extracción
+Gemini F01.5 sobre una página/LevelView conocido, con replay_payload=None, y conserva
+todos los artefactos de trazabilidad en tests/output/first_call_project_site_context_v1/.
+
+PENDIENTE
+- ejecutar pytest;
+- proporcionar datos USER_DECLARED reales del caso elegido;
+- ejecutar Gemini real;
+- comparar la salida contra archive/spatial-baseline-pre-clean-2026-10-01/.

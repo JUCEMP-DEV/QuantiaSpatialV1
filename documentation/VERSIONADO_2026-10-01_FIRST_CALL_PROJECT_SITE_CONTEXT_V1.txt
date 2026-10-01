@@ -1,0 +1,32 @@
+FIRST CALL PROJECT SITE CONTEXT V1 — CANDIDATE
+Fecha: 2026-10-01
+
+PUNTO DE RETORNO
+Branch: checkpoint/pre-first-call-clean-test-v1-2026-10-01
+Commit: 5625e745411c5dc332d729699ab6561fece2136a
+
+FASE / ARCHIVOS
+- F01.5: phase_015_evidence/replay_signature.py
+- F01.5: phase_015_evidence/gemini_evidence_adapter.py
+- tests: tests/test_quantia_spatial_replay_signature_v1.py
+- runner: tests/run_first_call_project_site_context_v1.py
+
+CAMBIOS
+- Replay exige equivalencia de prompt, schema, raster, MIME y PROJECT_SITE_CONTEXT.
+- Se aceptan nombres de hash del replay legacy cuando son verificables.
+- Replay sin signature es rechazado.
+- El runner ejecuta la extracción Gemini real con replay_payload=None.
+- Cada corrida guarda prompt, schema, contexto, raw provider response, payload,
+  semántica, evidencia, historial y manifiestos con hashes.
+- tests/output continúa ignorado por Git.
+
+NO MODIFICADO
+- F02
+- Adaptive Reconstruction
+- PostFilter V4
+- Canonical WallGraph
+- Call 2
+- routers/endpoints legacy
+
+VALIDACION
+Pendiente de ejecutar pytest local y corrida Gemini real.

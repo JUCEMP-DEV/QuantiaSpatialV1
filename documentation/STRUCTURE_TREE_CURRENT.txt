@@ -34,3 +34,12 @@ POLITICA
 - archive/spatial-baseline-pre-clean-2026-10-01 es solo referencia comparativa.
 - tests/output/ y tests/data/ activos continúan ignorados por Git.
 - Las nuevas corridas no deben reutilizar automáticamente el baseline archivado.
+
+NUEVO PROCESO F01.5
+phase_015_evidence/
+  replay_signature.py
+tests/
+  test_quantia_spatial_replay_signature_v1.py
+  run_first_call_project_site_context_v1.py
+  output/first_call_project_site_context_v1/  # local, ignorado por Git
+
