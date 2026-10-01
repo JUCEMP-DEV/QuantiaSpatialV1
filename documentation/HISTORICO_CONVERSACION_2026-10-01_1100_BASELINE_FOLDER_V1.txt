@@ -1,0 +1,14 @@
+HISTORICO DE CONVERSACION — 2026-10-01 11:00
+Proyecto: QuantiaSpatialV1
+
+CAMBIO DE DECISION
+La rama paralela no brinda separación física cuando se hace checkout dentro del mismo
+working tree. Se sustituye como mecanismo de consulta por una carpeta dedicada dentro
+de main.
+
+ACCION
+- Se conserva un checkpoint previo a la migración.
+- Se copian 135 archivos históricos desde el snapshot 5bd65974340fd69f0371905df8ba734be6ac3e68.
+- Se preservan sus rutas relativas bajo archive/spatial-baseline-pre-clean-2026-10-01/.
+- El proceso activo continúa limpio en tests/.
+- La carpeta archive es únicamente comparativa y no operativa.

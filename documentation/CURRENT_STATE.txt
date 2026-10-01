@@ -79,3 +79,19 @@ ni Call 2 durante esta limpieza estructural.
 Estado: MAIN_CLEAN_PROCESS_V1 CANDIDATE. La validación del nuevo proceso se ejecutará
 sobre artefactos nuevos; la comparación histórica se hará contra la rama archive.
 
+BASELINE HISTORICO EN CARPETA — 2026-10-01
+
+Por decisión de arquitectura, el baseline del proceso anterior deja de depender de
+una rama paralela para su consulta cotidiana. Los 135 archivos retirados
+del proceso activo quedan preservados dentro de main en:
+
+archive/spatial-baseline-pre-clean-2026-10-01/
+
+La estructura relativa original se conserva dentro de esa carpeta. El contenido es
+solo comparativo/histórico y no debe ser consumido automáticamente por el motor ni por
+la suite activa.
+
+Punto de retorno antes de esta migración:
+checkpoint/pre-baseline-folder-migration-2026-10-01
+commit 3da48a747e599dacbe0ed977cebf8a30bab5966f
+

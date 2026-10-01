@@ -1,0 +1,34 @@
+MAIN CLEAN BASELINE FOLDER V1 — CANDIDATE
+Fecha: 2026-10-01
+
+OBJETIVO
+Mantener en main una copia físicamente separada del baseline de pruebas anterior,
+sin mezclarla con las rutas operativas actuales.
+
+PUNTO DE RETORNO
+Branch: checkpoint/pre-baseline-folder-migration-2026-10-01
+Commit: 3da48a747e599dacbe0ed977cebf8a30bab5966f
+
+FUENTE ARCHIVADA
+Branch original: archive/spatial-baseline-pre-clean-2026-10-01
+Commit fuente: 5bd65974340fd69f0371905df8ba734be6ac3e68
+
+RESULTADO
+- 135 archivos históricos conservados.
+- tests/output histórico -> archive/spatial-baseline-pre-clean-2026-10-01/tests/output/
+- tests/data histórico -> archive/spatial-baseline-pre-clean-2026-10-01/tests/data/
+- probes/standardized tests dependientes -> archive/spatial-baseline-pre-clean-2026-10-01/tests/
+- rutas activas tests/output/ y tests/data/ permanecen limpias e ignoradas.
+
+NO MODIFICADO
+- engine.py
+- F02
+- Adaptive Reconstruction
+- PostFilter V4
+- Canonical WallGraph
+- Call 2
+- PROJECT_SITE_CONTEXT_V1
+
+ESTADO
+Estructura candidata lista para ejecutar el nuevo proceso desde rutas limpias y
+comparar manualmente contra la carpeta archive.

@@ -1,0 +1,19 @@
+{
+  "case_id": "MIGUEL_V_F02",
+  "render_scale": 0.7935,
+  "media_mime_type": "application/pdf",
+  "documents": [
+    {
+      "document_id": "MIGUEL_V_PLANTA_BAJA",
+      "level_name": "Planta Baja",
+      "pdf_path": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\REFERENCIAS Y ANEXOS Quantia General\\PlantaBaja Miguel V.pdf",
+      "source_page_number": 1
+    },
+    {
+      "document_id": "MIGUEL_V_PLANTA_ALTA",
+      "level_name": "Planta Alta",
+      "pdf_path": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\REFERENCIAS Y ANEXOS Quantia General\\PlantaAlta Miguel V.pdf",
+      "source_page_number": 1
+    }
+  ]
+}

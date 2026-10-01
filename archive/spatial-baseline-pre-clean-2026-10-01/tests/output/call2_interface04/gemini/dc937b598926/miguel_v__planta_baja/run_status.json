@@ -1,0 +1,7 @@
+{
+  "provider": "gemini",
+  "model": null,
+  "source_sha256": "2b60a5cb4de60bcadcc5006430ca58c1f0aa16d4b9244192a85b347eb284c960",
+  "status": "EXPORTED",
+  "mode": "LIVE_OR_EXACT_REPLAY"
+}

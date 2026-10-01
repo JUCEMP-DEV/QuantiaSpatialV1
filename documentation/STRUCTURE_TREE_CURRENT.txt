@@ -1,8 +1,16 @@
-QUANTIA SPATIALV1 — MAIN CLEAN PROCESS V1 — 2026-10-01
+QUANTIA SPATIALV1 — MAIN CLEAN PROCESS V1 + BASELINE FOLDER — 2026-10-01
 
 __init__.py
 adaptive_reconstruction/
 architectural_elements/
+archive/
+  spatial-baseline-pre-clean-2026-10-01/
+    README.md
+    MANIFEST.json
+    tests/
+      data/      # replays, histories y baseline geométrico del proceso anterior
+      output/    # resultados generados del proceso anterior
+      *.py       # probes/standardized tests históricos dependientes de ese baseline
 canonical_wallgraph/
 contracts/
 documentation/
@@ -17,28 +25,12 @@ process_engine.py
 prompts/
 providers/
 reconstruction_core/
-REFERENCIAS_PROCESO/  # material histórico/documental no operativo
-tests/                # solo pruebas activas sin baselines históricos embebidos
+REFERENCIAS_PROCESO/
+tests/          # suite activa; sin artefactos históricos versionados
 transport/
 
-SEPARACION DE BASELINE HISTORICO
-- branch: archive/spatial-baseline-pre-clean-2026-10-01
-- commit congelado: 5bd65974340fd69f0371905df8ba734be6ac3e68
-- contiene tests/output/, tests/data/, replays, historias Gemini, imágenes,
-  WallGraphs y probes/standardized tests del proceso anterior.
-
-POLITICA DE MAIN
-- tests/output/ no se versiona.
-- tests/data/ no se versiona.
-- cada nueva corrida parte sin outputs/replays heredados.
-- los resultados comparativos se contrastan con la rama archive, no se copian a main.
-- PROJECT_SITE_CONTEXT_V1 pertenece al proceso nuevo candidato.
-
-DOCUMENTACION OPERATIVA
-- documentation/CALL2_PROMPT_V2_SPEC.txt
-- documentation/CURRENT_STATE.txt
-- documentation/CURRENT_VERSION.txt
-- documentation/PROJECT_SITE_CONTEXT_V1.md
-- documentation/QUANTIA_SPATIAL_OBJECTIVES_AND_GATES.txt
-- documentation/MAIN_CLEAN_PROCESS_2026-10-01.md
-- documentation/VERSIONADO_2026-10-01_MAIN_CLEAN_PROCESS_V1.txt
+POLITICA
+- El motor operativo permanece fuera de archive/.
+- archive/spatial-baseline-pre-clean-2026-10-01 es solo referencia comparativa.
+- tests/output/ y tests/data/ activos continúan ignorados por Git.
+- Las nuevas corridas no deben reutilizar automáticamente el baseline archivado.

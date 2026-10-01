@@ -1,0 +1,40 @@
+CALL2_WALL_REVIEW_V2
+
+MISSION
+Produce the corrected WALLGRAPH for this LevelView by returning ONLY DELTAS against B.
+This is not initial extraction and not a redesign of the plan.
+
+VISUAL INPUT — same local coordinates in both panels
+A = exact original LevelView crop from the source page; primary truth.
+B = current Quantia walls-only WallGraph; proposal to audit, not truth.
+Priority: A > geometric evidence > B > previous filter metadata.
+
+WALL REVIEW RULES
+1. KEEP is implicit: never repeat correct walls.
+2. REMOVE_WALL when B is not a physical wall in A: axis/dimension, stair/railing, roof/terrace projection, slab edge, glazing/cancel, furniture, symbol, hatch/grid or other graphic.
+3. ADD_WALL only when A visibly contains a physical wall omitted by B. Require visible wall thickness/band, clear wall convention, or a convincing junction/boundary consistent with nearby walls. Never add a wall only because an axis aligns or symmetry suggests it.
+4. EXTEND/TRIM/REPOSITION only to match visible wall endpoints/junctions in A.
+5. MERGE/SPLIT only when B represents the same physical wall incorrectly.
+6. Perimeter is NOT protected. It may be corrected or removed.
+7. Do NOT draw solid wall through a visible opening. Door, window, floor-to-ceiling aluminum glazing, shutter/closure or similar opening stays physically open in the WallGraph.
+8. Parapet with real wall thickness = WALL. Railing/guardrail/handrail = non-wall architectural element.
+9. Roof/terrace lines are not walls unless A clearly shows an actual wall/parapet.
+10. If evidence is insufficient, do not guess: report unresolved_regions.
+
+NEXT-LAYER CANDIDATES
+After wall corrections, report only visually clear non-wall architectural regions relevant to the next layer or to a wall/opening decision: DOOR, WINDOW, FLOOR_TO_CEILING_GLAZING, RAILING_GUARDRAIL, STAIR, STAIR_HANDRAIL, ROOF_COVER, TERRACE, OPENING_CLOSURE, SLAB_EDGE_LEVEL_CHANGE, COLUMN, OTHER, UNCERTAIN.
+This is candidate identification, not final F04 classification/dimensioning.
+If an opening candidate has a clear host wall, include host_wall_id. For door/window/glazing: host_wall_continuity=true and solid_wall_present=false.
+
+OUTPUT DISCIPLINE
+- Coordinates are LevelView pixels: origin top-left, x right, y down.
+- WALL tuple format in STATE: [id,x1,y1,x2,y2,role], role P/D/R.
+- Reasons must be short and evidence-based (prefer <=12 words).
+- summary: maximum two short sentences.
+- Do not enumerate unchanged walls.
+- Do not output internal logical-gap hypotheses; continuity corrections belong in deltas.
+
+STATE
+{"level_view_id":"LEVEL_VIEW_f6e9f0082de5abaa","level_name":"Planta Baja","image_size_px":[2464,1651],"px_per_m":90.0232,"walls":[["CB_005_fcf68a56e77f",302.0,502.4,355.6,502.4,"P"],["CW_003_7d95fb039348",2092.0,502.7,1681.1,502.7,"R"],["PW_006",405.0,504.9,956.0,504.9,"P"],["CW_004_f80558c7f953",305.7,510.6,305.7,829.0,"P"],["PW_010",945.3,511.9,945.3,693.0,"P"],["CW_005_ba0df4d211d2",1393.1,527.9,1654.4,527.9,"R"],["CW_006_df30003f4bd0",980.6,550.9,1209.4,550.9,"R"],["PW_022",1376.2,553.1,1376.2,633.1,"R"],["CW_008_953893c38498",2086.1,554.4,2086.1,694.4,"R"],["CF_001_5c973a6def77",1359.1,555.6,1359.0,631.9,"R"],["PW_027",1685.6,559.4,1686.1,694.3,"R"],["PW_031",936.6,688.1,936.6,615.6,"R"],["PW_032",831.7,693.1,831.7,976.9,"R"],["CW_010_681e1b047237",948.8,733.1,948.8,833.1,"P"],["CW_002_1c4c508dee8a",1685.8,733.1,1686.2,1170.6,"R"],["PW_040",311.2,780.0,311.2,830.6,"P"],["PW_042",699.0,805.7,653.0,805.7,"R"],["CW_001_beef627bdca1",314.4,840.2,940.6,840.2,"D"],["PW_071",823.6,976.9,823.6,848.1,"R"],["CB_002_2df4315b84d2",945.8,850.6,945.8,943.1,"P"],["PW_050",307.5,866.9,307.4,1176.0,"P"],["PW_052",1680.4,943.1,1680.5,890.6,"R"],["CB_006_912c39224642",1394.2,904.0,1394.2,956.0,"R"],["CB_004_7ff8fca5d92f",946.0,958.8,1001.0,958.8,"R"],["CB_003_5c83ea29398c",1197.6,960.0,1197.6,1052.0,"R"],["CW_007_a9a37c55f834",1331.0,961.9,1331.0,1173.1,"R"],["PW_074",1210.2,988.1,1210.1,1068.1,"R"],["CB_001_499cb26544fa",946.2,1021.9,946.2,1163.1,"P"],["PW_079",934.8,1066.9,934.8,1021.9,"R"],["CW_013_102f4da6e80f",1090.2,1108.0,1090.2,1170.6,"R"],["PW_087",949.5,1163.0,949.5,1260.0,"R"],["PW_092",1686.0,1177.0,1686.0,1208.0,"R"],["PW_093",1341.9,1177.0,2081.9,1177.0,"R"],["PW_094",314.4,1177.4,1323.1,1177.4,"P"]],"source":{"document_id":"MIGUEL_V_PLANTA_BAJA","page":1,"bbox_page_px":[0,0,2464,1651],"origin":"top-left"}}
+PREVIOUS FILTER SUMMARY (counts only; NOT truth):
+{"architectural_candidate_count":4,"excluded_graphic_count":1,"unresolved_candidate_count":3,"architectural_family_counts":{"RAILING_GUARDRAIL":1,"STAIR":3}}
