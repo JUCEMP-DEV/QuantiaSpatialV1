@@ -22,7 +22,6 @@ from app.quantia_spatialV1.phase_015_evidence.project_site_prompt_context import
     build_project_site_context_prompt,
 )
 from app.quantia_spatialV1.phase_015_evidence.replay_signature import (
-    ReplaySignatureMismatchError,
     ReplaySignatureValidator,
 )
 from app.quantia_spatialV1.providers.vision import (
@@ -54,7 +53,6 @@ class GeminiPageEvidenceExtractionResult:
     fallback_used: bool
     replay_used: bool
     project_site_context: dict[str, Any] | None
-    replay_rejected_reason: str | None = None
 
 
 class GeminiEvidenceAdapter:
@@ -130,35 +128,27 @@ class GeminiEvidenceAdapter:
         )
 
         provider_result: object | None = None
-        replay_used = False
-        replay_rejected_reason: str | None = None
+        replay_used = replay_payload is not None
 
         try:
             if replay_payload is not None:
-                try:
-                    ReplaySignatureValidator.validate(
-                        replay_payload=replay_payload,
-                        current=ReplaySignatureValidator.build(
-                            prompt=prompt,
-                            schema=schema,
-                            raster_bytes=page_raster_bytes,
-                            raster_mime_type=page_raster_mime_type,
-                            project_site_context=(
-                                site_context.as_prompt_payload()
-                                if site_context is not None
-                                else None
-                            ),
+                ReplaySignatureValidator.validate(
+                    replay_payload=replay_payload,
+                    current=ReplaySignatureValidator.build(
+                        prompt=prompt,
+                        schema=schema,
+                        raster_bytes=page_raster_bytes,
+                        raster_mime_type=page_raster_mime_type,
+                        project_site_context=(
+                            site_context.as_prompt_payload()
+                            if site_context is not None
+                            else None
                         ),
-                    )
-                except ReplaySignatureMismatchError as exc:
-                    replay_rejected_reason = str(exc)
-                    replay_payload = None
-
-            if replay_payload is not None:
+                    ),
+                )
                 payload, replay_model, replay_fallback = self._payload_from_replay(
                     replay_payload
                 )
-                replay_used = True
             else:
                 provider_result = self.provider.analyze(
                     prompt=prompt,
@@ -255,7 +245,6 @@ class GeminiEvidenceAdapter:
             project_site_context=(
                 site_context.as_prompt_payload() if site_context is not None else None
             ),
-            replay_rejected_reason=replay_rejected_reason,
         )
 
         return GeminiPageEvidenceExtractionResult(
@@ -270,7 +259,6 @@ class GeminiEvidenceAdapter:
             project_site_context=(
                 site_context.as_prompt_payload() if site_context is not None else None
             ),
-            replay_rejected_reason=replay_rejected_reason,
         )
 
     def reproject_page_result(
@@ -336,7 +324,6 @@ class GeminiEvidenceAdapter:
             fallback_used=source_result.fallback_used,
             replay_used=source_result.replay_used,
             project_site_context=source_result.project_site_context,
-            replay_rejected_reason=source_result.replay_rejected_reason,
         )
 
     def extract_with_trace(self, *, level_view: LevelView) -> GeminiEvidenceExtractionResult:
