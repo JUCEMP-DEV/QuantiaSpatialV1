@@ -7,6 +7,7 @@ from typing import Any, Sequence
 
 from app.quantia_spatialV1.models.evidence import EvidenceGeometry, RawEvidence
 from app.quantia_spatialV1.models.level_view import LevelView, PixelBBox
+from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
 from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_contract import (
     SEMANTIC_CONTRACT_VERSION,
     SEMANTIC_SOURCE_MODE,
@@ -16,6 +17,9 @@ from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_extractor import (
 )
 from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_history import (
     GeminiSemanticHistory,
+)
+from app.quantia_spatialV1.phase_015_evidence.project_site_prompt_context import (
+    build_project_site_context_prompt,
 )
 from app.quantia_spatialV1.providers.vision import (
     GeminiSpatialVisionProvider,
@@ -45,6 +49,7 @@ class GeminiPageEvidenceExtractionResult:
     model: str | None
     fallback_used: bool
     replay_used: bool
+    project_site_context: dict[str, Any] | None
 
 
 class GeminiEvidenceAdapter:
@@ -84,6 +89,7 @@ class GeminiEvidenceAdapter:
         source_page_number: int,
         level_views: Sequence[LevelView],
         replay_payload: dict[str, Any] | None = None,
+        project_site_context: ProjectSiteContext | dict[str, Any] | None = None,
     ) -> GeminiPageEvidenceExtractionResult:
         views = list(level_views)
         self._validate_page_request(
@@ -92,7 +98,11 @@ class GeminiEvidenceAdapter:
             level_views=views,
         )
 
-        prompt = self._resolve_prompt()
+        site_context = ProjectSiteContext.coerce(project_site_context)
+        prompt = build_project_site_context_prompt(
+            base_prompt=self._resolve_prompt(),
+            project_site_context=site_context,
+        )
         schema = self._resolve_schema()
         call_id = self.semantic_history.new_page_call_id(
             source_document_id=source_document_id,
@@ -109,6 +119,9 @@ class GeminiEvidenceAdapter:
             raster_bytes=page_raster_bytes,
             raster_mime_type=page_raster_mime_type,
             semantic_contract_version=SEMANTIC_CONTRACT_VERSION,
+            project_site_context=(
+                site_context.as_prompt_payload() if site_context is not None else None
+            ),
         )
 
         provider_result: object | None = None
@@ -212,6 +225,9 @@ class GeminiEvidenceAdapter:
             semantic_payloads=semantic_payloads,
             response_payload=payload,
             replay_used=replay_used,
+            project_site_context=(
+                site_context.as_prompt_payload() if site_context is not None else None
+            ),
         )
 
         return GeminiPageEvidenceExtractionResult(
@@ -223,6 +239,9 @@ class GeminiEvidenceAdapter:
             model=model,
             fallback_used=fallback_used,
             replay_used=replay_used,
+            project_site_context=(
+                site_context.as_prompt_payload() if site_context is not None else None
+            ),
         )
 
     def reproject_page_result(
@@ -287,6 +306,7 @@ class GeminiEvidenceAdapter:
             model=source_result.model,
             fallback_used=source_result.fallback_used,
             replay_used=source_result.replay_used,
+            project_site_context=source_result.project_site_context,
         )
 
     def extract_with_trace(self, *, level_view: LevelView) -> GeminiEvidenceExtractionResult:
