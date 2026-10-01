@@ -1,0 +1,51 @@
+PROJECT SITE CONTEXT V1 — CANDIDATE
+Fecha: 2026-10-01
+
+OBJETIVO
+Conectar al primer llamado semantico de QuantiaSpatial el contexto declarado por el
+usuario en interfaces anteriores, manteniendolo separado de la evidencia observada
+en el plano.
+
+PUNTO DE RETORNO
+Branch: checkpoint/pre-project-site-context-v1-2026-10-01
+Commit base: 1be317aab1cf0c80229f46819df63401be8735d4
+
+CAMBIOS
+- models/project_site_context.py
+  Contrato USER_DECLARED compatible por alias con datosGeneralesObra de QuantiaV2L.
+- phase_015_evidence/project_site_prompt_context.py
+  Construye el bloque de contexto del primer prompt sin alterar el prompt cuando no
+  existe contexto util.
+- phase_015_evidence/gemini_evidence_adapter.py
+  Inyecta el contexto en la primera llamada Gemini.
+- phase_015_evidence/gemini_semantic_history.py
+  Persiste contexto y SHA256 junto con la traza de la llamada.
+- engine.py
+  Acepta project_site_context y lo conserva en QuantiaSpatialEngineResult.
+- tests/test_quantia_spatial_project_site_context_v1.py
+  Pruebas del contrato y del prompt.
+- documentation/PROJECT_SITE_CONTEXT_V1.md
+  Contrato conceptual y reglas de separacion de fuentes.
+
+REGLAS FIJADAS
+1. USER_DECLARED no reemplaza DOCUMENT_OBSERVED.
+2. DOCUMENT_OBSERVED no reemplaza SPATIAL_DERIVED.
+3. Terreno, footprint PB y footprint PA son magnitudes/geometrias diferentes.
+4. Voladizos, balcones y marquesinas pueden exceder el footprint inferior.
+5. Jardin, patio, cochera y acceso deben conservarse como regiones espaciales.
+6. Banqueta, calle y vecino pertenecen al contexto exterior cuando estan fuera del predio.
+7. No inferir el limite legal del predio unicamente desde ejes o perimetro construido.
+
+NO MODIFICADO
+- F02
+- CandidateGraph
+- Adaptive Reconstruction
+- PostFilter V4
+- Canonical WallGraph
+- Call 2
+- routers/endpoints legacy
+
+ESTADO
+Implementado en main como capa interna candidata.
+Validacion pytest local pendiente en el entorno de ejecucion del proyecto.
+No promover como estable hasta ejecutar la prueba nueva y regresiones pertinentes.
