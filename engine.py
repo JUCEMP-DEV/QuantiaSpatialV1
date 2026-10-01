@@ -9,6 +9,7 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 from pydantic import BaseModel, Field, ValidationError
 
 from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
 from app.quantia_spatialV1.phase_01_level.gemini_level_localization_service import (
     GeminiLevelLocalizationService,
     GeminiLevelLocalizationServiceError,
@@ -118,6 +119,7 @@ class QuantiaSpatialEngineResult(BaseModel):
     phase_01: QuantiaPhase01Result
     levels: list[QuantiaPhase02LevelResult] = Field(default_factory=list)
     raster_normalization: MetricRasterNormalizationResult | None = None
+    project_site_context: ProjectSiteContext | None = None
     warnings: list[str] = Field(default_factory=list)
 
 
@@ -182,6 +184,7 @@ class QuantiaSpatialEngine:
         discovery_payloads_by_page: dict[int, dict[str, Any]] | None = None,
         localization_payloads_by_page: dict[int, dict[str, Any]] | None = None,
         gemini_extraction_payloads_by_page: dict[int, dict[str, Any]] | None = None,
+        project_site_context: ProjectSiteContext | dict[str, Any] | None = None,
         enable_gemini_discovery: bool = True,
         enable_gemini_extraction: bool = True,
         enable_metric_raster_normalization: bool = True,
@@ -205,6 +208,8 @@ class QuantiaSpatialEngine:
             raise QuantiaSpatialEngineError(
                 "target_geometry_px_per_m debe ser mayor que cero."
             )
+
+        site_context = ProjectSiteContext.coerce(project_site_context)
 
         normalized_mime = self._normalize_mime_type(media_mime_type)
         phase_01_bootstrap = self.run_phase_01(
@@ -230,6 +235,7 @@ class QuantiaSpatialEngine:
             source_document_id=source_id,
             replay_by_page=gemini_extraction_payloads_by_page or {},
             enable_gemini_extraction=enable_gemini_extraction,
+            project_site_context=site_context,
         )
 
         bootstrap_levels, bootstrap_warnings = self._run_f015_f02(
@@ -273,6 +279,7 @@ class QuantiaSpatialEngine:
                 phase_01=phase_01_bootstrap,
                 levels=bootstrap_levels,
                 raster_normalization=normalization,
+                project_site_context=site_context,
                 warnings=self._dedupe_warnings([*warnings, *normalization.warnings]),
             )
 
@@ -288,6 +295,7 @@ class QuantiaSpatialEngine:
                 phase_01=phase_01_bootstrap,
                 levels=bootstrap_levels,
                 raster_normalization=normalization,
+                project_site_context=site_context,
                 warnings=self._dedupe_warnings(warnings),
             )
 
@@ -331,6 +339,7 @@ class QuantiaSpatialEngine:
             phase_01=phase_01_final,
             levels=final_levels,
             raster_normalization=normalization,
+            project_site_context=site_context,
             warnings=self._dedupe_warnings(warnings),
         )
 
@@ -342,6 +351,7 @@ class QuantiaSpatialEngine:
         source_document_id: str,
         replay_by_page: dict[int, dict[str, Any]],
         enable_gemini_extraction: bool,
+        project_site_context: ProjectSiteContext | None,
     ) -> tuple[dict[int, GeminiPageEvidenceExtractionResult], dict[int, str], list[str]]:
         views_by_page: dict[int, list[LevelView]] = defaultdict(list)
         for level_view in phase_01.level_views:
@@ -367,6 +377,7 @@ class QuantiaSpatialEngine:
                     source_page_number=page_number,
                     level_views=views,
                     replay_payload=replay_payload,
+                    project_site_context=project_site_context,
                 )
             except Exception as exc:
                 message = f"{type(exc).__name__}: {exc}"
