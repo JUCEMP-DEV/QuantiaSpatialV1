@@ -60,6 +60,7 @@ class GeminiSemanticHistory:
         raster_bytes: bytes,
         raster_mime_type: str,
         semantic_contract_version: str,
+        project_site_context: dict[str, Any] | None = None,
     ) -> None:
         self._append(
             {
@@ -75,6 +76,12 @@ class GeminiSemanticHistory:
                 "schema_sha256": self._sha256_json(schema),
                 "raster_sha256": hashlib.sha256(raster_bytes).hexdigest(),
                 "raster_mime_type": raster_mime_type,
+                "project_site_context": self._sanitize(project_site_context),
+                "project_site_context_sha256": (
+                    self._sha256_json(project_site_context)
+                    if project_site_context
+                    else None
+                ),
             }
         )
 
@@ -89,6 +96,7 @@ class GeminiSemanticHistory:
         semantic_payloads: dict[str, dict[str, Any]],
         response_payload: dict[str, Any],
         replay_used: bool,
+        project_site_context: dict[str, Any] | None = None,
     ) -> None:
         raw = getattr(provider_result, "raw", None) if provider_result is not None else None
         raw_dict = dict(raw) if isinstance(raw, dict) else None
@@ -108,6 +116,7 @@ class GeminiSemanticHistory:
                     getattr(provider_result, "fallback_used", False)
                 ) if provider_result is not None else False,
                 "replay_used": bool(replay_used),
+                "project_site_context": self._sanitize(project_site_context),
                 "response_payload": response_payload,
                 "semantic_payloads_by_level_view": semantic_payloads,
                 "usage_metadata": raw_dict.get("usageMetadata") if raw_dict else None,
