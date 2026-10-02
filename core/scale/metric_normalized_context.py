@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from .drawing_model import DrawingModel
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingModel
 from .level_scale_normalizer import LevelScaleProfile
 
 

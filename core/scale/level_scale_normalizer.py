@@ -5,8 +5,8 @@ from typing import Literal, Sequence
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 
 ScaleResolutionState = Literal["RESOLVED", "PARTIAL", "UNRESOLVED"]
