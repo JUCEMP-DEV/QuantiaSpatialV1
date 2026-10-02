@@ -5,6 +5,8 @@ from typing import Any
 
 from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
+    LevelViewEvidence,
+    PixelBBox,
 )
 from app.quantia_spatialV1.stages.levels.level_detector import (
     LevelDetectionResult,
@@ -223,6 +225,86 @@ class LevelIdentificationService:
             level_views=level_views,
             unresolved=unresolved,
             warnings=list(detection_result.warnings),
+        )
+
+    # ========================================================
+    # FALLBACK CONTROLADO DE PÁGINA COMPLETA
+    # ========================================================
+
+    def apply_full_page_fallback(
+        self,
+        *,
+        previous_result: LevelIdentificationResult,
+        source_raster_bytes: bytes,
+        source_document_id: str | None,
+        level_name: str | None,
+        evidence_sources: list[str],
+        reason: str,
+    ) -> LevelIdentificationResult:
+        """Publica una página completa solo después de fallar la ruta normal.
+
+        El fallback conserva la incertidumbre:
+        - con nombre respaldado externamente -> INFERIDO;
+        - sin nombre respaldado -> CANDIDATO.
+
+        No confirma geometría ni reemplaza las detecciones no resueltas previas.
+        """
+
+        if previous_result.level_views:
+            return previous_result
+
+        width_px, height_px = self._read_raster_size(source_raster_bytes)
+        bbox = PixelBBox(
+            x_min=0,
+            y_min=0,
+            x_max=width_px,
+            y_max=height_px,
+        )
+        state = "INFERIDO" if level_name else "CANDIDATO"
+        reference_parts = [
+            *[str(item).strip() for item in evidence_sources if str(item).strip()],
+            str(reason or "").strip(),
+        ]
+        reference = "|".join(dict.fromkeys(item for item in reference_parts if item))
+
+        evidence = [
+            LevelViewEvidence(
+                source="LEVEL_BOOTSTRAP",
+                reference=reference or "controlled_full_page_fallback",
+                text=level_name,
+                page_number=previous_result.source_page_number,
+                bbox_px=bbox,
+                confidence=None,
+            )
+        ]
+        detection = LevelRegionDetection(
+            level_name=level_name,
+            source_page_number=previous_result.source_page_number,
+            bbox_px=bbox,
+            state=state,
+            confidence=None,
+            evidence=evidence,
+        )
+        level_view = self.builder.build(
+            source_raster_bytes=source_raster_bytes,
+            source_page_number=previous_result.source_page_number,
+            source_bbox_px=bbox,
+            level_name=level_name,
+            state=state,
+            confidence=None,
+            source_document_id=source_document_id,
+            evidence=evidence,
+        )
+        warning = (
+            "LevelBootstrapResolver aplicó fallback controlado de página completa "
+            f"con estado {state}; requiere revisión posterior."
+        )
+        return previous_result.model_copy(
+            update={
+                "detections": [*previous_result.detections, detection],
+                "level_views": [level_view],
+                "warnings": [*previous_result.warnings, warning],
+            }
         )
 
     # ========================================================
