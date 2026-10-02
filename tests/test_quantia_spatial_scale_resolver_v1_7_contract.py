@@ -4,9 +4,9 @@ from io import BytesIO
 
 from PIL import Image
 
-from app.quantia_spatialV1.models.evidence import EvidenceGeometry, RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewTransform, PixelBBox
-from app.quantia_spatialV1.reconstruction_core.scale_evidence_resolver import ScaleEvidenceResolver
+from app.quantia_spatialV1.core.models.evidence import EvidenceGeometry, RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewTransform, PixelBBox
+from app.quantia_spatialV1.core.scale.scale_evidence_resolver import ScaleEvidenceResolver
 
 
 def _png(width: int = 1000, height: int = 500) -> bytes:

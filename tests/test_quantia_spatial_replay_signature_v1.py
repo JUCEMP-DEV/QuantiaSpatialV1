@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from app.quantia_spatialV1.phase_015_evidence.replay_signature import (
+from app.quantia_spatialV1.stages.evidence.replay_signature import (
     ReplaySignatureMismatchError,
     ReplaySignatureValidator,
 )

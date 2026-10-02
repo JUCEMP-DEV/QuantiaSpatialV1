@@ -4,26 +4,26 @@ from io import BytesIO
 
 from PIL import Image
 
-from app.quantia_spatialV1.models.evidence import EvidenceGeometry, RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewEvidence, LevelViewTransform, PixelBBox, PixelPoint
-from app.quantia_spatialV1.phase_01_level.level_identification_service import LevelIdentificationService
-from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_extractor import GeminiSemanticExtractor
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import (
+from app.quantia_spatialV1.core.models.evidence import EvidenceGeometry, RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewEvidence, LevelViewTransform, PixelBBox, PixelPoint
+from app.quantia_spatialV1.stages.levels.level_identification_service import LevelIdentificationService
+from app.quantia_spatialV1.stages.evidence.gemini_semantic_extractor import GeminiSemanticExtractor
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import (
     EditablePerimeterModel,
     EditablePerimeterVertex,
     EditablePerimeterWall,
     PerimeterComparisonBaseline,
     PerimeterMetricSummary,
 )
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_models import PerimeterPointPx
-from app.quantia_spatialV1.reconstruction_core.project_scale_reconciler import ProjectScaleReconciler
-from app.quantia_spatialV1.reconstruction_core.raster_density_policy import RasterDensityPolicy
-from app.quantia_spatialV1.reconstruction_core.scale_evidence_resolver import (
+from app.quantia_spatialV1.stages.perimeter.perimeter_models import PerimeterPointPx
+from app.quantia_spatialV1.core.scale.project_scale_reconciler import ProjectScaleReconciler
+from app.quantia_spatialV1.core.scale.raster_density_policy import RasterDensityPolicy
+from app.quantia_spatialV1.core.scale.scale_evidence_resolver import (
     LevelScaleEvidenceResult,
     ScaleEvidenceCandidate,
     ScaleEvidenceResolver,
 )
-from app.quantia_spatialV1.transport.gemini_level_localization import GeminiLevelLocalizationResponse
+from app.quantia_spatialV1.ai.schemas.gemini_level_localization import GeminiLevelLocalizationResponse
 
 
 def _png(width: int = 1000, height: int = 500) -> bytes:
@@ -892,8 +892,8 @@ def test_axis_fit_and_axis_spans_count_as_one_independent_family() -> None:
 
 def test_real_miguel_v_pb_conflict_policy_closes_only_self_inconsistent_orientation(monkeypatch) -> None:
     from types import SimpleNamespace
-    from app.quantia_spatialV1.reconstruction_core.general_dimension_graphic_span import GraphicDimensionSpan
-    from app.quantia_spatialV1.reconstruction_core import scale_evidence_resolver as resolver_module
+    from app.quantia_spatialV1.stages.walls.core.general_dimension_graphic_span import GraphicDimensionSpan
+    from app.quantia_spatialV1.core.scale import scale_evidence_resolver as resolver_module
 
     level = _level()
     perimeter = _rect_perimeter(level, x_min=128, y_min=276, x_max=1623, y_max=854)
@@ -979,8 +979,8 @@ def test_real_miguel_v_pb_conflict_policy_closes_only_self_inconsistent_orientat
 
 def test_two_internally_consistent_orientations_that_disagree_still_block(monkeypatch) -> None:
     from types import SimpleNamespace
-    from app.quantia_spatialV1.reconstruction_core.general_dimension_graphic_span import GraphicDimensionSpan
-    from app.quantia_spatialV1.reconstruction_core import scale_evidence_resolver as resolver_module
+    from app.quantia_spatialV1.stages.walls.core.general_dimension_graphic_span import GraphicDimensionSpan
+    from app.quantia_spatialV1.core.scale import scale_evidence_resolver as resolver_module
 
     level = _level()
     perimeter = _rect_perimeter(level, x_min=128, y_min=276, x_max=1623, y_max=854)

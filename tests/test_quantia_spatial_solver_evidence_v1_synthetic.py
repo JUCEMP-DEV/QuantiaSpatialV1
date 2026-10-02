@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from app.quantia_spatialV1.reconstruction_core.candidate_models import WallCandidate, WallEvidenceVector
-from app.quantia_spatialV1.reconstruction_core.context_models import (
+from app.quantia_spatialV1.stages.walls.core.candidate_models import WallCandidate, WallEvidenceVector
+from app.quantia_spatialV1.stages.walls.core.context_models import (
     CandidateContextDecision,
     CandidateContextGateResult,
 )
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingPoint
-from app.quantia_spatialV1.reconstruction_core.global_topology_solver import GlobalTopologySolver
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingPoint
+from app.quantia_spatialV1.stages.walls.core.global_topology_solver import GlobalTopologySolver
 
 
 def _candidate(*, candidate_id: str, vector: float, prior: float = 0.52) -> WallCandidate:
