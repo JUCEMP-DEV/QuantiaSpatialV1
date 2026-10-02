@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import ReconstructionDiagnostics
-from app.quantia_spatialV1.adaptive_reconstruction.decision_engine import AdaptiveModuleDecisionEngine
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import ReconstructionDiagnostics
+from app.quantia_spatialV1.stages.walls.adaptive.decision_engine import AdaptiveModuleDecisionEngine
 
 
 def _diag(**overrides) -> ReconstructionDiagnostics:

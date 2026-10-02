@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import cv2
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveRoutePlan,
     LogicalGap,
     ModuleDecision,
@@ -13,11 +13,11 @@ from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
     SingleLineWall,
     SingleLineWallGraph,
 )
-from app.quantia_spatialV1.adaptive_reconstruction.multimodal_review import (
+from app.quantia_spatialV1.stages.walls.adaptive.multimodal_review import (
     CALL2_PROMPT_VERSION,
     WallGraphMultimodalReviewer,
 )
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewTransform, PixelBBox
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewTransform, PixelBBox
 
 
 @dataclass

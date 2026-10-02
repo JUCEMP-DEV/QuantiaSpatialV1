@@ -4,23 +4,23 @@ import io
 
 from PIL import Image
 
-from app.quantia_spatialV1.architectural_elements import (
+from app.quantia_spatialV1.stages.elements import (
     ArchitecturalElementsMiniEngine,
     ArchitecturalRAGIndex,
 )
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
     LevelViewTransform,
     PixelBBox,
 )
-from app.quantia_spatialV1.parametric_model import (
+from app.quantia_spatialV1.core.models.parametric import (
     ParametricLevel,
     ParametricPoint,
     ParametricWall,
     QuantiaParametricModel,
 )
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion
-from app.quantia_spatialV1.reconstruction_core.drawing_model import (
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion
+from app.quantia_spatialV1.stages.walls.core.drawing_model import (
     DrawingBBox,
     DrawingLine,
     DrawingModel,
@@ -322,8 +322,8 @@ def test_publish_false_never_changes_model_revision_or_openings():
 
 
 def test_broad_curve_hypothesis_survives_as_review_or_accept_without_touching_walls():
-    from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingCurve
-    from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
+    from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingCurve
+    from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
 
     drawing = _drawing()
     drawing.curves = [
@@ -390,7 +390,7 @@ def test_broad_curve_hypothesis_survives_as_review_or_accept_without_touching_wa
 
 
 def _independent_drawing() -> DrawingModel:
-    from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingCurve
+    from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingCurve
 
     return DrawingModel(
         level_view_id="LV_TEST",
@@ -486,7 +486,7 @@ def _independent_drawing() -> DrawingModel:
 
 
 def _scale_profile():
-    from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
+    from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
     return LevelScaleProfile(
         level_view_id="LV_TEST",
         state="RESOLVED",
@@ -525,7 +525,7 @@ def test_v2_discovers_door_and_window_without_f03_regions():
 
 
 def test_v2_no_longer_depends_on_element_context_detector_for_generation():
-    from app.quantia_spatialV1.architectural_elements.proposal_generator import OpeningHypothesisGenerator
+    from app.quantia_spatialV1.stages.elements.proposal_generator import OpeningHypothesisGenerator
     generator = OpeningHypothesisGenerator()
     regions = generator.generate(
         drawing=_independent_drawing(),
@@ -541,7 +541,7 @@ def test_v2_no_longer_depends_on_element_context_detector_for_generation():
 
 
 def test_v2_wall_gap_plus_persisted_semantics_recovers_door_without_curve():
-    from app.quantia_spatialV1.reconstruction_core.drawing_model import SemanticObservation
+    from app.quantia_spatialV1.stages.walls.core.drawing_model import SemanticObservation
 
     drawing = DrawingModel(
         level_view_id="LV_TEST",

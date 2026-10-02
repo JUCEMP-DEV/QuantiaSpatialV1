@@ -12,23 +12,23 @@ from app.prompts.quantia_extraction_prompt import QUANTIA_EXTRACTION_PROMPT
 from app.schemas.gemini_extraction_transport import (
     get_gemini_extraction_transport_schema,
 )
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
     LevelViewTransform,
     PixelBBox,
 )
-from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
-from app.quantia_spatialV1.phase_01_level.pymupdf_level_source import PyMuPDFLevelSource
-from app.quantia_spatialV1.phase_015_evidence.gemini_evidence_adapter import (
+from app.quantia_spatialV1.core.models.project_site_context import ProjectSiteContext
+from app.quantia_spatialV1.stages.levels.pymupdf_level_source import PyMuPDFLevelSource
+from app.quantia_spatialV1.stages.evidence.gemini_evidence_adapter import (
     GeminiEvidenceAdapter,
 )
-from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_history import (
+from app.quantia_spatialV1.stages.evidence.gemini_semantic_history import (
     GeminiSemanticHistory,
 )
-from app.quantia_spatialV1.phase_015_evidence.project_site_prompt_context import (
+from app.quantia_spatialV1.stages.evidence.project_site_prompt_context import (
     build_project_site_context_prompt,
 )
-from app.quantia_spatialV1.phase_015_evidence.replay_signature import (
+from app.quantia_spatialV1.stages.evidence.replay_signature import (
     ReplaySignatureValidator,
 )
 

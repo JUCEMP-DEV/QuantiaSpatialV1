@@ -5,16 +5,16 @@ from types import SimpleNamespace
 import cv2
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveRoutePlan,
     ModuleDecision,
     ReconstructionDiagnostics,
     SingleLineWall,
     SingleLineWallGraph,
 )
-from app.quantia_spatialV1.adaptive_reconstruction.correction_applier import WallGraphCorrectionApplier
-from app.quantia_spatialV1.adaptive_reconstruction.multimodal_review import WallGraphMultimodalReviewer
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewTransform, PixelBBox
+from app.quantia_spatialV1.stages.walls.adaptive.correction_applier import WallGraphCorrectionApplier
+from app.quantia_spatialV1.stages.walls.adaptive.multimodal_review import WallGraphMultimodalReviewer
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewTransform, PixelBBox
 
 
 class _FakeProvider:

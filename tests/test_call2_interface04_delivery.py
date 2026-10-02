@@ -3,8 +3,8 @@ import socket
 
 import pytest
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import MultimodalWallReview
-from app.quantia_spatialV1.canonical_wallgraph import CanonicalWallGraphFinalizer
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import MultimodalWallReview
+from app.quantia_spatialV1.stages.walls.canonical import CanonicalWallGraphFinalizer
 from app.quantia_spatialV1.tests.call2_interface04_export import export_review
 from app.quantia_spatialV1.tests.test_quantia_spatial_canonical_wallgraph_contract_v1_synthetic import inputs
 
@@ -46,7 +46,7 @@ def test_multimodal_request_to_delivery_offline(inputs, tmp_path, monkeypatch):
     from types import SimpleNamespace
     import cv2
     import numpy as np
-    from app.quantia_spatialV1.adaptive_reconstruction.multimodal_review import WallGraphMultimodalReviewer
+    from app.quantia_spatialV1.stages.walls.adaptive.multimodal_review import WallGraphMultimodalReviewer
 
     def no_network(*args, **kwargs):
         raise AssertionError("Offline test attempted network")

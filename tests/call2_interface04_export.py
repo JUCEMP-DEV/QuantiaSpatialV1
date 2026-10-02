@@ -3,7 +3,7 @@ import hashlib
 import json
 import math
 
-from app.quantia_spatialV1.process_engine import QuantiaSpatialV1ProcessEngine
+from app.quantia_spatialV1.stages.walls.process import QuantiaSpatialV1ProcessEngine
 
 
 def export_review(*, view, graph, runtime, post, evidence, review, output):

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from app.quantia_spatialV1.adaptive_reconstruction import Call2DeltaValidator
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive import Call2DeltaValidator
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveRoutePlan,
     ModuleDecision,
     MultimodalWallReview,

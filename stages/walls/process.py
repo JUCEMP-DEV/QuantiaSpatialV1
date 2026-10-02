@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal, Sequence
 
-from app.quantia_spatialV1.adaptive_reconstruction import (
+from app.quantia_spatialV1.stages.walls.adaptive import (
     AdaptiveReconstructionEngine,
     AdaptiveReconstructionRuntime,
     Call2DeltaValidator,
@@ -13,19 +13,19 @@ from app.quantia_spatialV1.adaptive_reconstruction import (
     WallGraphCorrectionApplier,
     WallGraphMultimodalReviewer,
 )
-from app.quantia_spatialV1.canonical_wallgraph import (
+from app.quantia_spatialV1.stages.walls.canonical import (
     CanonicalWallGraphFinalizer,
     CanonicalWallGraphResult,
 )
-from app.quantia_spatialV1.canonical_wallgraph.correction_lineage import apply_with_lineage
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
-from app.quantia_spatialV1.post_reconstruction_filters import (
+from app.quantia_spatialV1.stages.walls.canonical.correction_lineage import apply_with_lineage
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.walls.postfilter import (
     PostReconstructionFilterEngine,
     PostReconstructionFilterResult,
 )
-from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
 
 
 Call2Mode = Literal["OFF", "AUTO", "FORCE"]
