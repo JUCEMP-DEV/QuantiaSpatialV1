@@ -54,11 +54,39 @@ class Call2DeltaValidator:
         known_gaps = {gap.id for gap in graph.logical_gaps}
         accepted_gaps: list[GapDecision] = []
         gap_items: list[Call2GapValidationItem] = []
+        seen_gap_ids: set[str] = set()
+        duplicate_gap_ids: set[str] = set()
+
         for decision in review.gap_decisions:
-            accepted, reason = self._validate_gap(decision=decision, known_gaps=known_gaps)
-            gap_items.append(Call2GapValidationItem(gap_decision=decision, accepted=accepted, reason=reason))
+            if decision.gap_id in seen_gap_ids:
+                duplicate_gap_ids.add(decision.gap_id)
+                accepted, reason = False, "duplicate_gap_id"
+            else:
+                seen_gap_ids.add(decision.gap_id)
+                accepted, reason = self._validate_gap(
+                    decision=decision,
+                    known_gaps=known_gaps,
+                )
+
+            gap_items.append(
+                Call2GapValidationItem(
+                    gap_decision=decision,
+                    accepted=accepted,
+                    reason=reason,
+                )
+            )
             if accepted:
                 accepted_gaps.append(decision)
+
+        missing_gap_ids = sorted(known_gaps - seen_gap_ids)
+        gap_coverage_ratio = (
+            1.0
+            if not known_gaps
+            else (
+                len(known_gaps) - len(missing_gap_ids)
+            )
+            / len(known_gaps)
+        )
 
         accepted_arch, rejected_arch = self._validate_regions(
             review.non_wall_architectural_regions,
@@ -87,6 +115,9 @@ class Call2DeltaValidator:
             rejected_architectural_regions=rejected_arch,
             accepted_unresolved_regions=accepted_unresolved,
             rejected_unresolved_regions=rejected_unresolved,
+            missing_gap_ids=missing_gap_ids,
+            duplicate_gap_ids=sorted(duplicate_gap_ids),
+            gap_coverage_ratio=gap_coverage_ratio,
         )
 
     def _validate_delta(
