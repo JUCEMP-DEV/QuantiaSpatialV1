@@ -18,6 +18,10 @@ from app.quantia_spatialV1.stages.levels.level_identification_service import (
     LevelIdentificationResult,
     LevelIdentificationService,
 )
+from app.quantia_spatialV1.stages.levels.level_bootstrap_resolver import (
+    LevelBootstrapResolver,
+    PageLevelBootstrapDecision,
+)
 from app.quantia_spatialV1.stages.levels.pdf_level_identification_service import (
     PDFLevelIdentificationService,
 )
@@ -70,6 +74,7 @@ class QuantiaPhase01Result(BaseModel):
     page_results: list[LevelIdentificationResult] = Field(default_factory=list)
     level_views: list[LevelView] = Field(default_factory=list)
     discoveries: dict[int, GeminiLevelDiscoveryResponse] = Field(default_factory=dict)
+    bootstrap_decisions: dict[int, PageLevelBootstrapDecision] = Field(default_factory=dict)
     warnings: list[str] = Field(default_factory=list)
 
     @property
@@ -147,6 +152,7 @@ class QuantiaSpatialEngine:
         vision_provider: GeminiSpatialVisionProvider | None = None,
         pdf_source: PyMuPDFLevelSource | None = None,
         identification_service: LevelIdentificationService | None = None,
+        level_bootstrap_resolver: LevelBootstrapResolver | None = None,
         localization_service: GeminiLevelLocalizationService | None = None,
         pdf_identification_service: PDFLevelIdentificationService | None = None,
         evidence_pipeline: EvidencePipeline | None = None,
@@ -156,6 +162,7 @@ class QuantiaSpatialEngine:
         self.vision_provider = vision_provider or GeminiSpatialVisionProvider()
         self.pdf_source = pdf_source or PyMuPDFLevelSource()
         self.identification_service = identification_service or LevelIdentificationService()
+        self.level_bootstrap_resolver = level_bootstrap_resolver or LevelBootstrapResolver()
         self.localization_service = localization_service or GeminiLevelLocalizationService(
             provider=self.vision_provider
         )
@@ -178,6 +185,7 @@ class QuantiaSpatialEngine:
         document_bytes: bytes,
         media_mime_type: str,
         source_document_id: str,
+        source_file_name: str | None = None,
         render_scale: float | None = None,
         known_level_names_by_page: dict[int, list[str]] | None = None,
         isolated_pages: set[int] | None = None,
@@ -216,6 +224,8 @@ class QuantiaSpatialEngine:
             document_bytes=document_bytes,
             media_mime_type=normalized_mime,
             source_document_id=source_id,
+            source_file_name=source_file_name,
+            project_site_context=site_context,
             render_scale=render_scale,
             known_level_names_by_page=known_level_names_by_page,
             isolated_pages=isolated_pages,
@@ -717,6 +727,7 @@ class QuantiaSpatialEngine:
             page_results=page_results,
             level_views=level_views,
             discoveries=dict(phase_01.discoveries),
+            bootstrap_decisions=dict(phase_01.bootstrap_decisions),
             warnings=list(phase_01.warnings),
         )
 
@@ -843,6 +854,8 @@ class QuantiaSpatialEngine:
         document_bytes: bytes,
         media_mime_type: str,
         source_document_id: str | None = None,
+        source_file_name: str | None = None,
+        project_site_context: ProjectSiteContext | None = None,
         render_scale: float | None = None,
         known_level_names_by_page: (dict[int, list[str]] | None) = None,
         isolated_pages: (set[int] | None) = None,
@@ -890,6 +903,8 @@ class QuantiaSpatialEngine:
                 document_bytes=document_bytes,
                 render_scale=render_scale,
                 source_document_id=(source_document_id),
+                source_file_name=source_file_name,
+                project_site_context=project_site_context,
                 known_level_names_by_page=(known_by_page),
                 isolated_pages=(isolated),
                 discovery_payloads_by_page=(discovery_replay),
@@ -902,6 +917,8 @@ class QuantiaSpatialEngine:
                 document_bytes=document_bytes,
                 media_mime_type=(normalized_mime),
                 source_document_id=(source_document_id),
+                source_file_name=source_file_name,
+                project_site_context=project_site_context,
                 known_level_names_by_page=(known_by_page),
                 isolated_pages=(isolated),
                 discovery_payloads_by_page=(discovery_replay),
@@ -923,6 +940,8 @@ class QuantiaSpatialEngine:
         document_bytes: bytes,
         render_scale: float,
         source_document_id: str | None,
+        source_file_name: str | None,
+        project_site_context: ProjectSiteContext | None,
         known_level_names_by_page: dict[
             int,
             list[str],
@@ -1061,6 +1080,8 @@ class QuantiaSpatialEngine:
         document_bytes: bytes,
         media_mime_type: str,
         source_document_id: str | None,
+        source_file_name: str | None,
+        project_site_context: ProjectSiteContext | None,
         known_level_names_by_page: dict[
             int,
             list[str],
