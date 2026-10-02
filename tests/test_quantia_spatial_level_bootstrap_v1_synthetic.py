@@ -140,6 +140,30 @@ def test_single_named_gemini_level_can_fallback_as_inferred_if_localization_fail
     assert decision.state == "REVIEW"
 
 
+
+def test_project_single_level_does_not_override_multiple_document_levels() -> None:
+    discovery = GeminiLevelDiscoveryResponse(
+        pagina=1,
+        niveles=[
+            GeminiDiscoveredLevel(nombre="Planta Baja", confianza=0.92),
+            GeminiDiscoveredLevel(nombre="Planta Alta", confianza=0.90),
+        ],
+        plantas_sin_nombre=0,
+    )
+    decision = LevelBootstrapResolver().resolve_page(
+        page_number=1,
+        page_count=1,
+        discovery=discovery,
+        project_site_context=ProjectSiteContext(level_count=1),
+    )
+
+    assert decision.known_level_names == ["Planta Baja", "Planta Alta"]
+    assert decision.fallback_full_page is False
+    assert decision.state == "RESOLVED"
+    assert "PROJECT_CONTEXT" in decision.sources
+    assert decision.warnings
+
+
 def test_without_evidence_bootstrap_remains_unresolved() -> None:
     decision = LevelBootstrapResolver().resolve_page(
         page_number=1,
