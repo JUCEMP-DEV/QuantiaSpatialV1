@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import math
 
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .perimeter_delivery import EditablePerimeterModel
 from .perimeter_models import (

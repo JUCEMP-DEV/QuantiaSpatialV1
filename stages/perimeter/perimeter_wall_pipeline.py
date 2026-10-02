@@ -5,8 +5,8 @@ from collections.abc import Sequence
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .boundary_geometry_detector import BoundaryGeometryDetector
 from .perimeter_dimension_grounder import PerimeterDimensionGrounder

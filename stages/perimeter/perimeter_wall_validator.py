@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from shapely.geometry import LineString, Polygon, box
 from shapely.validation import explain_validity
 
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .perimeter_wall_graph import PerimeterWallGraphResult
 
