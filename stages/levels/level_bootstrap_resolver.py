@@ -172,8 +172,19 @@ class LevelBootstrapResolver:
         ):
             if "PROJECT_CONTEXT" not in sources:
                 sources.append("PROJECT_CONTEXT")
-            fallback_full_page = True
-            reasons.append("project_declares_single_level")
+            if len(known) > 1 or (
+                discovery is not None
+                and discovery.total_visible_level_count > 1
+            ):
+                fallback_full_page = False
+                warnings.append(
+                    "El proyecto declara un nivel, pero la evidencia documental "
+                    "propone múltiples plantas; no se aplica fallback de página completa."
+                )
+                reasons.append("project_level_count_conflict")
+            else:
+                fallback_full_page = True
+                reasons.append("project_declares_single_level")
 
         # Un nombre único respaldado por evidencia fuerte puede usarse como
         # nombre del fallback solo cuando ya existe evidencia independiente.
