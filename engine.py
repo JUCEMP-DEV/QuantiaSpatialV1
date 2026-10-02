@@ -971,107 +971,124 @@ class QuantiaSpatialEngine:
             localization_payloads_by_page=(localization_payloads_by_page),
         )
 
-        resolved_known: dict[
-            int,
-            list[str],
-        ] = {}
-
-        discoveries: dict[
-            int,
-            GeminiLevelDiscoveryResponse,
-        ] = {}
-
+        resolved_known: dict[int, list[str]] = {}
+        discoveries: dict[int, GeminiLevelDiscoveryResponse] = {}
+        bootstrap_decisions: dict[int, PageLevelBootstrapDecision] = {}
         warnings = list(source_result.warnings)
 
         # ----------------------------------------------------
-        # DESCUBRIMIENTO POR PÁGINA
+        # DESCUBRIMIENTO + BOOTSTRAP POR PÁGINA
         # ----------------------------------------------------
 
         for source_page in source_result.pages:
             page_number = source_page.page_number
-
-            explicit_names = known_level_names_by_page.get(
-                page_number,
-                [],
-            )
-
+            explicit_names = known_level_names_by_page.get(page_number, [])
             vector_names = self._vector_level_names(source_page)
-
-            current_names = self._merge_level_names(
-                explicit_names,
-                vector_names,
-            )
-
             discovery: GeminiLevelDiscoveryResponse | None = None
-
             replay_payload = discovery_payloads_by_page.get(page_number)
 
             if replay_payload is not None:
                 discovery = self._validate_discovery_payload(
-                    payload=(replay_payload),
-                    expected_page_number=(page_number),
+                    payload=replay_payload,
+                    expected_page_number=page_number,
                 )
-
             elif enable_gemini_discovery and self._should_discover_pdf_page(
-                page_count=(source_result.page_count),
-                explicit_names=(explicit_names),
-                vector_names=(vector_names),
+                page_count=source_result.page_count,
+                explicit_names=explicit_names,
+                vector_names=vector_names,
             ):
                 try:
                     discovery = self._discover_levels(
-                        page_number=(page_number),
-                        raster_bytes=(source_page.raster_bytes),
-                        raster_mime_type=(source_page.raster_mime_type),
+                        page_number=page_number,
+                        raster_bytes=source_page.raster_bytes,
+                        raster_mime_type=source_page.raster_mime_type,
                     )
-
                 except QuantiaSpatialEngineError as exc:
                     warnings.append(f"Página {page_number}: {exc}")
 
             if discovery is not None:
                 discoveries[page_number] = discovery
-
-                current_names = self._merge_level_names(
-                    current_names,
-                    discovery.to_known_level_names(),
-                )
-
                 if discovery.plantas_sin_nombre > 0:
                     warnings.append(
                         f"Página {page_number}: Gemini detectó "
-                        f"{discovery.plantas_sin_nombre} "
-                        "planta(s) cuyo nivel no pudo "
-                        "identificar sin inventar datos."
+                        f"{discovery.plantas_sin_nombre} planta(s) cuyo nivel "
+                        "no pudo identificar sin inventar datos."
                     )
 
-            resolved_known[page_number] = current_names
+            decision = self.level_bootstrap_resolver.resolve_page(
+                page_number=page_number,
+                page_count=source_result.page_count,
+                explicit_level_names=explicit_names,
+                vector_level_names=vector_names,
+                discovery=discovery,
+                project_site_context=project_site_context,
+                source_file_name=source_file_name,
+                explicitly_isolated=page_number in isolated_pages,
+            )
+            bootstrap_decisions[page_number] = decision
+            resolved_known[page_number] = list(decision.known_level_names)
+            warnings.extend(
+                f"Página {page_number}: {warning}"
+                for warning in decision.warnings
+            )
 
-        # ----------------------------------------------------
-        # IDENTIFICACIÓN / LOCALIZACIÓN
-        # ----------------------------------------------------
-
+        resolved_isolated_pages = {
+            page_number
+            for page_number, decision in bootstrap_decisions.items()
+            if decision.single_level_isolated
+        }
         pdf_result = self.pdf_identification_service.identify_pdf(
             document_bytes=document_bytes,
             render_scale=render_scale,
-            source_document_id=(source_document_id),
-            known_level_names_by_page=(resolved_known),
-            gemini_payloads_by_page=(localization_payloads_by_page),
-            isolated_pages=(isolated_pages),
+            source_document_id=source_document_id,
+            known_level_names_by_page=resolved_known,
+            gemini_payloads_by_page=localization_payloads_by_page,
+            isolated_pages=resolved_isolated_pages,
         )
-
         warnings.extend(pdf_result.warnings)
 
+        source_by_page = {page.page_number: page for page in source_result.pages}
+        page_results: list[LevelIdentificationResult] = []
+        level_views: list[LevelView] = []
+
+        for page_result in pdf_result.pages:
+            page_number = page_result.source_page_number
+            decision = bootstrap_decisions.get(page_number)
+            resolved_page = page_result
+
+            if (
+                decision is not None
+                and decision.fallback_full_page
+                and not page_result.level_views
+            ):
+                source_page = source_by_page[page_number]
+                resolved_page = self.identification_service.apply_full_page_fallback(
+                    previous_result=page_result,
+                    source_raster_bytes=source_page.raster_bytes,
+                    source_document_id=source_document_id,
+                    level_name=decision.fallback_level_name,
+                    evidence_sources=list(decision.sources),
+                    reason=";".join(decision.reasons),
+                )
+                warnings.extend(
+                    f"Página {page_number}: {warning}"
+                    for warning in resolved_page.warnings
+                )
+
+            page_results.append(resolved_page)
+            level_views.extend(resolved_page.level_views)
+
         return QuantiaPhase01Result(
-            source_document_id=(source_document_id),
-            media_mime_type=(self.PDF_MIME_TYPE),
-            page_count=(pdf_result.page_count),
-            page_results=(pdf_result.pages),
-            level_views=(pdf_result.level_views),
-            discoveries=(discoveries),
-            warnings=(self._dedupe_warnings(warnings)),
+            source_document_id=source_document_id,
+            media_mime_type=self.PDF_MIME_TYPE,
+            page_count=pdf_result.page_count,
+            page_results=page_results,
+            level_views=level_views,
+            discoveries=discoveries,
+            bootstrap_decisions=bootstrap_decisions,
+            warnings=self._dedupe_warnings(warnings),
         )
 
-    # ========================================================
-    # IMAGEN
     # ========================================================
 
     def _run_image_phase_01(
@@ -1082,89 +1099,67 @@ class QuantiaSpatialEngine:
         source_document_id: str | None,
         source_file_name: str | None,
         project_site_context: ProjectSiteContext | None,
-        known_level_names_by_page: dict[
-            int,
-            list[str],
-        ],
+        known_level_names_by_page: dict[int, list[str]],
         isolated_pages: set[int],
-        discovery_payloads_by_page: dict[
-            int,
-            dict[str, Any],
-        ],
-        localization_payloads_by_page: dict[
-            int,
-            dict[str, Any],
-        ],
+        discovery_payloads_by_page: dict[int, dict[str, Any]],
+        localization_payloads_by_page: dict[int, dict[str, Any]],
         enable_gemini_discovery: bool,
     ) -> QuantiaPhase01Result:
 
         self._validate_page_configuration(
             page_count=1,
-            known_level_names_by_page=(known_level_names_by_page),
-            isolated_pages=(isolated_pages),
-            discovery_payloads_by_page=(discovery_payloads_by_page),
-            localization_payloads_by_page=(localization_payloads_by_page),
+            known_level_names_by_page=known_level_names_by_page,
+            isolated_pages=isolated_pages,
+            discovery_payloads_by_page=discovery_payloads_by_page,
+            localization_payloads_by_page=localization_payloads_by_page,
         )
 
         raster_bytes = self._normalize_image_to_png(document_bytes)
-
         page_number = 1
-
-        known_names = list(known_level_names_by_page.get(page_number, []))
-
-        discoveries: dict[
-            int,
-            GeminiLevelDiscoveryResponse,
-        ] = {}
-
+        explicit_names = list(known_level_names_by_page.get(page_number, []))
+        discoveries: dict[int, GeminiLevelDiscoveryResponse] = {}
         warnings: list[str] = []
 
-        # ----------------------------------------------------
-        # DISCOVERY
-        # ----------------------------------------------------
-
         replay_discovery = discovery_payloads_by_page.get(page_number)
-
         discovery: GeminiLevelDiscoveryResponse | None = None
 
         if replay_discovery is not None:
             discovery = self._validate_discovery_payload(
-                payload=(replay_discovery),
-                expected_page_number=1,
+                payload=replay_discovery,
+                expected_page_number=page_number,
             )
-
-        elif not known_names and enable_gemini_discovery:
+        elif not explicit_names and enable_gemini_discovery:
             try:
                 discovery = self._discover_levels(
-                    page_number=1,
-                    raster_bytes=(raster_bytes),
-                    raster_mime_type=("image/png"),
+                    page_number=page_number,
+                    raster_bytes=raster_bytes,
+                    raster_mime_type="image/png",
                 )
-
             except QuantiaSpatialEngineError as exc:
                 warnings.append(str(exc))
 
         if discovery is not None:
             discoveries[page_number] = discovery
-
-            known_names = self._merge_level_names(
-                known_names,
-                discovery.to_known_level_names(),
-            )
-
             if discovery.plantas_sin_nombre > 0:
                 warnings.append(
                     "Gemini detectó "
-                    f"{discovery.plantas_sin_nombre} "
-                    "planta(s) cuyo nivel no pudo identificar."
+                    f"{discovery.plantas_sin_nombre} planta(s) cuyo nivel "
+                    "no pudo identificar."
                 )
 
-        # ----------------------------------------------------
-        # LOCALIZACIÓN
-        # ----------------------------------------------------
-
-        isolated = page_number in isolated_pages
-
+        decision = self.level_bootstrap_resolver.resolve_page(
+            page_number=page_number,
+            page_count=1,
+            explicit_level_names=explicit_names,
+            vector_level_names=[],
+            discovery=discovery,
+            project_site_context=project_site_context,
+            source_file_name=source_file_name,
+            explicitly_isolated=page_number in isolated_pages,
+        )
+        warnings.extend(decision.warnings)
+        known_names = list(decision.known_level_names)
+        isolated = decision.single_level_isolated
         localization_payload = localization_payloads_by_page.get(page_number)
 
         if (
@@ -1174,52 +1169,57 @@ class QuantiaSpatialEngine:
         ):
             try:
                 localization = self.localization_service.localize(
-                    page_number=1,
-                    expected_level_names=(known_names),
-                    raster_bytes=(raster_bytes),
-                    raster_mime_type=("image/png"),
+                    page_number=page_number,
+                    expected_level_names=known_names,
+                    raster_bytes=raster_bytes,
+                    raster_mime_type="image/png",
                 )
-
                 localization_payload = localization.to_detector_payload()
-
             except GeminiLevelLocalizationServiceError as exc:
                 warnings.append(f"Gemini no pudo localizar los niveles: {exc}")
 
-        # ----------------------------------------------------
-        # LEVEL VIEW
-        # ----------------------------------------------------
-
         page_result = self.identification_service.identify_page(
-            source_raster_bytes=(raster_bytes),
-            source_page_number=1,
-            source_document_id=(source_document_id),
-            known_level_names=(known_names),
+            source_raster_bytes=raster_bytes,
+            source_page_number=page_number,
+            source_document_id=source_document_id,
+            known_level_names=known_names,
             pdf_level_markers=[],
-            gemini_payload=(localization_payload),
-            single_level_isolated=(isolated),
+            gemini_payload=localization_payload,
+            single_level_isolated=isolated,
         )
-
         warnings.extend(page_result.warnings)
 
-        # ----------------------------------------------------
-        # PLANTA SIN NOMBRE NO AISLADA
-        # ----------------------------------------------------
+        if decision.fallback_full_page and not page_result.level_views:
+            page_result = self.identification_service.apply_full_page_fallback(
+                previous_result=page_result,
+                source_raster_bytes=raster_bytes,
+                source_document_id=source_document_id,
+                level_name=decision.fallback_level_name,
+                evidence_sources=list(decision.sources),
+                reason=";".join(decision.reasons),
+            )
+            warnings.extend(page_result.warnings)
 
-        if discovery is not None and discovery.has_unnamed_levels and not isolated:
+        if (
+            discovery is not None
+            and discovery.has_unnamed_levels
+            and not isolated
+            and not decision.fallback_full_page
+        ):
             warnings.append(
-                "Existen plantas sin nombre que no pueden "
-                "aislarse todavía sin una referencia semántica "
-                "o espacial adicional."
+                "Existen plantas sin nombre que no pueden aislarse todavía "
+                "sin una referencia semántica o espacial adicional."
             )
 
         return QuantiaPhase01Result(
-            source_document_id=(source_document_id),
-            media_mime_type=(media_mime_type),
+            source_document_id=source_document_id,
+            media_mime_type=media_mime_type,
             page_count=1,
             page_results=[page_result],
-            level_views=(page_result.level_views),
-            discoveries=(discoveries),
-            warnings=(self._dedupe_warnings(warnings)),
+            level_views=page_result.level_views,
+            discoveries=discoveries,
+            bootstrap_decisions={page_number: decision},
+            warnings=self._dedupe_warnings(warnings),
         )
 
     # ========================================================
