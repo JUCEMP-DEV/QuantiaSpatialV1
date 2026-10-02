@@ -4,6 +4,7 @@ from app.quantia_spatialV1.stages.walls.adaptive import Call2DeltaValidator
 from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveRoutePlan,
     ModuleDecision,
+    LogicalGap,
     MultimodalWallReview,
     ReconstructionDiagnostics,
     SingleLineWall,
@@ -124,3 +125,64 @@ def test_call2_validator_rejects_unsafe_deltas_and_preserves_valid_ones() -> Non
     assert result.accepted_delta_count == 2
     assert result.rejected_delta_count == 2
     assert len(result.accepted_architectural_regions) == 1
+
+
+def test_call2_validator_reports_gap_coverage_and_duplicates() -> None:
+    graph = _graph().model_copy(deep=True)
+    graph.logical_gaps = [
+        LogicalGap(
+            id="G1",
+            kind="TEST",
+            start_px=(500.0, 100.0),
+            end_px=(520.0, 100.0),
+            gap_px=20.0,
+            wall_ids=["W1", "W2"],
+        ),
+        LogicalGap(
+            id="G2",
+            kind="TEST",
+            start_px=(500.0, 300.0),
+            end_px=(520.0, 300.0),
+            gap_px=20.0,
+            wall_ids=["W1", "W2"],
+        ),
+    ]
+    review = MultimodalWallReview.model_validate({
+        "level_view_id": graph.level_view_id,
+        "graph_state": "REVIEW",
+        "deltas": [],
+        "gap_decisions": [
+            {
+                "gap_id": "G1",
+                "classification": "PROBABLE_OPENING",
+                "host_wall_continuity": True,
+                "solid_wall_present": False,
+                "confidence": 0.90,
+                "reason": "opening",
+            },
+            {
+                "gap_id": "G1",
+                "classification": "PROBABLE_OPENING",
+                "host_wall_continuity": True,
+                "solid_wall_present": False,
+                "confidence": 0.88,
+                "reason": "duplicate",
+            },
+        ],
+        "non_wall_architectural_regions": [],
+        "unresolved_regions": [],
+        "summary": "coverage",
+    })
+
+    result = Call2DeltaValidator().validate(
+        graph=graph,
+        review=review,
+    )
+
+    assert result.missing_gap_ids == ["G2"]
+    assert result.duplicate_gap_ids == ["G1"]
+    assert result.gap_coverage_ratio == 0.5
+    assert sum(
+        item.accepted
+        for item in result.gap_items
+    ) == 1
