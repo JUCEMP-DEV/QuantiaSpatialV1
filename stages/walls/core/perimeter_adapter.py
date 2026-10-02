@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from shapely.geometry import GeometryCollection, LineString, MultiLineString, Polygon
 
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 
 def perimeter_polygon(perimeter: EditablePerimeterModel) -> Polygon:

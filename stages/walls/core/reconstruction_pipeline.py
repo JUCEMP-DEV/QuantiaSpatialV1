@@ -4,10 +4,10 @@ from typing import Sequence
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.parametric_model import QuantiaParametricModel
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.parametric import QuantiaParametricModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 from .candidate_context_gate import CandidateContextGate
 from .candidate_graph import WallCandidateGraphBuilder

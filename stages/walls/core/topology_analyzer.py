@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from shapely.geometry import LineString
 from shapely.ops import polygonize_full, snap, unary_union
 
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 from .candidate_models import WallCandidate
 from .perimeter_adapter import perimeter_polygon

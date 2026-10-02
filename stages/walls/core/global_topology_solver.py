@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 from .candidate_models import CandidateRelation, WallCandidate, WallCandidateGraph
 from .perimeter_adapter import line_is_inside_perimeter, perimeter_polygon
