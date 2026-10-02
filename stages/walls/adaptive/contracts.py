@@ -185,6 +185,9 @@ class Call2ValidationResult(BaseModel):
     rejected_architectural_regions: list[dict[str, Any]] = Field(default_factory=list)
     accepted_unresolved_regions: list[dict[str, Any]] = Field(default_factory=list)
     rejected_unresolved_regions: list[dict[str, Any]] = Field(default_factory=list)
+    missing_gap_ids: list[str] = Field(default_factory=list)
+    duplicate_gap_ids: list[str] = Field(default_factory=list)
+    gap_coverage_ratio: float = Field(default=1.0, ge=0.0, le=1.0)
 
     @property
     def accepted_delta_count(self) -> int:
