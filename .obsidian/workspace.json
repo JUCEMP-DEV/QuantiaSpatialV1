@@ -4,76 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "05920c170b2f8c48",
-        "type": "split",
+        "id": "0d8e1df3fbb3c711",
+        "type": "tabs",
         "children": [
           {
-            "id": "0d8e1df3fbb3c711",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "3a60e65e235295c2",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {},
-                  "icon": "lucide-file",
-                  "title": "Nueva pestaña"
-                }
-              }
-            ]
-          },
-          {
-            "id": "4cd48ba97fe12d66",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "79bfc455605d5547",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "terminal:terminal",
-                  "state": {
-                    "terminal:terminal": {
-                      "cwd": "D:\\03 INGENIEIRA SISTEMAS\\03 RESIDENCIAS PROFESIONALES\\QuantiaSpatialV1",
-                      "focus": false,
-                      "profile": {
-                        "args": [],
-                        "environment": [],
-                        "executable": "C:\\Windows\\System32\\cmd.exe",
-                        "followTheme": true,
-                        "name": "",
-                        "platforms": {
-                          "win32": true
-                        },
-                        "pythonExecutable": "python3",
-                        "restoreHistory": false,
-                        "rightClickAction": "copyPaste",
-                        "successExitCodes": [
-                          "0",
-                          "SIGINT",
-                          "SIGTERM"
-                        ],
-                        "terminalOptions": {
-                          "documentOverride": null
-                        },
-                        "type": "integrated",
-                        "useWin32Conhost": true
-                      },
-                      "profileSourceId": "win32IntegratedDefault",
-                      "serial": null,
-                      "userTitle": ""
-                    }
-                  },
-                  "pinned": true,
-                  "icon": "terminal",
-                  "title": "C:\\Windows\\System32\\conhost.exe"
-                }
-              }
-            ]
+            "id": "3a60e65e235295c2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -239,6 +183,31 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "79bfc455605d5547",
-  "lastOpenFiles": []
+  "active": "4d1e96b4591a2c50",
+  "lastOpenFiles": [
+    "documentation/VERSIONADO_2026-10-01_BASELINE_FOLDER_V1.txt",
+    "documentation/HISTORICO_CONVERSACION_2026-10-01_1100_BASELINE_FOLDER_V1.txt",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_v1_space_closure_probe_v1.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_v1_space_closure_constraint_probe_v2.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_v1_process_all_3_v1.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_v1_call2_all_3_v2.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_solver_evidence_v1_standardized.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_metric_reraster_v1_3_standardized.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_f03_flow_all_3_v1.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/test_quantia_spatial_context_gate_v5_standardized.py",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/space_closure_probe_v1/77198025b46f/miguel_v__planta_baja/space_closure_metrics.json",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/space_closure_probe_v1/77198025b46f/miguel_v__planta_baja/space_closure_comparison.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/space_closure_constraint_probe_v2/77198025b46f/miguel_v__planta_baja/space_constraint_audit.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/quantia_spatial_v1_process/miguel_v/miguel_v__planta_baja__01_walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/quantia_spatial_v1_process/miguel_v/miguel_v__planta_alta__01_walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/quantia_spatial_v1_process/miguel_h/miguel_h__planta_baja__01_walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/quantia_spatial_v1_process/miguel_h/miguel_h__planta_alta__01_walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/quantia_spatial_v1_process/casa_viri/casa_viri__02_planta_alta_copia_1__01_walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/quantia_spatial_v1_process/casa_viri/casa_viri__01_planta_baja_copia_1__01_walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/canonical_visual_review/20260926_140640_572805/resumen_seis_niveles.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/tests/output/canonical_visual_review/20260926_140640_572805/miguel_v__planta_baja__walls_only.png",
+    "archive/spatial-baseline-pre-clean-2026-10-01/README.md",
+    "documentation/MAIN_CLEAN_PROCESS_2026-10-01.md",
+    "documentation/PROJECT_SITE_CONTEXT_V1.md"
+  ]
 }
