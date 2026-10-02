@@ -1,0 +1,46 @@
+QUANTIA SPATIAL — TARGET CLEAN TREE V1
+2026-10-02
+
+quantia_spatialV1/
+|
++-- engine.py                    UNICO ENTRYPOINT PUBLICO
+|
++-- core/                        MODELOS Y REGLAS TRANSVERSALES
+|   +-- models/
+|   +-- contracts.py
+|   +-- scale/
+|
++-- stages/                      FLUJO SECUENCIAL
+|   +-- levels/                  documento -> LevelView
+|   +-- evidence/                LevelView -> RawEvidence
+|   +-- perimeter/               evidence -> F02
+|   +-- walls/                   candidates -> WallGraph -> Call2
+|   +-- spaces/                  WallGraph -> espacios
+|   +-- elements/                openings/escaleras
+|   +-- correlation.py           validacion cruzada
+|   +-- delivery.py              contrato canónico
+|
++-- ai/                          FRONTERA MULTIMODAL
+|   +-- vision.py
+|   +-- call2.py
+|   +-- prompts.py
+|   +-- schemas.py
+|   +-- history.py
+|   +-- replay.py
+|
++-- tests/
++-- documentation/
++-- _history/
+
+FLUJO
+engine
+ -> stages.levels
+ -> stages.evidence
+ -> stages.perimeter
+ -> core.scale
+ -> stages.walls
+ -> stages.spaces
+ -> stages.elements
+ -> stages.correlation
+ -> stages.delivery
+ -> QuantiaSpatialContract
