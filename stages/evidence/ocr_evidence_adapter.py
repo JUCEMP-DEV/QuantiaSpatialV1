@@ -9,11 +9,11 @@ import pytesseract
 from PIL import Image, ImageOps
 from pytesseract import Output
 
-from app.quantia_spatialV1.models.evidence import (
+from app.quantia_spatialV1.core.models.evidence import (
     EvidenceGeometry,
     RawEvidence,
 )
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
     PixelBBox,
 )

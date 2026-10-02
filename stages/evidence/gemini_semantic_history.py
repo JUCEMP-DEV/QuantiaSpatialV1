@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Sequence
 from uuid import uuid4
 
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 
 class GeminiSemanticHistory:

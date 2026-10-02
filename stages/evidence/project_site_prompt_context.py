@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
+from app.quantia_spatialV1.core.models.project_site_context import ProjectSiteContext
 
 
 def build_project_site_context_prompt(

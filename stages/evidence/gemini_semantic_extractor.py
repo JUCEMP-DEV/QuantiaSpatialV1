@@ -4,8 +4,8 @@ import re
 import unicodedata
 from typing import Any
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_contract import (
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.evidence.gemini_semantic_contract import (
     SEMANTIC_CATEGORIES,
     SEMANTIC_CONTRACT_VERSION,
     SEMANTIC_SOURCE_MODE,

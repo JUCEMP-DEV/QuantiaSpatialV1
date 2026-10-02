@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from typing import Any
 
-from app.quantia_spatialV1.prompts.level_localization import (
+from app.quantia_spatialV1.ai.prompts.level_localization import (
     build_level_localization_prompt,
 )
-from app.quantia_spatialV1.providers.vision import (
+from app.quantia_spatialV1.ai.providers.vision import (
     GeminiSpatialVisionProvider,
     SpatialVisionProviderError,
 )
-from app.quantia_spatialV1.transport.gemini_level_localization import (
+from app.quantia_spatialV1.ai.schemas.gemini_level_localization import (
     GeminiLevelLocalizationResponse,
     get_gemini_level_localization_schema,
 )

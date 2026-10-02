@@ -5,7 +5,7 @@ import unicodedata
 from collections import defaultdict
 from typing import Any
 
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelIdentificationState,
     LevelViewEvidence,
     PixelBBox,
