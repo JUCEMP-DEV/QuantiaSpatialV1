@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
-from app.quantia_spatialV1.phase_015_evidence.project_site_prompt_context import (
+from app.quantia_spatialV1.core.models.project_site_context import ProjectSiteContext
+from app.quantia_spatialV1.stages.evidence.project_site_prompt_context import (
     build_project_site_context_prompt,
 )
 

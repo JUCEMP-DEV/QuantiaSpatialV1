@@ -3,7 +3,7 @@ from __future__ import annotations
 import pymupdf
 
 from app.quantia_spatialV1.engine import QuantiaSpatialEngine
-from app.quantia_spatialV1.reconstruction_core.reconstruction_pipeline import QuantiaReconstructionPipeline
+from app.quantia_spatialV1.stages.walls.core.reconstruction_pipeline import QuantiaReconstructionPipeline
 
 
 def _pdf_declared_scale_1_50() -> bytes:

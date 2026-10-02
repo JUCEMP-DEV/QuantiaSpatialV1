@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from app.quantia_spatialV1.adaptive_reconstruction.call2_schema import CALL2_SCHEMA
-from app.quantia_spatialV1.providers.call2_providers import (
+from app.quantia_spatialV1.stages.walls.adaptive.call2_schema import CALL2_SCHEMA
+from app.quantia_spatialV1.ai.providers.call2_providers import (
     Call2StrictSchemaAdapter,
     GroqQwenCall2Provider,
     MistralCall2Provider,

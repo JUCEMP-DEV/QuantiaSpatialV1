@@ -5,7 +5,7 @@ import pytest
 import base64
 import zlib
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveReconstructionRuntime,
     AdaptiveRoutePlan,
     LogicalGap,
@@ -16,9 +16,9 @@ from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
     SingleLineWallGraph,
     SpaceTopology,
 )
-from app.quantia_spatialV1.canonical_wallgraph import CanonicalWallGraphFinalizer
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewTransform, PixelBBox
-from app.quantia_spatialV1.post_reconstruction_filters.contracts import (
+from app.quantia_spatialV1.stages.walls.canonical import CanonicalWallGraphFinalizer
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewTransform, PixelBBox
+from app.quantia_spatialV1.stages.walls.postfilter.contracts import (
     CanonicalWallMapping,
     FilterDecision,
     PostFilterDiagnostics,
@@ -249,7 +249,7 @@ def test_failed_integrity_is_not_published(inputs, monkeypatch):
 
 
 def test_bundle_round_trip_preserves_artifacts_and_inputs(inputs):
-    from app.quantia_spatialV1.canonical_wallgraph import ReconstructionEvidenceBundle
+    from app.quantia_spatialV1.stages.walls.canonical import ReconstructionEvidenceBundle
     level, runtime, post = inputs
     mask = np.arange(400, dtype=np.uint16).reshape(20, 20)
     runtime.artifacts = {"wall_mask": mask, "logical_mask": mask.copy(),
@@ -266,9 +266,9 @@ def test_bundle_round_trip_preserves_artifacts_and_inputs(inputs):
 
 
 def test_corrections_preserve_final_ancestry_and_seed_coverage(inputs):
-    from app.quantia_spatialV1.adaptive_reconstruction.contracts import MultimodalWallReview, WallDelta
-    from app.quantia_spatialV1.adaptive_reconstruction.correction_applier import WallGraphCorrectionApplier
-    from app.quantia_spatialV1.canonical_wallgraph.correction_lineage import apply_with_lineage
+    from app.quantia_spatialV1.stages.walls.adaptive.contracts import MultimodalWallReview, WallDelta
+    from app.quantia_spatialV1.stages.walls.adaptive.correction_applier import WallGraphCorrectionApplier
+    from app.quantia_spatialV1.stages.walls.canonical.correction_lineage import apply_with_lineage
     level, runtime, post = inputs
     review = MultimodalWallReview(level_view_id="LV1", graph_state="PARTIAL", deltas=[
         WallDelta(action="REMOVE_WALL", wall_id="W1", confidence=0.9, reason="test"),

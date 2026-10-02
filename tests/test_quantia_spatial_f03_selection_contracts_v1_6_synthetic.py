@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from app.quantia_spatialV1.reconstruction_core.candidate_context_gate import CandidateContextGate
-from app.quantia_spatialV1.reconstruction_core.candidate_models import WallCandidate, WallEvidenceVector
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion, RepetitiveAxisProfile
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingBBox, DrawingPoint
+from app.quantia_spatialV1.stages.walls.core.candidate_context_gate import CandidateContextGate
+from app.quantia_spatialV1.stages.walls.core.candidate_models import WallCandidate, WallEvidenceVector
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion, RepetitiveAxisProfile
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingBBox, DrawingPoint
 
 
 def _candidate(

@@ -6,13 +6,13 @@ from io import BytesIO
 from PIL import Image
 from shapely.geometry import box
 
-from app.quantia_spatialV1.models.evidence import EvidenceGeometry, RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewTransform, PixelBBox
-from app.quantia_spatialV1.reconstruction_core.candidate_context_gate import CandidateContextGate
-from app.quantia_spatialV1.reconstruction_core.candidate_models import WallCandidate, WallEvidenceVector
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion, RepetitiveAxisProfile
-from app.quantia_spatialV1.reconstruction_core.drawing_builder import DrawingModelBuilder
-from app.quantia_spatialV1.reconstruction_core.drawing_model import (
+from app.quantia_spatialV1.core.models.evidence import EvidenceGeometry, RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewTransform, PixelBBox
+from app.quantia_spatialV1.stages.walls.core.candidate_context_gate import CandidateContextGate
+from app.quantia_spatialV1.stages.walls.core.candidate_models import WallCandidate, WallEvidenceVector
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion, RepetitiveAxisProfile
+from app.quantia_spatialV1.stages.walls.core.drawing_builder import DrawingModelBuilder
+from app.quantia_spatialV1.stages.walls.core.drawing_model import (
     DrawingBBox,
     DrawingCurve,
     DrawingLine,
@@ -21,8 +21,8 @@ from app.quantia_spatialV1.reconstruction_core.drawing_model import (
     DrawingPoint,
     SemanticObservation,
 )
-from app.quantia_spatialV1.reconstruction_core.element_context_detector import ElementContextDetector
-from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.stages.walls.core.element_context_detector import ElementContextDetector
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
 
 
 def _profile():

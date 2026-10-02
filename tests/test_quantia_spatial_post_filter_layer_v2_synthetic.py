@@ -4,7 +4,7 @@ import copy
 
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveReconstructionRuntime,
     AdaptiveRoutePlan,
     ModuleDecision,
@@ -14,7 +14,7 @@ from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
     SingleLineWallGraph,
     SpaceTopology,
 )
-from app.quantia_spatialV1.post_reconstruction_filters import (
+from app.quantia_spatialV1.stages.walls.postfilter import (
     PostFilterGeometryPatternAnalyzer,
     PostReconstructionFilterEngine,
     WallHypothesisCanonicalizer,

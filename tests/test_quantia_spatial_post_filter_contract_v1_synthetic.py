@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveReconstructionRuntime,
     AdaptiveRoutePlan,
     ModuleDecision,
@@ -12,9 +12,9 @@ from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
     SingleLineWallGraph,
     SpaceTopology,
 )
-from app.quantia_spatialV1.post_reconstruction_filters import PostReconstructionFilterEngine
-from app.quantia_spatialV1.reconstruction_core.candidate_models import WallCandidate, WallEvidenceVector
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingPoint
+from app.quantia_spatialV1.stages.walls.postfilter import PostReconstructionFilterEngine
+from app.quantia_spatialV1.stages.walls.core.candidate_models import WallCandidate, WallEvidenceVector
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingPoint
 
 
 def _plan() -> AdaptiveRoutePlan:

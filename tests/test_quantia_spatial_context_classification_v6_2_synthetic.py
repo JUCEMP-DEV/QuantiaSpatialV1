@@ -2,24 +2,24 @@ from __future__ import annotations
 
 import math
 
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
     LevelViewTransform,
     PixelBBox,
 )
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import (
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import (
     EditablePerimeterModel,
     EditablePerimeterVertex,
     EditablePerimeterWall,
     PerimeterComparisonBaseline,
     PerimeterMetricSummary,
 )
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_models import PerimeterPointPx
-from app.quantia_spatialV1.reconstruction_core.candidate_context_gate import CandidateContextGate
-from app.quantia_spatialV1.reconstruction_core.candidate_models import WallCandidate, WallEvidenceVector
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion, RepetitiveAxisProfile
-from app.quantia_spatialV1.reconstruction_core.context_region_detector import ContextRegionDetector
-from app.quantia_spatialV1.reconstruction_core.drawing_model import (
+from app.quantia_spatialV1.stages.perimeter.perimeter_models import PerimeterPointPx
+from app.quantia_spatialV1.stages.walls.core.candidate_context_gate import CandidateContextGate
+from app.quantia_spatialV1.stages.walls.core.candidate_models import WallCandidate, WallEvidenceVector
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion, RepetitiveAxisProfile
+from app.quantia_spatialV1.stages.walls.core.context_region_detector import ContextRegionDetector
+from app.quantia_spatialV1.stages.walls.core.drawing_model import (
     DrawingBBox,
     DrawingLine,
     DrawingModel,
@@ -27,7 +27,7 @@ from app.quantia_spatialV1.reconstruction_core.drawing_model import (
     DrawingPoint,
     DrawingText,
 )
-from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import ProjectLevelScaleNormalizer
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import ProjectLevelScaleNormalizer
 
 
 def _level(level_id: str, width: int, height: int) -> LevelView:
@@ -578,7 +578,7 @@ def test_v6_2_paralelismo_sin_eje_ni_ancla_no_activa_linaje() -> None:
         _wall_candidate(f"P{i}", 100.0, 100.0 + i * 20.0, 150.0, 100.0 + i * 20.0, axis_support=0.10)
         for i in range(5)
     ]
-    from app.quantia_spatialV1.reconstruction_core.structural_lineage import StructuralLineageAnalyzer
+    from app.quantia_spatialV1.stages.walls.core.structural_lineage import StructuralLineageAnalyzer
 
     lineage = StructuralLineageAnalyzer().analyze(candidates)
     assert all(not item.strong for item in lineage.values())
