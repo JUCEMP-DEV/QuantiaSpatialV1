@@ -154,13 +154,16 @@ class LevelBootstrapResolver:
         if (
             discovery is not None
             and discovery.total_visible_level_count == 1
-            and not discovery.has_named_levels
             and page_count == 1
         ):
             if "GEMINI" not in sources:
                 sources.append("GEMINI")
             fallback_full_page = True
-            reasons.append("gemini_single_unnamed_level")
+            reasons.append(
+                "gemini_single_named_level"
+                if discovery.has_named_levels
+                else "gemini_single_unnamed_level"
+            )
 
         if (
             project_site_context is not None
