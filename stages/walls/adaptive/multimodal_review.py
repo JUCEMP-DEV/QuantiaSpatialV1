@@ -30,13 +30,9 @@ class MultimodalReviewProvider(Protocol):
     ) -> Any: ...
 
 
-CALL2_PROMPT_VERSION = "CALL2_WALL_REVIEW_V2"
-CALL2_SCHEMA_VERSION = "CALL2_WALL_REVIEW_SCHEMA_V2"
+CALL2_PROMPT_VERSION = "CALL2_WALL_REVIEW_V3"
+CALL2_SCHEMA_VERSION = "CALL2_WALL_REVIEW_SCHEMA_V3"
 
-# V2 intentionally does not enumerate every logical gap generated upstream.
-# Wall continuity is corrected by deltas; visible openings/elements are published
-# as architectural candidates for the next layer. This keeps the call focused
-# and prevents hundreds of internal bridge hypotheses from consuming context.
 from .call2_schema import CALL2_SCHEMA
 
 
@@ -167,6 +163,17 @@ class WallGraphMultimodalReviewer:
                 ]
                 for wall in graph.walls
             ],
+            "logical_gaps": [
+                [
+                    gap.id,
+                    round(gap.start_px[0], 1),
+                    round(gap.start_px[1], 1),
+                    round(gap.end_px[0], 1),
+                    round(gap.end_px[1], 1),
+                    list(gap.wall_ids),
+                ]
+                for gap in graph.logical_gaps
+            ],
         }
         if level_view is not None:
             bbox = level_view.source_bbox_px
@@ -222,6 +229,14 @@ WALL REVIEW RULES
 9. Roof/terrace lines are not walls unless A clearly shows an actual wall/parapet.
 10. If evidence is insufficient, do not guess: report unresolved_regions.
 
+GAP REVIEW
+Return one gap_decision for every logical_gap listed in STATE.
+- WALL_CONTINUITY: solid wall is visibly continuous; host_wall_continuity=true; solid_wall_present=true.
+- PROBABLE_OPENING: host wall continuity exists but the gap is physically open; host_wall_continuity=true; solid_wall_present=false.
+- NOT_A_GAP: upstream bridge hypothesis is false; host_wall_continuity=false; solid_wall_present=false.
+- UNCERTAIN: visual evidence is insufficient; host_wall_continuity=false; solid_wall_present=false.
+Never invent gap IDs and never close PROBABLE_OPENING with physical wall geometry.
+
 NEXT-LAYER CANDIDATES
 After wall corrections, report only visually clear non-wall architectural regions relevant to the next layer or to a wall/opening decision: DOOR, WINDOW, FLOOR_TO_CEILING_GLAZING, RAILING_GUARDRAIL, STAIR, STAIR_HANDRAIL, ROOF_COVER, TERRACE, OPENING_CLOSURE, SLAB_EDGE_LEVEL_CHANGE, COLUMN, OTHER, UNCERTAIN.
 This is candidate identification, not final F04 classification/dimensioning.
@@ -233,7 +248,7 @@ OUTPUT DISCIPLINE
 - Reasons must be short and evidence-based (prefer <=12 words).
 - summary: maximum two short sentences.
 - Do not enumerate unchanged walls.
-- Do not output internal logical-gap hypotheses; continuity corrections belong in deltas.
+- Classify only logical gaps listed in STATE; do not invent new gap IDs.
 
 STATE
 {capsule}{filter_note}
@@ -311,9 +326,10 @@ STATE
             payload = result.data
             if not isinstance(payload, dict):
                 raise RuntimeError("Call 2 no devolvió objeto JSON.")
-            # Schema V2 no solicita gap_decisions; contrato interno los mantiene
-            # opcionales para compatibilidad con validación/aplicador existentes.
-            payload.setdefault("gap_decisions", [])
+            if "gap_decisions" not in payload:
+                raise RuntimeError(
+                    "Call 2 no devolvió gap_decisions requeridos por Schema V3."
+                )
             review = MultimodalWallReview.model_validate(payload)
             if review.level_view_id != graph.level_view_id:
                 raise RuntimeError("Call 2 devolvió level_view_id distinto al solicitado.")
