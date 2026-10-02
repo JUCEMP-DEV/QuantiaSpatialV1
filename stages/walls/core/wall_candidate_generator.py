@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 from shapely.geometry import LineString
 
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 from .candidate_models import WallCandidate, WallEvidenceVector
 from .drawing_model import DrawingLine, DrawingModel, DrawingPoint

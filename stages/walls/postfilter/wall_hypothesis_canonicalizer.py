@@ -4,7 +4,7 @@ import hashlib
 import math
 from collections.abc import Sequence
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import SingleLineWall
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import SingleLineWall
 
 from .contracts import CanonicalWallMapping
 

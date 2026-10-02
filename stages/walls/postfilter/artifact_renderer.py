@@ -3,8 +3,8 @@ from __future__ import annotations
 import cv2
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import AdaptiveReconstructionRuntime, SingleLineWall
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import AdaptiveReconstructionRuntime, SingleLineWall
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .contracts import PostReconstructionFilterResult
 

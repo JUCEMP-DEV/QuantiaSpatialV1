@@ -5,9 +5,9 @@ import math
 
 from shapely.geometry import LineString
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
-from app.quantia_spatialV1.parametric_model import (
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.core.models.parametric import (
     ParametricLevel,
     ParametricPoint,
     ParametricWall,

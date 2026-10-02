@@ -3,7 +3,7 @@ from __future__ import annotations
 import math
 from collections.abc import Sequence
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import AdaptiveReconstructionRuntime, SingleLineWall
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import AdaptiveReconstructionRuntime, SingleLineWall
 
 from .contracts import FilterModuleDecision, PatternEvidence, PostFilterPlan
 

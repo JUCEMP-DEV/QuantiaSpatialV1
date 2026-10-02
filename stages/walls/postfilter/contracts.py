@@ -4,7 +4,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import SingleLineWall, SingleLineWallGraph
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import SingleLineWall, SingleLineWallGraph
 
 
 FilterClass = Literal[

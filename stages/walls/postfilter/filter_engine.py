@@ -4,7 +4,7 @@ from collections import defaultdict
 from collections.abc import Sequence
 from typing import Any
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveReconstructionRuntime,
     PhysicalWallTrack,
     SingleLineWall,
