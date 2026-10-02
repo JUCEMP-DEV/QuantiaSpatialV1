@@ -8,8 +8,8 @@ from typing import Iterable, Sequence
 import cv2
 import numpy as np
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .drawing_model import (
     DrawingBBox,

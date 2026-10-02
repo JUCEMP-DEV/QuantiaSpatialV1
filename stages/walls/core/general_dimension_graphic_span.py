@@ -4,9 +4,9 @@ import math
 from dataclasses import dataclass
 from typing import Literal, Sequence
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 
 DimensionOrientation = Literal["HORIZONTAL", "VERTICAL"]

@@ -8,7 +8,7 @@ from typing import Sequence
 
 from shapely.geometry import LineString, box
 
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 from .context_models import ContextRegion, RepetitiveAxisProfile
 from .context_region_classifier import ContextRegionClassifier
