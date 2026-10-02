@@ -52,6 +52,14 @@ from app.quantia_spatialV1.core.scale.raster_density_policy import (
 from app.quantia_spatialV1.core.scale.scale_evidence_resolver import (
     ScaleEvidenceResolver,
 )
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import (
+    ProjectLevelScaleNormalizer,
+    ProjectScaleContext,
+)
+from app.quantia_spatialV1.stages.walls.process import (
+    Call2Mode,
+    QuantiaSpatialV1ProcessEngine,
+)
 from app.quantia_spatialV1.ai.prompts.extraction import build_level_discovery_prompt
 from app.quantia_spatialV1.ai.providers.vision import (
     GeminiSpatialVisionProvider,
@@ -125,6 +133,9 @@ class QuantiaSpatialEngineResult(BaseModel):
     levels: list[QuantiaPhase02LevelResult] = Field(default_factory=list)
     raster_normalization: MetricRasterNormalizationResult | None = None
     project_site_context: ProjectSiteContext | None = None
+    project_scale_context: ProjectScaleContext | None = None
+    process_results: dict[str, Any] = Field(default_factory=dict)
+    process_errors: dict[str, str] = Field(default_factory=dict)
     warnings: list[str] = Field(default_factory=list)
 
 
@@ -158,6 +169,8 @@ class QuantiaSpatialEngine:
         evidence_pipeline: EvidencePipeline | None = None,
         gemini_evidence_adapter: GeminiEvidenceAdapter | None = None,
         perimeter_pipeline: PerimeterWallPipeline | None = None,
+        process_engine: QuantiaSpatialV1ProcessEngine | None = None,
+        scale_normalizer: ProjectLevelScaleNormalizer | None = None,
     ) -> None:
         self.vision_provider = vision_provider or GeminiSpatialVisionProvider()
         self.pdf_source = pdf_source or PyMuPDFLevelSource()
@@ -176,6 +189,8 @@ class QuantiaSpatialEngine:
             provider=self.vision_provider
         )
         self.perimeter_pipeline = perimeter_pipeline or PerimeterWallPipeline()
+        self.process_engine = process_engine or QuantiaSpatialV1ProcessEngine()
+        self.scale_normalizer = scale_normalizer or ProjectLevelScaleNormalizer()
         self.level_view_rerasterizer = LevelViewRerasterizer(pdf_source=self.pdf_source)
         self.perimeter_raster_reprojector = PerimeterRasterReprojector()
 
@@ -197,6 +212,8 @@ class QuantiaSpatialEngine:
         enable_gemini_extraction: bool = True,
         enable_metric_raster_normalization: bool = True,
         target_geometry_px_per_m: float = 90.0,
+        run_post_f02: bool = False,
+        call2_mode: Call2Mode = "OFF",
     ) -> QuantiaSpatialEngineResult:
         """Ejecuta F01 -> F01.5 -> F02 con normalización raster canónica.
 
@@ -285,12 +302,14 @@ class QuantiaSpatialEngine:
                     else []
                 ),
             )
-            return QuantiaSpatialEngineResult(
+            return self._finalize_engine_result(
                 phase_01=phase_01_bootstrap,
                 levels=bootstrap_levels,
-                raster_normalization=normalization,
+                normalization=normalization,
                 project_site_context=site_context,
-                warnings=self._dedupe_warnings([*warnings, *normalization.warnings]),
+                warnings=[*warnings, *normalization.warnings],
+                run_post_f02=run_post_f02,
+                call2_mode=call2_mode,
             )
 
         normalization, page_targets = self._plan_metric_raster_normalization(
@@ -301,12 +320,14 @@ class QuantiaSpatialEngine:
         warnings.extend(normalization.warnings)
 
         if not page_targets:
-            return QuantiaSpatialEngineResult(
+            return self._finalize_engine_result(
                 phase_01=phase_01_bootstrap,
                 levels=bootstrap_levels,
-                raster_normalization=normalization,
+                normalization=normalization,
                 project_site_context=site_context,
-                warnings=self._dedupe_warnings(warnings),
+                warnings=warnings,
+                run_post_f02=run_post_f02,
+                call2_mode=call2_mode,
             )
 
         phase_01_final = self._rerasterize_phase_01(
@@ -345,11 +366,95 @@ class QuantiaSpatialEngine:
         )
         warnings.extend(normalization.warnings)
 
-        return QuantiaSpatialEngineResult(
+        return self._finalize_engine_result(
             phase_01=phase_01_final,
             levels=final_levels,
-            raster_normalization=normalization,
+            normalization=normalization,
             project_site_context=site_context,
+            warnings=warnings,
+            run_post_f02=run_post_f02,
+            call2_mode=call2_mode,
+        )
+
+    def _finalize_engine_result(
+        self,
+        *,
+        phase_01: QuantiaPhase01Result,
+        levels: list[QuantiaPhase02LevelResult],
+        normalization: MetricRasterNormalizationResult,
+        project_site_context: ProjectSiteContext | None,
+        warnings: list[str],
+        run_post_f02: bool,
+        call2_mode: Call2Mode,
+    ) -> QuantiaSpatialEngineResult:
+        if call2_mode not in {"OFF", "AUTO", "FORCE"}:
+            raise QuantiaSpatialEngineError(
+                f"call2_mode no soportado: {call2_mode}"
+            )
+
+        if not run_post_f02:
+            return QuantiaSpatialEngineResult(
+                phase_01=phase_01,
+                levels=levels,
+                raster_normalization=normalization,
+                project_site_context=project_site_context,
+                warnings=self._dedupe_warnings(warnings),
+            )
+
+        reconstructable = [
+            item
+            for item in levels
+            if item.perimeter.editable_perimeter is not None
+        ]
+        if not reconstructable:
+            return QuantiaSpatialEngineResult(
+                phase_01=phase_01,
+                levels=levels,
+                raster_normalization=normalization,
+                project_site_context=project_site_context,
+                warnings=self._dedupe_warnings(
+                    [
+                        *warnings,
+                        "Post-F02 no encontró perímetros editables para reconstrucción.",
+                    ]
+                ),
+            )
+
+        scale_context = self.scale_normalizer.build(
+            levels=[
+                (item.level_view, item.perimeter.editable_perimeter)
+                for item in reconstructable
+            ]
+        )
+        process_results: dict[str, Any] = {}
+        process_errors: dict[str, str] = {}
+
+        for item in reconstructable:
+            level_id = item.level_view.id
+            try:
+                process_results[level_id] = self.process_engine.run_level(
+                    level_view=item.level_view,
+                    perimeter=item.perimeter.editable_perimeter,
+                    evidence=item.evidence.evidence,
+                    scale_profile=scale_context.for_level(level_id),
+                    call2_mode=call2_mode,
+                )
+            except Exception as exc:
+                message = f"{type(exc).__name__}: {exc}"
+                process_errors[level_id] = message
+                warnings.append(
+                    f"{item.level_view.level_name or level_id}: "
+                    f"post-F02 no completado. {message}"
+                )
+
+        return QuantiaSpatialEngineResult(
+            phase_01=phase_01,
+            levels=levels,
+            raster_normalization=normalization,
+            project_site_context=project_site_context,
+            project_scale_context=scale_context,
+            process_results=process_results,
+            process_errors=process_errors,
             warnings=self._dedupe_warnings(warnings),
         )
 
