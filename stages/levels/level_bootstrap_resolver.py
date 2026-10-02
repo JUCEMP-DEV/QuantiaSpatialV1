@@ -223,11 +223,19 @@ class LevelBootstrapResolver:
         tokens = set(normalized.split())
         candidates: list[str] = []
 
-        if re.search(r"\bplanta\s+baja\b", normalized) or "pb" in tokens:
+        if (
+            re.search(r"\bplanta\s+baja\b", normalized)
+            or "plantabaja" in tokens
+            or "pb" in tokens
+        ):
             candidates.append("Planta Baja")
-        if re.search(r"\bplanta\s+alta\b", normalized) or "pa" in tokens:
+        if (
+            re.search(r"\bplanta\s+alta\b", normalized)
+            or "plantaalta" in tokens
+            or "pa" in tokens
+        ):
             candidates.append("Planta Alta")
-        if re.search(r"\bsemi\s*sotano\b", normalized):
+        if re.search(r"\bsemi\s*sotano\b", normalized) or "semisotano" in tokens:
             candidates.append("Semisótano")
         elif re.search(r"\bsotano\b", normalized):
             candidates.append("Sótano")
