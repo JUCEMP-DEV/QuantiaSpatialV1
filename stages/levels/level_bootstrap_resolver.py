@@ -177,9 +177,14 @@ class LevelBootstrapResolver:
         if fallback_full_page and len(known) == 1:
             fallback_level_name = known[0]
 
+        strong_name_source = any(
+            source in {"USER_DECLARED", "PDF_VECTOR", "GEMINI"}
+            for source in sources
+        )
+
         if single_level_isolated:
             state: BootstrapState = "RESOLVED"
-        elif known and not fallback_full_page:
+        elif known and strong_name_source and not fallback_full_page:
             state = "RESOLVED"
         elif known or fallback_full_page:
             state = "REVIEW"
