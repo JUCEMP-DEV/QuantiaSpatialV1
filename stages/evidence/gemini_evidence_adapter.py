@@ -5,26 +5,26 @@ import json
 from dataclasses import dataclass
 from typing import Any, Sequence
 
-from app.quantia_spatialV1.models.evidence import EvidenceGeometry, RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView, PixelBBox
-from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
-from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_contract import (
+from app.quantia_spatialV1.core.models.evidence import EvidenceGeometry, RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView, PixelBBox
+from app.quantia_spatialV1.core.models.project_site_context import ProjectSiteContext
+from app.quantia_spatialV1.stages.evidence.gemini_semantic_contract import (
     SEMANTIC_CONTRACT_VERSION,
     SEMANTIC_SOURCE_MODE,
 )
-from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_extractor import (
+from app.quantia_spatialV1.stages.evidence.gemini_semantic_extractor import (
     GeminiSemanticExtractor,
 )
-from app.quantia_spatialV1.phase_015_evidence.gemini_semantic_history import (
+from app.quantia_spatialV1.stages.evidence.gemini_semantic_history import (
     GeminiSemanticHistory,
 )
-from app.quantia_spatialV1.phase_015_evidence.project_site_prompt_context import (
+from app.quantia_spatialV1.stages.evidence.project_site_prompt_context import (
     build_project_site_context_prompt,
 )
-from app.quantia_spatialV1.phase_015_evidence.replay_signature import (
+from app.quantia_spatialV1.stages.evidence.replay_signature import (
     ReplaySignatureValidator,
 )
-from app.quantia_spatialV1.providers.vision import (
+from app.quantia_spatialV1.ai.providers.vision import (
     GeminiSpatialVisionProvider,
     SpatialVisionProviderError,
 )

@@ -4,8 +4,8 @@ import io
 
 from PIL import Image
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingBBox
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingBBox
 
 
 class ElementVisualContextBuilder:

@@ -4,7 +4,7 @@ import math
 from collections.abc import Iterable
 from typing import Any
 
-from app.quantia_spatialV1.models.evidence import (
+from app.quantia_spatialV1.core.models.evidence import (
     EvidenceParameter,
     RawEvidence,
 )

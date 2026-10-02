@@ -6,19 +6,19 @@ from typing import Any, Callable
 
 from pydantic import BaseModel, Field
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_015_evidence.evidence_geometry_validator import (
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.evidence.evidence_geometry_validator import (
     EvidenceGeometryValidator,
 )
-from app.quantia_spatialV1.phase_015_evidence.evidence_parameterizer import (
+from app.quantia_spatialV1.stages.evidence.evidence_parameterizer import (
     EvidenceParameterizer,
 )
-from app.quantia_spatialV1.phase_015_evidence.ocr_evidence_adapter import OCREvidenceAdapter
-from app.quantia_spatialV1.phase_015_evidence.opencv_evidence_adapter import (
+from app.quantia_spatialV1.stages.evidence.ocr_evidence_adapter import OCREvidenceAdapter
+from app.quantia_spatialV1.stages.evidence.opencv_evidence_adapter import (
     OpenCVEvidenceAdapter,
 )
-from app.quantia_spatialV1.phase_015_evidence.pymupdf_evidence_adapter import (
+from app.quantia_spatialV1.stages.evidence.pymupdf_evidence_adapter import (
     PyMuPDFEvidenceAdapter,
 )
 

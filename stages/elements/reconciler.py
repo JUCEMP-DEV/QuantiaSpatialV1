@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import hashlib
 
-from app.quantia_spatialV1.parametric_model import ParametricOpening, QuantiaParametricModel
+from app.quantia_spatialV1.core.models.parametric import ParametricOpening, QuantiaParametricModel
 
 from .contracts import OpeningElementProposal
 

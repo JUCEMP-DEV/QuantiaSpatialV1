@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from app.quantia_spatialV1.models.evidence import (
+from app.quantia_spatialV1.core.models.evidence import (
     RawEvidence,
 )
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
     PixelBBox,
 )

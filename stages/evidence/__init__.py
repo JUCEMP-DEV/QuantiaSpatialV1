@@ -1,4 +1,4 @@
-from app.quantia_spatialV1.phase_015_evidence.evidence_pipeline import (
+from app.quantia_spatialV1.stages.evidence.evidence_pipeline import (
     EvidencePipeline,
     EvidencePipelineDiagnostics,
     EvidencePipelineResult,
