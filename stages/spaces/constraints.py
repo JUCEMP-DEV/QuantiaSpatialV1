@@ -92,6 +92,11 @@ class SpaceConstraintValidator:
         )
 
         warnings: list[str] = []
+        if any(
+            item.classification == "UPSTREAM_UNCLASSIFIED"
+            for item in closure.logical_closures
+        ):
+            warnings.append("SPACE_LOGICAL_GAPS_UNCLASSIFIED")
         if (
             metrics.area_conservation_ratio
             < self.config.area_conservation_warn
