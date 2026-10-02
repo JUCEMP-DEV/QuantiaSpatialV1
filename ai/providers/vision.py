@@ -57,7 +57,7 @@ class SpatialVisionResult:
 
     `data` permanece sin interpretar arquitectónicamente.
     La validación de transporte corresponde a los modelos
-    Pydantic de app.quantia_spatialV1.transport.
+    Pydantic de app.quantia_spatialV1.ai.schemas.
     """
 
     provider: str

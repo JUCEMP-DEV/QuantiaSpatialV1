@@ -348,6 +348,6 @@ def build_call2_provider(provider: str | None = None) -> Any:
         return MistralCall2Provider()
     if name == "gemini":
         # Import diferido para no acoplar Groq/Mistral a app.core.config.
-        from app.quantia_spatialV1.providers.vision import GeminiSpatialVisionProvider
+        from app.quantia_spatialV1.ai.providers.vision import GeminiSpatialVisionProvider
         return GeminiSpatialVisionProvider()
     raise Call2ProviderError(f"QUANTIA_CALL2_PROVIDER no soportado: {name}")
