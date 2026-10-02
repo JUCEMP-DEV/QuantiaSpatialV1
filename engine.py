@@ -127,7 +127,7 @@ class MetricRasterNormalizationResult(BaseModel):
 
 
 class QuantiaSpatialEngineResult(BaseModel):
-    """Resultado actual del motor: F01 + F01.5 + F02 sobre raster canónico."""
+    """Resultado canónico desde F01 hasta reconstrucción post-F02 opcional."""
 
     phase_01: QuantiaPhase01Result
     levels: list[QuantiaPhase02LevelResult] = Field(default_factory=list)
@@ -141,16 +141,16 @@ class QuantiaSpatialEngineResult(BaseModel):
 
 class QuantiaSpatialEngine:
     """
-    Motor interno vigente hasta Fase 02.
+    Entrypoint canónico de QuantiaSpatialV1.
 
-    Flujo:
-        documento -> F01 LevelView[]
-        página completa -> Gemini legacy (una llamada por página)
-        LevelView -> PyMuPDF/OpenCV/OCR + semántica Gemini -> RawEvidence
-        RawEvidence -> F02 PerimeterWallLayer
+    Flujo base:
+        documento -> F01 -> F01.5 -> F02 -> raster métrico canónico
 
-    F03-F06 permanecen fuera de este engine hasta ser adaptadas al nuevo
-    PerimeterWallLayer. No se importan módulos legacy de boundary.
+    Con run_post_f02=True:
+        F02 -> escala de proyecto -> walls -> Call2 -> spaces
+
+    Las etapas posteriores se incorporan aquí de forma incremental para evitar
+    que consumidores externos orquesten internamente el motor.
     """
 
     PDF_MIME_TYPE = "application/pdf"
@@ -215,7 +215,7 @@ class QuantiaSpatialEngine:
         run_post_f02: bool = False,
         call2_mode: Call2Mode = "OFF",
     ) -> QuantiaSpatialEngineResult:
-        """Ejecuta F01 -> F01.5 -> F02 con normalización raster canónica.
+        """Ejecuta el entrypoint canónico con post-F02 opcional.
 
         Para PDF el `render_scale` recibido es bootstrap. F01 identifica/localiza
         niveles sobre ese raster; F01.5/F02 producen la evidencia mínima necesaria
