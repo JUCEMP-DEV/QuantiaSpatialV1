@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from app.quantia_spatialV1.models.level_view import LevelView, LevelViewEvidence, PixelBBox
-from app.quantia_spatialV1.phase_01_level.level_detector import LevelRegionDetection
-from app.quantia_spatialV1.phase_01_level.level_identification_service import LevelIdentificationResult
-from app.quantia_spatialV1.phase_01_level.level_view_builder import LevelViewBuilder
-from app.quantia_spatialV1.phase_01_level.pymupdf_level_source import PyMuPDFLevelSource
+from app.quantia_spatialV1.core.models.level_view import LevelView, LevelViewEvidence, PixelBBox
+from app.quantia_spatialV1.stages.levels.level_detector import LevelRegionDetection
+from app.quantia_spatialV1.stages.levels.level_identification_service import LevelIdentificationResult
+from app.quantia_spatialV1.stages.levels.level_view_builder import LevelViewBuilder
+from app.quantia_spatialV1.stages.levels.pymupdf_level_source import PyMuPDFLevelSource
 
 
 @dataclass(frozen=True, slots=True)

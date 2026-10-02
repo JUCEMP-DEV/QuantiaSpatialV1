@@ -3,15 +3,15 @@ from __future__ import annotations
 from io import BytesIO
 from typing import Any
 
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
 )
-from app.quantia_spatialV1.phase_01_level.level_detector import (
+from app.quantia_spatialV1.stages.levels.level_detector import (
     LevelDetectionResult,
     LevelDetector,
     LevelRegionDetection,
 )
-from app.quantia_spatialV1.phase_01_level.level_view_builder import (
+from app.quantia_spatialV1.stages.levels.level_view_builder import (
     LevelViewBuilder,
 )
 from PIL import Image, UnidentifiedImageError

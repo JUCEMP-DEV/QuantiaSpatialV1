@@ -14,8 +14,8 @@ from shapely.geometry import (
 )
 from shapely.ops import polygonize_full, unary_union
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .perimeter_models import (
     PerimeterCandidate,

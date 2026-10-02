@@ -6,8 +6,8 @@ import re
 from collections.abc import Sequence
 from typing import Any
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 from .perimeter_models import (
     PerimeterDimensionGroundingResult,

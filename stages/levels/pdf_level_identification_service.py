@@ -2,18 +2,18 @@ from __future__ import annotations
 
 from typing import Any
 
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelView,
 )
-from app.quantia_spatialV1.phase_01_level.gemini_level_localization_service import (
+from app.quantia_spatialV1.stages.levels.gemini_level_localization_service import (
     GeminiLevelLocalizationService,
     GeminiLevelLocalizationServiceError,
 )
-from app.quantia_spatialV1.phase_01_level.level_identification_service import (
+from app.quantia_spatialV1.stages.levels.level_identification_service import (
     LevelIdentificationResult,
     LevelIdentificationService,
 )
-from app.quantia_spatialV1.phase_01_level.pymupdf_level_source import (
+from app.quantia_spatialV1.stages.levels.pymupdf_level_source import (
     PyMuPDFLevelSource,
     PyMuPDFLevelSourceResult,
     PyMuPDFSourcePage,

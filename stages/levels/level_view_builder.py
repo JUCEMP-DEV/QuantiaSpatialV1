@@ -3,7 +3,7 @@ from __future__ import annotations
 from hashlib import sha1
 from io import BytesIO
 
-from app.quantia_spatialV1.models.level_view import (
+from app.quantia_spatialV1.core.models.level_view import (
     LevelIdentificationState,
     LevelView,
     LevelViewEvidence,
