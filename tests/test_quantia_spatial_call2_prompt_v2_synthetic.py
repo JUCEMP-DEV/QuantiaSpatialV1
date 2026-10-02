@@ -45,6 +45,7 @@ class _FakeProvider:
                 "level_view_id": "LV_SYNTH",
                 "graph_state": "VALID",
                 "deltas": [],
+                "gap_decisions": [],
                 "non_wall_architectural_regions": [],
                 "unresolved_regions": [],
                 "summary": "No corrections required.",
@@ -152,13 +153,14 @@ def test_call2_v2_prompt_is_source_anchored_and_compact() -> None:
     assert review.level_view_id == "LV_SYNTH"
     assert CALL2_PROMPT_VERSION in provider.last_prompt
     assert "exact original LevelView crop" in provider.last_prompt
-    assert "logical_gaps" not in provider.last_prompt
-    assert "G499" not in provider.last_prompt
+    assert "logical_gaps" in provider.last_prompt
+    assert "G499" in provider.last_prompt
     assert "W1" in provider.last_prompt and "W2" in provider.last_prompt
-    # The 500 internal gaps and 400 filter candidates must not inflate the prompt.
-    assert len(provider.last_prompt) < 10_000
+    # Gaps use compact tuples; filter candidates remain counts-only.
+    assert len(provider.last_prompt) < 40_000
     assert provider.last_schema is not None
-    assert "gap_decisions" not in provider.last_schema["properties"]
+    assert "gap_decisions" in provider.last_schema["properties"]
+    assert "gap_decisions" in provider.last_schema["required"]
 
     decoded = cv2.imdecode(np.frombuffer(provider.last_media, dtype=np.uint8), cv2.IMREAD_COLOR)
     assert decoded is not None
