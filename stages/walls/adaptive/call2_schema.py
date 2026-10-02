@@ -29,6 +29,36 @@ CALL2_SCHEMA: dict[str, Any] = {
                 "required": ["action", "confidence", "reason"],
             },
         },
+        "gap_decisions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "gap_id": {"type": "string"},
+                    "classification": {
+                        "type": "string",
+                        "enum": [
+                            "WALL_CONTINUITY",
+                            "PROBABLE_OPENING",
+                            "UNCERTAIN",
+                            "NOT_A_GAP",
+                        ],
+                    },
+                    "host_wall_continuity": {"type": "boolean"},
+                    "solid_wall_present": {"type": "boolean"},
+                    "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+                    "reason": {"type": "string"},
+                },
+                "required": [
+                    "gap_id",
+                    "classification",
+                    "host_wall_continuity",
+                    "solid_wall_present",
+                    "confidence",
+                    "reason",
+                ],
+            },
+        },
         "non_wall_architectural_regions": {
             "type": "array",
             "items": {
@@ -65,7 +95,7 @@ CALL2_SCHEMA: dict[str, Any] = {
         "summary": {"type": "string"},
     },
     "required": [
-        "level_view_id", "graph_state", "deltas",
+        "level_view_id", "graph_state", "deltas", "gap_decisions",
         "non_wall_architectural_regions", "unresolved_regions", "summary"
     ],
 }
