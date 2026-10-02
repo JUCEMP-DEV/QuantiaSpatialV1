@@ -76,3 +76,39 @@ def test_f02_reproyectado_permanece_valido_en_raster_final() -> None:
     assert after.perimeter.state in {"VALID", "REVIEW"}
     assert after.perimeter.validation.inside_level_view is True
     assert after.perimeter.validation.closed_wall_chain is True
+
+
+def test_entrypoint_routes_post_f02_flags_without_changing_default_contract() -> None:
+    default_result = _run(normalize=False)
+    assert default_result.process_results == {}
+    assert default_result.process_errors == {}
+    assert default_result.project_scale_context is None
+
+    class SpyEngine(QuantiaSpatialEngine):
+        seen: tuple[bool, str] | None = None
+
+        def _finalize_engine_result(self, **kwargs):
+            self.seen = (
+                bool(kwargs["run_post_f02"]),
+                str(kwargs["call2_mode"]),
+            )
+            kwargs["run_post_f02"] = False
+            return super()._finalize_engine_result(**kwargs)
+
+    engine = SpyEngine()
+    result = engine.run(
+        document_bytes=_pdf_declared_scale_1_50(),
+        media_mime_type="application/pdf",
+        source_document_id="SYNTH_ENTRYPOINT_V1",
+        render_scale=0.7935,
+        known_level_names_by_page={1: ["Planta Baja"]},
+        isolated_pages={1},
+        enable_gemini_discovery=False,
+        enable_gemini_extraction=False,
+        enable_metric_raster_normalization=False,
+        run_post_f02=True,
+        call2_mode="AUTO",
+    )
+
+    assert engine.seen == (True, "AUTO")
+    assert len(result.levels) == 1
