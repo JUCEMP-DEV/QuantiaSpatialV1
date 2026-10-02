@@ -4,13 +4,13 @@ import hashlib
 import math
 from typing import Sequence
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.parametric_model import QuantiaParametricModel
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingModel, DrawingPoint
-from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
-from app.quantia_spatialV1.reconstruction_core.perimeter_adapter import perimeter_polygon
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.parametric import QuantiaParametricModel
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingModel, DrawingPoint
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.stages.walls.core.perimeter_adapter import perimeter_polygon
 
 from .contracts import (
     ArchitecturalElementsDiagnostics,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion
 
 from .contracts import ElementFeatureVector, ElementClass, HostWallMatch
 

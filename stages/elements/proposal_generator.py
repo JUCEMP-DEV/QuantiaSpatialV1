@@ -8,15 +8,15 @@ from typing import Iterable, Sequence
 
 from shapely.geometry import LineString, Point, box
 
-from app.quantia_spatialV1.parametric_model import ParametricWall
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion
-from app.quantia_spatialV1.reconstruction_core.drawing_model import (
+from app.quantia_spatialV1.core.models.parametric import ParametricWall
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion
+from app.quantia_spatialV1.stages.walls.core.drawing_model import (
     DrawingBBox,
     DrawingCurve,
     DrawingLine,
     DrawingModel,
 )
-from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
 
 
 class OpeningHypothesisGenerator:

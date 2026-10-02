@@ -6,9 +6,9 @@ from typing import Iterable
 
 from shapely.geometry import LineString, Point, box
 
-from app.quantia_spatialV1.parametric_model import ParametricWall
-from app.quantia_spatialV1.reconstruction_core.context_models import ContextRegion
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingLine, DrawingModel
+from app.quantia_spatialV1.core.models.parametric import ParametricWall
+from app.quantia_spatialV1.stages.walls.core.context_models import ContextRegion
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingLine, DrawingModel
 
 from .contracts import HostWallMatch
 

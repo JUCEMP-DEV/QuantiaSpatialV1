@@ -4,7 +4,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.reconstruction_core.drawing_model import DrawingBBox, DrawingPoint
+from app.quantia_spatialV1.stages.walls.core.drawing_model import DrawingBBox, DrawingPoint
 
 
 ElementClass = Literal["DOOR", "WINDOW", "NOT_OPENING"]

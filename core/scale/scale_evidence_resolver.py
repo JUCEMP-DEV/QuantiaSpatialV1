@@ -7,13 +7,13 @@ from typing import Any, Literal, Sequence
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
-from app.quantia_spatialV1.reconstruction_core.general_dimension_graphic_span import (
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.walls.core.general_dimension_graphic_span import (
     GeneralDimensionGraphicSpanResolver,
 )
-from app.quantia_spatialV1.reconstruction_core.reference_axis_resolver import AxisGridResolver
+from app.quantia_spatialV1.stages.walls.core.reference_axis_resolver import AxisGridResolver
 
 
 ScaleEvidenceState = Literal["RESOLVED", "REVIEW", "CONFLICT", "UNRESOLVED"]

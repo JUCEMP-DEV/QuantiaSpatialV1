@@ -8,52 +8,52 @@ from typing import Any
 from PIL import Image, ImageOps, UnidentifiedImageError
 from pydantic import BaseModel, Field, ValidationError
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.models.project_site_context import ProjectSiteContext
-from app.quantia_spatialV1.phase_01_level.gemini_level_localization_service import (
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.core.models.project_site_context import ProjectSiteContext
+from app.quantia_spatialV1.stages.levels.gemini_level_localization_service import (
     GeminiLevelLocalizationService,
     GeminiLevelLocalizationServiceError,
 )
-from app.quantia_spatialV1.phase_01_level.level_identification_service import (
+from app.quantia_spatialV1.stages.levels.level_identification_service import (
     LevelIdentificationResult,
     LevelIdentificationService,
 )
-from app.quantia_spatialV1.phase_01_level.pdf_level_identification_service import (
+from app.quantia_spatialV1.stages.levels.pdf_level_identification_service import (
     PDFLevelIdentificationService,
 )
-from app.quantia_spatialV1.phase_01_level.pymupdf_level_source import (
+from app.quantia_spatialV1.stages.levels.pymupdf_level_source import (
     PyMuPDFLevelSource,
 )
-from app.quantia_spatialV1.phase_01_level.level_view_rerasterizer import (
+from app.quantia_spatialV1.stages.levels.level_view_rerasterizer import (
     LevelViewRerasterizer,
 )
-from app.quantia_spatialV1.phase_015_evidence.evidence_pipeline import (
+from app.quantia_spatialV1.stages.evidence.evidence_pipeline import (
     EvidencePipeline,
     EvidencePipelineResult,
 )
-from app.quantia_spatialV1.phase_015_evidence.gemini_evidence_adapter import (
+from app.quantia_spatialV1.stages.evidence.gemini_evidence_adapter import (
     GeminiEvidenceAdapter,
     GeminiPageEvidenceExtractionResult,
 )
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_wall_pipeline import (
+from app.quantia_spatialV1.stages.perimeter.perimeter_wall_pipeline import (
     PerimeterWallPipeline,
     PerimeterWallPipelineResult,
 )
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_raster_reprojector import (
+from app.quantia_spatialV1.stages.perimeter.perimeter_raster_reprojector import (
     PerimeterRasterReprojector,
 )
-from app.quantia_spatialV1.reconstruction_core.raster_density_policy import (
+from app.quantia_spatialV1.core.scale.raster_density_policy import (
     RasterDensityPolicy,
 )
-from app.quantia_spatialV1.reconstruction_core.scale_evidence_resolver import (
+from app.quantia_spatialV1.core.scale.scale_evidence_resolver import (
     ScaleEvidenceResolver,
 )
-from app.quantia_spatialV1.prompts.extraction import build_level_discovery_prompt
-from app.quantia_spatialV1.providers.vision import (
+from app.quantia_spatialV1.ai.prompts.extraction import build_level_discovery_prompt
+from app.quantia_spatialV1.ai.providers.vision import (
     GeminiSpatialVisionProvider,
     SpatialVisionProviderError,
 )
-from app.quantia_spatialV1.transport.gemini_extraction import (
+from app.quantia_spatialV1.ai.schemas.gemini_extraction import (
     GeminiLevelDiscoveryResponse,
     get_gemini_level_discovery_schema,
 )
