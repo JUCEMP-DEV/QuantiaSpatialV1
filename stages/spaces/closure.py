@@ -7,6 +7,7 @@ from shapely.geometry import LineString, Polygon
 from shapely.ops import nearest_points, polygonize_full, unary_union
 
 from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
+    GapDecision,
     SingleLineWall,
     SingleLineWallGraph,
 )
@@ -39,7 +40,12 @@ class SpaceClosureEngine:
     def __init__(self, config: SpaceClosureConfig | None = None) -> None:
         self.config = config or SpaceClosureConfig()
 
-    def run(self, *, graph: SingleLineWallGraph) -> SpaceClosureResult:
+    def run(
+        self,
+        *,
+        graph: SingleLineWallGraph,
+        gap_decisions: list[GapDecision] | None = None,
+    ) -> SpaceClosureResult:
         projected, clusters = self._project_axes(graph.walls, graph.px_per_m)
         derived, wall_remap, merge_count = self._collapse_parallel_faces(
             projected,
@@ -49,6 +55,7 @@ class SpaceClosureEngine:
             graph=graph,
             walls=derived,
             wall_remap=wall_remap,
+            gap_decisions=gap_decisions,
         )
         spaces, wall_owners, topology = self._polygonize(
             level_view_id=graph.level_view_id,
@@ -357,6 +364,7 @@ class SpaceClosureEngine:
         graph: SingleLineWallGraph,
         walls: list[SpaceDerivedWall],
         wall_remap: dict[str, str],
+        gap_decisions: list[GapDecision] | None,
     ) -> list[SpaceLogicalClosure]:
         by_id = {wall.id: wall for wall in walls}
         seen: set[
@@ -368,9 +376,34 @@ class SpaceClosureEngine:
         result: list[SpaceLogicalClosure] = []
         max_gap_px = self.config.max_logical_gap_m * graph.px_per_m
 
+        decisions = (
+            {
+                decision.gap_id: decision
+                for decision in gap_decisions
+            }
+            if gap_decisions is not None
+            else None
+        )
+
         for gap in graph.logical_gaps:
             if not gap.logical_continuity_only:
                 continue
+
+            decision = (
+                decisions.get(gap.id)
+                if decisions is not None
+                else None
+            )
+            if decisions is not None:
+                if decision is None:
+                    continue
+                if decision.classification not in {
+                    "WALL_CONTINUITY",
+                    "PROBABLE_OPENING",
+                }:
+                    continue
+                if not decision.host_wall_continuity:
+                    continue
 
             mapped: list[str] = []
             for wall_id in gap.wall_ids:
@@ -419,6 +452,16 @@ class SpaceClosureEngine:
                     length_m=distance / graph.px_per_m,
                     wall_ids=mapped,
                     source_gap_id=gap.id,
+                    classification=(
+                        decision.classification
+                        if decision is not None
+                        else "UPSTREAM_UNCLASSIFIED"
+                    ),
+                    decision_confidence=(
+                        decision.confidence
+                        if decision is not None
+                        else None
+                    ),
                 )
             )
 
