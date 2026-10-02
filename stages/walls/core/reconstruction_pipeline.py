@@ -17,7 +17,7 @@ from .context_region_detector import ContextRegionDetector
 from .drawing_builder import DrawingModelBuilder
 from .drawing_model import DrawingModel
 from .global_topology_solver import GlobalTopologySolution, GlobalTopologySolver
-from .level_scale_normalizer import LevelScaleProfile, ProjectLevelScaleNormalizer, ProjectScaleContext
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile, ProjectLevelScaleNormalizer, ProjectScaleContext
 from .reference_constraints import ReferenceConstraintBuilder, ReferenceConstraintResult
 from .wall_candidate_generator import WallCandidateGenerator
 from .wall_reconstructor import ParametricWallReconstructor

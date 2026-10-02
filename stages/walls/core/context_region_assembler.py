@@ -9,7 +9,7 @@ from shapely.geometry import box
 
 from .context_models import ContextRegion, RepetitiveAxisProfile
 from .drawing_model import DrawingBBox, DrawingModel
-from .metric_normalized_context import MetricNormalizedContext
+from app.quantia_spatialV1.core.scale.metric_normalized_context import MetricNormalizedContext
 
 
 class ContextRegionAssembler:

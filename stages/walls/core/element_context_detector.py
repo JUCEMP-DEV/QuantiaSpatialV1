@@ -10,7 +10,7 @@ from shapely.geometry import LineString, Point, box
 
 from .context_models import ContextRegion
 from .drawing_model import DrawingBBox, DrawingCurve, DrawingLine, DrawingModel
-from .level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
 
 
 class ElementContextDetector:

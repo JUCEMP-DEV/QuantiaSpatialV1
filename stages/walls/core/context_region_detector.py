@@ -18,8 +18,8 @@ from .perimeter_adapter import perimeter_polygon
 from .physical_stroke_normalizer import PhysicalStrokeNormalizer
 from .repeated_cell_detector import RepeatedCellDetector
 from .surface_pattern_detector import SurfacePatternDetector
-from .level_scale_normalizer import LevelScaleProfile
-from .metric_normalized_context import MetricNormalizedContext
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.core.scale.metric_normalized_context import MetricNormalizedContext
 from .element_context_detector import ElementContextDetector
 
 

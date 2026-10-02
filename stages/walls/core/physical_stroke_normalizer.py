@@ -8,7 +8,7 @@ from typing import Sequence
 from shapely.geometry import LineString
 
 from .drawing_model import DrawingLine, DrawingModel, DrawingPoint
-from .metric_normalized_context import MetricNormalizedContext
+from app.quantia_spatialV1.core.scale.metric_normalized_context import MetricNormalizedContext
 
 
 class PhysicalStrokeNormalizer:

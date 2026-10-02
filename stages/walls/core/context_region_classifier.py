@@ -11,7 +11,7 @@ from shapely.geometry import LineString, Point, box
 
 from .context_models import ContextRegion
 from .drawing_model import DrawingBBox, DrawingLine, DrawingModel
-from .metric_normalized_context import MetricNormalizedContext
+from app.quantia_spatialV1.core.scale.metric_normalized_context import MetricNormalizedContext
 
 
 class ContextRegionClassifier:
