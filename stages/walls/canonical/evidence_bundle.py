@@ -10,10 +10,10 @@ from typing import Any, Sequence
 import numpy as np
 from pydantic import BaseModel
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import AdaptiveReconstructionRuntime, SingleLineWallGraph
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.post_reconstruction_filters.contracts import PostReconstructionFilterResult
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import AdaptiveReconstructionRuntime, SingleLineWallGraph
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.walls.postfilter.contracts import PostReconstructionFilterResult
 
 from .contracts import ReconstructionEvidenceBundle
 

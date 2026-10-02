@@ -4,7 +4,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import SingleLineWallGraph
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import SingleLineWallGraph
 
 
 class CanonicalWallGraphIntegrity(BaseModel):

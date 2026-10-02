@@ -5,7 +5,7 @@ from collections.abc import Sequence
 
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import (
     AdaptiveReconstructionRuntime,
     LogicalGap,
     PhysicalWallTrack,
@@ -13,11 +13,11 @@ from app.quantia_spatialV1.adaptive_reconstruction.contracts import (
     SingleLineWall,
     SingleLineWallGraph,
 )
-from app.quantia_spatialV1.adaptive_reconstruction.decision_engine import AdaptiveModuleDecisionEngine
-from app.quantia_spatialV1.adaptive_reconstruction.hybrid_engine import AdaptiveReconstructionEngine
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.post_reconstruction_filters.contracts import PostReconstructionFilterResult
+from app.quantia_spatialV1.stages.walls.adaptive.decision_engine import AdaptiveModuleDecisionEngine
+from app.quantia_spatialV1.stages.walls.adaptive.hybrid_engine import AdaptiveReconstructionEngine
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.walls.postfilter.contracts import PostReconstructionFilterResult
 
 from .contracts import CanonicalWallGraphIntegrity, CanonicalWallGraphResult
 from .evidence_bundle import ReconstructionEvidenceBundleBuilder
