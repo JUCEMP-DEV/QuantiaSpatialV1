@@ -39,6 +39,12 @@ class SpaceLogicalClosure(BaseModel):
     length_m: float = Field(gt=0.0)
     wall_ids: list[str] = Field(default_factory=list)
     source_gap_id: str
+    classification: str = "UPSTREAM_UNCLASSIFIED"
+    decision_confidence: float | None = Field(
+        default=None,
+        ge=0.0,
+        le=1.0,
+    )
     physical_wall_present: Literal[False] = False
     logical_continuity_only: Literal[True] = True
 
