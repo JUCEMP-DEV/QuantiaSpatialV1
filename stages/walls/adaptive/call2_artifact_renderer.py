@@ -5,8 +5,8 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from app.quantia_spatialV1.adaptive_reconstruction.contracts import SingleLineWallGraph
-from app.quantia_spatialV1.models.level_view import LevelView
+from app.quantia_spatialV1.stages.walls.adaptive.contracts import SingleLineWallGraph
+from app.quantia_spatialV1.core.models.level_view import LevelView
 
 
 class Call2WallGraphArtifactRenderer:

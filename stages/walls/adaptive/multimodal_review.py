@@ -13,8 +13,8 @@ from uuid import uuid4
 import cv2
 import numpy as np
 
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.providers.vision import GeminiSpatialVisionProvider
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.ai.providers.vision import GeminiSpatialVisionProvider
 
 from .contracts import MultimodalWallReview, SingleLineWallGraph
 

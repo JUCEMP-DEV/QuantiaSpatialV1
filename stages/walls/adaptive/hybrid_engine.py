@@ -7,13 +7,13 @@ import cv2
 import numpy as np
 from shapely.geometry import LineString, Point, box
 
-from app.quantia_spatialV1.models.evidence import RawEvidence
-from app.quantia_spatialV1.models.level_view import LevelView
-from app.quantia_spatialV1.phase_02_boundaries.perimeter_delivery import EditablePerimeterModel
-from app.quantia_spatialV1.reconstruction_core import ProposalCReconstructionPipeline
-from app.quantia_spatialV1.reconstruction_core.candidate_models import WallCandidate
-from app.quantia_spatialV1.reconstruction_core.level_scale_normalizer import LevelScaleProfile
-from app.quantia_spatialV1.reconstruction_core.wall_track_consolidator import WallTrackConsolidator
+from app.quantia_spatialV1.core.models.evidence import RawEvidence
+from app.quantia_spatialV1.core.models.level_view import LevelView
+from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
+from app.quantia_spatialV1.stages.walls.core.reconstruction_pipeline import ProposalCReconstructionPipeline
+from app.quantia_spatialV1.stages.walls.core.candidate_models import WallCandidate
+from app.quantia_spatialV1.core.scale.level_scale_normalizer import LevelScaleProfile
+from app.quantia_spatialV1.stages.walls.core.wall_track_consolidator import WallTrackConsolidator
 
 from .contracts import (
     AdaptiveReconstructionRuntime,
