@@ -10,6 +10,7 @@ from app.quantia_spatialV1.core.models.parametric import QuantiaParametricModel
 from app.quantia_spatialV1.stages.perimeter.perimeter_delivery import EditablePerimeterModel
 
 from .candidate_context_gate import CandidateContextGate
+from .candidate_selection_audit import CandidateSelectionAudit, CandidateSelectionAuditResult
 from .candidate_graph import WallCandidateGraphBuilder
 from .candidate_models import WallCandidateGraph
 from .context_models import CandidateContextGateResult
@@ -51,6 +52,7 @@ class ReconstructionCoreResult(BaseModel):
     candidate_graph: WallCandidateGraph
     reference_constraints: ReferenceConstraintResult
     solution: GlobalTopologySolution
+    selection_audit: CandidateSelectionAuditResult
     parametric_model: QuantiaParametricModel
     diagnostics: ReconstructionCoreDiagnostics
     warnings: list[str] = Field(default_factory=list)
@@ -72,6 +74,7 @@ class QuantiaReconstructionPipeline:
         self.context_gate = CandidateContextGate()
         self.graph_builder = WallCandidateGraphBuilder()
         self.solver = GlobalTopologySolver()
+        self.selection_audit = CandidateSelectionAudit()
         self.reconstructor = ParametricWallReconstructor()
         self.scale_normalizer = ProjectLevelScaleNormalizer()
 
@@ -221,6 +224,12 @@ class QuantiaReconstructionPipeline:
             candidates=graph_candidates,
         )
         solution = self.solver.solve(graph=graph, perimeter=perimeter)
+        selection_audit = self.selection_audit.build(
+            graph=graph,
+            solution=solution,
+            perimeter=perimeter,
+            solver=self.solver,
+        )
         parametric = self.reconstructor.build(
             level_view=level_view,
             perimeter=perimeter,
@@ -244,6 +253,7 @@ class QuantiaReconstructionPipeline:
             candidate_graph=graph,
             reference_constraints=constraints,
             solution=solution,
+            selection_audit=selection_audit,
             parametric_model=parametric,
             diagnostics=ReconstructionCoreDiagnostics(
                 drawing_line_count=len(drawing.lines),
